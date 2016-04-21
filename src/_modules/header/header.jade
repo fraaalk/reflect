@@ -1,0 +1,13 @@
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = './'
+
+header(id='header', class='header')
+    button(class='header__menutoggle') ☰
+    img(class='header__logo', src='http://dummyimage.com/160x60/000/fff.png&text=logo')
+    div(class='header__offcanvas')
+        include ../navigation/navigation.jade
+        form(class='header__search') 
+            fieldset
+                input
+                button abschicken

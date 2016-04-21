@@ -1,0 +1,23 @@
+// navigation styles
+.nav {
+
+	&__list {
+		display: flex;
+
+		@include media(medium-up) {
+			flex-flow: row wrap;
+			flex-direction: row;
+			/* This aligns items to the end line on main-axis */
+			justify-content: space-around;
+		}
+
+		&--level1 {
+			display: block;
+		}
+
+		&--level2 {
+			display: none;
+		}
+	}
+}
+
