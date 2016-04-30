@@ -2,8 +2,11 @@
   "name": "reflect",
   "version": "0.0.1",
   "dependencies": {
+    "breakpoint-sass": "^2.7.0",
     "jquery": "~2.2.0",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "reflex-grid": "^1.1.0",
+    "susy": "^2.2.12"
   },
   "devDependencies": {
     "autoprefixer": "~6.3.1",

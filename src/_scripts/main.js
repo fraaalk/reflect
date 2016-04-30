@@ -11,6 +11,20 @@ $(() => {
 
 
     $( '.header__menutoggle' ).on( 'click', function() {
-        $( '.header__offcanvas' ).toggleClass( 'is-visible' );
+        $( '.nav' ).toggleClass( 'is-visible' );
+    });
+
+    $( '.header__searchtoggle' ).on( 'click', function() {
+        $( '.search' ).toggleClass( 'is-visible' );
+    });
+
+    $( '.nav__listitem--l1' ).on ( 'click', 'a', function() {
+    	$(this)
+    		.parent( '.nav__listitem--l1' )
+    		.toggleClass( 'is-active' );
+    });
+
+    $( window ).on( 'resize', function(){
+    	$( '.nav' ).removeClass( 'is-visible' );
     });
 });

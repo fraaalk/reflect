@@ -4,44 +4,55 @@
 	z-index: 200;
 	background: white;
 
+	> div {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+
+	@include breakpoint($medium-up) {
+		height: calculateRem(70px);
+		border-bottom: 1px solid #ccc;
+		@include clearfix();
+	}
+
 	&__menutoggle {
 		position: absolute;
 		left: 0;
+
+		@include breakpoint($medium-up) {
+			display: none;
+		}
 	}
 
-	@include media('medium-up') {
-		height: calculateRem(70px);
-		border-bottom: 1px solid #ccc;
-		display: flex;
+	&__searchtoggle {
+		position: absolute;
+		right: 0;
 
-		&__menutoggle {
+		@include breakpoint($medium-up) {
 			display: none;
 		}
 	}
 
 	&__logo {
-		@include media(small-only) {
+		display: block;
+		
+		@include breakpoint($small-only) {
 			position: absolute;
 			left: calc(50% - 80px);
-			display: block;
+		}
+
+		@include breakpoint($medium-up) {
+			float: left;
+			position: static;
 		}
 	}
 
-	&__offcanvas {
-		@include media(small-only) {
-			transform: translateX(-100%);
-			transition: all 0.5s ease-out;
-			position: absolute;
-			height: 100vh;
-			width: 85vw;
-			top: calculateRem(60px);
-			z-index: 100;
-			background: white;
-			box-shadow: 5px 0px 5px -3px rgba(153,153,153,1);
+	&__search {
+		display: none;
 
-			&.is-visible {
-				transform: translateX(0);
-			}
+		@include breakpoint($medium-up) {
+			float: right;
+			display: block;
 		}
 	}
 }

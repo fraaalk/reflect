@@ -1,5 +1,8 @@
 // Normalize Styles
 @import 'node_modules/normalize.css/normalize';
+@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
+@import 'node_modules/susy/sass/susy';
+@import 'node_modules/reflex-grid/scss/reflex';
 
 // Import Mixins
 @import 'mixins';
@@ -10,6 +13,12 @@
 @import '../_modules/navigation/navigation';
 @import '../_modules/header/header';
 @import '../_modules/footer/footer';
+@import '../_modules/search/search';
+@import '../_modules/social/social';
+@import '../_modules/section/section';
+@import '../_modules/rating/rating';
+@import '../_modules/newsletter/newsletter';
+@import 'https://fonts.googleapis.com/css?family=Lato:400,300,700';
 
 // Box sizing partial styles:
 // Apply a natural box layout model to all elements
@@ -22,5 +31,33 @@
 }
 
 body {
-	background: #F4F4F5;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	background: #F4F4F4;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+h1,h2,h3,h4,h5 {
+	font-weight: 400;
+}
+
+ol li {
+	list-style-type: decimal;
+}
+
+.page {
+	background: white;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.u-textcenter {
+	text-align: center;
+}
+
+ul, li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }

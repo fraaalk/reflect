@@ -1,0 +1,44 @@
+// section styles
+.section {
+	position: relative;
+	padding: 40px 0 0;
+
+	&--grey {
+		background: #f4f4f4;
+	}
+
+	&--white {
+		background: white;
+	}
+
+	+ section {
+		border-top: 1px solid #007dc7;
+	}
+
+	&__headline {
+		font-family: Lato;
+		font-weight: 300;
+		font-size: 35px;
+		line-height: 1.1;
+		letter-spacing: 0.5px;
+		color: #007dc7;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	&__badge {
+		background: #007dc7;
+		color: white;
+		text-transform: uppercase;
+		font-family: Lato;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 2.2;
+		letter-spacing: 0.3px;
+		color: #ffffff;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0 20px;
+	}
+}

@@ -1,22 +1,29 @@
 @function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
 }
 
-@mixin media($point) {
-    $bp-small-only: "(max-width: 728px)";
-    $bp-medium-up: "(min-width: 728px)";
-  
-    @if $point == small-only {
-      @media #{$bp-small-only} { @content; }
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
     }
-    @else if $point == medium {
-      @media #{$bp-medium} { @content; }
-    }
-    @else if $point == large {
-      @media #{$bp-large}  { @content; }
-    }
-    @else if $point == medium-up {
-      @media #{$bp-medium-up}  { @content; }
+    &:after {
+        clear: both;
     }
 }
+
+$small-only: 'max-width' 727px;
+$medium-up: 'min-width' 728px;
+
+$susy: (
+    global-box-sizing: border-box,
+    use-custom: (rem: true),
+    columns: 12,
+    gutters: 1/4,
+    math: fluid,
+    output: float,
+    gutter-position: inside
+);
+

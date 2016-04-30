@@ -1,0 +1,16 @@
+// social styles
+.social {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	@include breakpoint($small-only) {
+		display: none;
+	}
+
+	> li {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+	}
+}

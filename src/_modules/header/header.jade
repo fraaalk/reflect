@@ -3,11 +3,11 @@ block config
     - var baseUrl = './'
 
 header(id='header', class='header')
-    button(class='header__menutoggle') ☰
-    img(class='header__logo', src='http://dummyimage.com/160x60/000/fff.png&text=logo')
-    div(class='header__offcanvas')
+    div
+        button(class='header__menutoggle') ☰
+        img(class='header__logo', src='http://dummyimage.com/160x60/000/fff.png&text=logo')
         include ../navigation/navigation.jade
-        form(class='header__search') 
-            fieldset
-                input
-                button abschicken
+        form(class='header__search search') 
+            input(class="search__input")
+            button(type="button", class="search__submit") abschicken
+        button(class='header__searchtoggle') ⚲

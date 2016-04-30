@@ -3,19 +3,11 @@ block config
     - var baseUrl = '../'
 
 nav(id='navigation', class='header__nav nav')
-    ul(class='nav__list nav__list--level1')
-        li(class='nav__listitem')  Profil
-            ul(class='nav__list nav__list--level2')
-                li  subnav1
-                li  subnav2
-        li(class='nav__listitem')  Portfolio
-            ul(class='nav__list nav__list--level2')
-                li  subnav1
-                li  subnav2
-        li(class='nav__listitem')  Instrumente
-            ul(class='nav__list nav__list--level2')
-                li  subnav1
-                li  subnav2
-        li(class='nav__listitem')  Kontakt
-        li(class='nav__listitem')  Blog
-        li(class='nav__listitem nav__listitem--language-selection')  DE
+    ul(class='nav__list nav__list--l1')
+        li(class='nav__listitem nav__listitem--l1') 
+            a(href="#", title="#") Profil
+            ul(class='nav__list nav__list--l2')
+                li(class='nav__listitem nav__listitem--l2')  
+                    a(href='#', title='foo') subnav1
+                li(class='nav__listitem  nav__listitem--l2')
+                    a(href='#', title='foo', class='is-active') subnav2

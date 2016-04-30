@@ -1,0 +1,36 @@
+.newsletter {
+	@include clearfix();
+
+	&__input,
+	&__submit {
+		line-height: 1;
+		font-size: calculateRem(12px);
+		font-family: 'Lato', sans-serif;
+		border-color: #ccc;
+		background-color: rgba(215, 215, 215, 0.2);
+		border-radius: calculateRem(4px);
+		border-style: solid;
+		border-width: 1px;
+		outline: none;
+		font-weight: 300;
+		display: block;
+		float: left;
+	}
+
+	&__input {
+		border-right: 0;
+		padding: 12px 17px;
+		text-transform: uppercase;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	&__submit {
+		border-left: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		padding: 12px 17px;
+		text-transform: uppercase;
+		height: 41px;	
+	}
+}

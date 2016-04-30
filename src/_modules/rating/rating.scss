@@ -1,0 +1,55 @@
+.rating {
+	border-radius: 2px;
+	background-color: rgba(204, 204, 204, 0.3);
+	border: solid 1px #cccccc;
+	padding: 25px;
+
+	&__list {
+		li {
+			&:not(:first-child) {
+				margin-top: 40px;
+			}
+			
+			@include clearfix();
+		}
+	}
+
+	&__label,
+	&__value {
+		font-size: 14px;
+		line-height: 1.4;
+		letter-spacing: 0.2px;
+		color: #000000;
+		font-weight: 400;
+	}
+
+	&__label {
+		float: left;
+		width: 70%;
+	}
+
+	&__value {
+		float: right;
+		width: 25%;
+		text-align: right;
+	}
+
+	&__bar {
+		background: white;
+		width: 100%;
+		height: 6px;
+		border-radius: 4px;
+		clear: both;
+		position: relative;
+
+		> span {
+			background: #007dc7;
+			position: absolute;
+			border-radius: 4px;
+			left: 0;
+			height: 100%;
+			top: 0;
+			display: block;
+		}
+	}
+}

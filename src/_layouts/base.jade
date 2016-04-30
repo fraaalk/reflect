@@ -24,7 +24,8 @@ head
 
 body
     include ../_modules/header/header.jade
-    block content
+    section(id='page', class='page')
+        block content
     include ../_modules/footer/footer.jade
 
     block scripts
