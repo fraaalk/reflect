@@ -5,28 +5,13 @@
 	@include clearfix();
 	padding: 15px;
 
-	> div {
+	&__logo {
+		display: inline-block;
+	}
+
+	&__wrapper {
 		max-width: 1280px;
 		margin: 0 auto;
-	}
-
-	@include breakpoint($medium-up) {
-		@include container();
-	}
-
-	&__section,
-	&__social,
-	&__address {
-		@include breakpoint($medium-up) {
-			@include span(3 wide of 12);
-		}
-	}
-
-	&__nav,
-	&__section--newsletter {
-		@include breakpoint($medium-up) {
-			@include span(9 wide of 12);
-		}
 	}
 
 	a {
@@ -39,10 +24,8 @@
 	}
 
 
-	&__section {
+	&__nav {
 		h5 {
-			font-family: 'Lato', sans-serif;
-			font-weight: 700;
 			text-transform: uppercase;
 			opacity: 0.8;
 			font-size: 14px;
@@ -83,7 +66,6 @@
 		line-height: 1.9;
 		letter-spacing: 1.6px;
 		color: #cccccc;
-		text-align: center;
 	}
 
 	&__newsletter,

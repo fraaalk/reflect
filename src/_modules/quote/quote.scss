@@ -1,0 +1,14 @@
+// quote styles
+.quote {
+	margin: 0;
+
+	&--default {
+		font-size: 18px;
+		line-height: 1.4;
+		letter-spacing: 0.5px;
+		color: #969100;
+		border-left: 4px solid #969100;
+		padding: 10px 0 10px 25px;
+	}
+	
+}

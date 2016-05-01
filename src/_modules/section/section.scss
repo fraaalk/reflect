@@ -1,7 +1,12 @@
 // section styles
 .section {
-	position: relative;
 	padding: 40px 0 0;
+
+	&__wrapper {
+		margin: 0 auto;
+		max-width: 992px;
+		position: relative;
+	}
 
 	&--grey {
 		background: #f4f4f4;

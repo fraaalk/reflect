@@ -1,0 +1,13 @@
+// icon styles
+.icon {
+	display: inline-block;
+	fill: currentColor;
+
+	&--portfolio {
+		width: 160px;
+		height: 160px;
+		padding: 10px;
+		border-radius: 50%;
+		border: 2px solid #000000;
+	}
+}
