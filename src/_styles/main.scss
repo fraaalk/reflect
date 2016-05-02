@@ -22,6 +22,11 @@ $reflex-grid-spacing: 10px;
 @import '../_modules/rating/rating';
 @import '../_modules/quote/quote';
 @import '../_modules/icon/icon';
+
+@import '../_modules/headline/headline';
+
+
+
 @import '../_modules/newsletter/newsletter';
 @import 'https://fonts.googleapis.com/css?family=Lato:400,300,700';
 
@@ -42,9 +47,100 @@ body {
 
 h1,h2,h3,h4,h5 {
 	font-weight: 400;
+	font-family: 'Lato', sans-serif;
+}
+
+svg {
+	fill: currentColor;
+}
+
+a,
+a:visited,
+a:active {
+	color: #0f4c88;
+	text-decoration: none;
+	transition: color 0.3s ease-out;
+
+	&:hover {
+		color: darken(#0f4c88, 10%);
+	}
+}
+
+/* text helper classes */
+.u__text-center {
+	text-align: center;
+}
+
+.u__text-upper {
+	text-transform: uppercase;
+}
+
+.u__text-truncated {
+	text-overflow: ellipsis;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.u__text-strong {
+	font-weight: 400;
+}
+
+.u__list-ordered {
+	list-style-type: decimal;
+	list-style-position: inside;
 }
 
 
-.u__text-center {
-	text-align: center;
+.block {
+	padding: 20px;
+
+	&__headline {
+		font-size: 20px;
+		line-height: 1.5;
+		letter-spacing: 1.7px;
+		color: #333333;
+		text-transform: uppercase;
+	}
+
+	&--columned {
+		column-count: 2;
+	}
+
+	&--bordered {
+		border-radius: 2px;
+		background-color: #ffffff;
+		border: solid 1px #cccccc;
+	}
+
+	&__pub-date {
+		text-align: center;
+		font-size: 14px;
+		line-height: 1.4;
+		letter-spacing: 0.2px;
+		color: #000000;
+		display: block;
+
+		+ .block__headline {
+			margin-top: 11px;
+		}
+	}
+
+	&__detail-link {
+		font-size: 14px;
+		line-height: 1.4;
+		letter-spacing: 1px;
+		color: #0f4c88;
+		display: block;
+		text-align: right;
+	}
+
+	p + ol,
+	p + ul,
+	p + h2, 
+	p + h3,
+	p + h4,
+	p + p {
+		margin-top: 20px;
+	}
 }

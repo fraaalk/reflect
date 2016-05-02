@@ -7,16 +7,19 @@ block config
 block content
     section(class="section section--white")
         div(class="section__wrapper")
-            h2(class="section__headline") Profil
-            div(class="section__badge") Unser Team wartet auf Sie
             div(class="grid")
-                div(class="grid__col-6")
-                    h3 Philosophie
+                h2(class="headline--section grid__col-12 grid__cell") 
+                    svg
+                        use(xlink:href="#twitter")
+                    | Profil
+                div(class="section__badge") Unser Team wartet auf Sie
+                div(class="block block--columned grid__col-12 grid__cell")
+                    h3(class="headline--level2") Philosophie
                     p Das Wesen unserer Arbeit erkennen Sie bereits in unserem Namen: Reflect steht für den Prozess reflektierten Handelns – gemeinsam mit Ihnen als Kunde. Denn durch gezielte Reflexion entstehen neue Perspektiven: Menschen können sich besser in die Lage anderer hineinversetzen. Der Blick kann sich mehrdimensionalen Lösungen öffnen. Der eigene Horizont erweitert sich. Und wo vorher keine Lösung mehr sichtbar oder denkbar war, entstehen herausragende Ideen und Optionen.
-                    h3 Leitsätze - unsere 7 Standpunkte
+                    h3(class="headline--level2") Leitsätze - unsere 7 Standpunkte
                     p Wir nehmen regelmäßig neue Perspektiven ein. Das ist unser Job. Dennoch haben wir Prinzipien und bekennen uns zu klaren Leitsätzen.
                     p An diesen sollten Sie uns messen und auf diese berufen wir uns selbst. So garantieren wir Ihnen und uns die bestmögliche Arbeit mit den bestmöglichen Ergebnissen.
-                    ol 
+                    ol(class="u__list-ordered") 
                         li Kundenorientierung
                         li Prozess- und Ressourcenorientierung
                         li Angebotsorientierung
@@ -24,18 +27,19 @@ block content
                         li Bewahrung von Autonomie
                         li Verzicht auf Wahrheitsansprüche
                         li Anerkennung von Komplexität
-                div(class="grid__col-6")
-                    h3 Vision, Mission, Werte
+                    h3(class="headline--level2") Vision, Mission, Werte
                     p Die Entscheidungsträger innerhalb von Unternehmen in der Region sind sich der Bedeutung strategischer Personalentwicklung bewusst. Sie sehen die Wirkung strategischer Personalentwicklung als relevanten Beitrag an, um ihre Organisation human, wirtschaftlich erfolgreich, zukunftsfähig und nicht kopierbar zu gestalten.
                     p Wir wollen Menschen und Unternehmen bei ihrer Entwicklung unterstützen, so dass diese ihre spezifischen Potenziale zum Wohle des Unternehmens, ihrer eigenen Person und somit der Gesellschaft voll zur Entfaltung bringen können. Dabei sehen wir Potenzialentfaltung nicht als Selbstzweck an, sondern als Weg der Verantwortungsübernahme jedes Einzelnen innerhalb des unternehmerischen und gesellschaftlichen Kontextes. 
-                    p 
-                        strong Kompetenz, Integrität und Spaß bei der Arbeit!
-                    h3 Arbeitsweise
+                    p(class="u__text-strong") Kompetenz, Integrität und Spaß bei der Arbeit!
+                    h3(class="headline--level2") Arbeitsweise
                     p Reflect denkt in Problemlagen nicht in Branchen. Wo andere Berater Patentlösungen für ganze Branchen präsentieren und entsprechende Maßnahmen und Trainings ‚einleiten’, betrachten wir das jeweilige Problem. Anders gesagt, wir arbeiten von Fall zu Fall, nicht generell. Doch bestimmte Standard-Arbeitsschritte halten natürlich auch wir für sinnvoll, weil sie die Qualität unserer Arbeit und damit auch Ihre Ergebnisse verbessern.
     section(class="section section--grey grid")
         div(class="section__wrapper")
-            h2(class="section__headline grid__col-12") Beschreibung
             div(class="grid")
+                h2(class="headline--section grid__col-12 grid__cell") 
+                    svg
+                        use(xlink:href="#twitter")
+                    | Beschreibung
                 div(class="grid__col-8")
                     div(class="grid grid--direction-column")
                         div(class="grid__col-12")
@@ -47,41 +51,82 @@ block content
                     include ../_modules/rating/rating.jade
     section(class="section section--white")
         div(class="section__wrapper")
-            h2(class="section__headline") Portfolio
             div(class="grid")
+                h2(class="headline--section grid__col-12 grid__cell") 
+                    svg
+                        use(xlink:href="#twitter")
+                    | Portfolio
                 div(class="grid__col-4")
                     div(class="grid__cell u__text-center")
                         svg(class="icon icon--portfolio grid__cell-img")
                             use(xlink:href="#twitter")
-                        h3 Personalentwicklung
+                        h3(class="headline--level2") Personalentwicklung
                         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
                 div(class="grid__col-4")
                     div(class="grid__cell u__text-center")
                         svg(class="icon icon--portfolio grid__cell-img")
                             use(xlink:href="#twitter")
-                        h3 Veränderungsmanagement
+                        h3(class="headline--level2") Veränderungsmanagement
                         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
                 div(class="grid__col-4")
                     div(class="grid__cell u__text-center")
                         svg(class="icon icon--portfolio grid__cell-img")
                             use(xlink:href="#twitter")
-                        h3 Coaching
+                        h3(class="headline--level2") Coaching
                         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
                 div(class="grid__col-4")
                     div(class="grid__cell u__text-center")
                         svg(class="icon icon--portfolio")
                             use(xlink:href="#twitter")
-                        h3 Kompetenzdiagnostik
+                        h3(class="headline--level2") Kompetenzdiagnostik
                         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
                 div(class="grid__col-4")
                     div(class="grid__cell u__text-center")
                         svg(class="icon icon--portfolio")
                             use(xlink:href="#twitter")
-                        h3 Befragungen
+                        h3(class="headline--level2") Befragungen
                         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
                 div(class="grid__col-4")
                     div(class="grid__cell u__text-center")
                         svg(class="icon icon--portfolio")
                             use(xlink:href="#twitter")
-                        h3 Gesunde Organisation
+                        h3(class="headline--level2") Gesunde Organisation
                         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
+    section(class="section section--grey")
+        div(class="section__wrapper")
+            div(class="grid")
+                h2(class="headline--section grid__col-12 grid__cell") 
+                    svg
+                        use(xlink:href="#twitter")
+                    | Lösungen Teilbereich 1
+                div(class="grid__col-6")
+                    div(class="block block--bordered")
+                        h3(class="headline--level2") Headline Lorem Ipsum
+                        p Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.
+                        p Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. 
+                div(class="grid__col-6")
+                    div(class="block block--bordered")
+                        h3(class="headline--level2") Headline Lorem Ipsum
+                        p Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.
+                        p Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis.
+    section(class="section section--grey")
+        div(class="section__wrapper")
+            div(class="grid")
+                h2(class="headline--section grid__col-12 grid__cell") 
+                    svg
+                        use(xlink:href="#twitter")
+                    | Blog
+                div(class="grid__col-6")
+                    article(class="block block--bordered")
+                        time(class="block__pub-date") 11. NOV 2015
+                        h3(class="headline--level2 u__text-truncated u__text-upper") Headline Lorem Ipsum
+                        p Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.
+                        p Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. 
+                        a(class="block__detail-link", href="#") weiterlesen →
+                div(class="grid__col-6")
+                    article(class="block block--bordered")
+                        time(class="block__pub-date") 11. NOV 2015
+                        h3(class="headline--level2 u__text-truncated u__text-upper") Headline Lorem Ipsum Headline Lorem Ipsum
+                        p Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.
+                        p Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis.
+                        a(class="block__detail-link", href="#") weiterlesen →
