@@ -1,1 +1,29 @@
 // breadcrumb styles
+.breadcrumb {
+	background: #ffffff;
+
+	ol {
+		max-width: 992px;
+		margin: 0 auto;
+		padding: 10px 20px;
+
+		> li {
+			display: inline-block;
+
+			&:not(:first-child):before {
+				content: '/';
+				display: inline-block;
+				color: #7d8c93;
+				padding: 0 10px;
+			}
+
+			&:not(:last-child) a {
+				color: #7d8c93;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

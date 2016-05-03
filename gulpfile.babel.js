@@ -7,6 +7,7 @@ import browserSyncLib from 'browser-sync';
 import pjson from './package.json';
 import minimist from 'minimist';
 import wrench from 'wrench';
+import svgSprite from 'gulp-svg-sprite';
 
 // Load all gulp plugins based on their names
 // EX: gulp-copy -> copy
@@ -18,6 +19,15 @@ let config = pjson.config;
 let args = minimist(process.argv.slice(2));
 let dirs = config.directories;
 let taskTarget = args.production ? dirs.destination : dirs.temporary;
+let spriteConfig = {
+    mode: {
+        css: {     // Activate the «css» mode
+            render: {
+                css: true  // Activate CSS output (with default options)
+            }
+        }
+    }
+};
 
 // Create a new browserSync instance
 let browserSync = browserSyncLib.create();
@@ -35,8 +45,16 @@ gulp.task('default', ['clean'], () => {
   gulp.start('build');
 });
 
+// Generates Inline SVG
+gulp.task('svgSprite', () => {
+  gulp.src('.app/src/_icons/*.svg')
+    .pipe(svgSprite(spriteConfig))
+    .pipe(gulp.dest('.app/src/_images/'));
+});
+
 // Build production-ready code
 gulp.task('build', [
+  'svgSprite',
   'copy',
   'imagemin',
   'jade',
@@ -46,6 +64,7 @@ gulp.task('build', [
 
 // Server tasks with watch
 gulp.task('serve', [
+  'svgSprite',
   'imagemin',
   'copy',
   'jade',

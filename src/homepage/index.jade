@@ -5,7 +5,8 @@ block config
     - var baseUrl = '../'
 
 block content
-    section(class="section section--white")
+    include ../_modules/breadcrumb/breadcrumb.jade
+    section(class="section section--grey")
         div(class="section__wrapper")
             div(class="grid")
                 h2(class="headline--section grid__col-12 grid__cell") 
@@ -33,7 +34,7 @@ block content
                     p(class="u__text-strong") Kompetenz, Integrität und Spaß bei der Arbeit!
                     h3(class="headline--level2") Arbeitsweise
                     p Reflect denkt in Problemlagen nicht in Branchen. Wo andere Berater Patentlösungen für ganze Branchen präsentieren und entsprechende Maßnahmen und Trainings ‚einleiten’, betrachten wir das jeweilige Problem. Anders gesagt, wir arbeiten von Fall zu Fall, nicht generell. Doch bestimmte Standard-Arbeitsschritte halten natürlich auch wir für sinnvoll, weil sie die Qualität unserer Arbeit und damit auch Ihre Ergebnisse verbessern.
-    section(class="section section--grey grid")
+    section(class="section section--white grid")
         div(class="section__wrapper")
             div(class="grid")
                 h2(class="headline--section grid__col-12 grid__cell") 
@@ -49,7 +50,7 @@ block content
                             div(class="grid__col-6") Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor.
                 div(class="grid__col-4")
                     include ../_modules/rating/rating.jade
-    section(class="section section--white")
+    section(class="section section--grey")
         div(class="section__wrapper")
             div(class="grid")
                 h2(class="headline--section grid__col-12 grid__cell") 
@@ -92,7 +93,7 @@ block content
                             use(xlink:href="#twitter")
                         h3(class="headline--level2") Gesunde Organisation
                         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
-    section(class="section section--grey")
+    section(class="section section--white")
         div(class="section__wrapper")
             div(class="grid")
                 h2(class="headline--section grid__col-12 grid__cell") 
