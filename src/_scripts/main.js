@@ -5,9 +5,20 @@
 
 import $ from 'jquery';
 import Link from '../_modules/link/link';
+import Popup from '../_modules/popup/popup';
+import Card from '../_modules/card/card';
 
 $(() => {
     new Link(); // Activate Link modules logic
+    
+
+    $('[data-popup]').each( function() {
+        new Popup( this );
+    });
+    
+    $('[data-card]').each( function() {
+        new Card( this );
+    });
 
 
     $( '.header__menutoggle' ).on( 'click', function() {
@@ -28,3 +39,6 @@ $(() => {
     	$( '.nav' ).removeClass( 'is-visible' );
     });
 });
+
+
+        

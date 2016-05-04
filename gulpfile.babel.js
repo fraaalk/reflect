@@ -20,11 +20,12 @@ let args = minimist(process.argv.slice(2));
 let dirs = config.directories;
 let taskTarget = args.production ? dirs.destination : dirs.temporary;
 let spriteConfig = {
-    mode: {
-        css: {     // Activate the «css» mode
-            render: {
-                css: true  // Activate CSS output (with default options)
-            }
+    "dest": "",
+    "log": "info",
+    "mode": {
+        "symbol": {
+            "dest": "_images",
+            "inline": true
         }
     }
 };
@@ -47,9 +48,9 @@ gulp.task('default', ['clean'], () => {
 
 // Generates Inline SVG
 gulp.task('svgSprite', () => {
-  gulp.src('.app/src/_icons/*.svg')
+  gulp.src('src/_icons/*.svg')
     .pipe(svgSprite(spriteConfig))
-    .pipe(gulp.dest('.app/src/_images/'));
+    .pipe(gulp.dest('src/'));
 });
 
 // Build production-ready code

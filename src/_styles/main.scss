@@ -12,7 +12,6 @@ $reflex-grid-spacing: 10px;
 
 // Import Modules
 
-@import '../_modules/link/link';
 @import '../_modules/navigation/navigation';
 @import '../_modules/header/header';
 @import '../_modules/footer/footer';
@@ -25,6 +24,7 @@ $reflex-grid-spacing: 10px;
 
 @import '../_modules/breadcrumb/breadcrumb';
 @import '../_modules/headline/headline';
+@import '../_modules/card/card';
 
 
 
@@ -55,6 +55,7 @@ svg {
 	fill: currentColor;
 }
 
+/*
 a,
 a:visited,
 a:active {
@@ -65,7 +66,7 @@ a:active {
 	&:hover {
 		color: darken(#0f4c88, 10%);
 	}
-}
+}*/
 
 /* text helper classes */
 .u__text-center {

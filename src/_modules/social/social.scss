@@ -16,45 +16,40 @@
 	}
 
 	&__icon {
-		//width: 40px;
-		//height: 40px;
-		width: 26px;
-		height: 26px;
+		width: 100%;
+		height: 100%;
 		fill: currentColor;
 	}
 
 	&__button {
-		transition: background 0.2s ease-out;
+		transition: color 0.2s ease-out;
 		display: block;
 		width: 40px;
 		height: 40px;
-		padding: 7px;
-		border-radius: 50%;
-		background: #fff;
-		color: #3d3d3d;
+		color: #ECECED;
 
 		&:hover {
 			color: #fff;
 		}
 
 		&--google-plus:hover {
-			background: #dd4b39;
+			color: #dd4b39;
 		}
 
 		&--facebook:hover {
-			background: #4460ae;
+			color: #4460ae;
 		}
 
 		&--linked-in:hover {
-			background: #0077b5;
+			color: #0077b5;
 		}
 
 		&--twitter:hover {
-			background: #00acec;
+			color: #00acec;
 		}
 
 		&--rss:hover {
-			background: #FA9B39;
+			color: #FA9B39;
 		}
 	}
 }

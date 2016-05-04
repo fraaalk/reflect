@@ -11,7 +11,7 @@ block content
             div(class="grid")
                 h2(class="headline--section grid__col-12 grid__cell") 
                     svg
-                        use(xlink:href="#twitter")
+                        use(xlink:href="#blackboard")
                     | Profil
                 div(class="section__badge") Unser Team wartet auf Sie
                 div(class="block block--columned grid__col-12 grid__cell")
@@ -34,13 +34,13 @@ block content
                     p(class="u__text-strong") Kompetenz, Integrität und Spaß bei der Arbeit!
                     h3(class="headline--level2") Arbeitsweise
                     p Reflect denkt in Problemlagen nicht in Branchen. Wo andere Berater Patentlösungen für ganze Branchen präsentieren und entsprechende Maßnahmen und Trainings ‚einleiten’, betrachten wir das jeweilige Problem. Anders gesagt, wir arbeiten von Fall zu Fall, nicht generell. Doch bestimmte Standard-Arbeitsschritte halten natürlich auch wir für sinnvoll, weil sie die Qualität unserer Arbeit und damit auch Ihre Ergebnisse verbessern.
-    section(class="section section--white grid")
+    section(class="section section--white")
         div(class="section__wrapper")
             div(class="grid")
                 h2(class="headline--section grid__col-12 grid__cell") 
                     svg
                         use(xlink:href="#twitter")
-                    | Beschreibung
+                    | Typische Lösungen
                 div(class="grid__col-8")
                     div(class="grid grid--direction-column")
                         div(class="grid__col-12")
@@ -56,11 +56,58 @@ block content
                 h2(class="headline--section grid__col-12 grid__cell") 
                     svg
                         use(xlink:href="#twitter")
+                    | Beschreibung
+                div(class="grid__col-12 grid__cell")
+                    ul(class="card__wrapper")&attributes({'data-card': ''})
+                        li(class="card card--prev")
+                            h2(class="card__headline") Card 1
+                            p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                            p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
+                            small(class="card__author") Max Mustermann
+                        li(class="card card--active")
+                            h2(class="card__headline") Card 2
+                            p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                            p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
+                            small(class="card__author") Max Mustermann
+                        li(class="card card--next")
+                            h2(class="card__headline") Card 3
+                            p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                            p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
+                            small(class="card__author") Max Mustermann
+                        li(class="card")
+                            h2(class="card__headline") Card 4
+                            p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                            p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
+                            small(class="card__author") Max Mustermann
+                        li(class="card")
+                            h2(class="card__headline") Card 5
+                            p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                            p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
+                            small(class="card__author") Max Mustermann
+                        li(class="card")
+                            h2(class="card__headline") Card 6
+                            p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                            p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
+                            small(class="card__author") Max Mustermann
+                        li(class="card")
+                            h2(class="card__headline") Card 7
+                            p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                            p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
+                            small(class="card__author") Max Mustermann
+                    button(type="button", class="card__prev") &lt;
+                    button(type="button", clasS="card__next") &gt;
+
+    section(class="section section--white")
+        div(class="section__wrapper")
+            div(class="grid")
+                h2(class="headline--section grid__col-12 grid__cell") 
+                    svg
+                        use(xlink:href="#twitter")
                     | Portfolio
                 div(class="grid__col-4")
                     div(class="grid__cell u__text-center")
                         svg(class="icon icon--portfolio grid__cell-img")
-                            use(xlink:href="#twitter")
+                            use(xlink:href="#portfolio__human-resources-developement")
                         h3(class="headline--level2") Personalentwicklung
                         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
                 div(class="grid__col-4")
@@ -93,7 +140,7 @@ block content
                             use(xlink:href="#twitter")
                         h3(class="headline--level2") Gesunde Organisation
                         p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
-    section(class="section section--white")
+    section(class="section section--grey")
         div(class="section__wrapper")
             div(class="grid")
                 h2(class="headline--section grid__col-12 grid__cell") 
@@ -110,7 +157,7 @@ block content
                         h3(class="headline--level2") Headline Lorem Ipsum
                         p Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.
                         p Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis.
-    section(class="section section--grey")
+    section(class="section section--white")
         div(class="section__wrapper")
             div(class="grid")
                 h2(class="headline--section grid__col-12 grid__cell") 
