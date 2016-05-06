@@ -2,46 +2,15 @@
 .nav {
 	display: block;
 
-	@include breakpoint($small-only) {
-		transform: translateX(-100%);
-		transition: transform 0.5s ease-out;
-		position: absolute;
-		height: calc(100vh - 60px);
-		width: 85vw;
-		max-width: 300px;
-		top: calculateRem(60px);
-		z-index: 100;
-		background: white;
-		box-shadow: 5px 0px 5px -3px rgba(153,153,153, 1);
-
-		&.is-visible {
-			transform: translateX(0);
-		}
-	}
-
-	@include breakpoint($medium-up) {
-		float: left;
-		height: calculateRem(70px);
-	}
-
-	a {
-		font-family: 'Lato', sans-serif;
-		text-decoration: none;
-		color: #7d8c93;
-		display: block;
-		font-size: calculateRem(15px);
-	}
-
 	&__list {
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
-		display: block;
+		display: flex;
+		justify-content: space-around;
 
 		&--l1 {
-			@include breakpoint($medium-up) {
-				float: left;
-			}
+			
 		}
 
 		&--l2 {
@@ -49,7 +18,7 @@
 
 			.is-active & {
 				display: block;
-			}
+			}	
 		}
 
 		&item{
@@ -58,13 +27,12 @@
 			display: block;
 			//height: calculateRem(44px);
 
-
 			&--l1 {
 				> a {
 					text-transform: uppercase;
 					letter-spacing: 0.2px;
 					line-height: 1.2; // 18px
-					padding: 13px 26px;
+					padding: 13px 0;
 				}
 
 				&.is-active > a {

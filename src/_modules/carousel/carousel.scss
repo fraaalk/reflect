@@ -11,12 +11,12 @@
         position: relative;
         transform: translateX(100%);
 
-        @include breakpoint($small-only) {
+        &.is-viewing-2-slides {
             left: -50%;
             transform: translateX(50%);
         }
 
-        @include breakpoint($medium-up) {
+        &.is-viewing-3-slides {
             left: -33.33333%;
             transform: translateX(33.33333%);
         }
@@ -24,11 +24,11 @@
         &.is-reversing {
             transform: translateX(-100%);
             
-            @include breakpoint($small-only) {
+            &.is-viewing-2-slides {
                 transform: translateX(-50%);
             }
           
-            @include breakpoint($medium-up) {
+            &.is-viewing-3-slides {
                 transform: translateX(-33.33333%);
             }
         }
@@ -40,20 +40,14 @@
     }
 
     &__slide {
-        background: #ddd;
         flex: 1 0 100%;
         order: 2;
-        height: 300px;
-        
-        &:nth-child(even) {
-            background: #d5d5d5;
-        }
 
-        @include breakpoint($small-only) {
+        .is-viewing-2-slides & {
             flex-basis: 50%;
         }
       
-        @include breakpoint($medium-up) {
+        .is-viewing-3-slides & {
             flex-basis: 33.33333%;
         }
 
@@ -68,5 +62,10 @@
 
     &__button {
         display: inline-block;
+        background: none;
+        border: none;
+        outline: none;
+        min-width: 44px;
+        min-height: 44px;
     }
 }
