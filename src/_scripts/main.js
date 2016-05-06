@@ -7,6 +7,7 @@ import $ from 'jquery';
 import Link from '../_modules/link/link';
 import Popup from '../_modules/popup/popup';
 import Card from '../_modules/card/card';
+import Carousel from '../_modules/carousel/carousel';
 
 $(() => {
     new Link(); // Activate Link modules logic
@@ -20,6 +21,9 @@ $(() => {
         new Card( this );
     });
 
+    $('[data-carousel]').each( function() {
+        new Carousel( this );
+    });
 
     $( '.header__menutoggle' ).on( 'click', function() {
         $( '.nav' ).toggleClass( 'is-visible' );

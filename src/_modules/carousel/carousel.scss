@@ -1,1 +1,72 @@
 // carousel styles
+.carousel {
+    overflow: hidden;
+
+    > ul {
+        display: flex;
+        left: -100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        transform: translateX(100%);
+
+        @include breakpoint($small-only) {
+            left: -50%;
+            transform: translateX(50%);
+        }
+
+        @include breakpoint($medium-up) {
+            left: -33.33333%;
+            transform: translateX(33.33333%);
+        }
+
+        &.is-reversing {
+            transform: translateX(-100%);
+            
+            @include breakpoint($small-only) {
+                transform: translateX(-50%);
+            }
+          
+            @include breakpoint($medium-up) {
+                transform: translateX(-33.33333%);
+            }
+        }
+          
+        &.is-set {
+          transform: none;
+          transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+    }
+
+    &__slide {
+        background: #ddd;
+        flex: 1 0 100%;
+        order: 2;
+        height: 300px;
+        
+        &:nth-child(even) {
+            background: #d5d5d5;
+        }
+
+        @include breakpoint($small-only) {
+            flex-basis: 50%;
+        }
+      
+        @include breakpoint($medium-up) {
+            flex-basis: 33.33333%;
+        }
+
+        &.is-ref {
+            order: 1
+        }
+    }
+
+    &__controls {
+        text-align: center;
+    }
+
+    &__button {
+        display: inline-block;
+    }
+}

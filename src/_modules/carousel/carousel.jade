@@ -1,6 +1,20 @@
-mixin carousel(spec)
-  - spec = spec || {}
-  - spec.__class = spec.__class || ''
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = '../'
 
-  div(class=spec.__class)&attributes(attributes)
-    p This is an example paragraph for the carousel module
+
+div(class="carousel")&attributes({'data-carousel': ''})
+    ul
+        li(class="carousel__slide")
+            h2 1
+        li(class="carousel__slide")
+            h2 2
+        li(class="carousel__slide")
+            h2 3
+        li(class="carousel__slide")
+            h2 4
+        li(class="carousel__slide is-ref")
+            h2 5
+    nav(class="carousel__controls")
+        button(class="carousel__button carousel__button--prev") prev
+        button(class="carousel__button carousel__button--next") next
