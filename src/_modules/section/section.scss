@@ -1,6 +1,31 @@
 // section styles
 .section {
-	padding: 40px 0;
+	padding: 40px 15px;
+	position: relative;
+
+	&__headline {
+		padding: 0 10px;
+		font-weight: 300;
+		font-size: 35px;
+		line-height: 1.1;
+		letter-spacing: 0.5px;
+		color: #007dc7;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		text-align: center;
+
+		&-icon {
+			height: 38px;
+			width: 38px;
+			display: inline-block;
+			vertical-align: sub;
+			margin-right: 12px;
+		}
+
+		@include breakpoint($bp-sm) {
+			text-align: left;
+		}
+	}
 
 	&__wrapper {
 		margin: 0 auto;
@@ -34,9 +59,13 @@
 		line-height: 2.2;
 		letter-spacing: 0.3px;
 		color: #ffffff;
-		position: absolute;
-		top: 0;
-		right: 0;
 		padding: 0 20px;
+		margin-bottom: 30px;
+
+		@include breakpoint($bp-sm) {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 	}
 }

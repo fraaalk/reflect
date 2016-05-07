@@ -69,5 +69,5 @@ export default class Carousel {
         } else {
             return this.$slides.last();
         }
-    };
+    }
 }

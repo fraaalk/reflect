@@ -1,0 +1,63 @@
+// go styles
+.go {
+	position: relative;
+
+	&__overlay {
+		background: rgba(0, 56, 101, 0.8);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		color: white;
+		padding: 10px 25px 15px;
+	}
+
+	&__visual {
+		display: block;
+	}
+
+	&__body-text {
+		font-size: 20px;
+		font-weight: 200;
+		line-height: 1.2;
+		@include clearfix();
+	}
+
+	&__link {
+		color: white;
+		display: block;
+		background-color: rgba(254, 254, 254, 0.3);
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		transition: background 0.3s ease-out;
+
+		&:hover {
+			background: darken(#007dc7, 10%);
+		}
+
+		&--prev {
+			float: left;
+		}
+
+		&--next {
+			float: right;
+		}
+
+		&-icon {
+			width: 40px;
+			height: 40px;
+
+			&--prev {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__headline {
+		font-size: 20px;
+		letter-spacing: 0.3px;
+		text-transform: uppercase;
+	}
+}

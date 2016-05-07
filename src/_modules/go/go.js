@@ -1,8 +1,8 @@
 'use strict';
 
-export default class Icon {
+export default class Go {
   constructor() {
-    this.name = 'icon';
+    this.name = 'go';
     console.log('%s module', this.name);
   }
 }

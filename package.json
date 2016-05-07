@@ -4,10 +4,8 @@
   "dependencies": {
     "breakpoint-sass": "^2.7.0",
     "jquery": "~2.2.0",
-    "normalize.css": "~3.0.3",
     "reflex-grid": "^1.1.0",
-    "reset.scss": "^1.0.0",
-    "susy": "^2.2.12"
+    "reset.scss": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "~6.3.1",

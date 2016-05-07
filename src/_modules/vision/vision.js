@@ -1,8 +1,8 @@
 'use strict';
 
-export default class Headline {
+export default class Vision {
   constructor() {
-    this.name = 'headline';
+    this.name = 'vision';
     console.log('%s module', this.name);
   }
 }

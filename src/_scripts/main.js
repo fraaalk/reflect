@@ -4,7 +4,6 @@
 'use strict';
 
 import $ from 'jquery';
-import Link from '../_modules/link/link';
 import Popup from '../_modules/popup/popup';
 import Carousel from '../_modules/carousel/carousel';
 import Deck from '../_modules/deck/deck';

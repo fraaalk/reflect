@@ -1,0 +1,28 @@
+// portfolio-teaser styles
+.portfolio-teaser {
+	text-align: center;
+
+	&__headline {
+		font-size: 20px;
+		line-height: 1.5;
+		letter-spacing: 1.7px;
+		color: #333333;
+		margin-top: 5px;
+	}
+
+	&__visual {
+		width: 160px;
+		height: 160px;
+		padding: 10px;
+		border-radius: 50%;
+		border: 2px solid #000000;
+	}
+
+	&__body-text {
+		font-size: 16px;
+		line-height: 1.6;
+		letter-spacing: 1px;
+		color: #000000;
+		margin-bottom: 15px;
+	}
+}

@@ -14,16 +14,11 @@
     }
 }
 
+$bp-xs: 'min-width' 480px;
+$bp-sm: 'min-width' 768px;
+$bp-md: 'min-width' 992px;
+$bp-lg: 'min-width' 1200px;
+$bp-xlg: 'min-width' 1600px;
+
 $small-only: 'max-width' 727px;
 $medium-up: 'min-width' 728px;
-
-$susy: (
-    global-box-sizing: border-box,
-    use-custom: (rem: true),
-    columns: 12,
-    gutters: 1/4,
-    math: fluid,
-    output: float,
-    gutter-position: inside
-);
-
