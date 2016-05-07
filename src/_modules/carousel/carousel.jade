@@ -3,38 +3,23 @@ block config
     - var baseUrl = '../'
 
 
+include ../team-teaser/team-teaser.jade
 div(class="carousel")&attributes({'data-carousel': ''})
     ul
         li(class="carousel__slide")
-            div(class="team-teaser")
-                img(class="team-teaser__image", src="/images/team__tina-chhristiansen.png")
-                p(class="team-teaser__quote") „Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.“
-                p(class="team-teaser__staff") Tina Christiansen
-                    small Business Coach
+            +team-teaser('Tina Christiansen')
         li(class="carousel__slide")
-            div(class="team-teaser")
-                img(class="team-teaser__image", src="/images/team__tina-chhristiansen.png")
-                p(class="team-teaser__quote") „Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.“
-                p(class="team-teaser__staff") Tina Christiansen
-                    small Business Coach
+             +team-teaser('Tina Christiansen')
         li(class="carousel__slide")
-            div(class="team-teaser")
-                img(class="team-teaser__image", src="/images/team__tina-chhristiansen.png")
-                p(class="team-teaser__quote") „Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.“
-                p(class="team-teaser__staff") Tina Christiansen
-                    small Business Coach
+             +team-teaser('Tina Christiansen')
         li(class="carousel__slide")
-            div(class="team-teaser")
-                img(class="team-teaser__image", src="/images/team__tina-chhristiansen.png")
-                p(class="team-teaser__quote") „Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.“
-                p(class="team-teaser__staff") Tina Christiansen
-                    small Business Coach
+             +team-teaser('Tina Christiansen')
         li(class="carousel__slide ")
-            div(class="team-teaser")
-                img(class="team-teaser__image", src="/images/team__tina-chhristiansen.png")
-                p(class="team-teaser__quote") „Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.“
-                p(class="team-teaser__staff") Tina Christiansen
-                    small Business Coach
+             +team-teaser('Tina Christiansen')
     nav(class="carousel__controls carousel__controls--team-teaser")
-        button(class="carousel__button carousel__button--prev") prev
-        button(class="carousel__button carousel__button--next") next
+        button(class="carousel__button carousel__button--prev") 
+            svg(class="carousel__button-icon carousel__button-icon--prev")
+                use(xlink:href="#arrow")
+        button(class="carousel__button carousel__button--next")
+            svg(class="carousel__button-icon carousel__button-icon--next")
+                use(xlink:href="#arrow")

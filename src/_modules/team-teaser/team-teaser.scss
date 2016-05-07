@@ -1,0 +1,48 @@
+// team-teaser styles
+.team-teaser {
+	@include clearfix();
+
+	&__image {
+		float: left;
+		width: 30%;
+		max-width: 174px;
+		max-height: 174px;
+		margin-right: 60px;
+	}
+
+	> div {
+		width: 70%;
+		float: left;
+	}
+
+	blockquote {
+		font-size: 36px;
+		line-height: 1.1;
+		letter-spacing: 0.6px;
+		color: #000000;
+		font-style: italic;
+
+		&:before,
+		&:after {
+			display: inline;
+		}
+
+		&:before {
+			content: '„';
+		}
+
+		&:after {
+			content: '“';
+		}
+
+		+ p {
+			margin-top: 20px;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		letter-spacing: 0.2px;
+		color: #000000;
+	}
+}

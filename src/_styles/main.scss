@@ -26,6 +26,7 @@ $reflex-grid-spacing: 10px;
 @import '../_modules/breadcrumb/breadcrumb';
 @import '../_modules/headline/headline';
 @import '../_modules/deck/deck';
+@import '../_modules/team-teaser/team-teaser';
 
 
 
@@ -145,5 +146,19 @@ a:active {
 	p + h4,
 	p + p {
 		margin-top: 20px;
+	}
+}
+
+.carousel__controls {
+	&.carousel__controls--team-teaser {
+		position: absolute;
+		right: 0;
+		top: -60px;
+		z-index: 400;
+		background: #f4f4f4;
+
+		.carousel__button {
+			background: white;
+		}
 	}
 }
