@@ -1,0 +1,409 @@
+diff --git a/src/_modules/blog-teaser/blog-teaser.jade b/src/_modules/blog-teaser/blog-teaser.jade
+index 79a188b..c86f54d 100644
+--- a/src/_modules/blog-teaser/blog-teaser.jade
++++ b/src/_modules/blog-teaser/blog-teaser.jade
+@@ -7,4 +7,4 @@ mixin blog-teaser(spec)
+         h3(class="blog-teaser__headline") Headline Lorem Ipsum
+         p(class="blog-teaser__body-text") Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.
+         p(class="blog-teaser__body-text") Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. 
+-        a(class="blog-teaser__link",href="#") weiterlesen →
+\ No newline at end of file
++        a(class="blog-teaser__link", href="/blogview/") weiterlesen →
+\ No newline at end of file
+diff --git a/src/_modules/carousel/carousel.jade b/src/_modules/carousel/carousel.jade
+index ac07993..fb5aabb 100644
+--- a/src/_modules/carousel/carousel.jade
++++ b/src/_modules/carousel/carousel.jade
+@@ -5,17 +5,18 @@ block config
+ 
+ include ../team-teaser/team-teaser.jade
+ div(class="carousel")&attributes({'data-carousel': ''})
+-    ul
+-        li(class="carousel__slide")
+-            +team-teaser('Tina Christiansen')
+-        li(class="carousel__slide")
+-             +team-teaser('Tina Christiansen')
+-        li(class="carousel__slide")
+-             +team-teaser('Tina Christiansen')
+-        li(class="carousel__slide")
+-             +team-teaser('Tina Christiansen')
+-        li(class="carousel__slide ")
+-             +team-teaser('Tina Christiansen')
++    div(class="carousel__stage")
++        ul(class="carousel__slide-list")
++            li(class="carousel__slide")
++                +team-teaser('Tina Christiansen')
++            li(class="carousel__slide")
++                 +team-teaser('Tina Christiansen')
++            li(class="carousel__slide")
++                 +team-teaser('Tina Christiansen')
++            li(class="carousel__slide")
++                 +team-teaser('Tina Christiansen')
++            li(class="carousel__slide ")
++                 +team-teaser('Tina Christiansen')
+     nav(class="carousel__controls carousel__controls--team-teaser")
+         button(class="carousel__button carousel__button--prev") 
+             svg(class="carousel__button-icon carousel__button-icon--prev")
+diff --git a/src/_modules/carousel/carousel.js b/src/_modules/carousel/carousel.js
+index 0df4126..7427f2c 100644
+--- a/src/_modules/carousel/carousel.js
++++ b/src/_modules/carousel/carousel.js
+@@ -6,7 +6,7 @@ export default class Carousel {
+     constructor( element ) {
+         this.name = 'carousel';
+         this.$carousel = $( element );
+-        this.$stage = $( 'ul', this.$carousel );
++        this.$list = $( '.carousel__slide-list', this.$carousel );
+         this.$slides = $( '.carousel__slide', this.$carousel );
+         this.$prevNext = $( '.carousel__button', this.$carousel );
+         this.$bNext = $( '.carousel__button--next', this.$carousel );
+@@ -25,11 +25,11 @@ export default class Carousel {
+ 
+         if ( $( event.currentTarget ).hasClass( 'carousel__button--next' ) ) {
+             newSlide = this.next( el );
+-            this.$stage
++            this.$list
+                 .removeClass( 'is-reversing' );
+         } else {
+             newSlide = this.prev( el );
+-            this.$stage
++            this.$list
+                 .addClass( 'is-reversing' );
+         }
+         
+@@ -41,14 +41,14 @@ export default class Carousel {
+             newSlide = this.next( newSlide ).css( 'order', i );
+         }
+         
+-        this.$stage
++        this.$list
+             .removeClass( 'is-set' );
+ 
+         window.setTimeout( $.proxy( this.fixStage, this), 50);
+     }
+ 
+     fixStage() {
+-        this.$stage.addClass( 'is-set' );
++        this.$list.addClass( 'is-set' );
+     }
+ 
+     bindEvents() {
+diff --git a/src/_modules/carousel/carousel.scss b/src/_modules/carousel/carousel.scss
+index 23c6a95..0f96620 100644
+--- a/src/_modules/carousel/carousel.scss
++++ b/src/_modules/carousel/carousel.scss
+@@ -1,8 +1,11 @@
+ // carousel styles
+ .carousel {
+-    overflow: hidden;
+ 
+-    > ul {
++    &__stage {
++        overflow: hidden;
++    }
++
++    &__slide-list {
+         display: flex;
+         left: -100%;
+         list-style: none;
+diff --git a/src/_modules/go/go.jade b/src/_modules/go/go.jade
+index a7569a6..1569ebe 100644
+--- a/src/_modules/go/go.jade
++++ b/src/_modules/go/go.jade
+@@ -1,11 +1,19 @@
+-div(class="go")&attributes({'data-go': ''})
+-    img(class="go__visual",src="http://placehold.it/320x520")
++div(class="go")&attributes({'data-go': '', 'data-go-visual': 'http://wallpoper.com/images/00/34/39/15/circuit-pcb_00343915.jpg'})
+     div(class="go__overlay")
+         h3(class="go__headline") Gesunde Strategie
+         p(class="go__body-text") Ihre Mitbewerber wachsen schneller als Ihr Unternehmen - was tun Sie?
+-        a(class="go__link go__link--prev", href="#")
+-            svg(class="go__link-icon go__link-icon--prev")
+-                use(xlink:href="#arrows")
+-        a(class="go__link go__link--next", href="#")
+-            svg(class="go__link-icon go__link-icon--next")
+-                use(xlink:href="#arrows")
++        nav(class="go__nav")
++            a(class="go__link go__link--prev", rel="prev", href="/question/")
++                svg(class="go__link-icon go__link-icon--prev")
++                    use(xlink:href="#arrows")
++            div(class="go__page-indicator")
++                a(class="is-active", href="#") •
++                a(href="/question/") •
++                a(href="/question/") •
++                a(href="/question/") •
++                a(href="/question/") •
++                a(href="/question/") •
++                a(href="/question/") •
++            a(class="go__link go__link--next", rel="next" href="/question/")
++                svg(class="go__link-icon go__link-icon--next")
++                    use(xlink:href="#arrows")
+diff --git a/src/_modules/go/go.scss b/src/_modules/go/go.scss
+index 0b1b83d..ea5e00b 100644
+--- a/src/_modules/go/go.scss
++++ b/src/_modules/go/go.scss
+@@ -1,6 +1,15 @@
+ // go styles
+ .go {
+ 	position: relative;
++	// might get a future implementation
++	background-image: attr(data-go-visual url);
++	background-size: cover;
++	width: 100%;
++	height: 520px;
++
++	@include breakpoint($bp-xs) {
++		height: 602px;
++	}
+ 
+ 	&__overlay {
+ 		background: rgba(0, 56, 101, 0.8);
+@@ -23,6 +32,12 @@
+ 		@include clearfix();
+ 	}
+ 
++	&__nav {
++		display: flex;
++		align-content: center;
++		justify-content: space-between;
++	}
++
+ 	&__link {
+ 		color: white;
+ 		display: block;
+@@ -38,11 +53,11 @@
+ 		}
+ 
+ 		&--prev {
+-			float: left;
++			align-self: flex-start;
+ 		}
+ 
+ 		&--next {
+-			float: right;
++			align-self: flex-end;
+ 		}
+ 
+ 		&-icon {
+@@ -55,6 +70,15 @@
+ 		}
+ 	}
+ 
++	&__page-indicator {
++		text-align: center;
++
++		> a {
++			color: white;
++			text-decoration: none;
++		}
++	}
++
+ 	&__headline {
+ 		font-size: 20px;
+ 		letter-spacing: 0.3px;
+diff --git a/src/_modules/header/header.jade b/src/_modules/header/header.jade
+index c4e312d..c2236cc 100644
+--- a/src/_modules/header/header.jade
++++ b/src/_modules/header/header.jade
+@@ -13,5 +13,7 @@ header(id='header', class='header')
+             div(class="grid__col-3")
+                 form(class='header__search search') 
+                     input(class="search__input")
+-                    button(type="button", class="search__submit") abschicken
++                    button(type="button", class="search__submit")
++                        svg(class="search__submit-icon")
++                            use(xlink:href="#chat")
+                 button(class='header__searchtoggle') ⚲
+diff --git a/src/_modules/search/search.scss b/src/_modules/search/search.scss
+index 2ec034c..b9481a1 100644
+--- a/src/_modules/search/search.scss
++++ b/src/_modules/search/search.scss
+@@ -30,6 +30,11 @@
+ 		border-bottom-left-radius: 0;
+ 		padding: 12px 17px;
+ 		text-transform: uppercase;
+-		height: 41px;	
++		height: 41px;
++
++		&-icon {
++			width: 15px;
++			height: 15px;
++		}
+ 	}
+ }
+\ No newline at end of file
+diff --git a/src/_modules/section/section.scss b/src/_modules/section/section.scss
+index 8d3d64c..091144e 100644
+--- a/src/_modules/section/section.scss
++++ b/src/_modules/section/section.scss
+@@ -7,7 +7,8 @@
+ 		padding: 0 10px;
+ 		font-weight: 300;
+ 		font-size: 35px;
+-		line-height: 1.1;
++		// line-height: 1.1; why 1.1?
++		line-height: 1;
+ 		letter-spacing: 0.5px;
+ 		color: #007dc7;
+ 		text-transform: uppercase;
+@@ -25,6 +26,15 @@
+ 		@include breakpoint($bp-sm) {
+ 			text-align: left;
+ 		}
++
++		&-link {
++			opacity: 0.6;
++			font-size: 14px;
++			line-height: 1.4;
++			letter-spacing: 0.2px;
++			color: #000000;
++			float: right;
++		}
+ 	}
+ 
+ 	&__wrapper {
+diff --git a/src/_modules/team-teaser/team-teaser.jade b/src/_modules/team-teaser/team-teaser.jade
+index 3211dad..c819af7 100644
+--- a/src/_modules/team-teaser/team-teaser.jade
++++ b/src/_modules/team-teaser/team-teaser.jade
+@@ -3,8 +3,9 @@ mixin team-teaser(spec)
+     - spec.__class = spec.__class || ''
+ 
+     div(class='team-teaser')&attributes(attributes)
+-        img(class="team-teaser__image", src="/images/team__tina-christiansen.png")
+-        div
+-            blockquote Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.
+-            p(class="u__text-strong") Tina Christiansen
+-            p Business Coach
++        a(href="/teamview/")
++            img(class="team-teaser__image", src="/images/team__tina-christiansen.png")
++            div
++                blockquote Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.
++                p(class="u__text-strong") Tina Christiansen
++                p Business Coach
+diff --git a/src/_modules/team-teaser/team-teaser.scss b/src/_modules/team-teaser/team-teaser.scss
+index c789857..df56b24 100644
+--- a/src/_modules/team-teaser/team-teaser.scss
++++ b/src/_modules/team-teaser/team-teaser.scss
+@@ -1,19 +1,29 @@
+ // team-teaser styles
+ .team-teaser {
+ 	@include clearfix();
++	text-align: center;
++
++	@include breakpoint($bp-sm) {
++		text-align: left;
++
++		> div {
++			width: 70%;
++			float: left;
++		}
++	}
+ 
+ 	&__image {
+-		float: left;
+-		width: 30%;
++		@include breakpoint($bp-sm) {
++			float: left;
++			width: 30%;
++			margin-right: 60px;
++		} 
++		
+ 		max-width: 174px;
+ 		max-height: 174px;
+-		margin-right: 60px;
+ 	}
+ 
+-	> div {
+-		width: 70%;
+-		float: left;
+-	}
++	
+ 
+ 	blockquote {
+ 		font-size: 36px;
+diff --git a/src/_scripts/main.js b/src/_scripts/main.js
+index 4cf4ca8..6861db9 100644
+--- a/src/_scripts/main.js
++++ b/src/_scripts/main.js
+@@ -9,8 +9,6 @@ import Carousel from '../_modules/carousel/carousel';
+ import Deck from '../_modules/deck/deck';
+ 
+ $(() => {
+-    new Link(); // Activate Link modules logic
+-    
+ 
+     $('[data-popup]').each( function() {
+         new Popup( this );
+diff --git a/src/_styles/main.scss b/src/_styles/main.scss
+index 153e5ed..8af9664 100644
+--- a/src/_styles/main.scss
++++ b/src/_styles/main.scss
+@@ -28,7 +28,6 @@ $reflex-grid-spacing: 10px;
+ @import '../_modules/carousel/carousel';
+ @import '../_modules/breadcrumb/breadcrumb';
+ @import '../_modules/deck/deck';
+-@import '../_modules/portfolio/portfolio';
+ 
+ // teasers
+ @import '../_modules/blog-teaser/blog-teaser';
+@@ -43,7 +42,6 @@ $reflex-grid-spacing: 10px;
+ 
+ 
+ 
+-
+ // Box sizing partial styles:
+ // Apply a natural box layout model to all elements
+ body {
+@@ -55,6 +53,10 @@ body {
+ 	line-height: 1.6;
+ }
+ 
++a {
++	text-decoration: none;
++}
++
+ h1,h2,h3,h4,h5 {
+ 	font-weight: 400;
+ 	font-family: 'Lato', sans-serif;
+@@ -85,10 +87,16 @@ svg {
+ }
+ 
+ .carousel__controls {
++	display: none;
++
++	@include breakpoint($bp-sm) {
++		display: block;
++	}
++
+ 	&.carousel__controls--team-teaser {
+ 		position: absolute;
+ 		right: 0;
+-		top: -60px;
++		top: 0;
+ 		z-index: 400;
+ 		background: #f4f4f4;
+ 	}
+diff --git a/src/homepage/index.jade b/src/homepage/index.jade
+index 959bb66..ceee884 100644
+--- a/src/homepage/index.jade
++++ b/src/homepage/index.jade
+@@ -40,9 +40,7 @@ block content
+                 svg(class="section__headline-icon")
+                     use(xlink:href="#group-of-people-outline")
+                 | Team
+-            div(class="grid")
+-                div(class="grid__col-12 grid__cell")
+-                    include ../_modules/carousel/carousel.jade
++            include ../_modules/carousel/carousel.jade
+     include ../_modules/blog-teaser/blog-teaser.jade
+     section(class="section section--white")
+         div(class="section__wrapper")
+@@ -50,6 +48,7 @@ block content
+                 svg(class="section__headline-icon")
+                     use(xlink:href="#chat")
+                 | Blog
++                a(class="section__headline-link", href="/bloglist/") Mehr Blog-Artikel →
+             div(class="grid")
+                 div(class="grid__col-12 grid__col-xs-6")
+                     +blog-teaser()

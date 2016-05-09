@@ -1,0 +1,40 @@
+extends ../_layouts/base
+
+
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    article(class="team-view")
+        header(class="team-view__header")
+            img(class="team-view__header-image", src="/images/team__tina-christiansen.png")
+            blockquote Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.
+            p(class="u__text-strong") Tina Christiansen
+            p Business Coach
+    include ../_modules/breadcrumb/breadcrumb.jade
+    section(class="section section--grey")
+        a(class="back") ← zurück
+        h1(class="team-view__headline") Tina Christiansen
+        h2(class="team-view__sub-headline") Abschlüsse, Zertifikate, Ausbildungen
+        ul
+            li Dipl.-Erziehungswissenschaftlerin
+            li Zusatzstudium BWL für Geisteswissenschaflter (Universität Bielefeld)
+            li Basic Management Programm (Management Centrum St. Gallen)
+            li Ausbildung als Systemischer Berater/Coach (Systemisches Institut Karlsrughe, 3-jährig)
+            li 7 Jahre Führungserfahrung im Bereich HR (Pharma)
+            li Seit 2008 als selbstständige Beraterin tätig
+        h2(class="team-view__sub-headline") Arbeitsschwerpunkte
+        ul
+            li Business Coaching
+            li Change Management
+            li Führungskräfteentwicklung
+            li Assessment- und Developentcenter
+            li HR Prozessanalyse und -gestaltung
+            li Strategie- und Teamentwicklung
+        ul(class="team-view__contact-po")
+            li xing
+            li mail
+
+
