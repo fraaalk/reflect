@@ -9,8 +9,6 @@ import Carousel from '../_modules/carousel/carousel';
 import Deck from '../_modules/deck/deck';
 
 $(() => {
-    new Link(); // Activate Link modules logic
-    
 
     $('[data-popup]').each( function() {
         new Popup( this );

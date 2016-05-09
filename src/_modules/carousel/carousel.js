@@ -6,7 +6,7 @@ export default class Carousel {
     constructor( element ) {
         this.name = 'carousel';
         this.$carousel = $( element );
-        this.$stage = $( 'ul', this.$carousel );
+        this.$list = $( '.carousel__slide-list', this.$carousel );
         this.$slides = $( '.carousel__slide', this.$carousel );
         this.$prevNext = $( '.carousel__button', this.$carousel );
         this.$bNext = $( '.carousel__button--next', this.$carousel );
@@ -25,11 +25,11 @@ export default class Carousel {
 
         if ( $( event.currentTarget ).hasClass( 'carousel__button--next' ) ) {
             newSlide = this.next( el );
-            this.$stage
+            this.$list
                 .removeClass( 'is-reversing' );
         } else {
             newSlide = this.prev( el );
-            this.$stage
+            this.$list
                 .addClass( 'is-reversing' );
         }
         
@@ -41,14 +41,14 @@ export default class Carousel {
             newSlide = this.next( newSlide ).css( 'order', i );
         }
         
-        this.$stage
+        this.$list
             .removeClass( 'is-set' );
 
         window.setTimeout( $.proxy( this.fixStage, this), 50);
     }
 
     fixStage() {
-        this.$stage.addClass( 'is-set' );
+        this.$list.addClass( 'is-set' );
     }
 
     bindEvents() {

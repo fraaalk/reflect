@@ -30,6 +30,11 @@
 		border-bottom-left-radius: 0;
 		padding: 12px 17px;
 		text-transform: uppercase;
-		height: 41px;	
+		height: 41px;
+
+		&-icon {
+			width: 15px;
+			height: 15px;
+		}
 	}
 }

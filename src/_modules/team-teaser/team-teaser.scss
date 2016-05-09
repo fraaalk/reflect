@@ -1,19 +1,29 @@
 // team-teaser styles
 .team-teaser {
 	@include clearfix();
+	text-align: center;
+
+	@include breakpoint($bp-sm) {
+		text-align: left;
+
+		> div {
+			width: 70%;
+			float: left;
+		}
+	}
 
 	&__image {
-		float: left;
-		width: 30%;
+		@include breakpoint($bp-sm) {
+			float: left;
+			width: 30%;
+			margin-right: 60px;
+		} 
+		
 		max-width: 174px;
 		max-height: 174px;
-		margin-right: 60px;
 	}
 
-	> div {
-		width: 70%;
-		float: left;
-	}
+	
 
 	blockquote {
 		font-size: 36px;

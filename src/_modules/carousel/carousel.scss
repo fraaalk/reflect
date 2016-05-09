@@ -1,8 +1,11 @@
 // carousel styles
 .carousel {
-    overflow: hidden;
 
-    > ul {
+    &__stage {
+        overflow: hidden;
+    }
+
+    &__slide-list {
         display: flex;
         left: -100%;
         list-style: none;

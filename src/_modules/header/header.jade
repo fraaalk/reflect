@@ -13,5 +13,7 @@ header(id='header', class='header')
             div(class="grid__col-3")
                 form(class='header__search search') 
                     input(class="search__input")
-                    button(type="button", class="search__submit") abschicken
+                    button(type="button", class="search__submit")
+                        svg(class="search__submit-icon")
+                            use(xlink:href="#chat")
                 button(class='header__searchtoggle') ⚲

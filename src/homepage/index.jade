@@ -40,9 +40,7 @@ block content
                 svg(class="section__headline-icon")
                     use(xlink:href="#group-of-people-outline")
                 | Team
-            div(class="grid")
-                div(class="grid__col-12 grid__cell")
-                    include ../_modules/carousel/carousel.jade
+            include ../_modules/carousel/carousel.jade
     include ../_modules/blog-teaser/blog-teaser.jade
     section(class="section section--white")
         div(class="section__wrapper")
@@ -50,6 +48,7 @@ block content
                 svg(class="section__headline-icon")
                     use(xlink:href="#chat")
                 | Blog
+                a(class="section__headline-link", href="/bloglist/") Mehr Blog-Artikel →
             div(class="grid")
                 div(class="grid__col-12 grid__col-xs-6")
                     +blog-teaser()
