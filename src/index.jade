@@ -3,56 +3,43 @@ extends _layouts/base
 include _modules/carousel/carousel.jade
 include _modules/team-teaser/team-teaser.jade
 include _modules/portfolio-teaser/portfolio-teaser.jade
-include _modules/blog-teaser/blog-teaser.jade
+include _modules/blog/blog.jade
+include _modules/section/section.jade
 
 block config
     //- Correct base url pathing for this page
     - var baseUrl = '../'
     - var portfolio = site.data.portfolio
     - var team = site.data.team
+    - var blog = site.data.blog
 
 block content
     include _modules/go/go.jade
     section(class="section section--grey")
         div(class="section__wrapper")
-            div(class="section__badge")
-                svg(class="section__badge-icon")
-                    use(xlink:href="#yelp")
-                | Unser Team wartet auf Sie
-            h2(class="section__headline")
-                svg(class="section__headline-icon")
-                    use(xlink:href="#television")
-                | Profil
+            +section-badge({icon: "#yelp", title: "Unser Team wartet auf Sie"})
+            +section-headline({icon: "#television", title: "Profil"})
             include _modules/vision/vision.jade
     section(class="section section--white")
         div(class="section__wrapper")
-            h2(class="section__headline")
-                svg(class="section__headline-icon")
-                    use(xlink:href="#rocket")
-                | Portfolio
+            +section-headline({icon: "#rocket", title: "Portfolio"})
             div(class="grid")
                 each teaser in portfolio
                     div(class="grid__col-12 grid__col-xs-6 grid__col-sm-4")
                         +portfolio-teaser(teaser)
     section(class="section section--grey")
         div(class="section__wrapper")
-            h2(class="section__headline")
-                svg(class="section__headline-icon")
-                    use(xlink:href="#group")
-                | Team
+            +section-headline({icon: "#group", title: "Team"})
             +carousel()
                 each teaser in team
                     +carousel-slide()
                         +team-teaser(teaser)
     section(class="section section--white")
         div(class="section__wrapper")
-            h2(class="section__headline")
-                svg(class="section__headline-icon")
-                    use(xlink:href="#comment-o")
-                | Blog
-                a(class="section__headline-link", href="/bloglist/") Mehr Blog-Artikel →
+            +section-headline({icon: "#comment-o", title: "Blog"})
+                a(class="section__headline-link", href="/blog/") Mehr Blog-Artikel →
             div(class="grid")
                 div(class="grid__col-12 grid__col-xs-6")
-                    +blog-teaser()
+                    +blog-teaser-default(blog[0])
                 div(class="grid__col-12 grid__col-xs-6")
-                    +blog-teaser()
+                    +blog-teaser-default(blog[1])

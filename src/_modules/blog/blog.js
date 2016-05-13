@@ -1,8 +1,8 @@
 'use strict';
 
-export default class BlogTeaser {
+export default class Blog {
   constructor() {
-    this.name = 'blog-teaser';
+    this.name = 'blog';
     console.log('%s module', this.name);
   }
 }

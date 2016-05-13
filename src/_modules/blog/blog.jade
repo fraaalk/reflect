@@ -1,0 +1,31 @@
+mixin blog-teaser-default(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
+
+    article(class="blog-teaser blog-teaser--default")&attributes(attributes)
+        header
+            time(class="blog-teaser__pub-date")= spec.pubDate
+        h3(class="blog-teaser__headline")= spec.title
+        each paragraph in spec.body
+            p(class="blog-teaser__body-text")= paragraph
+        footer
+            a(class="blog-teaser__link", href=spec.link) weiterlesen →
+
+mixin blog-teaser-extended(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
+
+    article(class="blog-teaser blog-teaser--extended")&attributes(attributes)
+        header
+            time(class="blog-teaser__pub-date")= spec.pubDate
+            div(class="blog-teaser__author")= spec.author
+        h3(class="blog-teaser__headline")= spec.title
+        if spec.image
+            img(src=spec.image)
+        each paragraph in spec.body
+            p(class="blog-teaser__body-text")= paragraph
+        footer
+            div(class="blog-teaser__tags")
+                each tag in spec.tags
+                    a(href="#")= tag
+            a(class="blog-teaser__link", href=spec.link) weiterlesen →

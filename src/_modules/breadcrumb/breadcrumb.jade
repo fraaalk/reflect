@@ -2,17 +2,14 @@ block config
     //- Correct base url pathing for this page
     - var baseUrl = '../'
 
-nav(class="breadcrumb")
-    ol(itemscope="", itemtype="http://schema.org/BreadcrumbList")
-        li(itemprop="itemListElement", itemscope="", itemtype="http://schema.org/ListItem")
-            a(title="#", itemprop="item", href="#")
-                span(itemprop="name") Home
-                meta(itemprop="position", content="1")
-        li(itemprop="itemListElement", itemscope="", itemtype="http://schema.org/ListItem")
-            a(title="#", itemprop="item", href="#")
-                span(itemprop="name") Instrumente
-                meta(itemprop="position", content="2")
-        li(itemprop="itemListElement", itemscope="", itemtype="http://schema.org/ListItem")
-            a(title="#", itemprop="item", href="#")
-                span(itemprop="name") Frage 1
-                meta(itemprop="position", content="3")
+
+mixin breadcrumb(spec)
+    - spec = spec || ''
+
+    nav(class="breadcrumb")
+        ol(itemscope="", itemtype="http://schema.org/BreadcrumbList")
+            each crumb, index in spec
+                li(itemprop="itemListElement", itemscope="", itemtype="http://schema.org/ListItem")
+                    a(title="#", itemprop="item", href=crumb[1])
+                        span(itemprop="name")= crumb[0]
+                        meta(itemprop="position", content=index)

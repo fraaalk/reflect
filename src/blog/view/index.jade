@@ -1,23 +1,22 @@
-extends ../_layouts/base
+extends ../../_layouts/base
 
 block config
   //- Correct base url pathing for this page
-  - var baseUrl = '../'
-  - var blogs = site.data.blog
+  - var baseUrl = '../../'
+  - var blog = site.data.blog[0]
 
-include ../_modules/section/section.jade
-include ../_modules/breadcrumb/breadcrumb.jade
-include ../_modules/blog/blog.jade
+include ../../_modules/section/section.jade
+include ../../_modules/breadcrumb/breadcrumb.jade
+include ../../_modules/blog/blog.jade
 
 block content
-    +breadcrumb([["Home", "/"],["Blog Übersicht", "/blog"]])
+    +breadcrumb([["Home", "/"],["Blog", "/blog"],[blog.shorttitle, "/blog/view"]])
     section(class="section section--grey")
         div(class="section__wrapper")
             +section-headline({icon: "#comment-o", title: "Blog"})
             div(class="grid")
                 div(class="grid__col-8")
-                    each blog in blogs
-                        +blog-teaser-extended(blog)
+                    +blog-teaser-extended(blog)
                 div(class="grid__col-4")
                     h3 Kategorie
                     h3 Tags

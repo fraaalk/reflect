@@ -1,6 +1,18 @@
-mixin section(spec)
-  - spec = spec || {}
-  - spec.__class = spec.__class || ''
+mixin section-headline(spec)
+    - spec = spec || ''
 
-  div(class=spec.__class)&attributes(attributes)
-    p This is an example paragraph for the section module
+    h2(class="section__headline")
+        svg(class="section__headline-icon")
+            use(xlink:href=spec.icon)
+        = spec.title
+        block
+
+
+mixin section-badge(spec)
+    - spec = spec || ''
+
+    div(class="section__badge")
+        svg(class="section__badge-icon")
+            use(xlink:href=spec.icon)
+        = spec.title
+

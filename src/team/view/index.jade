@@ -1,10 +1,10 @@
-extends ../_layouts/base
-
-
+extends ../../_layouts/base
 
 block config
   //- Correct base url pathing for this page
-  - var baseUrl = '../'
+  - var baseUrl = '../../'
+
+include ../../_modules/breadcrumb/breadcrumb.jade
 
 block content
     article(class="team-view")
@@ -13,7 +13,7 @@ block content
             blockquote Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.
             p(class="u__text-strong") Tina Christiansen
             p Business Coach
-    include ../_modules/breadcrumb/breadcrumb.jade
+    +breadcrumb([["Home", "/"],["Blog Übersicht", "/blog"]])
     section(class="section section--grey")
         a(class="back") ← zurück
         h1(class="team-view__headline") Tina Christiansen
@@ -36,5 +36,3 @@ block content
         ul(class="team-view__contact-po")
             li xing
             li mail
-
-
