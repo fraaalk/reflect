@@ -4,8 +4,8 @@ mixin team-teaser(spec)
 
     div(class='team-teaser')&attributes(attributes)
         a(href="/teamview/")
-            img(class="team-teaser__image", src="/images/team__tina-christiansen.png")
+            img(class="team-teaser__image", src=spec.image)
             div
-                blockquote Hier bitte noch von jedem Mitarbeiter ein persönliches Zitat hinterlegen.
-                p(class="u__text-strong") Tina Christiansen
-                p Business Coach
+                blockquote= spec.quote
+                p(class="u__text-strong")= spec.name
+                p= spec.title

@@ -1,12 +1,58 @@
 extends _layouts/base
 
+include _modules/carousel/carousel.jade
+include _modules/team-teaser/team-teaser.jade
+include _modules/portfolio-teaser/portfolio-teaser.jade
+include _modules/blog-teaser/blog-teaser.jade
+
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = '../'
+    - var portfolio = site.data.portfolio
+    - var team = site.data.team
+
 block content
-  .container
-    .yeogurt-info
-      h1 Welcome to Yeogurt!
-      p.
-        Take a look at the
-        and start mixing up something awesome.
-      p
-        img.logo(src="images/yeogurt-swirl.png", width="75px")
-  code.version v1.5.2
+    include _modules/go/go.jade
+    section(class="section section--grey")
+        div(class="section__wrapper")
+            div(class="section__badge")
+                svg(class="section__badge-icon")
+                    use(xlink:href="#yelp")
+                | Unser Team wartet auf Sie
+            h2(class="section__headline")
+                svg(class="section__headline-icon")
+                    use(xlink:href="#television")
+                | Profil
+            include _modules/vision/vision.jade
+    section(class="section section--white")
+        div(class="section__wrapper")
+            h2(class="section__headline")
+                svg(class="section__headline-icon")
+                    use(xlink:href="#rocket")
+                | Portfolio
+            div(class="grid")
+                each teaser in portfolio
+                    div(class="grid__col-12 grid__col-xs-6 grid__col-sm-4")
+                        +portfolio-teaser(teaser)
+    section(class="section section--grey")
+        div(class="section__wrapper")
+            h2(class="section__headline")
+                svg(class="section__headline-icon")
+                    use(xlink:href="#group")
+                | Team
+            +carousel()
+                each teaser in team
+                    +carousel-slide()
+                        +team-teaser(teaser)
+    section(class="section section--white")
+        div(class="section__wrapper")
+            h2(class="section__headline")
+                svg(class="section__headline-icon")
+                    use(xlink:href="#comment-o")
+                | Blog
+                a(class="section__headline-link", href="/bloglist/") Mehr Blog-Artikel →
+            div(class="grid")
+                div(class="grid__col-12 grid__col-xs-6")
+                    +blog-teaser()
+                div(class="grid__col-12 grid__col-xs-6")
+                    +blog-teaser()

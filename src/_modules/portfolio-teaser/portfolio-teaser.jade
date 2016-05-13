@@ -1,10 +1,10 @@
 mixin portfolio-teaser(spec)
     - spec = spec || {}
     - spec.__class = spec.__class || ''
-    - spec.__icon = spec.__icon || '#user-md'
+    - spec.__icon = spec.__icon || ''
 
     div(class='portfolio-teaser')&attributes(attributes)
         svg(class="portfolio-teaser__visual")
-            use(xlink:href="#user-md")
-        h3(class="portfolio-teaser__headline") Personalentwicklung
-        p(class="portfolio-teaser__body-text") Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. 
+            use(xlink:href=spec.icon)
+        h3(class="portfolio-teaser__headline")= spec.title
+        p(class="portfolio-teaser__body-text")= spec.text

@@ -1,0 +1,84 @@
+{
+	"profil": {
+		"title": "Profil",
+		"href": "#",
+		"items": [{
+			"title": "Philosophie",
+			"href": "#"
+		}, {
+			"title": "Vision, Mission, Werte",
+			"href": "#"
+		}, {
+			"title": "Leitsätze",
+			"href": "#"
+		}, {
+			"title": "Arbeitsweise",
+			"href": "#"
+		}]
+	},
+	"portfolio": {
+		"title": "Portfolio",
+		"href": "#",
+		"items": [{
+			"title": "Personalentwicklung",
+			"href": "#"
+		}, {
+			"title": "Veränderungsmanagement",
+			"href": "#"
+		}, {
+			"title": "Coaching",
+			"href": "#"
+		}, {
+			"title": "Kompetenzdiagnostik",
+			"href": "#"
+		}, {
+			"title": "Befragungen",
+			"href": "#"
+		}, {
+			"title": "Gesunde Organisation",
+			"href": "#"
+		}]
+	},
+	"instrumente": {
+		"title": "Instrumente",
+		"href": "#",
+		"items": [{
+			"title": "Webinare",
+			"href": "#"
+		}, {
+			"title": "Registrierung",
+			"href": "#"
+		}]
+	},
+	"kontakt": {
+		"title": "Kontakt",
+		"href": "#",
+		"items": [{
+			"title": "Unternehmen",
+			"href": "#"
+		}, {
+			"title": "Team",
+			"href": "#"
+		}]
+	},
+	"kunden": {
+		"title": "Kunden",
+		"href": "#",
+		"items": [{
+			"title": "News-Blog",
+			"href": "#"
+		}, {
+			"title": "Newsletteranmeldung",
+			"href": "#"
+		}, {
+			"title": "Impressum",
+			"href": "#"
+		}, {
+			"title": "AGB",
+			"href": "#"
+		}, {
+			"title": "Datenschutz",
+			"href": "#"
+		}]
+	}
+}

@@ -2,25 +2,25 @@ block config
     //- Correct base url pathing for this page
     - var baseUrl = '../'
 
+mixin carousel(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
 
-include ../team-teaser/team-teaser.jade
-div(class="carousel")&attributes({'data-carousel': ''})
-    div(class="carousel__stage")
-        ul(class="carousel__slide-list")
-            li(class="carousel__slide")
-                +team-teaser('Tina Christiansen')
-            li(class="carousel__slide")
-                 +team-teaser('Tina Christiansen')
-            li(class="carousel__slide")
-                 +team-teaser('Tina Christiansen')
-            li(class="carousel__slide")
-                 +team-teaser('Tina Christiansen')
-            li(class="carousel__slide ")
-                 +team-teaser('Tina Christiansen')
-    nav(class="carousel__controls carousel__controls--team-teaser")
-        button(class="carousel__button carousel__button--prev") 
-            svg(class="carousel__button-icon carousel__button-icon--prev")
-                use(xlink:href="#angle-right")
-        button(class="carousel__button carousel__button--next")
-            svg(class="carousel__button-icon carousel__button-icon--next")
-                use(xlink:href="#angle-right")
+    div(class="carousel")&attributes({'data-carousel': ''})
+        div(class="carousel__stage")
+            ul(class="carousel__slide-list")
+                block
+        nav(class="carousel__controls carousel__controls--team-teaser")
+            button(class="carousel__button carousel__button--prev") 
+                svg(class="carousel__button-icon carousel__button-icon--prev")
+                    use(xlink:href="#angle-right")
+            button(class="carousel__button carousel__button--next")
+                svg(class="carousel__button-icon carousel__button-icon--next")
+                    use(xlink:href="#angle-right")
+
+mixin carousel-slide(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
+
+    li(class="carousel__slide")
+        block

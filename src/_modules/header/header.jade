@@ -3,14 +3,14 @@ block config
     - var baseUrl = './'
 
 header(id='header', class='header')
-    div(class="header__wrapper")
-        div(class="grid")
-            div(class="grid__col-2")
-                img(class='header__logo', src='/images/logo--header.png')
-            div(class="grid__col-7")
+    .header__wrapper
+        .grid
+            .grid__col-2
+                a(href="/", title="Zur Startseite"): img(class='header__logo', src='/images/logo--header.png')
+            .grid__col-7
                 button(class='header__menutoggle') ☰
                 include ../navigation/navigation.jade
-            div(class="grid__col-3")
+            .grid__col-3
                 form(class='header__search search') 
                     input(class="search__input")
                     button(type="button", class="search__submit")

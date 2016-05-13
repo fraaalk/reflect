@@ -19,38 +19,43 @@
 		height: 56px;
 	}
 
+	&__headline {
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 1.8px;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
 
 	&__nav {
-		h5 {
-			text-transform: uppercase;
-			opacity: 0.8;
-			font-size: 14px;
-			letter-spacing: 1.8px;
-			color: #ffffff;
+
+		@include breakpoint($bp-sm) {
+			> div {
+				float: left;
+				width: 50%;
+			}
+		}
+
+		@include breakpoint($bp-md) {
+			> div {
+				float: left;
+				width: 50%;
+
+				> div {
+					float: left;
+					width: 50%;
+				}
+			}
 		}
 
 		ul {
-			display: none;
-			opacity: 0.8;
-			font-family: 'Lato', sans-serif;
-			font-weight: 300;
 			font-size: 13px;
 			line-height: 1.9;
 			letter-spacing: 1.6px;
-			color: #cccccc;
-		}
-
-		ul, 
-		form {
-			display: none;
-
-			&.is-active {
-				display: block;
-			}
-
-			@include breakpoint($medium-up) {
-				display: block;
-			}
+			color: rgba(204, 204, 204, 0.8);
+			word-break: break-word;
+			hyphens: auto;
+			margin-bottom: 15px;
 		}
 
 		a {
@@ -63,6 +68,19 @@
 		}
 	}
 
+	ul, 
+	form {
+		display: none;
+
+		&.is-active {
+			display: block;
+		}
+
+		@include breakpoint($bp-sm) {
+			display: block;
+		}
+	}
+
 	&__address {
 		opacity: 0.8;
 		font-family: 'Lato', sans-serif;
@@ -72,6 +90,10 @@
 		letter-spacing: 1.6px;
 		color: #cccccc;
 		white-space: pre-line;
+
+		@include breakpoint($bp-md) {
+			text-align: center;
+		}
 	}
 
 	&__newsletter,

@@ -66,9 +66,17 @@ svg {
 	fill: currentColor;
 }
 
+input {
+	font-family: inherit;
+}
+
 /* text helper classes */
 .u__text-center {
 	text-align: center;
+}
+
+.u__text-right {
+	text-align: right;
 }
 
 .u__text-upper {

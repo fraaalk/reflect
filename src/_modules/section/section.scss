@@ -7,19 +7,18 @@
 		padding: 0 10px;
 		font-weight: 300;
 		font-size: 35px;
-		// line-height: 1.1; why 1.1?
 		line-height: 1;
 		letter-spacing: 0.5px;
-		color: #007dc7;
+		color: rgba(0, 125, 199, 1);
 		text-transform: uppercase;
 		margin-bottom: 10px;
 		text-align: center;
 
 		&-icon {
-			height: 38px;
-			width: 38px;
+			height: 35px;
+			width: 35px;
 			display: inline-block;
-			vertical-align: sub;
+			vertical-align: middle;
 			margin-right: 12px;
 		}
 
@@ -28,11 +27,10 @@
 		}
 
 		&-link {
-			opacity: 0.6;
 			font-size: 14px;
 			line-height: 1.4;
 			letter-spacing: 0.2px;
-			color: #000000;
+			color: rgba(0, 0, 0, 0.6);
 			float: right;
 		}
 	}
@@ -48,7 +46,7 @@
 	}
 
 	&--grey {
-		background: #f4f4f4;
+		background: rgba(244, 244, 244, 1);
 	}
 
 	&--white {
@@ -56,11 +54,11 @@
 	}
 
 	+ section {
-		border-top: 1px solid #007dc7;
+		border-top: 1px solid rgba(0, 125, 199, 1);
 	}
 
 	&__badge {
-		background: #007dc7;
+		background: rgba(0, 125, 199, 1);
 		color: white;
 		text-transform: uppercase;
 		font-family: Lato;
@@ -68,9 +66,17 @@
 		font-size: 18px;
 		line-height: 2.2;
 		letter-spacing: 0.3px;
-		color: #ffffff;
-		padding: 0 20px;
+		color: rgba(255, 255, 255, 1);
+		padding: 0 15px 0 10px;
 		margin-bottom: 30px;
+
+		&-icon {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
 
 		@include breakpoint($bp-sm) {
 			position: absolute;

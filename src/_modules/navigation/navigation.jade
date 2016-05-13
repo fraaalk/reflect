@@ -1,23 +1,14 @@
 block config
     //- Correct base url pathing for this page
     - var baseUrl = '../'
+    - var menu = site.data.menu
 
 nav(id='navigation', class='header__nav nav')
     ul(class='nav__list nav__list--l1')
-        li(class='nav__listitem nav__listitem--l1') 
-            a(href="#", title="#") Profil
-            ul(class='nav__list nav__list--l2')
-                li(class='nav__listitem nav__listitem--l2')  
-                    a(href='#', title='foo') subnav1
-                li(class='nav__listitem  nav__listitem--l2')
-                    a(href='#', title='foo', class='is-active') subnav2
-        li(class='nav__listitem nav__listitem--l1') 
-            a(href="#", title="#") Portfolio
-        li(class='nav__listitem nav__listitem--l1') 
-            a(href="#", title="#") Instrumente
-        li(class='nav__listitem nav__listitem--l1') 
-            a(href="#", title="#") Kunden
-        li(class='nav__listitem nav__listitem--l1') 
-            a(href="#", title="#") Kontakt
-        li(class='nav__listitem nav__listitem--l1') 
-            a(href="#", title="#") Blog
+        each item in site.data.menu
+            li(class='nav__listitem nav__listitem--l1')
+                span= item.title
+                ul(class="nav__list nav__list--l2")
+                    each subitem in item.items
+                        li(class='nav__listitem nav__listitem--l2')
+                            a(href=subitem.href, title=subitem.title)= subitem.title
