@@ -1,0 +1,28 @@
+// pagination styles
+.pagination {
+	text-align: center;
+
+	&__link {
+		display: inline-block;
+		text-align: center;
+		min-width: 28px;
+		height: 28px;
+		line-height: 1;
+		font-size: 14px;
+		letter-spacing: 1px;
+		color: #4a4a4a;
+		padding: 7px 0;
+		margin: 0px 4px;
+
+		&.is-active,
+		&:not(.pagination__link--prev):not(.pagination__link--next):hover {
+			color: white;
+			background: #007dc7;
+		}
+
+		&--prev,
+		&--next {
+			text-transform: uppercase;
+		}
+	}
+}

@@ -3,12 +3,13 @@ mixin blog-teaser-default(spec)
     - spec.__class = spec.__class || ''
 
     article(class="blog-teaser blog-teaser--default")&attributes(attributes)
-        header
+        header(class="blog-teaser__header")
             time(class="blog-teaser__pub-date")= spec.pubDate
-        h3(class="blog-teaser__headline")= spec.title
-        each paragraph in spec.body
-            p(class="blog-teaser__body-text")= paragraph
-        footer
+        div(class="blog-teaser__body")
+            h3= spec.title
+            each paragraph in spec.body
+                p= paragraph
+        footer(class="blog-teaser__footer")
             a(class="blog-teaser__link", href=spec.link) weiterlesen →
 
 mixin blog-teaser-extended(spec)
@@ -16,16 +17,43 @@ mixin blog-teaser-extended(spec)
     - spec.__class = spec.__class || ''
 
     article(class="blog-teaser blog-teaser--extended")&attributes(attributes)
-        header
+        header(class="blog-teaser__header")
             time(class="blog-teaser__pub-date")= spec.pubDate
             div(class="blog-teaser__author")= spec.author
-        h3(class="blog-teaser__headline")= spec.title
-        if spec.image
-            img(src=spec.image)
-        each paragraph in spec.body
-            p(class="blog-teaser__body-text")= paragraph
-        footer
+        div(class="blog-teaser__body")
+            h3(class="blog-teaser__headline")= spec.title
+            if spec.image
+                img(class="blog-teaser__image", src=spec.image)
+            each paragraph in spec.body
+                p= paragraph
+        footer(class="blog-teaser__footer")
             div(class="blog-teaser__tags")
                 each tag in spec.tags
                     a(href="#")= tag
-            a(class="blog-teaser__link", href=spec.link) weiterlesen →
+            a(class="blog-teaser__link", href=spec.link) weiterlesen
+                svg(class="blog-teaser__link-icon")
+                    use(xlink:href="#long-arrow-right")
+
+mixin blog-tag-listing(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
+
+    div(class="blog-sidebar__tags")&attributes(attributes)
+        each blog in spec
+            each tag in blog.tags
+                a= tag
+
+mixin blog-category-listing(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
+
+    div(class="blog-sidebar__categories")&attributes(attributes)
+        each blog in spec
+            each tag in blog.tags
+                a= tag
+
+mixin blog-search(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
+
+    div(class="blog-sidebar__search")&attributes(attributes)

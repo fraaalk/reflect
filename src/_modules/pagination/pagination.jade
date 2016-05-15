@@ -1,0 +1,13 @@
+mixin pagination(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  nav(class="pagination")&attributes(attributes)
+    a(class="pagination__link pagination__link--prev is-disabled", rel="prev", href="#") « zurück
+    a(class="pagination__link is-active", rel="prev", href="#") 1
+    a(class="pagination__link", rel="prev", href="#") 2
+    a(class="pagination__link", rel="prev", href="#") 3
+    | ...
+    a(class="pagination__link", rel="prev", href="#") 12
+    a(class="pagination__link", rel="prev", href="#") 13
+    a(class="pagination__link pagination__link--next", rel="next", href="#") weiter »
