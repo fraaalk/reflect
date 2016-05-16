@@ -20,9 +20,11 @@ block content
                     each blog in blogs
                         +blog-teaser-extended(blog)
                 div(class="blog-sidebar grid__col-4")
-                    h3(class="blog-sidebar__headline") Kategorie
-                    +blog-category-listing(blogs)
-                    h3(class="blog-sidebar__headline") Tags
-                    +blog-tag-listing(blogs)
+                    div(class="blog-sidebar__block")
+                        h3(class="blog-sidebar__headline") Kategorie
+                        +blog-category-listing(blogs)
+                    div(class="blog-sidebar__block")
+                        h3(class="blog-sidebar__headline") Tags
+                        +blog-tag-listing(blogs)
                 div(class="grid__col-8")
                     +pagination()

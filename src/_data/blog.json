@@ -1,6 +1,7 @@
 [{
-	"pubDate": "11. NOV 2015",
+	"pubDate": "1. Dezember 2015 ",
 	"author": "Max Mustermann",
+	"category": "Kategorie 1",
 	"image": "http://baconmockup.com/606/207/",
 	"shorttitle": "Donec facilisis tortor ut augue lacinia...",
 	"title": "Donec facilisis tortor ut augue lacinia. Second Line means if you need a third line, it will be strap",
@@ -14,8 +15,9 @@
 	],
 	"link": "/blog/view/"
 }, {
-	"pubDate": "12. NOV 2015",
+	"pubDate": "21. Januar 2015",
 	"author": "Lisa Mustermann",
+	"category": "Kategorie 2",
 	"image": "http://baconmockup.com/606/208/",
 	"shorttitle": "Headline Lorem Ipsum",
 	"title": "Headline Lorem Ipsum",
@@ -26,6 +28,23 @@
 	"tags": [
 		"Meat",
 		"Wurst"
+	],
+	"link": "/blog/view/"
+},
+{
+	"pubDate": "13. März 2016",
+	"author": "Sepp Mustermann",
+	"category": "Kategorie 3",
+	"image": "http://baconmockup.com/606/209/",
+	"shorttitle": "Headline Lorem Ipsum",
+	"title": "Headline Lorem Ipsum",
+	"body": [
+		"Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.",
+		"Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis."
+	],
+	"tags": [
+		"Loaf",
+		"Wuaast"
 	],
 	"link": "/blog/view/"
 }]

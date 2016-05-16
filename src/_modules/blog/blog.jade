@@ -48,9 +48,10 @@ mixin blog-category-listing(spec)
     - spec.__class = spec.__class || ''
 
     div(class="blog-sidebar__categories")&attributes(attributes)
-        each blog in spec
-            each tag in blog.tags
-                a= tag
+        ol
+            each blog in spec
+                li
+                    a= blog.category
 
 mixin blog-search(spec)
     - spec = spec || {}

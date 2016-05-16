@@ -1,6 +1,10 @@
 // breadcrumb styles
 .breadcrumb {
 	background: #ffffff;
+	font-size: 11px;
+	line-height: 1.3;
+	letter-spacing: 1.1px;
+	text-transform: uppercase;
 
 	ol {
 		max-width: 992px;
@@ -21,8 +25,16 @@
 				color: #7d8c93;
 			}
 
-			a:hover {
-				text-decoration: underline;
+			&:last-child {
+				color: #7d8c93;
+			}
+
+			a {
+				color: inherit;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
