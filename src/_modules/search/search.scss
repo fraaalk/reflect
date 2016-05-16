@@ -3,8 +3,7 @@
 	&__input,
 	&__submit {
 		line-height: 1;
-		font-size: calculateRem(12px);
-		font-family: 'Lato', sans-serif;
+		font-size: 12px;
 		border-color: #ccc;
 		background-color: rgba(215, 215, 215, 0.2);
 		border-radius: calculateRem(4px);
@@ -22,6 +21,7 @@
 		text-transform: uppercase;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
+		width: calc(100% - 40px)
 	}
 
 	&__submit {
@@ -31,6 +31,7 @@
 		padding: 12px 17px;
 		text-transform: uppercase;
 		height: 41px;
+		width: 40px;
 
 		&-icon {
 			width: 15px;

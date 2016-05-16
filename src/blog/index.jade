@@ -5,12 +5,8 @@ block config
   - var baseUrl = '../'
   - var blogs = site.data.blog
 
-include ../_modules/section/section.jade
-include ../_modules/breadcrumb/breadcrumb.jade
-include ../_modules/blog/blog.jade
-include ../_modules/pagination/pagination.jade
-
 block content
+    +header({"visual": "http://baconmockup.com/1280/196/"})
     +breadcrumb([["Home", "/"],["Blog Übersicht", "/blog"]])
     section(class="section section--grey")
         div(class="section__wrapper")
@@ -20,6 +16,8 @@ block content
                     each blog in blogs
                         +blog-teaser-extended(blog)
                 div(class="blog-sidebar grid__col-4")
+                    div(class="blog-sidebar__block")
+                        +form-inline({"class": "search", "icon": "#search"})
                     div(class="blog-sidebar__block")
                         h3(class="blog-sidebar__headline") Kategorie
                         +blog-category-listing(blogs)

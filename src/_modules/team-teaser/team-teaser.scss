@@ -13,6 +13,7 @@
 	}
 
 	&__image {
+		border-radius: 50%;
 		@include breakpoint($bp-sm) {
 			float: left;
 			width: 30%;

@@ -22,9 +22,18 @@ head
     block stylesheets
         link(rel='stylesheet', href= baseUrl + 'styles/main.css')
 
+include ../_modules/carousel/carousel.jade
+include ../_modules/team-teaser/team-teaser.jade
+include ../_modules/portfolio-teaser/portfolio-teaser.jade
+include ../_modules/blog/blog.jade
+include ../_modules/section/section.jade
+include ../_modules/header/header.jade
+include ../_modules/form/form.jade
+include ../_modules/breadcrumb/breadcrumb.jade
+include ../_modules/pagination/pagination.jade
+
 body
     include ../_images/svg/sprite.symbol.svg
-    include ../_modules/header/header.jade
     block content
     include ../_modules/footer/footer.jade
 

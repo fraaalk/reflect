@@ -39,7 +39,7 @@ footer(id='footer', class='footer')
                 div(class="grid__cell-footer")
                     div(class="grid__cell")
                         h5(class="footer__headline") Newsletter Anmeldung
-                        include ../newsletter/newsletter.jade
+                        +form-inline({"class": "newsletter", "icon": "#angle-right"})
             div(class="grid__col-12 grid__col-sm-4")
                 div(class="grid__cell")
                     img(class="grid__cell-img", class="footer__logo", src="/images/logo--footer.png")

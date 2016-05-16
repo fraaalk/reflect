@@ -4,3 +4,14 @@ mixin form(spec)
 
   div(class=spec.__class)&attributes(attributes)
     p This is an example paragraph for the form module
+
+
+mixin form-inline(spec)
+  - spec = spec || {}
+  - spec.class = spec.class || ''
+
+    form(class=spec.class)&attributes(attributes)
+        input(class="#{spec.class}__input")
+        button(type="button", class="#{spec.class}__submit")
+            svg(class="#{spec.class}__submit-icon")
+                use(xlink:href=spec.icon)

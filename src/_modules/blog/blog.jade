@@ -6,11 +6,12 @@ mixin blog-teaser-default(spec)
         header(class="blog-teaser__header")
             time(class="blog-teaser__pub-date")= spec.pubDate
         div(class="blog-teaser__body")
-            h3= spec.title
-            each paragraph in spec.body
-                p= paragraph
+            h3(class="blog-teaser__headline")= spec.shorttitle
+            p= spec.body[0]
         footer(class="blog-teaser__footer")
-            a(class="blog-teaser__link", href=spec.link) weiterlesen →
+            a(class="blog-teaser__link", href=spec.link) weiterlesen
+                svg(class="blog-teaser__link-icon")
+                    use(xlink:href="#long-arrow-right")
 
 mixin blog-teaser-extended(spec)
     - spec = spec || {}

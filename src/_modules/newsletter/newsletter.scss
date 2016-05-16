@@ -1,5 +1,6 @@
 .newsletter {
 	@include clearfix();
+	max-width: 300px;
 
 	&__input,
 	&__submit {
@@ -23,6 +24,7 @@
 		text-transform: uppercase;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
+		width: calc(100% - 40px)
 	}
 
 	&__submit {
@@ -32,6 +34,7 @@
 		padding: 12px 17px;
 		text-transform: uppercase;
 		height: 41px;
+		width: 40px;
 
 		&-icon {
 			width: 15px;

@@ -1,17 +1,11 @@
 // header styles
 .header {
-	height: calculateRem(60px);
 	z-index: 200;
 	background: white;
 
 	&__wrapper {
 		max-width: 1280px;
 		margin: 0 auto;
-	}
-
-	@include breakpoint($medium-up) {
-		height: calculateRem(70px);
-		border-bottom: 1px solid #ccc;
 	}
 
 	&__menutoggle {
@@ -54,6 +48,16 @@
 		@include breakpoint($medium-up) {
 			float: right;
 			display: block;
+		}
+	}
+
+	&__visual {
+		border-top: 40px solid #00488D;
+		
+		&-image {
+			display: block;
+			width: 100%;
+			height: auto;
 		}
 	}
 }
