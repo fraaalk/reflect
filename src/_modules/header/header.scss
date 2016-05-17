@@ -2,6 +2,7 @@
 .header {
 	z-index: 200;
 	background: white;
+	position: relative;
 
 	&__wrapper {
 		max-width: 1280px;
@@ -58,6 +59,107 @@
 			display: block;
 			width: 100%;
 			height: auto;
+		}
+	}
+
+	&-overlay {
+		background: rgba(0, 56, 101, 0.8);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		color: white;
+		padding: 10px 25px 15px;
+
+		&__headline {
+			font-size: 20px;
+			letter-spacing: 0.3px;
+			text-transform: uppercase;
+		}
+
+		&__text {
+			font-size: 20px;
+			font-weight: 200;
+			line-height: 1.2;
+			@include clearfix();
+			font-style: italic;
+		}
+
+		&__page-indicator {
+			text-align: center;
+			display: inline-block;
+
+			> a {
+				color: white;
+				text-decoration: none;
+				height: 14px;
+				width: 14px;
+				border: 1px solid #fff;
+				border-radius: 50%;
+				font-size: 0;
+				display: inline-block;
+				margin: 0 3px;
+
+				&.is-active {
+					background: white;
+				}
+
+				&:not(.is-active):hover {
+					border: 1px solid darken(white, 10%);
+					background: darken(white, 10%);
+				}
+			}
+		}
+
+		&__link {
+			$background-color: rgba(254, 254, 254, 0.3);
+			$color: rgba(255, 255, 255, 1);
+			$border-color: rgba(255, 255, 255, 1);
+
+			background-color: $background-color;
+			border-radius: 50%;
+			border-style: solid;
+			border-width: 1px;
+			border-color: $border-color;
+			color: $color;
+			cursor: pointer;
+			display: block;
+			height: 40px;
+			transition: all 0.3s ease-out;
+			width: 40px;
+			text-align: center;
+
+			&:hover {
+				background: darken($background-color, 10%);
+				color: darken($color, 10%);
+				border-color: darken($border-color, 10%);
+			}
+
+			&--prev {
+				float: left;
+				// hacking with padding, since i dont get proper
+				// made icons with no spacing around which would be the best
+				// looks at least somehow centered now
+				padding: 7px 5px 5px 4px;
+			}
+
+			&--next {
+				float: right;
+				// hacking with padding, since i dont get proper
+				// made icons with no spacing around which would be the best
+				// looks at least somehow centered now
+				padding: 6px 2px 5px 5px;
+			}
+
+			&-icon {
+				width: 25px;
+				height: 25px;
+				display: inline-block;
+
+				&--prev {
+					transform: rotate(180deg);
+				}
+			}
 		}
 	}
 }

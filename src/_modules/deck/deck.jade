@@ -34,6 +34,10 @@ div(class="deck")&attributes({'data-deck': ''})
         p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
         p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
         small(class="deck__card-author") Max Mustermann
-    nav(class="deck__nav")
-        button(type="button", class="deck__button deck__button--prev") &lt;
-        button(type="button", clasS="deck__button deck__button--next") &gt;
+    nav(class="deck__controls")
+        button(class="deck__button deck__button--prev") 
+            svg(class="deck__button-icon deck__button-icon--prev")
+                use(xlink:href="#angle-right")
+        button(class="deck__button deck__button--next")
+            svg(class="deck__button-icon deck__button-icon--next")
+                use(xlink:href="#angle-right")

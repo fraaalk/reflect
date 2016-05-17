@@ -1,10 +1,9 @@
 mixin portfolio-teaser(spec)
     - spec = spec || {}
-    - spec.__class = spec.__class || ''
-    - spec.__icon = spec.__icon || ''
+    - spec.class = spec.class || ''
 
-    div(class='portfolio-teaser')&attributes(attributes)
-        svg(class="portfolio-teaser__visual")
-            use(xlink:href=spec.icon)
-        h3(class="portfolio-teaser__headline")= spec.title
-        p(class="portfolio-teaser__body-text")= spec.text
+    div(class="grid__cell")
+        div(class='portfolio-teaser')&attributes(attributes)
+            img(class="portfolio-teaser__visual", src=spec.image)
+            h3(class="portfolio-teaser__headline")= spec.title
+            p(class="portfolio-teaser__body-text")= spec.text
