@@ -3,7 +3,7 @@ mixin team-teaser(spec)
     - spec.__class = spec.__class || ''
 
     div(class='team-teaser')&attributes(attributes)
-        a(href="/teamview/")
+        a(href="/team/view/")
             img(class="team-teaser__image", src=spec.image)
             div
                 blockquote= spec.quote

@@ -54,6 +54,12 @@
 
 	&__visual {
 		border-top: 40px solid #00488D;
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		// large breakpoint, check for mobile?!
+		min-height: calc(196px + 40px);
 		
 		&-image {
 			display: block;

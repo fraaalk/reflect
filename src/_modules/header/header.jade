@@ -13,9 +13,9 @@ mixin header(spec)
                 div(class="grid__col-3")
                     +form-inline({"class": "search", "icon": "#search"})
                     button(class='header__searchtoggle')
-            div(class="header__visual")
-                img(class="header__visual-image", src=spec.visual)
-            block
+            div(class="header__visual", style="background-image: url(#{spec.visual});")
+                block
+                img(class="header__visual-image", src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'#{spec.visualSize}'%2F%3E")
 
 mixin header-overlay(spec)
     - spec = spec || {}
