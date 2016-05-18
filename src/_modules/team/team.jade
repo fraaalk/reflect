@@ -1,0 +1,22 @@
+mixin team-teaser(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ''
+
+    div(class='team-teaser')&attributes(attributes)
+        a(class='team-teaser__link', href='/team/view/')
+            img(class='team-teaser__image', src=spec.image)
+            div(class='team-teaser__body')
+                blockquote(class='team-teaser__member-quote')= spec.quote
+                p(class='team-teaser__member-name')= spec.name
+                p(class='team-teaser__member-title')= spec.title
+
+mixin team-header(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ''
+
+    div(class='team-header')&attributes(attributes)
+        img(class='team-header__image', src=spec.image)
+        div(class='team-header__body')
+            blockquote(class='team-header__member-quote')= spec.quote
+            p(class='team-header__member-name')= spec.name
+            p(class='team-header__member-title')= spec.title
