@@ -1,7 +1,10 @@
 // social styles
 .social {
-	text-align: center;
-
+	
+	&--footer {
+		text-align: center;
+	}
+	
 	@include breakpoint($small-only) {
 		display: none;
 	}
@@ -54,6 +57,14 @@
 		}
 
 		&--rss {
+			padding: 6px 2px 5px 7px;
+		}
+
+		&--mail {
+			padding: 6px 2px 5px 7px;
+		}
+
+		&--xing {
 			padding: 6px 2px 5px 7px;
 		}
 	}

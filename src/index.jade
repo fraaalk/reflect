@@ -26,9 +26,9 @@ block content
         div(class="section__wrapper")
             +section-headline({icon: "#group", title: "Team"})
             +carousel()
-                each teaser in team
+                each member in team
                     +carousel-slide()
-                        +team-teaser(teaser)
+                        +team-teaser({"class": "team-teaser--list-view", "image": member.image, "title": member.title, "name": member.name, "link": member.link, "quote": member.quote})
     section(class="section section--white")
         div(class="section__wrapper")
             +section-headline({icon: "#comment-o", title: "Blog"})

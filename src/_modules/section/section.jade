@@ -1,12 +1,19 @@
+mixin section(spec)
+    - spec = spec || ''
+
+    section(class="section #{spec.class}")
+        div(class="section__wrapper")
+            block
+
 mixin section-headline(spec)
     - spec = spec || ''
 
-    h2(class="section__headline")
-        svg(class="section__headline-icon")
-            use(xlink:href=spec.icon)
+    h2(class="section__headline #{spec.class}")
+        if spec.icon
+            svg(class="section__headline-icon")
+                use(xlink:href=spec.icon)
         = spec.title
         block
-
 
 mixin section-badge(spec)
     - spec = spec || ''
@@ -16,3 +23,10 @@ mixin section-badge(spec)
             use(xlink:href=spec.icon)
         = spec.title
 
+mixin section-link(spec)
+    - spec = spec || ''
+
+    a(class="section__link #{spec.class}", href=spec.href, title=spec.title) 
+        svg(class="section__link-icon")
+            use(xlink:href=spec.icon)
+        = spec.title

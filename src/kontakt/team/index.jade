@@ -1,4 +1,4 @@
-extends ../_layouts/base
+extends ../../_layouts/base
 
 block config
   //- Correct base url pathing for this page
@@ -7,13 +7,9 @@ block config
 
 block content
     +header({"class":"header--extended", "visual": "http://baconmockup.com/1280/196/", "visualSize": "0 0 32 5"})
-    +breadcrumb([["Home", "/"],["Kontakt", "/kontakt/"]])
+    +breadcrumb([["Home", "/"],["Kontakt", "/kontakt/"], ["Team", "/kontakt/team/"]])
     +section({"class": "section--compressed section--grey"})
-        +section-headline({"title": "Kontakt", "class": "", "icon": "#group"})
-    +section({"class": "section--white"})
-        +section-headline({"title": "Adresse & Anfahrt", "class": "", "icon": "#group"})
-        
-    +section({"class": "section--compressed section--grey"})
+        +section-link({"href": "/kontakt/", "title": "zurück", "icon": "#long-arrow-right", "class": "section__link--back"})
         +section-headline({"title": "Team", "class": "section__headline--spaced-top", "icon": "#group"})
         p Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
         div(class="grid")

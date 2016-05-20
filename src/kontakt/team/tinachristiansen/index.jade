@@ -1,0 +1,21 @@
+extends ../../../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../../../'
+  - var member = site.data.team[0]
+
+block content
+    +header({"class":"header--extended", "visual": "http://baconmockup.com/1280/196/", "visualSize": "0 0 32 5"})
+        +team-header(member)
+    +breadcrumb([["Home", "/"],["Kontakt", "/kontakt/"], ["Team", "/kontakt/team/"], [member.name, "/kontakt/team/tinachristiansen/"]])
+    +section({"class": "section--compressed section--grey"})
+        +section-link({"href": "/kontakt/team/", "title": "zurück", "icon": "#long-arrow-right", "class": "section__link--back"})
+        +section-headline({"title": member.name, "class": "section__headline--spaced-top"})
+        div(class="grid")
+            div(class="grid__col-12 grid__col-sm-7")
+                +team-info(member.content[0])
+            div(class="grid__col-12 grid__col-sm-5")
+                +team-info(member.content[1])
+            div(class="grid__col-12")
+                +social-links({"class": "social--team", "mail": true, "xing": true})

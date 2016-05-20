@@ -1,38 +1,16 @@
 // team-teaser styles
 .team {
 
-	&-header {
-		position: absolute;
-		top: 0;
-	}
+	// member infos
+	&__member {
 
-	&-teaser,
-	&-header {
-		@include clearfix();
-		text-align: center;
-
-		@include breakpoint($bp-sm) {
-			text-align: left;
-
-			> div {
-				width: 70%;
-				float: left;
-			}
+		&-title {
+			font-size: 16px;
+			letter-spacing: 0.2px;
+			color: #000000;
 		}
 
-		&__image {
-			border-radius: 50%;
-			@include breakpoint($bp-sm) {
-				float: left;
-				width: 30%;
-				margin-right: 60px;
-			} 
-			
-			max-width: 174px;
-			max-height: 174px;
-		}
-
-		&__member-quote {
+		&-quote {
 			font-size: 36px;
 			line-height: 1.1;
 			letter-spacing: 0.6px;
@@ -57,17 +35,75 @@
 			}
 		}
 
-		&__member-name {
+		&-name {
 			font-weight: 400;
 			font-size: 16px;
 			letter-spacing: 0.2px;
 			color: #000000;
 		}
 
-		&__member-title {
-			font-size: 16px;
-			letter-spacing: 0.2px;
-			color: #000000;
+		&-image {
+			border-radius: 50%;
+			max-width: 174px;
+			max-height: 174px;
+			background-color: #ececed;
+			border: solid 2px #cccccc;
+		}
+
+		&-info {
+			h3 {
+				font-size: 20px;
+				line-height: 1.5;
+				letter-spacing: 1.7px;
+				color: #333333;
+			}
+
+			ul {
+				line-height: 1.6;
+				letter-spacing: 1px;
+				color: #777777;
+				list-style-type: disc;
+				padding: 10px 0 0 20px;
+			}
+		}
+	}
+
+	&-teaser {
+		@include clearfix();
+		text-align: center;
+
+		@include breakpoint($bp-sm) {
+			text-align: left;
+		}
+
+		&__body {
+			@include breakpoint($bp-sm) {
+				padding-left: 60px;
+			}
+		}
+
+		&__image {
+			max-width: calc(174px + 10px);
+		}
+
+		&--grid-view {
+			background: white;
+			border: 1px solid #cccccc;
+			text-align: center;
+			padding: 30px 0;
+		}
+	}
+
+	&-header {
+		position: absolute;
+		top: 0;
+
+		&__body {
+			text-align: center;
+		}
+
+		&__image {
+			max-width: calc(174px + 10px);
 		}
 	}
 }
