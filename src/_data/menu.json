@@ -1,7 +1,7 @@
 {
 	"profil": {
 		"title": "Profil",
-		"href": "#",
+		"href": "/profil/",
 		"items": [{
 			"title": "Philosophie",
 			"href": "#"
@@ -18,30 +18,30 @@
 	},
 	"portfolio": {
 		"title": "Portfolio",
-		"href": "#",
+		"href": "/portfolio/",
 		"items": [{
 			"title": "Personalentwicklung",
-			"href": "#"
+			"href": "/portfolio/personalentwicklung/"
 		}, {
 			"title": "Veränderungsmanagement",
-			"href": "#"
+			"href": "/portfolio/veraenderungsmanagement"
 		}, {
 			"title": "Coaching",
-			"href": "#"
+			"href": "/portfolio/coaching/"
 		}, {
 			"title": "Kompetenzdiagnostik",
-			"href": "#"
+			"href": "/portfolio/kompetenzdiagnostik/"
 		}, {
 			"title": "Befragungen",
-			"href": "#"
+			"href": "/portfolio/befragungen/"
 		}, {
 			"title": "Gesunde Organisation",
-			"href": "#"
+			"href": "/portfolio/gesunde-organisation/"
 		}]
 	},
 	"instrumente": {
 		"title": "Instrumente",
-		"href": "#",
+		"href": "/instrumente/",
 		"items": [{
 			"title": "Webinare",
 			"href": "#"
@@ -50,24 +50,10 @@
 			"href": "#"
 		}]
 	},
-	"kontakt": {
-		"title": "Kontakt",
-		"href": "#",
-		"items": [{
-			"title": "Unternehmen",
-			"href": "#"
-		}, {
-			"title": "Team",
-			"href": "#"
-		}]
-	},
 	"kunden": {
 		"title": "Kunden",
-		"href": "#",
+		"href": "/kunden/",
 		"items": [{
-			"title": "News-Blog",
-			"href": "#"
-		}, {
 			"title": "Newsletteranmeldung",
 			"href": "#"
 		}, {
@@ -80,5 +66,20 @@
 			"title": "Datenschutz",
 			"href": "#"
 		}]
+	},
+	"kontakt": {
+		"title": "Kontakt",
+		"href": "/kontakt/",
+		"items": [{
+			"title": "Unternehmen",
+			"href": "#"
+		}, {
+			"title": "Team",
+			"href": "#"
+		}]
+	},
+	"blog": {
+		"title": "Blog",
+		"href": "/blog/"
 	}
 }

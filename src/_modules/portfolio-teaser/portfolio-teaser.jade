@@ -1,9 +1,9 @@
-mixin portfolio-teaser(spec)
+mixin portfolio-teaser-short(spec)
     - spec = spec || {}
     - spec.class = spec.class || ''
 
-    div(class="grid__cell")
-        div(class='portfolio-teaser')&attributes(attributes)
+    div(class='portfolio-teaser')&attributes(attributes)
+        a(href=spec.link, title=spec.title)
             img(class="portfolio-teaser__visual", src=spec.image)
             h3(class="portfolio-teaser__headline")= spec.title
-            p(class="portfolio-teaser__body-text")= spec.text
+            p(class="portfolio-teaser__body-text")= spec.text[0]

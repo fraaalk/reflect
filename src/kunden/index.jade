@@ -1,8 +1,11 @@
 extends ../_layouts/base
 
 block config
-  //- Correct base url pathing for this page
-  - var baseUrl = '../'
+    //- Correct base url pathing for this page
+    - var baseUrl = '../'
 
 block content
-  p kunden page
+    +header({"class":"header--extended", "visual": "http://baconmockup.com/1280/188/", "visualSize": "0 0 32 5"})
+    section(class="section section--grey")
+        div(class="section__wrapper")
+            +section-headline({icon: "#television", title: "Kunden"})

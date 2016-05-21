@@ -14,4 +14,5 @@ block content
         p Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
         div(class="grid")
             each member in members
-                +team-teaser({"class": "team-teaser--grid-view grid__col-4", "name": member.name, "icon": "#long-arrow-right", "title": member.title, "image": member.image})
+                div(class="grid__col-4")
+                  +team-teaser-grid(member)

@@ -47,7 +47,14 @@
 			max-width: 174px;
 			max-height: 174px;
 			background-color: #ececed;
-			border: solid 2px #cccccc;
+			border: 2px solid #cccccc;
+			transition: all 0.2s ease-out;
+			display: inline-block;
+
+			&:hover {
+				border: 2px solid darken(#cccccc, 10%);
+				background-color: darken(#ececed, 10%);
+			}
 		}
 
 		&-info {
@@ -77,20 +84,54 @@
 		}
 
 		&__body {
-			@include breakpoint($bp-sm) {
-				padding-left: 60px;
+			.team-teaser--list-view & {
+				@include breakpoint($bp-sm) {
+					padding: 0 60px;
+				}
+			}
+
+			.team-teaser--grid-view & {
+				text-align: center;
+				width: 100%;
+			}
+		}
+
+		&__link {
+			display: block;
+			transition: background 0.3s ease-out;
+
+			.team-teaser--grid-view & { 
+				padding: 30px 0;
+				
+				&:hover {
+					background: darken(#fff, 10%);
+				}
 			}
 		}
 
 		&__image {
-			max-width: calc(174px + 10px);
+			text-align: center;
+
+			.team-teaser--list-view & {
+				max-width: calc(174px + 10px);
+			}
+
+			.team-teaser--grid-view & {
+				text-align: center;
+				width: 100%;
+			}
+		}
+
+		&__icon {
+			color: #4a90e2;
+			width: 25px;
+			height: 13px;
 		}
 
 		&--grid-view {
+			border: 1px solid #ccc;
 			background: white;
-			border: 1px solid #cccccc;
 			text-align: center;
-			padding: 30px 0;
 		}
 	}
 
@@ -100,6 +141,7 @@
 
 		&__body {
 			text-align: center;
+			padding: 0 60px;
 		}
 
 		&__image {

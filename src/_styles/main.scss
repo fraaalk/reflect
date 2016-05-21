@@ -1,5 +1,5 @@
 // variables
-$reflex-grid-spacing: 10px;
+//$reflex-grid-spacing: 10px;
 
 // Normalize Styles
 @import 'node_modules/reset.scss/reset';
@@ -40,8 +40,6 @@ $reflex-grid-spacing: 10px;
 @import 'https://fonts.googleapis.com/css?family=Lato:400,300,700';
 
 
-
-
 // Box sizing partial styles:
 // Apply a natural box layout model to all elements
 body {
@@ -51,6 +49,8 @@ body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	line-height: 1.6;
+	color: #000000;
+	letter-spacing: 1px;
 }
 
 a {
@@ -62,12 +62,27 @@ h1,h2,h3,h4,h5 {
 	font-family: 'Lato', sans-serif;
 }
 
+strong {
+	font-weight: 400;
+}
+
 svg {
 	fill: currentColor;
 }
 
-input {
+input,
+textarea {
 	font-family: inherit;
+	font-size: 16px;
+	letter-spacing: 0.3px;
+	color: #7d8c93;
+	border: 1px solid #cccccc;
+	transition: all 0.3s ease-out;
+
+	&:focus {
+		border-color: darken(#ccc, 10%);
+		color: #000;
+	}
 }
 
 /* text helper classes */
@@ -107,5 +122,36 @@ input {
 		top: 0;
 		z-index: 400;
 		background: #f4f4f4;
+	}
+}
+
+.form {
+
+	&__input {
+		width: 100%;
+		padding: 15px 25px;
+		border-radius: 2px;
+		background-color: #ffffff;
+		border: solid 1px #cccccc;
+
+		+ input,
+		+ submit,
+		+ button {
+			margin-top: 20px;
+		}
+
+		&--textarea {
+			height: 193px;
+		}
+	}
+
+	&__submit {
+		background: #007dc7;
+		text-align: center;
+		font-size: 20px;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: 400;
+		padding: 9px 0 10px 0;
 	}
 }

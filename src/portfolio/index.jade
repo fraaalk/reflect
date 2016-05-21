@@ -1,0 +1,18 @@
+extends ../_layouts/base
+
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = '../'
+    - var portfolio = site.data.portfolio
+
+block content
+    +header({"class":"header--extended", "visual": "http://baconmockup.com/1280/188/", "visualSize": "0 0 32 5"})
+    +breadcrumb([["Home", "/"],["Portfolio", "/portfolio"]])
+    section(class="section section--grey")
+        div(class="section__wrapper")
+            +section-headline({icon: "#rocket", title: "Portfolio"})
+            div(class="grid")
+                each teaser in portfolio
+                    div(class="grid__col-12 grid__col-xs-6 grid__col-sm-4")
+                        div(class="grid__cell")
+                            +portfolio-teaser-short(teaser)

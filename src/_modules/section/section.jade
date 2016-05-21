@@ -15,6 +15,13 @@ mixin section-headline(spec)
         = spec.title
         block
 
+mixin section-block(spec)
+    - spec = spec || ''
+
+    div(class="section__block")
+        h3(class="section__sub-headline #{spec.class}")= spec.title
+        block
+
 mixin section-badge(spec)
     - spec = spec || ''
 

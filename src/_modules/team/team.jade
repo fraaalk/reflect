@@ -1,26 +1,34 @@
-mixin team-teaser(spec)
-    - spec = spec || {}
-    - spec.class = spec.class || ""
+mixin team-teaser-list(spec)
+    - spec = spec || ""
 
-    div(class="team-teaser #{spec.class}")&attributes(attributes)
+    div(class="team-teaser team-teaser--list-view")&attributes(attributes)
         a(class="team-teaser__link", href=spec.link)
-            div(class="grid")
+            div(class="grid grid--align-center")
                 div(class="team-teaser__image grid__col-auto grid__cell")
                     img(class="team__member-image", src=spec.image)
                 div(class="team-teaser__body grid__col-auto")
-                    if spec.quote
-                        blockquote(class="team__member-quote")= spec.quote
+                    blockquote(class="team__member-quote")= spec.quote
                     p(class="team__member-name")= spec.name
                     p(class="team__member-title")= spec.title
-                    if spec.icon
-                        svg(class="team-teaser__icon")
-                            use(xlink:href=spec.icon)
+
+mixin team-teaser-grid(spec)
+    - spec = spec || ""
+
+    div(class="team-teaser team-teaser--grid-view")&attributes(attributes)
+        a(class="team-teaser__link", href=spec.link)
+            div(class="team-teaser__image")
+                img(class="team__member-image", src=spec.image)
+            div(class="team-teaser__body")
+                p(class="team__member-name")= spec.name
+                p(class="team__member-title")= spec.title
+                svg(class="team-teaser__icon")
+                    use(xlink:href="#long-arrow-right")
 
 mixin team-header(spec)
     - spec = spec || {}
     - spec.class = spec.class || ""
 
-    div(class="team-header grid")&attributes(attributes)
+    div(class="team-header grid grid--align-center")&attributes(attributes)
         div(class="team-header__image grid__col-auto grid__cell")
             img(class="team__member-image", src=spec.image)
         div(class="team-header__body grid__col-auto")

@@ -3,12 +3,13 @@ block config
     - var baseUrl = '../'
     - var menu = site.data.menu
 
-nav(id='navigation', class='header__nav nav')
+nav(class='nav')
     ul(class='nav__list nav__list--l1')
         each item in site.data.menu
             li(class='nav__listitem nav__listitem--l1')
-                span= item.title
-                ul(class="nav__list nav__list--l2")
-                    each subitem in item.items
-                        li(class='nav__listitem nav__listitem--l2')
-                            a(href=subitem.href, title=subitem.title)= subitem.title
+                a(title=item.title, href=item.href)= item.title
+                if item.items
+                    ul(class="nav__list nav__list--l2")
+                        each subitem in item.items
+                            li(class='nav__listitem nav__listitem--l2')
+                                a(href=subitem.href, title=subitem.title)= subitem.title

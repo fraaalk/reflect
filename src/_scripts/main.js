@@ -36,10 +36,15 @@ $(() => {
     		.toggleClass( 'is-active' );
     });
 
-    $( window ).on( 'resize', function(){
+    $( window ).on( 'resize', function() {
     	$( '.nav' ).removeClass( 'is-visible' );
     });
+
+    $( '#google-maps' ).each( function() {
+        new google.maps.Map(document.getElementById('google-maps'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+        });
+    });
 });
-
-
         

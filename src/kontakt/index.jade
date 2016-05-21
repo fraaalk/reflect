@@ -10,12 +10,45 @@ block content
     +breadcrumb([["Home", "/"],["Kontakt", "/kontakt/"]])
     +section({"class": "section--compressed section--grey"})
         +section-headline({"title": "Kontakt", "class": "", "icon": "#group"})
+        form(class="grid form")
+            p(class="grid__col-12") Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
+            div(class="grid__col-12 grid__col-sm-6")
+                input(placeholder="Vorname", class="form__input")
+                input(placeholder="Nachname", class="form__input")
+                input(placeholder="E-Mail", class="form__input")
+                input(placeholder="Telefon", class="form__input")
+            div(class="grid__col-12 grid__col-sm-6")
+                textarea(class="form__input form__input--textarea") Ihre Nachricht
+                submit(class="form__submit") Abschicken
+
+
     +section({"class": "section--white"})
         +section-headline({"title": "Adresse & Anfahrt", "class": "", "icon": "#group"})
-        
+        div(class="grid")
+            p(class="grid__col-12")
+                strong Mit dem Auto
+                | Sie erreichen Rohrbach über die A65, Ausfahrt Rohrbach/Herxheim. Von dort ca. 3 km bis zur Ortsmitte, dort rechts abbiegen in die Hauptstrasse und die nächste wieder rechts in Richtung Insheim. Am Ortsausgang auf der linken Seite finden Sie Reflect. 
+            p(class="grid__col-12")
+                strong Bahn:
+                | Der Bahnhof Rohrbach liegt auf der Strecke Mannheim/Ludwigshafen in Richtung Karlsruhe, die zweite Station südlich von Landau. Sie erreichen Reflect in ca. 10 min Fußweg. 
+            p(class="grid__col-12")
+                strong Flugzeug:
+                | Vom Flughafen Mannheim (65 km) oder Karlsruhe-Baden (70 km) am schnellsten per Bahn (s. o.) zu erreichen .
+            div(class="grid__col-12 grid__col-sm-6")
+                div(id="google-maps")
+            div(class="grid__col-12 grid__col-sm-6")
+                h3(class="section__sub-headline") Kontaktadresse
+                | Reflect
+                | Insheimer Straße 32
+                | D-76865 Rohrbach 
+                | 
+                | E-mail: info@reflect-beratung.de
+                | Fon: +49 (06349) 96 30 228
+                | Fax: +49 (06349) 96 30 229 
     +section({"class": "section--compressed section--grey"})
         +section-headline({"title": "Team", "class": "section__headline--spaced-top", "icon": "#group"})
-        p Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
         div(class="grid")
+            p(class="grid__col-12") Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
             each member in members
-                +team-teaser({"class": "team-teaser--grid-view grid__col-4", "name": member.name, "icon": "#long-arrow-right", "title": member.title, "image": member.image})
+                div(class="grid__col-12 grid__col-sm-6 grid__col-md-4")
+                  +team-teaser-grid(member)
