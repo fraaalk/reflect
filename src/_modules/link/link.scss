@@ -1,0 +1,22 @@
+// link styles
+.link {
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&__icon {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		vertical-align: text-bottom;
+
+		&--after {
+			margin-left: 4px;
+		}
+
+		&--before {
+			margin-right: 4px;
+		}
+	}
+}

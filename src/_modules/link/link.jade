@@ -1,0 +1,16 @@
+mixin link(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ''
+    - spec.iconBefore = spec.iconBefore || false
+    - spec.iconAfter = spec.iconAfter || false
+    - spec.title = spec.title || ''
+    - spec.href = spec.href || '#'
+
+    a(class="link #{spec.class}", href=spec.href, title=spec.title)
+        if spec.iconBefore
+            svg(class="link__icon link__icon--before")
+                use(xlink:href=spec.iconBefore)
+        = spec.title
+        if spec.iconAfter
+            svg(class="link__icon link__icon--after")
+                use(xlink:href=spec.iconAfter)

@@ -33,7 +33,7 @@
 @import '../_modules/blog/blog';
 @import '../_modules/portfolio-teaser/portfolio-teaser';
 @import '../_modules/team/team';
-
+@import '../_modules/link/link';
 
 
 @import '../_modules/newsletter/newsletter';
@@ -68,6 +68,47 @@ strong {
 
 svg {
 	fill: currentColor;
+}
+
+.u {
+	&__text {
+		&-left {
+			text-align: left;
+		}
+
+		&-right {
+			text-align: right;
+		}
+
+		&-center {
+			text-align: center;
+		}
+
+		&-truncated {
+			text-overflow: ellipsis;
+			width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		&-upper {
+			text-transform: uppercase;
+		}
+
+		&-strong {
+			font-weight: 400;
+		}
+	}
+
+	&__color {
+		&-red {
+			color: rgba(208, 2, 27, 1);
+		}
+
+		&-blue {
+			color: rgba(15, 76, 136, 1);
+		}
+	}
 }
 
 input,

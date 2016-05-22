@@ -1,8 +1,22 @@
 extends ../_layouts/base
 
 block config
-  //- Correct base url pathing for this page
-  - var baseUrl = '../'
+    //- Correct base url pathing for this page
+    - var baseUrl = '../'
+    - var webinare = site.data.webinare
 
 block content
-  p instrumente page
+    +header({"class":"header--extended", "visual": "http://baconmockup.com/1280/188/", "visualSize": "0 0 32 5"})
+    +breadcrumb([["Home", "/"],["Instrumente", "/instrumente"]])
+    +section({"class": "section--grey"})
+        +section-headline({icon: "#rocket", title: "Instrumente"})
+        div(class="grid")
+            each webinar in webinare
+                div(class="grid__col-12 grid__col-xs-6")
+                    +section-block({"class": "section__block--tiled" ,"title": webinar.title})
+                        p= webinar.teaser
+                        div(class="grid")
+                            div(class="grid__col-6")
+                                +link({"class": "link--blub u__color-red u__text-upper u__text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#question-circle"})
+                            div(class="grid__col-6")
+                                +link({"class": "link--blub2 u__color-blue u__text-upper u__text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})

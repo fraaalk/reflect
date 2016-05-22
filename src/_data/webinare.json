@@ -1,0 +1,34 @@
+{
+	"antreibertest": {
+		"title": "Antreibertest",
+		"status": "unlocked",
+		"new": true,
+		"link": "#",
+		"teaser": "Bacon ipsum dolor amet jerky biltong beef shoulder pork loin ribeye. Salami flank ground round doner, corned beef cupim pastrami."
+	},
+	"auftragsklaerung": {
+		"title": "Auftragsklärung",
+		"status": "locked",
+		"new": true,
+		"link": "#",
+		"teaser": "Bacon ipsum dolor amet jerky biltong beef shoulder pork loin ribeye. Salami flank ground round doner, corned beef cupim pastrami."
+	},
+	"biwecon": {
+		"title": "biwecon",
+		"status": "free",
+		"link": "#",
+		"teaser": "Bacon ipsum dolor amet jerky biltong beef shoulder pork loin ribeye. Salami flank ground round doner, corned beef cupim pastrami."
+	},
+	"lifomethode": {
+		"title": "Lifo-Methode",
+		"status": "free",
+		"link": "#",
+		"teaser": "Bacon ipsum dolor amet jerky biltong beef shoulder pork loin ribeye. Salami flank ground round doner, corned beef cupim pastrami."
+	},
+	"teamanalyse": {
+		"title": "Teamanalyse",
+		"status": "free",
+		"link": "#",
+		"teaser": "Bacon ipsum dolor amet jerky biltong beef shoulder pork loin ribeye. Salami flank ground round doner, corned beef cupim pastrami."
+	}
+}

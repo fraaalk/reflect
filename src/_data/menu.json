@@ -36,7 +36,7 @@
 			"href": "/portfolio/befragungen/"
 		}, {
 			"title": "Gesunde Organisation",
-			"href": "/portfolio/gesunde-organisation/"
+			"href": "/portfolio/gesundeorganisation/"
 		}]
 	},
 	"instrumente": {
@@ -44,26 +44,20 @@
 		"href": "/instrumente/",
 		"items": [{
 			"title": "Webinare",
-			"href": "#"
+			"href": "/instrumente/webinare/"
 		}, {
 			"title": "Registrierung",
-			"href": "#"
+			"href": "/instrumente/registrierung/"
 		}]
 	},
 	"kunden": {
 		"title": "Kunden",
 		"href": "/kunden/",
 		"items": [{
-			"title": "Newsletteranmeldung",
+			"title": "Kunden",
 			"href": "#"
 		}, {
-			"title": "Impressum",
-			"href": "#"
-		}, {
-			"title": "AGB",
-			"href": "#"
-		}, {
-			"title": "Datenschutz",
+			"title": "Reflectionen",
 			"href": "#"
 		}]
 	},
@@ -78,8 +72,23 @@
 			"href": "#"
 		}]
 	},
-	"blog": {
-		"title": "Blog",
-		"href": "/blog/"
+	"service": {
+		"title": "Service",
+		"items": [{
+			"title": "News-Blog",
+			"href": "/blog/"
+		}, {
+			"title": "Newsletter Anmeldung",
+			"href": ""
+		}, {
+			"title": "Impressum",
+			"href": "/impressum/"
+		}, {
+			"title": "AGB",
+			"href": "/agb/"
+		}, {
+			"title": "Datenschutz",
+			"href": "/datenschutz/"
+		}]
 	}
 }
