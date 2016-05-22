@@ -6,4 +6,5 @@ mixin portfolio-teaser-short(spec)
         a(href=spec.link, title=spec.title)
             img(class="portfolio-teaser__visual", src=spec.image)
             h3(class="portfolio-teaser__headline")= spec.title
-            p(class="portfolio-teaser__body-text")= spec.text[0]
+            p(class="portfolio-teaser__body-text")= spec.teaser[0]
+            p(class="portfolio-teaser__body-text")= spec.teaser[1]

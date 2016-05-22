@@ -86,29 +86,6 @@ textarea {
 }
 
 /* text helper classes */
-.u__text-center {
-	text-align: center;
-}
-
-.u__text-right {
-	text-align: right;
-}
-
-.u__text-upper {
-	text-transform: uppercase;
-}
-
-.u__text-truncated {
-	text-overflow: ellipsis;
-	width: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-.u__text-strong {
-	font-weight: 400;
-}
-
 .carousel__controls {
 	display: none;
 

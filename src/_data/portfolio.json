@@ -1,71 +1,98 @@
-[{
-	"link": "/portfolio/personalentwicklung/",
-	"image": "http://baconmockup.com/160/160/",
-	"title": "Personalentwicklung",
-	"text": [
-		"Bacon ipsum dolor amet jerky biltong beef shoulder pork loin ribeye.",
-		"Salami flank ground round doner, corned beef cupim pastrami.",
-		"Hamburger tri-tip filet mignon flank boudin tail. T-bone andouille ham jerky.",
-		"Ham beef ribs salami bresaola pork tenderloin hamburger kielbasa prosciutto fatback chicken pastrami beef.",
-		"Meatball rump filet mignon jowl ham hock cow pancetta short loin salami drumstick, turducken kevin capicola landjaeger t-bone."
-	]
-}, {
-	"link": "/portfolio/kompetenzdiagnostik/",
-	"image": "http://baconmockup.com/161/161/",
-	"title": "Kompetenzdiagnostik",
-	"text": [
-		"Leberkas short ribs chicken rump shoulder.",
-		"Boudin tri-tip pastrami, filet mignon tail doner meatball turducken ball tip pork loin rump andouille prosciutto.",
-		"Rump sausage pork, andouille leberkas t-bone meatloaf pastrami biltong filet mignon.",
-		"Shank doner rump beef porchetta jowl corned beef meatball chuck.",
-		"Hamburger short ribs spare ribs, venison boudin fatback kielbasa cow.",
-		"Picanha pastrami drumstick cow tenderloin meatball, turkey ham venison pork loin meatloaf jerky bresaola.",
-		"Ground round pork biltong shoulder beef ribs pastrami andouille jerky."
-	]
-}, {
-	"link": "/portfolio/veraenderungsmanagement/",
-	"image": "http://baconmockup.com/162/162/",
-	"title": "Veränderungsmanagement",
-	"text": [
-		"Frankfurter kevin filet mignon bacon strip steak ground round.",
-		"Andouille sausage ham pork chop pork loin, salami ground round ribeye corned beef doner jowl jerky chuck.",
-		"Leberkas sausage ribeye picanha prosciutto, strip steak capicola tenderloin pork belly drumstick chicken shoulder t-bone sirloin.",
-		"Pork belly beef sausage, ground round swine picanha pastrami tail t-bone short loin ball tip strip steak.",
-		"T-bone shank ribeye sausage, ham hock shoulder bresaola salami pancetta chuck bacon swine meatloaf pork belly sirloin."
-	]
-}, {
-	"link": "/portfolio/befragungen/",
-	"image": "http://baconmockup.com/163/163/",
-	"title": "Befragungen",
-	"text": [
-		"Short ribs filet mignon kevin leberkas turducken sausage shankle ball tip tenderloin tongue swine capicola ham hock flank.",
-		"Swine pork chop pastrami jowl meatball shank, doner spare ribs pig cow capicola ground round chuck ball tip.",
-		"Ground round beef ribs porchetta chuck shank.",
-		"Tail landjaeger pork belly meatloaf swine ground round.",
-		"Cupim frankfurter strip steak corned beef andouille pancetta pastrami."
-	]
-}, {
-	"link": "/portfolio/coaching/",
-	"image": "http://baconmockup.com/164/164/",
-	"title": "Coaching",
-	"text": [
-		"Tenderloin boudin turducken, frankfurter beef ribs ground round bacon pancetta bresaola cupim kevin pork loin turkey brisket.",
-		"Fatback biltong rump pastrami short loin ribeye.",
-		"Leberkas venison t-bone frankfurter.",
-		"Short ribs pastrami jowl strip steak.",
-		"Tail bresaola strip steak ham hock. Rump chicken turducken sirloin cupim corned beef.",
-		"Bacon jowl short loin, ribeye spare ribs tongue ball tip ham ground round venison tail frankfurter."
-	]
-}, {
-	"link": "/portfolio/gesunde-organistation/",
-	"image": "http://baconmockup.com/165/165/",
-	"title": "Gesunde Organisation",
-	"text": [
-		"T-bone pastrami short ribs, boudin pancetta pork loin tongue meatloaf turkey chuck corned beef.",
-		"Andouille rump biltong ground round.",
-		"Short ribs ball tip landjaeger corned beef, rump pork loin picanha jerky.",
-		"Capicola turducken cupim kielbasa shankle biltong pastrami picanha pork chop.",
-		"Short loin shankle andouille, pork t-bone landjaeger capicola frankfurter swine doner alcatra tongue ball tip.",
-		"Ham hock beef fatback pork loin jowl."
-	]
-}]
+{
+	"personalentwicklung": {
+		"link": "/portfolio/personalentwicklung/",
+		"image": "http://baconmockup.com/160/160/",
+		"title": "Personalentwicklung",
+		"teaser": [
+			"Bacon ipsum dolor amet jerky biltong beef shoulder pork loin ribeye.",
+			"Salami flank ground round doner, corned beef cupim pastrami."
+		],
+		"text": [
+			"Bacon ipsum dolor amet meatball pork chop tail rump beef ribs bacon cow capicola porchetta kevin. Pork kevin pork belly fatback, chuck picanha chicken swine shank jowl spare ribs drumstick. Shankle jerky tenderloin rump pork, beef meatloaf strip steak cupim hamburger turducken short loin chicken tongue. Brisket pancetta pig rump. Andouille brisket boudin alcatra cow cupim bresaola doner pork chop pork.",
+			"Capicola andouille pork loin fatback biltong, beef ribs landjaeger doner pork chop venison tongue. Pork loin venison chicken, corned beef cow swine porchetta biltong. Pig porchetta short loin tail, pastrami leberkas pork loin pork belly jerky. Sausage jowl tenderloin turkey landjaeger pork pork belly bresaola. Hamburger short ribs shankle cow pork belly shank chuck ham hock jerky. Frankfurter jerky capicola meatloaf tail corned beef ham pig boudin drumstick. Salami turkey picanha shoulder boudin shankle prosciutto bresaola fatback doner.",
+			"Pastrami cow pork chop, salami sausage ham ground round. Biltong pork belly beef ribs tail chuck ham hock rump pork chop drumstick swine salami pancetta turducken. Turducken pancetta strip steak, fatback pig shank tongue tenderloin doner. Hamburger shank bacon sausage, pancetta spare ribs beef ribs. Corned beef frankfurter tenderloin, venison kevin flank porchetta. Pork loin jowl andouille tail ham hock, shankle filet mignon. Corned beef landjaeger beef ribs bacon shankle turducken, ground round ribeye.",
+			"Drumstick turducken rump shankle salami beef ribs fatback. Pork chop meatball doner drumstick. Pastrami tail biltong swine. Salami pancetta strip steak shoulder ham chuck kielbasa.",
+			"Pork belly pork shoulder kevin chicken shankle ribeye frankfurter. Venison picanha porchetta, sirloin jerky tri-tip ball tip pork belly ham hock. Turkey t-bone corned beef ham picanha. Swine bresaola ham porchetta short ribs jowl tongue cupim cow corned beef ground round strip steak tri-tip hamburger. Meatball cow sirloin drumstick kielbasa strip steak andouille. Shoulder capicola shankle, brisket ribeye kevin bacon chicken."
+		]
+	},
+	"kompetenzdiagnostik": {
+		"link": "/portfolio/kompetenzdiagnostik/",
+		"image": "http://baconmockup.com/161/161/",
+		"title": "Kompetenzdiagnostik",
+		"teaser": [
+			"Leberkas short ribs chicken rump shoulder.",
+			"Boudin tri-tip pastrami, filet mignon tail doner meatball turducken ball tip pork loin rump andouille prosciutto."
+		],
+		"text": [
+			"Bacon ipsum dolor amet meatball pork chop tail rump beef ribs bacon cow capicola porchetta kevin. Pork kevin pork belly fatback, chuck picanha chicken swine shank jowl spare ribs drumstick. Shankle jerky tenderloin rump pork, beef meatloaf strip steak cupim hamburger turducken short loin chicken tongue. Brisket pancetta pig rump. Andouille brisket boudin alcatra cow cupim bresaola doner pork chop pork.",
+			"Capicola andouille pork loin fatback biltong, beef ribs landjaeger doner pork chop venison tongue. Pork loin venison chicken, corned beef cow swine porchetta biltong. Pig porchetta short loin tail, pastrami leberkas pork loin pork belly jerky. Sausage jowl tenderloin turkey landjaeger pork pork belly bresaola. Hamburger short ribs shankle cow pork belly shank chuck ham hock jerky. Frankfurter jerky capicola meatloaf tail corned beef ham pig boudin drumstick. Salami turkey picanha shoulder boudin shankle prosciutto bresaola fatback doner.",
+			"Pastrami cow pork chop, salami sausage ham ground round. Biltong pork belly beef ribs tail chuck ham hock rump pork chop drumstick swine salami pancetta turducken. Turducken pancetta strip steak, fatback pig shank tongue tenderloin doner. Hamburger shank bacon sausage, pancetta spare ribs beef ribs. Corned beef frankfurter tenderloin, venison kevin flank porchetta. Pork loin jowl andouille tail ham hock, shankle filet mignon. Corned beef landjaeger beef ribs bacon shankle turducken, ground round ribeye.",
+			"Drumstick turducken rump shankle salami beef ribs fatback. Pork chop meatball doner drumstick. Pastrami tail biltong swine. Salami pancetta strip steak shoulder ham chuck kielbasa.",
+			"Pork belly pork shoulder kevin chicken shankle ribeye frankfurter. Venison picanha porchetta, sirloin jerky tri-tip ball tip pork belly ham hock. Turkey t-bone corned beef ham picanha. Swine bresaola ham porchetta short ribs jowl tongue cupim cow corned beef ground round strip steak tri-tip hamburger. Meatball cow sirloin drumstick kielbasa strip steak andouille. Shoulder capicola shankle, brisket ribeye kevin bacon chicken."
+		]
+	},
+	"veraenderungsmanagement": {
+		"link": "/portfolio/veraenderungsmanagement/",
+		"image": "http://baconmockup.com/162/162/",
+		"title": "Veränderungsmanagement",
+		"teaser": [
+			"Frankfurter kevin filet mignon bacon strip steak ground round.",
+			"Andouille sausage ham pork chop pork loin, salami ground round ribeye corned beef doner jowl jerky chuck."
+		],
+		"text": [
+			"Bacon ipsum dolor amet meatball pork chop tail rump beef ribs bacon cow capicola porchetta kevin. Pork kevin pork belly fatback, chuck picanha chicken swine shank jowl spare ribs drumstick. Shankle jerky tenderloin rump pork, beef meatloaf strip steak cupim hamburger turducken short loin chicken tongue. Brisket pancetta pig rump. Andouille brisket boudin alcatra cow cupim bresaola doner pork chop pork.",
+			"Capicola andouille pork loin fatback biltong, beef ribs landjaeger doner pork chop venison tongue. Pork loin venison chicken, corned beef cow swine porchetta biltong. Pig porchetta short loin tail, pastrami leberkas pork loin pork belly jerky. Sausage jowl tenderloin turkey landjaeger pork pork belly bresaola. Hamburger short ribs shankle cow pork belly shank chuck ham hock jerky. Frankfurter jerky capicola meatloaf tail corned beef ham pig boudin drumstick. Salami turkey picanha shoulder boudin shankle prosciutto bresaola fatback doner.",
+			"Pastrami cow pork chop, salami sausage ham ground round. Biltong pork belly beef ribs tail chuck ham hock rump pork chop drumstick swine salami pancetta turducken. Turducken pancetta strip steak, fatback pig shank tongue tenderloin doner. Hamburger shank bacon sausage, pancetta spare ribs beef ribs. Corned beef frankfurter tenderloin, venison kevin flank porchetta. Pork loin jowl andouille tail ham hock, shankle filet mignon. Corned beef landjaeger beef ribs bacon shankle turducken, ground round ribeye.",
+			"Drumstick turducken rump shankle salami beef ribs fatback. Pork chop meatball doner drumstick. Pastrami tail biltong swine. Salami pancetta strip steak shoulder ham chuck kielbasa.",
+			"Pork belly pork shoulder kevin chicken shankle ribeye frankfurter. Venison picanha porchetta, sirloin jerky tri-tip ball tip pork belly ham hock. Turkey t-bone corned beef ham picanha. Swine bresaola ham porchetta short ribs jowl tongue cupim cow corned beef ground round strip steak tri-tip hamburger. Meatball cow sirloin drumstick kielbasa strip steak andouille. Shoulder capicola shankle, brisket ribeye kevin bacon chicken."
+		]
+	},
+	"befragungen": {
+		"link": "/portfolio/befragungen/",
+		"image": "http://baconmockup.com/163/163/",
+		"title": "Befragungen",
+		"teaser": [
+			"Short ribs filet mignon kevin leberkas turducken sausage shankle ball tip tenderloin tongue swine capicola ham hock flank.",
+			"Swine pork chop pastrami jowl meatball shank, doner spare ribs pig cow capicola ground round chuck ball tip."
+		],
+		"text": [
+			"Bacon ipsum dolor amet meatball pork chop tail rump beef ribs bacon cow capicola porchetta kevin. Pork kevin pork belly fatback, chuck picanha chicken swine shank jowl spare ribs drumstick. Shankle jerky tenderloin rump pork, beef meatloaf strip steak cupim hamburger turducken short loin chicken tongue. Brisket pancetta pig rump. Andouille brisket boudin alcatra cow cupim bresaola doner pork chop pork.",
+			"Capicola andouille pork loin fatback biltong, beef ribs landjaeger doner pork chop venison tongue. Pork loin venison chicken, corned beef cow swine porchetta biltong. Pig porchetta short loin tail, pastrami leberkas pork loin pork belly jerky. Sausage jowl tenderloin turkey landjaeger pork pork belly bresaola. Hamburger short ribs shankle cow pork belly shank chuck ham hock jerky. Frankfurter jerky capicola meatloaf tail corned beef ham pig boudin drumstick. Salami turkey picanha shoulder boudin shankle prosciutto bresaola fatback doner.",
+			"Pastrami cow pork chop, salami sausage ham ground round. Biltong pork belly beef ribs tail chuck ham hock rump pork chop drumstick swine salami pancetta turducken. Turducken pancetta strip steak, fatback pig shank tongue tenderloin doner. Hamburger shank bacon sausage, pancetta spare ribs beef ribs. Corned beef frankfurter tenderloin, venison kevin flank porchetta. Pork loin jowl andouille tail ham hock, shankle filet mignon. Corned beef landjaeger beef ribs bacon shankle turducken, ground round ribeye.",
+			"Drumstick turducken rump shankle salami beef ribs fatback. Pork chop meatball doner drumstick. Pastrami tail biltong swine. Salami pancetta strip steak shoulder ham chuck kielbasa.",
+			"Pork belly pork shoulder kevin chicken shankle ribeye frankfurter. Venison picanha porchetta, sirloin jerky tri-tip ball tip pork belly ham hock. Turkey t-bone corned beef ham picanha. Swine bresaola ham porchetta short ribs jowl tongue cupim cow corned beef ground round strip steak tri-tip hamburger. Meatball cow sirloin drumstick kielbasa strip steak andouille. Shoulder capicola shankle, brisket ribeye kevin bacon chicken."
+		]
+	},
+	"coaching": {
+		"link": "/portfolio/coaching/",
+		"image": "http://baconmockup.com/164/164/",
+		"title": "Coaching",
+		"teaser": [
+			"Tenderloin boudin turducken, frankfurter beef ribs ground round bacon pancetta bresaola cupim kevin pork loin turkey brisket.",
+			"Fatback biltong rump pastrami short loin ribeye."
+		],
+		"text": [
+			"Bacon ipsum dolor amet meatball pork chop tail rump beef ribs bacon cow capicola porchetta kevin. Pork kevin pork belly fatback, chuck picanha chicken swine shank jowl spare ribs drumstick. Shankle jerky tenderloin rump pork, beef meatloaf strip steak cupim hamburger turducken short loin chicken tongue. Brisket pancetta pig rump. Andouille brisket boudin alcatra cow cupim bresaola doner pork chop pork.",
+			"Capicola andouille pork loin fatback biltong, beef ribs landjaeger doner pork chop venison tongue. Pork loin venison chicken, corned beef cow swine porchetta biltong. Pig porchetta short loin tail, pastrami leberkas pork loin pork belly jerky. Sausage jowl tenderloin turkey landjaeger pork pork belly bresaola. Hamburger short ribs shankle cow pork belly shank chuck ham hock jerky. Frankfurter jerky capicola meatloaf tail corned beef ham pig boudin drumstick. Salami turkey picanha shoulder boudin shankle prosciutto bresaola fatback doner.",
+			"Pastrami cow pork chop, salami sausage ham ground round. Biltong pork belly beef ribs tail chuck ham hock rump pork chop drumstick swine salami pancetta turducken. Turducken pancetta strip steak, fatback pig shank tongue tenderloin doner. Hamburger shank bacon sausage, pancetta spare ribs beef ribs. Corned beef frankfurter tenderloin, venison kevin flank porchetta. Pork loin jowl andouille tail ham hock, shankle filet mignon. Corned beef landjaeger beef ribs bacon shankle turducken, ground round ribeye.",
+			"Drumstick turducken rump shankle salami beef ribs fatback. Pork chop meatball doner drumstick. Pastrami tail biltong swine. Salami pancetta strip steak shoulder ham chuck kielbasa.",
+			"Pork belly pork shoulder kevin chicken shankle ribeye frankfurter. Venison picanha porchetta, sirloin jerky tri-tip ball tip pork belly ham hock. Turkey t-bone corned beef ham picanha. Swine bresaola ham porchetta short ribs jowl tongue cupim cow corned beef ground round strip steak tri-tip hamburger. Meatball cow sirloin drumstick kielbasa strip steak andouille. Shoulder capicola shankle, brisket ribeye kevin bacon chicken."
+		]
+	},
+	"gesundeorganisation": {
+		"link": "/portfolio/gesundeorganisation/",
+		"image": "http://baconmockup.com/165/165/",
+		"title": "Gesunde Organisation",
+		"teaser": [
+			"T-bone pastrami short ribs, boudin pancetta pork loin tongue meatloaf turkey chuck corned beef.",
+			"Andouille rump biltong ground round."
+		],
+		"text": [
+			"Bacon ipsum dolor amet meatball pork chop tail rump beef ribs bacon cow capicola porchetta kevin. Pork kevin pork belly fatback, chuck picanha chicken swine shank jowl spare ribs drumstick. Shankle jerky tenderloin rump pork, beef meatloaf strip steak cupim hamburger turducken short loin chicken tongue. Brisket pancetta pig rump. Andouille brisket boudin alcatra cow cupim bresaola doner pork chop pork.",
+			"Capicola andouille pork loin fatback biltong, beef ribs landjaeger doner pork chop venison tongue. Pork loin venison chicken, corned beef cow swine porchetta biltong. Pig porchetta short loin tail, pastrami leberkas pork loin pork belly jerky. Sausage jowl tenderloin turkey landjaeger pork pork belly bresaola. Hamburger short ribs shankle cow pork belly shank chuck ham hock jerky. Frankfurter jerky capicola meatloaf tail corned beef ham pig boudin drumstick. Salami turkey picanha shoulder boudin shankle prosciutto bresaola fatback doner.",
+			"Pastrami cow pork chop, salami sausage ham ground round. Biltong pork belly beef ribs tail chuck ham hock rump pork chop drumstick swine salami pancetta turducken. Turducken pancetta strip steak, fatback pig shank tongue tenderloin doner. Hamburger shank bacon sausage, pancetta spare ribs beef ribs. Corned beef frankfurter tenderloin, venison kevin flank porchetta. Pork loin jowl andouille tail ham hock, shankle filet mignon. Corned beef landjaeger beef ribs bacon shankle turducken, ground round ribeye.",
+			"Drumstick turducken rump shankle salami beef ribs fatback. Pork chop meatball doner drumstick. Pastrami tail biltong swine. Salami pancetta strip steak shoulder ham chuck kielbasa.",
+			"Pork belly pork shoulder kevin chicken shankle ribeye frankfurter. Venison picanha porchetta, sirloin jerky tri-tip ball tip pork belly ham hock. Turkey t-bone corned beef ham picanha. Swine bresaola ham porchetta short ribs jowl tongue cupim cow corned beef ground round strip steak tri-tip hamburger. Meatball cow sirloin drumstick kielbasa strip steak andouille. Shoulder capicola shankle, brisket ribeye kevin bacon chicken."
+		]
+	}
+}

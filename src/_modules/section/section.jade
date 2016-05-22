@@ -29,11 +29,3 @@ mixin section-badge(spec)
         svg(class="section__badge-icon")
             use(xlink:href=spec.icon)
         = spec.title
-
-mixin section-link(spec)
-    - spec = spec || ''
-
-    a(class="section__link #{spec.class}", href=spec.href, title=spec.title) 
-        svg(class="section__link-icon")
-            use(xlink:href=spec.icon)
-        = spec.title
