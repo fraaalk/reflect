@@ -12,16 +12,20 @@ block content
         +section-headline({"title": "Kontakt", "class": "", "icon": "#group"})
         form(class="grid form")
             p(class="grid__col-12") Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
-            div(class="grid__col-12 grid__col-sm-6")
-                input(placeholder="Vorname", class="form__input")
-                input(placeholder="Nachname", class="form__input")
-                input(placeholder="E-Mail", class="form__input")
-                input(placeholder="Telefon", class="form__input")
-            div(class="grid__col-12 grid__col-sm-6")
-                textarea(class="form__input form__input--textarea") Ihre Nachricht
-                submit(class="form__submit") Abschicken
-
-
+            div(class="grid__col-12 grid__col-sm-6 grid__col--bleed")
+                div(class="grid__col-12")
+                    input(placeholder="Vorname", class="form__input")
+                div(class="grid__col-12")
+                    input(placeholder="Nachname", class="form__input")
+                div(class="grid__col-12")
+                    input(placeholder="E-Mail", class="form__input")
+                div(class="grid__col-12")
+                    input(placeholder="Telefon", class="form__input")
+            div(class="grid__col-12 grid__col-sm-6 grid__col--bleed")
+                div(class="grid__col-12")
+                    textarea(class="form__input form__input--textarea") Ihre Nachricht
+                div(class="grid__col-12")
+                    input(type="submit", class="form__submit", value="Abschicken")
     +section({"class": "section--white"})
         +section-headline({"title": "Adresse & Anfahrt", "class": "", "icon": "#group"})
         div(class="grid")
@@ -49,6 +53,8 @@ block content
         +section-headline({"title": "Team", "class": "section__headline--spaced-top", "icon": "#group"})
         div(class="grid")
             p(class="grid__col-12") Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
+        div(class="grid grid--bleed team-teasers")
             each member in members
-                div(class="grid__col-12 grid__col-sm-6 grid__col-md-4")
-                  +team-teaser-grid(member)
+                +team-teaser-grid(member)
+            // hack to make the layout work, it requires a full set
+            div(class="team-teaser grid__col-4")

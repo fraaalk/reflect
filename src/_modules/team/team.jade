@@ -3,18 +3,17 @@ mixin team-teaser-list(spec)
 
     div(class="team-teaser team-teaser--list-view")&attributes(attributes)
         a(class="team-teaser__link", href=spec.link)
-            div(class="grid grid--align-center")
-                div(class="team-teaser__image grid__col-auto grid__cell")
-                    img(class="team__member-image", src=spec.image)
-                div(class="team-teaser__body grid__col-auto")
-                    blockquote(class="team__member-quote")= spec.quote
-                    p(class="team__member-name")= spec.name
-                    p(class="team__member-title")= spec.title
+            div(class="team-teaser__image")
+                img(class="team__member-image", src=spec.image)
+            div(class="team-teaser__body")
+                blockquote(class="team__member-quote")= spec.quote
+                p(class="team__member-name")= spec.name
+                p(class="team__member-title")= spec.title
 
 mixin team-teaser-grid(spec)
     - spec = spec || ""
 
-    div(class="team-teaser team-teaser--grid-view")&attributes(attributes)
+    div(class="team-teaser grid__col-4")&attributes(attributes)
         a(class="team-teaser__link", href=spec.link)
             div(class="team-teaser__image")
                 img(class="team__member-image", src=spec.image)

@@ -11,11 +11,18 @@
 		}
 
 		&-quote {
-			font-size: 36px;
-			line-height: 1.1;
-			letter-spacing: 0.6px;
 			color: #000000;
 			font-style: italic;
+			font-size: 22px;
+			line-height: 1.5;
+			letter-spacing: 0.3px;
+
+			@include breakpoint($bp-sm) {
+				font-size: 36px;
+				letter-spacing: 0.6px;
+				line-height: 1.1;
+			}
+
 
 			&:before,
 			&:after {
@@ -75,6 +82,13 @@
 		}
 	}
 
+	// teasers wrapper container
+	// for contact page (grid view)
+	&-teasers {
+		border: 1px solid #ccc;
+		background: white;
+	}
+
 	&-teaser {
 		@include clearfix();
 		text-align: center;
@@ -83,16 +97,33 @@
 			text-align: left;
 		}
 
+		// team teaser inside a grid view, currently only 4col supported
+		// no layout for any other size given yet
+		&.grid__col-4 {
+			background: white;
+			text-align: center;
+			border-bottom: 1px solid #ccc;
+			border-right: 1px solid #ccc;
+			padding: 0;
+
+			@include every(3) {
+				border-right: 0;
+			}
+
+			@include last(3) {
+				border-bottom: 0;
+			}
+
+
+		}
+
 		&__body {
 			.team-teaser--list-view & {
 				@include breakpoint($bp-sm) {
 					padding: 0 60px;
+					float: left;
+					width: 70%;
 				}
-			}
-
-			.team-teaser--grid-view & {
-				text-align: center;
-				width: 100%;
 			}
 		}
 
@@ -100,7 +131,7 @@
 			display: block;
 			transition: background 0.3s ease-out;
 
-			.team-teaser--grid-view & { 
+			.team-teasers & { 
 				padding: 30px 0;
 				
 				&:hover {
@@ -113,12 +144,16 @@
 			text-align: center;
 
 			.team-teaser--list-view & {
-				max-width: calc(174px + 10px);
+
+				@include breakpoint($bp-sm) {
+					float: left;
+					width: 30%;
+					max-width: 190px;
+				}
 			}
 
-			.team-teaser--grid-view & {
-				text-align: center;
-				width: 100%;
+			img {
+				display: inline-block;
 			}
 		}
 
@@ -126,12 +161,6 @@
 			color: #4a90e2;
 			width: 25px;
 			height: 13px;
-		}
-
-		&--grid-view {
-			border: 1px solid #ccc;
-			background: white;
-			text-align: center;
 		}
 	}
 

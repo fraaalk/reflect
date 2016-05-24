@@ -10,7 +10,7 @@ mixin link(spec)
         if spec.iconBefore
             svg(class="link__icon link__icon--before")
                 use(xlink:href=spec.iconBefore)
-        = spec.title
+        span(class="link__text")= spec.title
         if spec.iconAfter
             svg(class="link__icon link__icon--after")
                 use(xlink:href=spec.iconAfter)

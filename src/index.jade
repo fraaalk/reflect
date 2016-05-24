@@ -42,7 +42,7 @@ block content
             +section-headline({icon: "#rocket", title: "Portfolio"})
             div(class="grid")
                 each teaser in portfolio
-                    div(class="grid__col-12 grid__col-xs-6 grid__col-sm-4")
+                    div(class="grid__col-12 grid__col-sm-4")
                         div(class="grid__cell")
                             +portfolio-teaser-short(teaser)
     section(class="section section--grey")
@@ -57,7 +57,7 @@ block content
             +section-headline({icon: "#comment-o", title: "Blog"})
                 a(class="section__headline-link", href="/blog/") Mehr Blog-Artikel →
             div(class="grid")
-                div(class="grid__col-12 grid__col-xs-6")
+                div(class="grid__col-12 grid__col-sm-6")
                     +blog-teaser-default(blog[0])
-                div(class="grid__col-12 grid__col-xs-6")
+                div(class="grid__col-12 grid__col-sm-6")
                     +blog-teaser-default(blog[1])

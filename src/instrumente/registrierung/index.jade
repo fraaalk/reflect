@@ -1,0 +1,43 @@
+extends ../../_layouts/base
+
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = '../../'
+    - var portfolio = site.data.portfolio.befragungen
+
+block content
+    +header({"class":"header--extended", "visual": "http://baconmockup.com/1280/188/", "visualSize": "0 0 32 5"})
+    +breadcrumb([["Home", "/"],["Instrumente", "/instrumente/"], ["Registrierung", "/instrumente/registrierung/"]])
+    +section({"class": "section--grey"})
+        +section-headline({icon: "#rocket", title: "Login"})
+        form(class="grid grid--justify-end form")
+            p(class="grid__col-12") Um an dieser Umfrage teilzunehmen, benötigen Sie einen passenden Zugangsschlüssel. Falls Sie einen Zugangsschlüssel erhalten haben, geben Sie diesen bitte in das untenstehende Feld ein und klicken Sie auf 'Weiter'.
+            div(class="grid__col-12 grid__col-sm-4")
+                input(class="form__input is-invalid")
+            div(class="grid__col-12 grid__col-sm-4")
+                input(class="form__input")
+            div(class="grid__col-12 grid__col-sm-4")
+                input(type="submit", class="form__submit", value="Weiter")
+            div(class="grid__col-12 grid__col-sm-4 grid__col--bleed")
+                +link({"class": "u__color-red u__text-upper u__text-center", "href": "/instrumente/registrierung/", "title": "Login vergessen", "iconBefore": "#question-circle"})
+    +section({"class": "section--white"})
+        +section-headline({icon: "#rocket", title: "Noch keinen Zugangsschlüssel? Hier registrieren"})
+        form(class="grid grid--justify-end form")
+            div(class="grid__col-12 grid__col-sm-6")
+                input(class="form__input", placeholder="Name")
+            div(class="grid__col-12 grid__col-sm-6")
+                input(class="form__input", placeholder="Vorname")
+            div(class="grid__col-12")
+                input(class="form__input", placeholder="Firma")
+            div(class="grid__col-12 grid__col-sm-8")
+                input(class="form__input", placeholder="Straße")
+            div(class="grid__col-12 grid__col-sm-4")
+                input(class="form__input", placeholder="Nr")
+            div(class="grid__col-12 grid__col-sm-4")
+                input(class="form__input", placeholder="PLZ")
+            div(class="grid__col-12 grid__col-sm-8")
+                input(class="form__input", placeholder="Ort")
+            div(class="grid__col-12 grid__col-sm-4 ")
+                 input(type="submit", class="form__submit", value="Abschicken")
+
+

@@ -1,15 +1,33 @@
 // link styles
 .link {
 
-	&:hover {
-		text-decoration: underline;
+	&__text {
+		line-height: 1;
+		transition: all 0.2s ease-out;
+
+		&:hover {
+			text-decoration: underline;
+
+			.u__color-red & {
+				color: darken($color-red, 10%);
+			}
+
+			.u__color-darkblue & {
+				color: darken($color-darkblue, 10%);
+			}
+		}
+	}
+
+	&__icon,
+	&__text {
+		display: inline-block;
+		vertical-align: middle;
 	}
 
 	&__icon {
-		display: inline-block;
 		height: 1em;
 		width: 1em;
-		vertical-align: text-bottom;
+		line-height: 1;
 
 		&--after {
 			margin-left: 4px;

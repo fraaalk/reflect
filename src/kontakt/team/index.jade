@@ -11,7 +11,8 @@ block content
     +section({"class": "section--compressed section--grey"})
         +section-headline({"title": "Team", "class": "section__headline--spaced-top", "icon": "#group"})
         p Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
-        div(class="grid")
+        div(class="grid grid--bleed team-teasers")
             each member in members
-                div(class="grid__col-4")
-                  +team-teaser-grid(member)
+                +team-teaser-grid(member)
+            // hack to make the layout work, it requires a full set
+            div(class="team-teaser grid__col-4")
