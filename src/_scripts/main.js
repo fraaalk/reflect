@@ -22,20 +22,16 @@ $(() => {
         new Carousel( this );
     });
 
-    $( '.header__menutoggle' ).on( 'click', function() {
-        $( '.nav' ).toggleClass( 'is-visible' );
-    });
-
-    $( '.header__searchtoggle' ).on( 'click', function() {
-        $( '.search' ).toggleClass( 'is-visible' );
+    $( '.header__nav-toggle' ).on( 'click', 'button', function() {
+        $( '.header__off-canvas' ).toggleClass( 'is-visible' );
     });
 
     $( '.nav__listitem--l1' ).on ( 'mouseenter', 'a', function() {
     	$(this)
     		.parent( '.nav__listitem--l1' )
-    		.addClass( 'is-active' );
-    }).on( 'mouseout', function(){
-        $(this).removeClass( 'is-active' );
+    		.addClass( 'is-active' )
+            .siblings()
+            .removeClass( 'is-active' );
     });
 
     $( window ).on( 'resize', function() {

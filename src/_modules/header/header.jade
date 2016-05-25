@@ -4,15 +4,17 @@ mixin header(spec)
 
     header(class="header")&attributes(attributes)
         div(class="header__wrapper")
-            div(class="grid grid--align-center")
-                div(class="grid__col-auto")
-                    a(href="/", title="Zur Startseite"): img(class='header__logo', src='/images/logo--header.png')
-                div(class="grid__col-7")
-                    button(class='header__menutoggle') ☰
-                    include ../navigation/navigation.jade
-                div(class="grid__col-auto")
+            div(class="header__nav-toggle")
+                button ☰
+            div(class="header__logo")
+                a(href="/", title="Zur Startseite"): img(src='/images/logo--header.png')
+            div(class="header__off-canvas")
+                div(class="header__nav")
+                    +navigation({"class": "nav--main", "menu": site.data.menu})
+                div(class="header__search")
                     +form-inline({"class": "form--search", "icon": "#search"})
-                    button(class='header__searchtoggle')
+                div(class="header__language-selection")
+                    +navigation({"class": "nav--language", "menu": site.data.language})
             div(class="header__visual", style="background-image: url(#{spec.visual});")
                 block
                 img(class="header__visual-image", src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'#{spec.visualSize}'%2F%3E")

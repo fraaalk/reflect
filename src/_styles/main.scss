@@ -6,6 +6,7 @@ $color-red: rgba(208, 2, 27, 1);
 $color-lightblue: rgba(0, 125, 199, 1);
 $color-darkblue: rgba(15, 76, 136, 1);
 
+$color-lightgrey: rgba(125, 140, 147, 1);
 $color-darkgrey: rgba(0, 0, 0, 0.6);
 
 // for debugging the grid
@@ -183,6 +184,12 @@ svg {
 	&-hidden {
 		@include breakpoint($bp-sm-down) {
 			&-sm-down {
+				display: none;
+			}
+		}
+
+		@include breakpoint($bp-sm-up) {
+			&-sm-up {
 				display: none;
 			}
 		}

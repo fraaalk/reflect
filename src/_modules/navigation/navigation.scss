@@ -2,6 +2,17 @@
 .nav {
 	display: block;
 
+	a {
+		font-size: inherit;
+		color: $color-lightgrey;
+		font-weight: 400;
+		display: block;
+
+		&:hover {
+			color: black;
+		}
+	}
+
 	&__list {
 		margin: 0;
 		padding: 0;
@@ -9,48 +20,47 @@
 		display: flex;
 		justify-content: space-around;
 
+		@include breakpoint($bp-sm-down) {
+			flex-direction: column;
+		}
+
 		&--l1 {
-			
+			font-size: 13px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			letter-spacing: 0.2px;
 		}
 
 		&--l2 {
 			display: none;
-			position: absolute;
-			background: white;
-			z-index: 600;
-
+			
+			@include breakpoint($bp-sm-up) {
+				position: absolute;
+				background: #ccc;
+				z-index: 600;
+				margin-left: -25px;
+				padding-top: 30px;
+				padding-bottom: 20px;
+			}
+			
 			.is-active & {
 				display: block;
-			}	
+			}
 		}
 
 		&item{
 			margin: 0;
 			padding: 0;
 			display: block;
-			//height: calculateRem(44px);
 
-			&--l1 {
-				> a {
-					text-transform: uppercase;
-					letter-spacing: 0.2px;
-					line-height: 1.2; // 18px
-					padding: 13px 0;
-				}
-
-				&.is-active > a {
-					color: #000;					
-				}
+			&--l1 > a {
+				padding: 13px 0;
 			}
 
 			&--l2 > a {
 				letter-spacing: 1.9px;
 				line-height: 1.7;
 				padding: 0 26px;
-
-				&.is-active {
-					color: #000;
-				}
 			}
 		}
 	}

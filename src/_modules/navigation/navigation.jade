@@ -1,15 +1,18 @@
 block config
     //- Correct base url pathing for this page
     - var baseUrl = '../'
-    - var menu = site.data.menu
 
-nav(class='nav')
-    ul(class='nav__list nav__list--l1')
-        each item in site.data.menu
-            li(class='nav__listitem nav__listitem--l1')
-                a(title=item.title, href=item.href)= item.title
-                if item.items
-                    ul(class="nav__list nav__list--l2")
-                        each subitem in item.items
-                            li(class='nav__listitem nav__listitem--l2')
-                                a(href=subitem.href, title=subitem.title)= subitem.title
+mixin navigation(spec)
+    - spec = spec || ''
+    - spec.class = spec.class || ''
+
+    nav(class='nav #{spec.class}')
+        ul(class='nav__list nav__list--l1')
+            each item in spec.menu
+                li(class='nav__listitem nav__listitem--l1')
+                    a(title=item.title, href=item.href)= item.title
+                    if item.items
+                        ul(class="nav__list nav__list--l2")
+                            each subitem in item.items
+                                li(class='nav__listitem nav__listitem--l2')
+                                    a(href=subitem.href, title=subitem.title)= subitem.title

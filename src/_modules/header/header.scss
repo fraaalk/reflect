@@ -7,56 +7,122 @@
 	&__wrapper {
 		max-width: 1280px;
 		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 
-	&__menutoggle {
-		position: absolute;
-		left: 0;
+	// wrapper for navigation,
+	// search and language selection
+	// which is moved out of the canvas on mobile
+	&__off-canvas {
 
-		@include breakpoint($bp-sm-up) {
-			display: none;
+		@include breakpoint($bp-sm-down) {
+			width: 0; 
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			background: white;
+			z-index: 400;
+			margin-top: 60px;
+
+			&.is-visible {
+				width: 300px;
+			}
 		}
 	}
 
-	&__searchtoggle {
-		position: absolute;
-		right: 0;
+	@include breakpoint($bp-sm-up) {
+		&__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+		}
 
-		@include breakpoint($bp-sm-up) {
+		&__off-canvas {
+			display: flex;
+			// calculated width all available space minus logo
+			// needs to be adjusted if logo should get more spacing
+			width: calc(100% - 160px);
+		}
+
+		&__nav,
+		&__search,
+		&__language-selection {
+			align-self: center;
+		}
+
+		// wrapper for header navigation
+		&__nav {
+			width: 70%;
+		}
+
+		// wrapper for the header search
+		&__search {
+			width: 20%;
+		}
+
+		// wrapper for language selection
+		&__language-selection {
+			width: 10%;
+		}
+
+		// nav toggle button only visible on mobile
+		&__nav-toggle {
 			display: none;
+		}
+
+		&__visual {
+			width: 100%;
+		}
+	}
+
+	&__nav-toggle {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 62px;
+		line-height: 62px;
+
+		button {
+			border: none;
+			background: none;
+			color: #8493a8;
+			vertical-align: middle;
+			display: inline-block;
 		}
 	}
 
 	&__logo {
-		display: block;
 		width: 160px;
-		height: 41px;
 
-		/*@include breakpoint($small-only) {
-			position: absolute;
-			left: calc(50% - 80px);
+		@include breakpoint($bp-sm-down) {
+			height: 62px;
+			line-height: 62px;
 		}
-*/
-		@include breakpoint($bp-sm-up) {
-			float: left;
-			position: static;
-		}
-	}
 
-	&__search {
-		display: none;
-
-		@include breakpoint($bp-sm-up) {
-			float: right;
+		a {
 			display: block;
+		}
+
+		img {
+			width: 160px;
+			height: 41px;
+			vertical-align: middle;
+			display: inline-block;
 		}
 	}
 
 	&__visual {
-		border-top: 40px solid #00488D;
 		position: relative;
 		background-size: cover;
 		background-repeat: no-repeat;
+		width: 100%;
+
+		@include breakpoint($bp-sm-up) {
+			border-top: 40px solid #00488D;
+		}
 
 		// large breakpoint, check for mobile?!
 		min-height: calc(196px + 40px);

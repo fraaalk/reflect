@@ -57,5 +57,9 @@
 	"kontakt": {
 		"title": "Kontakt",
 		"href": "/kontakt/"
+	},
+	"blog": {
+		"title": "Blog",
+		"href": "/blog/"
 	}
 }
