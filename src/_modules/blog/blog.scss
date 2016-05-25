@@ -136,33 +136,21 @@
 			letter-spacing: 0.3px;
 			@include clearfix();
 
-			a {
-				text-decoration: none;
-				transition: all 0.3s ease-out;
-
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-
 			.blog-teaser--extended & {
 				margin-top: 30px;
 				background: #4a4a4a;
 				padding: 10px 25px;
 				color: white;
-
-				a {
-					color: white;
-
-					&:hover {
-						color: darken(white, 10%);
-					}
-				}
 			}
 
 			.blog-teaser--default & {
 				padding: 10px 25px;
 			}
+		}
+
+		// wrapper for the detail link inside the footer
+		&__detail-link {
+			text-align: right;
 		}
 
 		// blog teaser body

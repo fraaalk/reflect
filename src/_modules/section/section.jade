@@ -7,12 +7,13 @@ mixin section(spec)
 
 mixin section-headline(spec)
     - spec = spec || ''
+    - spec.class = spec.class || ''
 
     h2(class="section__headline #{spec.class}")
         if spec.icon
             svg(class="section__headline-icon")
                 use(xlink:href=spec.icon)
-        = spec.title
+        span(class="section__headine-text")= spec.title
         block
 
 mixin section-block(spec)

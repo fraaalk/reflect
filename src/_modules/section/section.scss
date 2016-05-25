@@ -11,11 +11,9 @@
 		padding: 0 10px;
 		font-weight: 300;
 		font-size: 35px;
-		line-height: 1;
 		letter-spacing: 0.5px;
 		color: rgba(0, 125, 199, 1);
 		text-transform: uppercase;
-		margin-bottom: 10px;
 		text-align: center;
 
 		&--spaced-top {
@@ -23,11 +21,11 @@
 		}
 
 		&-icon {
-			height: 35px;
-			width: 35px;
-			display: inline-block;
-			vertical-align: middle;
+			height: 1em;
+			width: 1em;
 			margin-right: 12px;
+			position: relative;
+			top: 3px;
 		}
 
 		@include breakpoint($bp-sm) {
@@ -84,7 +82,7 @@
 		&-icon {
 			width: 20px;
 			height: 20px;
-			display: inline-block;
+			display: inline;
 			margin-right: 5px;
 			vertical-align: middle;
 		}
@@ -93,17 +91,6 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-		}
-	}
-
-	&__link {
-		&-icon {
-			height: 14px;
-			width: 14px;
-			display: inline-block;
-			margin: 0 10px 0 0;
-			transform: rotate(180deg);
-			vertical-align: text-bottom;
 		}
 	}
 

@@ -9,9 +9,8 @@ mixin blog-teaser-default(spec)
             h3(class="blog-teaser__headline")= spec.shorttitle
             p= spec.body[0]
         footer(class="blog-teaser__footer")
-            a(class="blog-teaser__link", href=spec.link) weiterlesen
-                svg(class="blog-teaser__link-icon")
-                    use(xlink:href="#long-arrow-right")
+            div(class="blog-teaser__detail-link")
+                +link({"class": "u__color-darkblue", "href": spec.link, "title": "weiterlesen", "iconAfter": "#long-arrow-right"})
 
 mixin blog-teaser-extended(spec)
     - spec = spec || {}
@@ -30,10 +29,9 @@ mixin blog-teaser-extended(spec)
         footer(class="blog-teaser__footer")
             div(class="blog-teaser__tags")
                 each tag in spec.tags
-                    a(href="#")= tag
-            a(class="blog-teaser__link", href=spec.link) weiterlesen
-                svg(class="blog-teaser__link-icon")
-                    use(xlink:href="#long-arrow-right")
+                    +link({"class": "u__color-white", "href": "#", "title": tag})
+            div(class="blog-teaser__detail-link")
+                +link({"class": "u__color-white", "href": spec.link, "title": "weiterlesen", "iconAfter": "#long-arrow-right"})
 
 mixin blog-tag-listing(spec)
     - spec = spec || {}

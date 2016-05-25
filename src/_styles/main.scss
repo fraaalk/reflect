@@ -1,8 +1,17 @@
 // variables
 $reflex-grid-spacing: 10px;
+
+$color-white: #fff;
 $color-red: rgba(208, 2, 27, 1);
 $color-lightblue: rgba(0, 125, 199, 1);
 $color-darkblue: rgba(15, 76, 136, 1);
+
+$color-darkgrey: rgba(0, 0, 0, 0.6);
+
+// for debugging the grid
+*[class^="grid__col"] {
+	outline: 1px dotted #000;
+}
 
 @import 'node_modules/reset.scss/reset';
 @import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
@@ -13,7 +22,6 @@ $color-darkblue: rgba(15, 76, 136, 1);
 @import 'mixins';
 
 // Import Modules
-
 @import '../_modules/navigation/navigation';
 @import '../_modules/header/header';
 @import '../_modules/footer/footer';
@@ -120,6 +128,10 @@ svg {
 
 	// color helpers
 	&__color {
+		&-white {
+			color: $color-white;
+		}
+
 		&-red {
 			color: $color-red;
 		}
@@ -130,6 +142,10 @@ svg {
 
 		&-darkblue {
 			color: $color-darkblue;
+		}
+
+		&-darkgrey {
+			color: $color-darkgrey;
 		}
 	}
 

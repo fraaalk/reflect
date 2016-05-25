@@ -1,20 +1,32 @@
 // link styles
 .link {
+	transition: all 0.2s ease-out;
+	text-decoration: none;
+	font-size: 16px;
+
+	&:hover {
+		&.u__color-red {
+			color: darken($color-red, 10%);
+		}
+
+		&.u__color-darkblue {
+			color: darken($color-darkblue, 10%);
+		}
+
+		&.u__color-white {
+			color: darken($color-white, 10%);
+		}
+
+		&.u__color-darkgrey {
+			color: darken($color-darkgrey, 10%);
+		}
+	}
 
 	&__text {
 		line-height: 1;
-		transition: all 0.2s ease-out;
 
 		&:hover {
 			text-decoration: underline;
-
-			.u__color-red & {
-				color: darken($color-red, 10%);
-			}
-
-			.u__color-darkblue & {
-				color: darken($color-darkblue, 10%);
-			}
 		}
 	}
 
