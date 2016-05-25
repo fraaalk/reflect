@@ -4,14 +4,14 @@ mixin header(spec)
 
     header(class="header")&attributes(attributes)
         div(class="header__wrapper")
-            div(class="grid")
-                div(class="grid__col-2")
+            div(class="grid grid--align-center")
+                div(class="grid__col-auto")
                     a(href="/", title="Zur Startseite"): img(class='header__logo', src='/images/logo--header.png')
                 div(class="grid__col-7")
                     button(class='header__menutoggle') ☰
                     include ../navigation/navigation.jade
-                div(class="grid__col-3")
-                    +form-inline({"class": "search", "icon": "#search"})
+                div(class="grid__col-auto")
+                    +form-inline({"class": "form--search", "icon": "#search"})
                     button(class='header__searchtoggle')
             div(class="header__visual", style="background-image: url(#{spec.visual});")
                 block

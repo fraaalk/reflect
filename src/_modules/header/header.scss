@@ -13,7 +13,7 @@
 		position: absolute;
 		left: 0;
 
-		@include breakpoint($medium-up) {
+		@include breakpoint($bp-sm-up) {
 			display: none;
 		}
 	}
@@ -22,7 +22,7 @@
 		position: absolute;
 		right: 0;
 
-		@include breakpoint($medium-up) {
+		@include breakpoint($bp-sm-up) {
 			display: none;
 		}
 	}
@@ -32,12 +32,12 @@
 		width: 160px;
 		height: 41px;
 
-		@include breakpoint($small-only) {
+		/*@include breakpoint($small-only) {
 			position: absolute;
 			left: calc(50% - 80px);
 		}
-
-		@include breakpoint($medium-up) {
+*/
+		@include breakpoint($bp-sm-up) {
 			float: left;
 			position: static;
 		}
@@ -46,7 +46,7 @@
 	&__search {
 		display: none;
 
-		@include breakpoint($medium-up) {
+		@include breakpoint($bp-sm-up) {
 			float: right;
 			display: block;
 		}

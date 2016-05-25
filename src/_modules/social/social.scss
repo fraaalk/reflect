@@ -4,10 +4,6 @@
 	&--footer {
 		text-align: center;
 	}
-	
-	@include breakpoint($small-only) {
-		display: none;
-	}
 
 	&__button {
 		$background-color: rgba(254, 254, 254, 0.3);

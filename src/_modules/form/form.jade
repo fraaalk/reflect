@@ -10,8 +10,8 @@ mixin form-inline(spec)
   - spec = spec || {}
   - spec.class = spec.class || ''
 
-    form(class=spec.class)&attributes(attributes)
-        input(class="#{spec.class}__input")
-        button(type="button", class="#{spec.class}__submit")
-            svg(class="#{spec.class}__submit-icon")
+    form(class="form form--inline #{spec.class}")&attributes(attributes)
+        input(class="form__input form__input--inline")
+        button(type="button", class="form__submit form__submit--inline")
+            svg(class="form__submit-icon")
                 use(xlink:href=spec.icon)

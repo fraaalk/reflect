@@ -3,20 +3,30 @@ block config
     - var baseUrl = '../'
 
 mixin carousel(spec)
-    - spec = spec || {}
-    - spec.__class = spec.__class || ''
+    -spec = spec || ''
 
     div(class="carousel")&attributes({'data-carousel': ''})
-        div(class="carousel__stage")
-            ul(class="carousel__slide-list")
-                block
-        nav(class="carousel__controls carousel__controls--team-teaser")
-            button(class="carousel__button carousel__button--prev") 
-                svg(class="carousel__button-icon carousel__button-icon--prev")
-                    use(xlink:href="#angle-right")
-            button(class="carousel__button carousel__button--next")
-                svg(class="carousel__button-icon carousel__button-icon--next")
-                    use(xlink:href="#angle-right")
+
+mixin carousel-stage(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ''
+
+    div(class="carousel__stage")
+        ul(class="carousel__slide-list")
+            block
+
+mixin carousel-controls(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ''
+
+    nav(class="carousel__controls carousel__controls--team-teaser")
+        button(class="carousel__button carousel__button--prev") 
+            svg(class="carousel__button-icon carousel__button-icon--prev")
+                use(xlink:href="#angle-right")
+        button(class="carousel__button carousel__button--next")
+            svg(class="carousel__button-icon carousel__button-icon--next")
+                use(xlink:href="#angle-right")
+
 
 mixin carousel-slide(spec)
     - spec = spec || {}

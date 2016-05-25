@@ -14,11 +14,18 @@
     }
 }
 
-$bp-xs: 'min-width' 480px;
-$bp-sm: 'min-width' 768px;
-$bp-md: 'min-width' 992px;
-$bp-lg: 'min-width' 1200px;
-$bp-xlg: 'min-width' 1600px;
-
-$small-only: 'max-width' 727px;
-$medium-up: 'min-width' 728px;
+$bp-xs-up: 'min-width' 480px;
+$bp-xs-down: 0 480px;
+$bp-xs-only: 0 480px;
+$bp-sm-up: 'min-width' 768px;
+$bp-sm-down: 0 768px;
+$bp-sm-only: 481px 768px;
+$bp-md-up: 'min-width' 992px;
+$bp-md-down: 0 992px;
+$bp-md-only: 769px 992px;
+$bp-lg-up: 'min-width' 1200px;
+$bp-lg-down: 0 1200px;
+$bp-lg-only: 993px 1200px;
+$bp-xlg-up: 'min-width' 1600px;
+$bp-xlg-down: 0 1600px;
+$bp-xlg-only: 'min-width' 1600px;

@@ -5,19 +5,19 @@
 	font-size: 16px;
 
 	&:hover {
-		&.u__color-red {
+		&.u-color-red {
 			color: darken($color-red, 10%);
 		}
 
-		&.u__color-darkblue {
+		&.u-color-darkblue {
 			color: darken($color-darkblue, 10%);
 		}
 
-		&.u__color-white {
+		&.u-color-white {
 			color: darken($color-white, 10%);
 		}
 
-		&.u__color-darkgrey {
+		&.u-color-darkgrey {
 			color: darken($color-darkgrey, 10%);
 		}
 	}

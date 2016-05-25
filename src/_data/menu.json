@@ -4,16 +4,16 @@
 		"href": "/profil/",
 		"items": [{
 			"title": "Philosophie",
-			"href": "#"
+			"href": "/profil/#philosophie"
 		}, {
 			"title": "Vision, Mission, Werte",
-			"href": "#"
+			"href": "/profil/#vision"
 		}, {
 			"title": "Leitsätze",
-			"href": "#"
+			"href": "/profil/#leitsätze"
 		}, {
 			"title": "Arbeitsweise",
-			"href": "#"
+			"href": "/profil/#arbeitsweise"
 		}]
 	},
 	"portfolio": {
@@ -52,43 +52,10 @@
 	},
 	"kunden": {
 		"title": "Kunden",
-		"href": "/kunden/",
-		"items": [{
-			"title": "Kunden",
-			"href": "#"
-		}, {
-			"title": "Reflectionen",
-			"href": "#"
-		}]
+		"href": "/kunden/"
 	},
 	"kontakt": {
 		"title": "Kontakt",
-		"href": "/kontakt/",
-		"items": [{
-			"title": "Unternehmen",
-			"href": "#"
-		}, {
-			"title": "Team",
-			"href": "#"
-		}]
-	},
-	"service": {
-		"title": "Service",
-		"items": [{
-			"title": "News-Blog",
-			"href": "/blog/"
-		}, {
-			"title": "Newsletter Anmeldung",
-			"href": ""
-		}, {
-			"title": "Impressum",
-			"href": "/impressum/"
-		}, {
-			"title": "AGB",
-			"href": "/agb/"
-		}, {
-			"title": "Datenschutz",
-			"href": "/datenschutz/"
-		}]
+		"href": "/kontakt/"
 	}
 }

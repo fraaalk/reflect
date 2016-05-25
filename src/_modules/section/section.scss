@@ -28,7 +28,7 @@
 			top: 3px;
 		}
 
-		@include breakpoint($bp-sm) {
+		@include breakpoint($bp-sm-up) {
 			text-align: left;
 		}
 
@@ -87,7 +87,7 @@
 			vertical-align: middle;
 		}
 
-		@include breakpoint($bp-sm) {
+		@include breakpoint($bp-sm-up) {
 			position: absolute;
 			top: 0;
 			right: 0;

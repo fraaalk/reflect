@@ -31,29 +31,15 @@ footer(id='footer', class='footer')
                                             a(title=item.title, href=item.href)= item.title
                             div
                                 h5(class="footer__headline")= site.data.menu.kontakt.title
-                                ul
-                                    each item in site.data.menu.kontakt.items
-                                        li
-                                            a(title=item.title, href=item.href)= item.title
                         div
                             h5(class="footer__headline")= site.data.menu.kunden.title
-                            ul
-                                each item in site.data.menu.kunden.items
-                                    li
-                                        a(title=item.title, href=item.href)= item.title
-                        div
-                            h5(class="footer__headline")= site.data.menu.service.title
-                            ul
-                                each item in site.data.menu.service.items
-                                    li
-                                        a(title=item.title, href=item.href)= item.title
                                         
                 div(class="grid__cell-footer")
                     div(class="grid__cell")
                         h5(class="footer__headline") Newsletter Anmeldung
-                        +form-inline({"class": "newsletter", "icon": "#angle-right"})
+                        +form-inline({"class": "form--newsletter", "icon": "#angle-right"})
             div(class="grid__col-12 grid__col-sm-4")
-                div(class="grid__cell")
+                div(class="grid__cell u-text-center")
                     img(class="grid__cell-img", class="footer__logo", src="/images/logo--footer.png")
                     div(class='footer__address')
                         | Insheimer Straße 32

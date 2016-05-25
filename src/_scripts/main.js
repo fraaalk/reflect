@@ -30,10 +30,12 @@ $(() => {
         $( '.search' ).toggleClass( 'is-visible' );
     });
 
-    $( '.nav__listitem--l1' ).on ( 'click', 'a', function() {
+    $( '.nav__listitem--l1' ).on ( 'mouseenter', 'a', function() {
     	$(this)
     		.parent( '.nav__listitem--l1' )
-    		.toggleClass( 'is-active' );
+    		.addClass( 'is-active' );
+    }).on( 'mouseout', function(){
+        $(this).removeClass( 'is-active' );
     });
 
     $( window ).on( 'resize', function() {

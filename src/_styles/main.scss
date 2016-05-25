@@ -14,8 +14,12 @@ $color-darkgrey: rgba(0, 0, 0, 0.6);
 }
 
 @import 'node_modules/reset.scss/reset';
+
+// https://github.com/at-import/breakpoint
 @import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
 @import 'node_modules/reflex-grid/scss/reflex';
+
+// http://lukyvj.github.io/family.scss/
 @import 'node_modules/family.scss/family';
 
 // Import Mixins
@@ -25,7 +29,6 @@ $color-darkgrey: rgba(0, 0, 0, 0.6);
 @import '../_modules/navigation/navigation';
 @import '../_modules/header/header';
 @import '../_modules/footer/footer';
-@import '../_modules/search/search';
 @import '../_modules/social/social';
 @import '../_modules/section/section';
 @import '../_modules/rating/rating';
@@ -34,7 +37,6 @@ $color-darkgrey: rgba(0, 0, 0, 0.6);
 
 // homepage elements
 @import '../_modules/go/go';
-@import '../_modules/vision/vision';
 @import '../_modules/form/form';
 
 
@@ -48,8 +50,6 @@ $color-darkgrey: rgba(0, 0, 0, 0.6);
 @import '../_modules/team/team';
 @import '../_modules/link/link';
 
-
-@import '../_modules/newsletter/newsletter';
 @import 'https://fonts.googleapis.com/css?family=Lato:400,300,700';
 
 
@@ -87,7 +87,7 @@ svg {
 
 .u {
 	// text helper
-	&__text {
+	&-text {
 		// left
 		&-left {
 			text-align: left;
@@ -127,7 +127,7 @@ svg {
 	}
 
 	// color helpers
-	&__color {
+	&-color {
 		&-white {
 			color: $color-white;
 		}
@@ -150,7 +150,7 @@ svg {
 	}
 
 	// background helpers
-	&__background {
+	&-background {
 		
 		// dirty green
 		&-green {
@@ -178,22 +178,13 @@ svg {
 	}
 }
 
-
-
-/* text helper classes */
-.carousel__controls {
-	display: none;
-
-	@include breakpoint($bp-sm) {
-		display: block;
-	}
-
-	&.carousel__controls--team-teaser {
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: 400;
-		background: #f4f4f4;
+// states
+.is {
+	&-hidden {
+		@include breakpoint($bp-sm-down) {
+			&-sm-down {
+				display: none;
+			}
+		}
 	}
 }
-
