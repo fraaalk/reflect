@@ -26,10 +26,11 @@
 			height: 100%;
 			background: white;
 			z-index: 400;
-			margin-top: 60px;
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+			padding: 62px 20px 0;
 
 			&.is-visible {
-				width: 300px;
+				width: 269px;
 			}
 		}
 	}
@@ -44,7 +45,10 @@
 			display: flex;
 			// calculated width all available space minus logo
 			// needs to be adjusted if logo should get more spacing
-			width: calc(100% - 160px);
+			width: calc(100% - 220px);
+			background: white;
+			z-index: 700;
+			height: 70px;
 		}
 
 		&__nav,
@@ -56,6 +60,7 @@
 		// wrapper for header navigation
 		&__nav {
 			width: 70%;
+			padding: 12px 0;
 		}
 
 		// wrapper for the header search
@@ -84,6 +89,7 @@
 		top: 0;
 		height: 62px;
 		line-height: 62px;
+		z-index: 600;
 
 		button {
 			border: none;
@@ -95,22 +101,30 @@
 	}
 
 	&__logo {
-		width: 160px;
 
 		@include breakpoint($bp-sm-down) {
-			height: 62px;
-			line-height: 62px;
+			padding: 9px 30px 10px;
+			width: 100%;
+			text-align: center;
+			position: relative;
+			z-index: 500;
+			background: white;
+			line-height: 1;
+		}
+
+		@include breakpoint($bp-sm-up) {
+			width: 220px;
+			padding: 12px 30px 11px;
 		}
 
 		a {
-			display: block;
+			display: inline-block;
 		}
 
 		img {
 			width: 160px;
 			height: 41px;
-			vertical-align: middle;
-			display: inline-block;
+			display: block;
 		}
 	}
 
