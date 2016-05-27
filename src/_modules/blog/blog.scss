@@ -50,7 +50,7 @@
 
 				&:before {
 					display: inline-block;
-					content: 'Datum:';
+					content: "Datum:";
 					font-weight: 400;
 					margin-right: 3px;
 				}
@@ -72,7 +72,7 @@
 
 				&:before {
 					display: inline-block;
-					content: 'Autor:';
+					content: "Autor:";
 					font-weight: 400;
 					margin-right: 3px;
 				}
@@ -98,7 +98,7 @@
 
 			&:before {
 				display: inline-block;
-				content: 'Tags:';
+				content: "Tags:";
 				font-weight: 400;
 				margin-right: 3px;
 			}
@@ -108,7 +108,7 @@
 				margin-left: 3px;
 
 				&:not(:last-of-type):after {
-					content: ',';
+					content: ",";
 					display: inline-block;
 				}
 			}

@@ -1,13 +1,13 @@
 block config
     //- Correct base url pathing for this page
-    - var baseUrl = '../_modules/'
+    - var baseUrl = "../_modules/"
     - var menu = site.data.menu
 
-footer(id='footer', class='footer')
+footer(id="footer", class="footer")
     div(class="footer__wrapper")
         div(class="grid")
             div(class="grid__col-12 grid__col-sm-8")
-                nav(class='footer__nav')
+                nav(class="footer__nav")
                     div
                         div
                             h5(class="footer__headline")= site.data.menu.profil.title
@@ -36,8 +36,8 @@ footer(id='footer', class='footer')
                         +form-inline({"class": "form--newsletter", "icon": "#angle-right"})
             div(class="grid__col-12 grid__col-sm-4")
                 div(class="grid__cell u-text-center")
-                    img(class="grid__cell-img", class="footer__logo", src="/images/logo--footer.png")
-                    div(class='footer__address')
+                    img(class="grid__cell-img", class="footer__logo", src="images/logo--footer.png")
+                    div(class="footer__address")
                         | Insheimer Straße 32
                         | D-76865 Rohrbach
                         | Fon +49 6349 96 30 228

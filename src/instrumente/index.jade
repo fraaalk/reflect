@@ -2,7 +2,7 @@ extends ../_layouts/base
 
 block config
     //- Correct base url pathing for this page
-    - var baseUrl = '../'
+    - var baseUrl = "../"
     - var webinare = site.data.webinare
 
 block content
@@ -20,13 +20,13 @@ block content
                                 +link({"class": "u-c-r u-t-u u-t-l","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#question-circle"})
                             div(class="grid__col-6")
                                 +link({"class": "u-c-b u-t-u u-t-r", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
-                        if webinar.status === 'free'
+                        if webinar.status === "free"
                             div(class="section__block-footer u-bg-lg")
                                 p Ohne Freischaltcode verfügbar
-                        if webinar.status === 'locked'
+                        if webinar.status === "locked"
                             div(class="section__block-footer u-bg-r")
                                 p Seminar noch nicht freigeschaltet.
-                        if webinar.status === 'unlocked'
+                        if webinar.status === "unlocked"
                             div(class="section__block-footer u-bg-g")
                                 p Seminar ist bereits freigeschaltet.
 

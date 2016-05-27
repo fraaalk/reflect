@@ -1,8 +1,8 @@
 mixin portfolio-teaser-short(spec)
     - spec = spec || {}
-    - spec.class = spec.class || ''
+    - spec.class = spec.class || ""
 
-    div(class='portfolio-teaser')&attributes(attributes)
+    div(class="portfolio-teaser")&attributes(attributes)
         a(href=spec.link, title=spec.title)
             img(class="portfolio-teaser__visual", src=spec.image)
             h3(class="portfolio-teaser__headline")= spec.title

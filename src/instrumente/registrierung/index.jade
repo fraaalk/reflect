@@ -2,7 +2,7 @@ extends ../../_layouts/base
 
 block config
     //- Correct base url pathing for this page
-    - var baseUrl = '../../'
+    - var baseUrl = "../../"
     - var portfolio = site.data.portfolio.befragungen
 
 block content
@@ -11,7 +11,7 @@ block content
     +section({"class": "section--grey"})
         +section-headline({icon: "#rocket", title: "Login"})
         form(class="grid grid--justify-end form")
-            p(class="grid__col-12") Um an dieser Umfrage teilzunehmen, benötigen Sie einen passenden Zugangsschlüssel. Falls Sie einen Zugangsschlüssel erhalten haben, geben Sie diesen bitte in das untenstehende Feld ein und klicken Sie auf 'Weiter'.
+            p(class="grid__col-12") Um an dieser Umfrage teilzunehmen, benötigen Sie einen passenden Zugangsschlüssel. Falls Sie einen Zugangsschlüssel erhalten haben, geben Sie diesen bitte in das untenstehende Feld ein und klicken Sie auf "Weiter".
             div(class="grid__col-12 grid__col-sm-4")
                 input(class="form__input is-invalid")
             div(class="grid__col-12 grid__col-sm-4")

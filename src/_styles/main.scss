@@ -10,48 +10,48 @@ $color-lightgrey: rgba(125, 140, 147, 1);
 $color-darkgrey: rgba(0, 0, 0, 0.6);
 
 // for debugging the grid
-*[class^="grid__col"] {
+/**[class^="grid__col"] {
 	outline: 1px dotted #000;
-}
+}*/
 
-@import 'node_modules/reset.scss/reset';
+@import "node_modules/reset.scss/reset";
 
 // https://github.com/at-import/breakpoint
-@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
-@import 'node_modules/reflex-grid/scss/reflex';
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "node_modules/reflex-grid/scss/reflex";
 
 // http://lukyvj.github.io/family.scss/
-@import 'node_modules/family.scss/family';
+@import "node_modules/family.scss/family";
 
 // Import Mixins
-@import 'mixins';
+@import "mixins";
 
 // Import Modules
-@import '../_modules/navigation/navigation';
-@import '../_modules/header/header';
-@import '../_modules/footer/footer';
-@import '../_modules/social/social';
-@import '../_modules/section/section';
-@import '../_modules/rating/rating';
-@import '../_modules/quote/quote';
+@import "../_modules/navigation/navigation";
+@import "../_modules/header/header";
+@import "../_modules/footer/footer";
+@import "../_modules/social/social";
+@import "../_modules/section/section";
+@import "../_modules/rating/rating";
+@import "../_modules/quote/quote";
 
 
 // homepage elements
-@import '../_modules/go/go';
-@import '../_modules/form/form';
+@import "../_modules/go/go";
+@import "../_modules/form/form";
 
 
-@import '../_modules/carousel/carousel';
-@import '../_modules/breadcrumb/breadcrumb';
-@import '../_modules/deck/deck';
+@import "../_modules/carousel/carousel";
+@import "../_modules/breadcrumb/breadcrumb";
+@import "../_modules/deck/deck";
 
-@import '../_modules/pagination/pagination';
-@import '../_modules/blog/blog';
-@import '../_modules/portfolio-teaser/portfolio-teaser';
-@import '../_modules/team/team';
-@import '../_modules/link/link';
+@import "../_modules/pagination/pagination";
+@import "../_modules/blog/blog";
+@import "../_modules/portfolio-teaser/portfolio-teaser";
+@import "../_modules/team/team";
+@import "../_modules/link/link";
 
-@import 'https://fonts.googleapis.com/css?family=Lato:400,300,700';
+@import "https://fonts.googleapis.com/css?family=Lato:400,300,700";
 
 
 // Box sizing partial styles:
@@ -60,7 +60,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	background: #F4F4F4;
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	font-weight: 300;
 	line-height: 1.6;
 	color: #000000;
@@ -73,7 +73,7 @@ a {
 
 h1,h2,h3,h4,h5 {
 	font-weight: 400;
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 }
 
 strong {

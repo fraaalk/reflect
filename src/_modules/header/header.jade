@@ -1,13 +1,13 @@
 mixin header(spec)
     - spec = spec || {}
-    - spec.class = spec.class || ''
+    - spec.class = spec.class || ""
 
     header(class="header")&attributes(attributes)
         div(class="header__wrapper")
             div(class="header__nav-toggle")
                 button ☰
             div(class="header__logo")
-                a(href="/", title="Zur Startseite"): img(src='/images/logo--header.png')
+                a(href="/", title="Zur Startseite"): img(src="images/logo--header.png")
             div(class="header__off-canvas")
                 div(class="header__nav")
                     +navigation({"class": "nav--main", "menu": site.data.menu})
@@ -17,11 +17,11 @@ mixin header(spec)
                     +navigation({"class": "nav--language", "menu": site.data.language})
             div(class="header__visual", style="background-image: url(#{spec.visual});")
                 block
-                img(class="header__visual-image", src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'#{spec.visualSize}'%2F%3E")
+                img(class="header__visual-image", src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 #{spec.visualSize}'%2F%3E")
 
 mixin header-overlay(spec)
     - spec = spec || {}
-    - spec.class = spec.class || ''
+    - spec.class = spec.class || ""
 
     div(class="header-overlay")
         h3(class="header-overlay__headline") Gesunde Strategie
