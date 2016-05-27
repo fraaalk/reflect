@@ -1,15 +1,15 @@
 block config
     //- Correct base url pathing for this page
-    - var baseUrl = '../'
+    - var baseUrl = "../"
 
 mixin carousel(spec)
-    -spec = spec || ''
+    -spec = spec || ""
 
-    div(class="carousel")&attributes({'data-carousel': ''})
+    div(class="carousel")&attributes({"data-carousel": ""})
 
 mixin carousel-stage(spec)
     - spec = spec || {}
-    - spec.class = spec.class || ''
+    - spec.class = spec.class || ""
 
     div(class="carousel__stage")
         ul(class="carousel__slide-list")
@@ -17,7 +17,7 @@ mixin carousel-stage(spec)
 
 mixin carousel-controls(spec)
     - spec = spec || {}
-    - spec.class = spec.class || ''
+    - spec.class = spec.class || ""
 
     nav(class="carousel__controls carousel__controls--team-teaser")
         button(class="carousel__button carousel__button--prev") 
@@ -30,7 +30,7 @@ mixin carousel-controls(spec)
 
 mixin carousel-slide(spec)
     - spec = spec || {}
-    - spec.__class = spec.__class || ''
+    - spec.__class = spec.__class || ""
 
     li(class="carousel__slide")
         block

@@ -2,7 +2,7 @@ extends _layouts/base
 
 block config
     //- Correct base url pathing for this page
-    - var baseUrl = '../'
+    - var baseUrl = "../"
     - var portfolio = site.data.portfolio
     - var team = site.data.team
     - var blog = site.data.blog
@@ -50,7 +50,7 @@ block content
                     div(class="grid__cell")
                         +portfolio-teaser-short(teaser)
     +section({"class": "section--grey"})
-        div(class="grid grid--bleed carousel")&attributes({'data-carousel': ''})
+        div(class="grid grid--bleed carousel")&attributes({"data-carousel": ""})
             div(class="grid__col-12 grid__col-sm-8")
                 +section-headline({icon: "#group", title: "Team"})
             div(class="grid__col-sm-4 grid--align-self-center u-text-right is-hidden-sm-down")

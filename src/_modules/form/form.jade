@@ -1,6 +1,6 @@
 mixin form(spec)
   - spec = spec || {}
-  - spec.__class = spec.__class || ''
+  - spec.__class = spec.__class || ""
 
   div(class=spec.__class)&attributes(attributes)
     p This is an example paragraph for the form module
@@ -8,7 +8,7 @@ mixin form(spec)
 
 mixin form-inline(spec)
   - spec = spec || {}
-  - spec.class = spec.class || ''
+  - spec.class = spec.class || ""
 
     form(class="form form--inline #{spec.class}")&attributes(attributes)
         input(class="form__input form__input--inline")

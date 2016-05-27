@@ -13,7 +13,7 @@
 		"Unicorn",
 		"Hackepeter"
 	],
-	"link": "/blog/view/"
+	"link": "blog/view/"
 }, {
 	"pubDate": "21. Januar 2015",
 	"author": "Lisa Mustermann",
@@ -29,7 +29,7 @@
 		"Meat",
 		"Wurst"
 	],
-	"link": "/blog/view/"
+	"link": "blog/view/"
 },
 {
 	"pubDate": "13. März 2016",
@@ -46,5 +46,5 @@
 		"Loaf",
 		"Wuaast"
 	],
-	"link": "/blog/view/"
+	"link": "blog/view/"
 }]

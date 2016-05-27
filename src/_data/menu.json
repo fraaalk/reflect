@@ -1,59 +1,59 @@
 {
 	"profil": {
 		"title": "Profil",
-		"href": "/profil/",
+		"href": "profil/",
 		"items": [{
 			"title": "Philosophie",
-			"href": "/profil/#philosophie"
+			"href": "profil/#philosophie"
 		}, {
 			"title": "Vision, Mission, Werte",
-			"href": "/profil/#vision"
+			"href": "profil/#vision"
 		}, {
 			"title": "Leitsätze",
-			"href": "/profil/#leitsätze"
+			"href": "profil/#leitsätze"
 		}, {
 			"title": "Arbeitsweise",
-			"href": "/profil/#arbeitsweise"
+			"href": "profil/#arbeitsweise"
 		}]
 	},
 	"portfolio": {
 		"title": "Portfolio",
-		"href": "/portfolio/",
+		"href": "portfolio/",
 		"items": [{
 			"title": "Personalentwicklung",
-			"href": "/portfolio/personalentwicklung/"
+			"href": "portfolio/personalentwicklung/"
 		}, {
 			"title": "Veränderungsmanagement",
-			"href": "/portfolio/veraenderungsmanagement"
+			"href": "portfolio/veraenderungsmanagement"
 		}, {
 			"title": "Coaching",
-			"href": "/portfolio/coaching/"
+			"href": "portfolio/coaching/"
 		}, {
 			"title": "Kompetenzdiagnostik",
-			"href": "/portfolio/kompetenzdiagnostik/"
+			"href": "portfolio/kompetenzdiagnostik/"
 		}, {
 			"title": "Befragungen",
-			"href": "/portfolio/befragungen/"
+			"href": "portfolio/befragungen/"
 		}, {
 			"title": "Gesunde Organisation",
-			"href": "/portfolio/gesundeorganisation/"
+			"href": "portfolio/gesundeorganisation/"
 		}]
 	},
 	"instrumente": {
 		"badge": "2 neue",
 		"title": "Instrumente",
-		"href": "/instrumente/"
+		"href": "instrumente/"
 	},
 	"kunden": {
 		"title": "Kunden",
-		"href": "/kunden/"
+		"href": "kunden/"
 	},
 	"kontakt": {
 		"title": "Kontakt",
-		"href": "/kontakt/"
+		"href": "kontakt/"
 	},
 	"blog": {
 		"title": "Blog",
-		"href": "/blog/"
+		"href": "blog/"
 	}
 }

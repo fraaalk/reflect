@@ -1,6 +1,6 @@
 {
 	"personalentwicklung": {
-		"link": "/portfolio/personalentwicklung/",
+		"link": "portfolio/personalentwicklung/",
 		"image": "http://baconmockup.com/160/160/",
 		"title": "Personalentwicklung",
 		"teaser": [
@@ -16,7 +16,7 @@
 		]
 	},
 	"kompetenzdiagnostik": {
-		"link": "/portfolio/kompetenzdiagnostik/",
+		"link": "portfolio/kompetenzdiagnostik/",
 		"image": "http://baconmockup.com/161/161/",
 		"title": "Kompetenzdiagnostik",
 		"teaser": [
@@ -32,7 +32,7 @@
 		]
 	},
 	"veraenderungsmanagement": {
-		"link": "/portfolio/veraenderungsmanagement/",
+		"link": "portfolio/veraenderungsmanagement/",
 		"image": "http://baconmockup.com/162/162/",
 		"title": "Veränderungsmanagement",
 		"teaser": [
@@ -48,7 +48,7 @@
 		]
 	},
 	"befragungen": {
-		"link": "/portfolio/befragungen/",
+		"link": "portfolio/befragungen/",
 		"image": "http://baconmockup.com/163/163/",
 		"title": "Befragungen",
 		"teaser": [
@@ -64,7 +64,7 @@
 		]
 	},
 	"coaching": {
-		"link": "/portfolio/coaching/",
+		"link": "portfolio/coaching/",
 		"image": "http://baconmockup.com/164/164/",
 		"title": "Coaching",
 		"teaser": [
@@ -80,7 +80,7 @@
 		]
 	},
 	"gesundeorganisation": {
-		"link": "/portfolio/gesundeorganisation/",
+		"link": "portfolio/gesundeorganisation/",
 		"image": "http://baconmockup.com/165/165/",
 		"title": "Gesunde Organisation",
 		"teaser": [

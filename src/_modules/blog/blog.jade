@@ -1,6 +1,6 @@
 mixin blog-teaser-default(spec)
     - spec = spec || {}
-    - spec.__class = spec.__class || ''
+    - spec.__class = spec.__class || ""
 
     article(class="blog-teaser blog-teaser--default")&attributes(attributes)
         header(class="blog-teaser__header")
@@ -14,7 +14,7 @@ mixin blog-teaser-default(spec)
 
 mixin blog-teaser-extended(spec)
     - spec = spec || {}
-    - spec.__class = spec.__class || ''
+    - spec.__class = spec.__class || ""
 
     article(class="blog-teaser blog-teaser--extended")&attributes(attributes)
         header(class="blog-teaser__header")
@@ -35,7 +35,7 @@ mixin blog-teaser-extended(spec)
 
 mixin blog-tag-listing(spec)
     - spec = spec || {}
-    - spec.__class = spec.__class || ''
+    - spec.__class = spec.__class || ""
 
     div(class="blog-sidebar__tags")&attributes(attributes)
         each blog in spec
@@ -44,7 +44,7 @@ mixin blog-tag-listing(spec)
 
 mixin blog-category-listing(spec)
     - spec = spec || {}
-    - spec.__class = spec.__class || ''
+    - spec.__class = spec.__class || ""
 
     div(class="blog-sidebar__categories")&attributes(attributes)
         ol
@@ -54,6 +54,6 @@ mixin blog-category-listing(spec)
 
 mixin blog-search(spec)
     - spec = spec || {}
-    - spec.__class = spec.__class || ''
+    - spec.__class = spec.__class || ""
 
     div(class="blog-sidebar__search")&attributes(attributes)
