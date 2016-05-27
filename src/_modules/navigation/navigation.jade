@@ -1,18 +1,33 @@
 block config
     //- Correct base url pathing for this page
-    - var baseUrl = '../'
+    - var baseUrl = "../"
 
 mixin navigation(spec)
-    - spec = spec || ''
-    - spec.class = spec.class || ''
+    - spec = spec || ""
+    - spec.class = spec.class || ""
 
-    nav(class='nav #{spec.class}')
-        ul(class='nav__list nav__list--l1')
+    nav(class="nav #{spec.class}")
+        ul(class="nav__list nav__list--l1")
             each item in spec.menu
-                li(class='nav__listitem nav__listitem--l1')
-                    a(title=item.title, href=item.href)= item.title
-                    if item.items
-                        ul(class="nav__list nav__list--l2")
-                            each subitem in item.items
-                                li(class='nav__listitem nav__listitem--l2')
-                                    a(href=subitem.href, title=subitem.title)= subitem.title
+                if item.badge
+                    li(class="nav__listitem nav__listitem--l1 nav__listitem--badge")
+                        a(title=item.title, href=item.href)
+                            span(class="nav__listitem-text")= item.title
+                            span(class="badge")= item.badge
+                        if item.items
+                            ul(class="nav__list nav__list--l2")
+                                each subitem in item.items
+                                    li(class="nav__listitem nav__listitem--l2")
+                                        a(href=subitem.href, title=subitem.title)= subitem.title
+                else
+                    li(class="nav__listitem nav__listitem--l1")
+                        a(title=item.title, href=item.href)
+                            span(class="nav__listitem-text")= item.title
+                            if item.items
+                                svg(class="nav__listitem-icon")
+                                    use(xlink:href="#angle-right")
+                        if item.items
+                            ul(class="nav__list nav__list--l2")
+                                each subitem in item.items
+                                    li(class="nav__listitem nav__listitem--l2")
+                                        a(href=subitem.href, title=subitem.title)= subitem.title

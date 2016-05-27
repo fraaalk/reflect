@@ -32,6 +32,8 @@ $(() => {
     		.addClass( 'is-active' )
             .siblings()
             .removeClass( 'is-active' );
+    }).on( 'mouseleave', function() {
+        
     });
 
     $( window ).on( 'resize', function() {

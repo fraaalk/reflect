@@ -18,7 +18,7 @@
 	&__off-canvas {
 
 		@include breakpoint($bp-sm-down) {
-			width: 0; 
+			width: 269px;
 			overflow: hidden;
 			position: fixed;
 			top: 0;
@@ -28,9 +28,11 @@
 			z-index: 400;
 			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 			padding: 62px 20px 0;
+			transform: translateX(-100%);
+			transition: all 0.3s ease-out;
 
 			&.is-visible {
-				width: 269px;
+				transform: translateX(0);
 			}
 		}
 	}
