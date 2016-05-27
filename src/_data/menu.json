@@ -42,14 +42,7 @@
 	"instrumente": {
 		"badge": "2 neue",
 		"title": "Instrumente",
-		"href": "/instrumente/",
-		"items": [{
-			"title": "Webinare",
-			"href": "/instrumente/webinare/"
-		}, {
-			"title": "Registrierung",
-			"href": "/instrumente/registrierung/"
-		}]
+		"href": "/instrumente/"
 	},
 	"kunden": {
 		"title": "Kunden",

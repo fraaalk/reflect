@@ -10,7 +10,9 @@ block content
     +breadcrumb([["Home", "/"],["Portfolio", "/portfolio"]])
     section(class="section section--grey")
         div(class="section__wrapper")
-            +section-headline({icon: "#rocket", title: "Portfolio"})
+            div(class="grid grid--bleed")
+                div(class="grid__col-12")
+                    +section-headline({icon: "#rocket", title: "Portfolio"})
             div(class="grid")
                 each teaser in portfolio
                     div(class="grid__col-12 grid__col-xs-6 grid__col-sm-4")

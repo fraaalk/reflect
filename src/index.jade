@@ -11,8 +11,11 @@ block content
     +header({"class":"header--extended", "visual": "http://baconmockup.com/1280/600/", "visualSize": "0 0 32 15"})
         +header-overlay()
     +section({"class": "section--grey"})
-        +section-badge({icon: "#yelp", title: "Unser Team wartet auf Sie"})
-        +section-headline({icon: "#television", title: "Profil"})
+        div(class="grid grid--bleed")
+            div(class="grid__col-12 grid__col-sm-8")
+                +section-headline({icon: "#television", title: "Profil"})
+            div(class="grid__col-12 grid__col-sm-4 grid--align-self-center")
+                +section-badge({icon: "#yelp", title: "Unser Team wartet auf Sie"})
         div(class="grid")
             div(class="grid__col-12 grid__col-sm-6")
                 +section-block({title: "Philosophie"})
@@ -38,7 +41,9 @@ block content
                     p Reflect denkt in Problemlagen nicht in Branchen. Wo andere Berater Patentlösungen für ganze Branchen präsentieren und entsprechende Maßnahmen und Trainings ‚einleiten’, betrachten wir das jeweilige Problem. Anders gesagt, wir arbeiten von Fall zu Fall, nicht generell. Doch bestimmte Standard-Arbeitsschritte halten natürlich auch wir für sinnvoll, weil sie die Qualität unserer Arbeit und damit auch Ihre Ergebnisse verbessern.
 
     +section({"class": "section--white"})
-        +section-headline({icon: "#rocket", title: "Portfolio"})
+        div(class="grid grid--bleed")
+            div(class="grid__col-12")
+                +section-headline({icon: "#rocket", title: "Portfolio"})
         div(class="grid")
             each teaser in portfolio
                 div(class="grid__col-12 grid__col-sm-4")
