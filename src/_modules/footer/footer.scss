@@ -28,22 +28,25 @@
 
 
 	&__nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
-		@include breakpoint($bp-sm-up) {
-			> div {
-				float: left;
-				width: 50%;
-			}
-		}
+		&-block {
+			flex: 1 1 auto;
 
-		@include breakpoint($bp-md-up) {
-			> div {
-				float: left;
-				width: 50%;
+			@include breakpoint($bp-sm-up) {
+				&--portfolio {
+					width: 190px;
+				}
 
-				> div {
-					float: left;
-					width: 50%;
+				&--profil {
+					width: 170px;
+				}
+
+				&--instrumente,
+				&--kunden {
+					width: 130px;
 				}
 			}
 		}

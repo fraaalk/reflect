@@ -6,17 +6,17 @@ block config
     - var portfolio = site.data.portfolio
     - var team = site.data.team
     - var blog = site.data.blog
+    - var customers = site.data.customers
 
 block content
     +header({"class":"header--extended", "visual": "http://baconmockup.com/1280/600/", "visualSize": "0 0 32 15"})
         +header-overlay()
     +section({"class": "section--grey"})
-        div(class="grid grid--bleed")
+        div(class="grid grid--bleed grid--align-center")
             div(class="grid__col-12 grid__col-sm-8")
                 +section-headline({icon: "#television", title: "Profil"})
-            div(class="grid__col-12 grid__col-sm-4 grid--align-self-center")
+            div(class="grid__col-12 grid__col-sm-4")
                 +section-badge({icon: "#yelp", title: "Unser Team wartet auf Sie"})
-        div(class="grid")
             div(class="grid__col-12 grid__col-sm-6")
                 +section-block({title: "Philosophie"})
                     p Das Wesen unserer Arbeit erkennen Sie bereits in unserem Namen: Reflect steht für den Prozess reflektierten Handelns – gemeinsam mit Ihnen als Kunde. Denn durch gezielte Reflexion entstehen neue Perspektiven: Menschen können sich besser in die Lage anderer hineinversetzen. Der Blick kann sich mehrdimensionalen Lösungen öffnen. Der eigene Horizont erweitert sich. Und wo vorher keine Lösung mehr sichtbar oder denkbar war, entstehen herausragende Ideen und Optionen.
@@ -39,21 +39,19 @@ block content
                     strong Kompetenz, Integrität und Spaß bei der Arbeit!
                 +section-block({title: "Arbeitsweise"})
                     p Reflect denkt in Problemlagen nicht in Branchen. Wo andere Berater Patentlösungen für ganze Branchen präsentieren und entsprechende Maßnahmen und Trainings ‚einleiten’, betrachten wir das jeweilige Problem. Anders gesagt, wir arbeiten von Fall zu Fall, nicht generell. Doch bestimmte Standard-Arbeitsschritte halten natürlich auch wir für sinnvoll, weil sie die Qualität unserer Arbeit und damit auch Ihre Ergebnisse verbessern.
-
     +section({"class": "section--white"})
-        div(class="grid grid--bleed")
-            div(class="grid__col-12")
-                +section-headline({icon: "#rocket", title: "Portfolio"})
         div(class="grid")
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({icon: "#rocket", title: "Portfolio"})
             each teaser in portfolio
                 div(class="grid__col-12 grid__col-sm-4")
                     div(class="grid__cell")
                         +portfolio-teaser-short(teaser)
     +section({"class": "section--grey"})
-        div(class="grid grid--bleed carousel")&attributes({'data-carousel': ''})
-            div(class="grid__col-12 grid__col-sm-8")
+        div(class="grid carousel")&attributes({'data-carousel': ''})
+            div(class="grid__col-12 grid__col-sm-8 grid__col--bleed")
                 +section-headline({icon: "#group", title: "Team"})
-            div(class="grid__col-sm-4 grid--align-self-center u-text-right is-hidden-sm-down")
+            div(class="grid__col-sm-4 grid--align-self-center grid__col--bleed u-text-right is-hidden-sm-down")
                 +carousel-controls()
             div(class="grid__col-12")
                 +carousel-stage()
@@ -61,13 +59,16 @@ block content
                         +carousel-slide()
                             +team-teaser-list({"class": "team-teaser--list-view", "image": member.image, "title": member.title, "name": member.name, "link": member.link, "quote": member.quote})
     +section({"class": "section--white"})
-        div(class="grid grid--bleed")
-            div(class="grid__col-12 grid__col-sm-8")
+        div(class="grid grid--align-center")
+            div(class="grid__col-12 grid__col-sm-8 grid--bleed")
                 +section-headline({icon: "#comment-o", title: "Blog"})
-            div(class="grid__col-sm-4 grid--align-self-center u-text-right is-hidden-sm-down")
+            div(class="grid__col-sm-4 u-text-right is-hidden-sm-down")
                 +link({"class": "u-color-darkgrey u-text-upper", "href": "/blog/", "title": "Mehr Blog-Artikel", "iconAfter": "#long-arrow-right"})
-        div(class="grid")
             div(class="grid__col-12 grid__col-sm-6")
                 +blog-teaser-default(blog[0])
             div(class="grid__col-12 grid__col-sm-6")
                 +blog-teaser-default(blog[1])
+    +section({"class": "section--grey"})
+        div(class="grid")
+            div(class="grid__col-12")
+                +customer-listing({"customers": customers.homepage})

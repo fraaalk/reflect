@@ -1,0 +1,80 @@
+// customer styles
+.customer {
+
+	&-listing {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+
+		li {
+			width: 20%;
+			text-align: center;
+
+			img {
+				display: inline-block;
+			}
+		}
+
+		&--large {
+			background: white;
+			padding: 35px 0;
+
+			li {
+				padding: 35px 0;
+			}
+		}
+	}
+
+
+	&-filters {
+		&:before {
+			display: inline-block;
+			content: 'Filter:';
+			font-weight: 400;
+			margin-right: 3px;
+		}
+
+		a {
+			font-family: Helvetica;
+			font-size: 14px;
+			letter-spacing: 0.2px;
+			color: #7d8c93;
+			display: inline-block;
+			margin: 0px 4px;
+
+			&:hover {
+				color: darken(#7d8c93, 10%);
+				text-decoration: underline;
+			}
+
+			&:last-of-type {
+				margin: 0px 0px 0px 4px;
+			}
+
+			&.is-active,
+			&.is-active:hover {
+				color: white;
+				border-radius: 3px;
+				background: #007dc7;
+				padding: 0px 8px;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&-reflection {
+		opacity: 0.5;
+		background-color: rgba(149, 145, 0, 0.2);
+		border: solid 1px #969100;
+		text-align: center;
+		font-size: 26px;
+		line-height: 1.3;
+		letter-spacing: 0.4px;
+		text-align: center;
+		color: #969100;
+		font-style: italic;
+		font-weight: 500;
+		padding: 24px 90px 30px;
+	}
+}

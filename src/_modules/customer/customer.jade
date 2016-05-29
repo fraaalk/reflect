@@ -1,0 +1,24 @@
+mixin customer-listing(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ""
+
+    ul(class="customer-listing #{spec.class}")&attributes(attributes)
+        each logo in spec.customers
+            li
+                img(src=logo)
+
+mixin customer-filters(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ""
+
+    div(class="customer-filters")
+        a(href="#", class="is-active") Alle
+        a(href="#") Dienstleistung &amp; Handel
+        a(href="#") Industrie &amp; Energie 
+        a(href="#") Hochtechnologie
+
+mixin customer-reflection(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ""
+
+    div(class="customer-reflection")= spec.body

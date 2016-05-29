@@ -1,13 +1,20 @@
 mixin section(spec)
-    - spec = spec || ''
+    - spec = spec || ""
+    - spec.class = spec.class || ""
+    - spec.id = spec.id || ""
 
-    section(class="section #{spec.class}")
-        div(class="section__wrapper")
-            block
+    if spec.id
+        section(id=spec.id, class="section #{spec.class}")
+            div(class="section__wrapper")
+                block
+    else
+        section(class="section #{spec.class}")
+            div(class="section__wrapper")
+                block
 
 mixin section-headline(spec)
-    - spec = spec || ''
-    - spec.class = spec.class || ''
+    - spec = spec || ""
+    - spec.class = spec.class || ""
 
     h2(class="section__headline #{spec.class}")
         if spec.icon
@@ -17,7 +24,8 @@ mixin section-headline(spec)
         block
 
 mixin section-block(spec)
-    - spec = spec || ''
+    - spec = spec || ""
+    - spec.class = spec.class || ""
 
     if spec.id
         div(id=spec.id, class="section__block #{spec.class}")
@@ -31,7 +39,7 @@ mixin section-block(spec)
             block
 
 mixin section-badge(spec)
-    - spec = spec || ''
+    - spec = spec || ""
 
     div(class="section__badge")
         svg(class="section__badge-icon")

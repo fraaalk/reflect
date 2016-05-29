@@ -1,0 +1,96 @@
+{
+	"profil": {
+		"title": "Profil",
+		"href": "/profil/",
+		"items": [{
+			"title": "Philosophie",
+			"href": "/profil/#philosophie"
+		}, {
+			"title": "Vision, Mission, Werte",
+			"href": "/profil/#vision"
+		}, {
+			"title": "Leitsätze",
+			"href": "/profil/#leitsätze"
+		}, {
+			"title": "Arbeitsweise",
+			"href": "/profil/#arbeitsweise"
+		}]
+	},
+	"portfolio": {
+		"title": "Portfolio",
+		"href": "/portfolio/",
+		"items": [{
+			"title": "Personalentwicklung",
+			"href": "/portfolio/personalentwicklung/"
+		}, {
+			"title": "Veränderungsmanagement",
+			"href": "/portfolio/veraenderungsmanagement"
+		}, {
+			"title": "Coaching",
+			"href": "/portfolio/coaching/"
+		}, {
+			"title": "Kompetenzdiagnostik",
+			"href": "/portfolio/kompetenzdiagnostik/"
+		}, {
+			"title": "Befragungen",
+			"href": "/portfolio/befragungen/"
+		}, {
+			"title": "Gesunde Organisation",
+			"href": "/portfolio/gesundeorganisation/"
+		}]
+	},
+	"instrumente": {
+		"badge": "2 neue",
+		"title": "Instrumente",
+		"href": "/instrumente/",
+		"items": [{
+			"title": "Webinare",
+			"href": "/instrumente/webinare/"
+		}, {
+			"title": "Registrierung",
+			"href": "/instrumente/registrierung/"
+		}]
+	},
+	"kunden": {
+		"title": "Kunden",
+		"href": "/kunden/",
+		"items": [{
+			"title": "Kunden",
+			"href": "/kunden/#kunden"
+		}, {
+			"title": "Reflectionen",
+			"href": "/kunden/#reflectionen"
+		}]
+	},
+	"kontakt": {
+		"title": "Kontakt",
+		"href": "/kontakt/",
+		"items": [{
+			"title": "Unternehmen",
+			"href": "/kontakt/#unternehmen"
+		}, {
+			"title": "Team",
+			"href": "/kontakt/#team"
+		}]
+	},
+	"service": {
+		"title": "Service",
+		"href": "/blog/",
+		"items": [{
+			"title": "News-Blog",
+			"href": "#"
+		}, {
+			"title": "Newsletteranmeldung",
+			"href": "#"
+		}, {
+			"title": "Impressum",
+			"href": "#"
+		}, {
+			"title": "AGB",
+			"href": "#"
+		}, {
+			"title": "Datenschutz",
+			"href": "#"
+		}]
+	}
+}

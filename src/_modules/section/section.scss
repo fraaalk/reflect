@@ -11,22 +11,18 @@
 		color: rgba(0, 125, 199, 1);
 		text-transform: uppercase;
 		text-align: center;
-
-		&--spaced-top {
-			margin-top: 30px;
-		}
+		display: flex;
 
 		&-text {
-			display: inline;
+			// 100% - icon width
+			width: calc(100% - 1em + 12px);
+			line-height: 1.2;
 		}
 
 		&-icon {
 			height: 1em;
 			width: 1em;
-			margin-right: 12px;
-			position: relative;
-			top: 3px;
-			display: inline-block;
+			margin: 6px 12px 0 0;
 		}
 
 		@include breakpoint($bp-sm-up) {
