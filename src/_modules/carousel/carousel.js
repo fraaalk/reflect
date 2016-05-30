@@ -4,8 +4,14 @@ import $ from 'jquery';
 
 export default class Carousel {
     constructor( element ) {
+        
         this.name = 'carousel';
         this.$carousel = $( element );
+
+        const autoplayTimer = element.dataset.carouselAutoplay || false;
+        const nav = element.dataset.carouselNav || false;
+        let autoplayInterval = false;
+
         this.$list = $( '.carousel__slide-list', this.$carousel );
         this.$slides = $( '.carousel__slide', this.$carousel );
         this.$prevNext = $( '.carousel__button', this.$carousel );
@@ -13,6 +19,10 @@ export default class Carousel {
         this.$bPrev = $( '.carousel__button--prev', this.$carousel );
 
         this.bindEvents();
+
+        if (autoplayTimer) {
+            window.setInterval( $.proxy( this.slide, this), autoplayTimer);
+        }
     }
 
     slide() {
@@ -23,14 +33,14 @@ export default class Carousel {
         
         el = $('.is-ref').removeClass('is-ref');
 
-        if ( $( event.currentTarget ).hasClass( 'carousel__button--next' ) ) {
-            newSlide = this.next( el );
-            this.$list
-                .removeClass( 'is-reversing' );
-        } else {
+        if ( event && $( event.currentTarget ).hasClass( 'carousel__button--prev' ) ) {
             newSlide = this.prev( el );
             this.$list
                 .addClass( 'is-reversing' );
+        } else { 
+            newSlide = this.next( el );
+            this.$list
+                .removeClass( 'is-reversing' );
         }
         
         newSlide
@@ -53,6 +63,10 @@ export default class Carousel {
 
     bindEvents() {
         this.$prevNext.on( 'click', $.proxy( this.slide, this) );
+    }
+
+    autoplay () {
+
     }
 
     next( el ) {

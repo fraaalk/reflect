@@ -22,7 +22,7 @@ block content
             div(class="grid__col-12")
                 +section-block()
                     p In unseren Beratungsprozessen sind wir immer wieder erfreut, wie kreativ, geistreich und humorvoll Menschen sein können. Inspiriert durch eine Radiosendung und durch unsere Kunden finden Sie hier alltägliche Reflectionen zum Sinnieren und Schmunzeln… Und vielleicht haben auch Sie ungewöhnliche Reflectionen?
-            div(class="grid__col-12 carousel")&attributes({'data-carousel': ''})
+            div(class="grid__col-12 carousel")&attributes({'data-carousel': '', 'data-carousel-nav': true, 'data-carousel-autoplay': 5000})
                 +carousel-stage()
                     each reflection in customers.reflectionen
                         +carousel-slide()
