@@ -38,13 +38,6 @@
 		}
 	}
 
-	&__sub-headline {
-		font-size: 20px;
-		line-height: 1.5;
-		letter-spacing: 1.7px;
-		color: #333333;
-	}
-
 	&__wrapper {
 		margin: 0 auto;
 		max-width: 992px;
@@ -81,33 +74,6 @@
 			display: inline;
 			margin-right: 5px;
 			vertical-align: middle;
-		}
-	}
-
-	&__block {
-		&--tiled {
-			background: white;
-			border: 1px solid #cccccc;
-		}
-
-		&:not(:first-of-type) {
-			margin-top: 10px;
-		}
-
-		ol {
-			list-style-type: decimal;
-			padding-left: 20px;
-		}
-
-		ul {
-			list-style-type: disc;
-			padding-left: 20px;
-		}
-
-		p + p,
-		h3 + p,
-		p + ol {
-			margin-top: 10px;
 		}
 	}
 }

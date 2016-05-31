@@ -1,0 +1,50 @@
+extends ../_layouts/base
+
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = '../'
+
+block content
+    +header({"visual": "http://baconmockup.com/1280/188/", "visualSize": "0 0 32 5"})
+    +breadcrumb([["Home", "/"],["Impressum", "/impressum/"]])
+    +section({"class": "section--grey"})
+        div(class="grid")
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({icon: "#television", title: "Impressum"})
+            div(class="grid__col-12")
+                +block()
+                    p
+                        strong Reflect
+                        br
+                        | Insheimer Straße 32
+                        br
+                        | D-76865 Rohrbach 
+                        br
+                        br
+                        | E-mail: info@reflect-beratung.de
+                        br
+                        | Fon: +49 (06349) 96 30 228
+                        br
+                        | Fax: +49 (06349) 96 30 229 
+                    p 
+                        | Inhaber und inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV.: Ingo Kallenbach
+                        br
+                        | USt-IdNr.: DE239927799 Amtsgericht Landau 
+                    p
+                        strong Design &amp; Realisierung: 
+                        +link({"class": "u-color-darkblue", "href": "http://www.hankeundwekel.de/", "title": "http://www.hankeundwekel.de/"})
+                    p
+                        strong Bildnachweis: 
+                        +link({"class": "u-color-darkblue", "href": "http://www.istock.de/", "title": "http://www.istock.de"})
+                    p
+                        strong Text: 
+                        +link({"class": "u-color-darkblue", "href": "http://www.gordonhoffmeyer.de/", "title": "http://www.gordonhoffmeyer.de"})
+                    p
+                        strong Haftungsausschluss: 
+                        br
+                        | Die Inhalte unserer Seiten sind mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Für den Inhalt verlinkter Seiten zu Reflect sind ausschließlich deren Betreiber verantwortlich. 
+                    p Die auf dieser Webseite veröffentlichten Inhalte unterliegen dem deutschen Urheber- und Leistungsschutzrecht. Jede Verwertung bedarf der vorherigen, schriftlichen Zustimmung von Reflect. 
+                    p Diese Website enthält Links zu Websites Dritter, die der Haftung der jeweiligen Betreiber unterliegen. Reflect hat keinerlei Einfluss auf die Inhalte der verknüpften Seiten. Das Setzen von externen Links bedeutet nicht, dass Reflect sich deren Inhalte zu Eigen macht. Eine ständige Kontrolle der externen Links ist für uns ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Kenntnis von Rechtsverstößen werden derartige Verknüpfungen unverzüglich gelöscht.
+
+
+

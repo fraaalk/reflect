@@ -1,0 +1,26 @@
+mixin block(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ""
+
+    if spec.id
+        div(id=spec.id, class="block #{spec.class}")
+            if spec.title
+                h3(class="block__headline")= spec.title
+            block
+    else
+        div(class="block #{spec.class}")
+            if spec.title
+                h3(class="block__headline")= spec.title
+            block
+
+mixin block-headline(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ""
+
+    h2(class="block__headline #{spec.class}")= spec.title
+
+mixin block-sub-headline(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ""
+
+    h3(class="block__sub-headline #{spec.class}")= spec.title

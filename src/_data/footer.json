@@ -78,19 +78,19 @@
 		"href": "/blog/",
 		"items": [{
 			"title": "News-Blog",
-			"href": "#"
+			"href": "/blog/"
 		}, {
 			"title": "Newsletteranmeldung",
-			"href": "#"
+			"href": "/newsletter/"
 		}, {
 			"title": "Impressum",
-			"href": "#"
+			"href": "/impressum/"
 		}, {
 			"title": "AGB",
-			"href": "#"
+			"href": "/agb/"
 		}, {
 			"title": "Datenschutz",
-			"href": "#"
+			"href": "/datenschutz/"
 		}]
 	}
 }

@@ -1,6 +1,33 @@
 // carousel styles
 .carousel {
 
+    &__page-indicator {
+        text-align: center;
+        display: inline-block;
+
+        > span {
+            color: white;
+            text-decoration: none;
+            height: 14px;
+            width: 14px;
+            border: 1px solid #979797;
+            border-radius: 50%;
+            font-size: 0;
+            display: inline-block;
+            margin: 0 3px;
+
+            &.is-active {
+                background: #969100;
+                border: solid 1px #969100;
+            }
+
+            &:not(.is-active):hover {
+                border: 1px solid darken(white, 10%);
+                background: darken(white, 10%);
+            }
+        }
+    }
+
     &__stage {
         overflow: hidden;
     }

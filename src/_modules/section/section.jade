@@ -23,21 +23,6 @@ mixin section-headline(spec)
         span(class="section__headline-text")= spec.title
         block
 
-mixin section-block(spec)
-    - spec = spec || ""
-    - spec.class = spec.class || ""
-
-    if spec.id
-        div(id=spec.id, class="section__block #{spec.class}")
-            if spec.title
-                h3(class="section__sub-headline")= spec.title
-            block
-    else
-        div(class="section__block #{spec.class}")
-            if spec.title
-                h3(class="section__sub-headline")= spec.title
-            block
-
 mixin section-badge(spec)
     - spec = spec || ""
 

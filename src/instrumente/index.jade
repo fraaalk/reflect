@@ -13,7 +13,7 @@ block content
         div(class="grid")
             each webinar in webinare
                 div(class="grid__col-12 grid__col-sm-6")
-                    +section-block({"class": "section__block--tiled" ,"title": webinar.title})
+                    +block({"class": "section__block--tiled" ,"title": webinar.title})
                         p= webinar.teaser
                         div(class="grid")
                             div(class="grid__col-6")
