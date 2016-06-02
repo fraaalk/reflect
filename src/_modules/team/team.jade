@@ -13,7 +13,7 @@ mixin team-teaser-list(spec)
 mixin team-teaser-grid(spec)
     - spec = spec || ""
 
-    div(class="team-teaser grid__col-4")&attributes(attributes)
+    div(class="team-teaser grid__col-12 grid__col-sm-4")&attributes(attributes)
         a(class="team-teaser__link", href=spec.link)
             div(class="team-teaser__image")
                 img(class="team__member-image", src=spec.image)

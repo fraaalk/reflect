@@ -99,11 +99,14 @@
 
 		// team teaser inside a grid view, currently only 4col supported
 		// no layout for any other size given yet
-		&.grid__col-4 {
+		&.grid__col-sm-4 {
 			background: white;
 			text-align: center;
 			border-bottom: 1px solid #ccc;
-			border-right: 1px solid #ccc;
+
+			@include breakpoint($bp-sm-up) {
+				border-right: 1px solid #ccc;
+			}
 			padding: 0;
 
 			@include every(3) {

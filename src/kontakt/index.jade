@@ -9,52 +9,73 @@ block content
     +header({"class":"header--extended", "visual": "http://baconmockup.com/1280/196/", "visualSize": "0 0 32 5"})
     +breadcrumb([["Home", "/"],["Kontakt", "/kontakt/"]])
     +section({"class": "section--compressed section--grey"})
-        +section-headline({"title": "Kontakt", "class": "", "icon": "#group"})
-        form(class="grid form")
-            p(class="grid__col-12") Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
-            div(class="grid__col-12 grid__col-sm-6 grid__col--bleed")
-                div(class="grid__col-12")
-                    input(placeholder="Vorname", class="form__input")
-                div(class="grid__col-12")
-                    input(placeholder="Nachname", class="form__input")
-                div(class="grid__col-12")
-                    input(placeholder="E-Mail", class="form__input")
-                div(class="grid__col-12")
-                    input(placeholder="Telefon", class="form__input")
-            div(class="grid__col-12 grid__col-sm-6 grid__col--bleed")
-                div(class="grid__col-12")
-                    textarea(class="form__input form__input--textarea") Ihre Nachricht
-                div(class="grid__col-12")
-                    input(type="submit", class="form__submit", value="Abschicken")
-    +section({"class": "section--white"})
-        +section-headline({"title": "Adresse & Anfahrt", "class": "", "icon": "#group"})
         div(class="grid")
-            p(class="grid__col-12")
-                strong Mit dem Auto
-                | Sie erreichen Rohrbach über die A65, Ausfahrt Rohrbach/Herxheim. Von dort ca. 3 km bis zur Ortsmitte, dort rechts abbiegen in die Hauptstrasse und die nächste wieder rechts in Richtung Insheim. Am Ortsausgang auf der linken Seite finden Sie Reflect. 
-            p(class="grid__col-12")
-                strong Bahn:
-                | Der Bahnhof Rohrbach liegt auf der Strecke Mannheim/Ludwigshafen in Richtung Karlsruhe, die zweite Station südlich von Landau. Sie erreichen Reflect in ca. 10 min Fußweg. 
-            p(class="grid__col-12")
-                strong Flugzeug:
-                | Vom Flughafen Mannheim (65 km) oder Karlsruhe-Baden (70 km) am schnellsten per Bahn (s. o.) zu erreichen .
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({"title": "Kontakt", "class": "", "icon": "#group"})
+            div(class="grid__col-12")
+                form(class="grid grid--justify-end form")
+                    p(class="grid__col-12") Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
+                    div(class="grid__col-12 grid__col-sm-6 grid__col--bleed")
+                        div(class="grid__col-12")
+                            input(placeholder="Vorname", class="form__input")
+                        div(class="grid__col-12")
+                            input(placeholder="Nachname", class="form__input")
+                        div(class="grid__col-12")
+                            input(placeholder="E-Mail", class="form__input")
+                        div(class="grid__col-12")
+                            input(placeholder="Telefon", class="form__input")
+                    div(class="grid__col-12 grid__col-sm-6 grid__col--bleed")
+                        div(class="grid grid--justify-end")
+                            div(class="grid__col-12")
+                                textarea(class="form__input form__input--textarea") Ihre Nachricht
+                            div(class="grid__col-12 grid__col-sm-6")
+                                input(type="submit", class="form__submit", value="Abschicken")
+    +section({"class": "section--white"})
+        div(class="grid")
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({icon: "#television", title: "Adresse & Anfahrt"})
+            div(class="grid__col-12")
+                +block()
+                    p 
+                        strong Mit dem Auto:
+                        br
+                        | Sie erreichen Rohrbach über die A65, Ausfahrt Rohrbach/Herxheim. Von dort ca. 3 km bis zur Ortsmitte, dort rechts abbiegen in die Hauptstrasse und die nächste wieder rechts in Richtung Insheim. Am Ortsausgang auf der linken Seite finden Sie Reflect.
+                    p
+                        strong Bahn:
+                        br
+                        | Der Bahnhof Rohrbach liegt auf der Strecke Mannheim/Ludwigshafen in Richtung Karlsruhe, die zweite Station südlich von Landau. Sie erreichen Reflect in ca. 10 min Fußweg. 
+                    p
+                        strong Flugzeug:
+                        br
+                        | Vom Flughafen Mannheim (65 km) oder Karlsruhe-Baden (70 km) am schnellsten per Bahn (s. o.) zu erreichen .
             div(class="grid__col-12 grid__col-sm-6")
                 div(id="google-maps")
             div(class="grid__col-12 grid__col-sm-6")
-                h3(class="section__sub-headline") Kontaktadresse
-                | Reflect
-                | Insheimer Straße 32
-                | D-76865 Rohrbach 
-                | 
-                | E-mail: info@reflect-beratung.de
-                | Fon: +49 (06349) 96 30 228
-                | Fax: +49 (06349) 96 30 229 
-    +section({"class": "section--compressed section--grey"})
-        +section-headline({"title": "Team", "class": "section__headline--spaced-top", "icon": "#group"})
+                p
+                    strong Kontaktadresse
+                    br
+                    | Reflect
+                    br
+                    | Insheimer Straße 32
+                    br
+                    | D-76865 Rohrbach 
+                    br
+                    br
+                    | E-mail: 
+                    +link({"class": "u-color-darkblue", "href": "mailto:info@reflect-beratung.de", "title": "info@reflect-beratung.de"})
+                    br
+                    | Fon: +49 (06349) 96 30 228
+                    br
+                    | Fax: +49 (06349) 96 30 229 
+    +section({"id": "team", "class": "section--grey"})
         div(class="grid")
-            p(class="grid__col-12") Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({icon: "#television", title: "Team"})
+            div(class="grid__col-12")
+                +block()
+                    p Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
         div(class="grid grid--bleed team-teasers")
             each member in members
                 +team-teaser-grid(member)
             // hack to make the layout work, it requires a full set
-            div(class="team-teaser grid__col-4")
+            div(class="team-teaser is-hidden-sm-down grid__col-4")
