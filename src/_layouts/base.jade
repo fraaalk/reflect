@@ -36,11 +36,12 @@ include ../_modules/link/link.jade
 include ../_modules/navigation/navigation.jade
 include ../_modules/customer/customer.jade
 include ../_modules/block/block.jade
+include ../_modules/go/go.jade
 
 body
-    include ../_images/svg/sprite.symbol.svg
     block content
     include ../_modules/footer/footer.jade
+    include ../_images/svg/sprite.symbol.svg
 
     block scripts
         script(src= baseUrl + 'scripts/main.js')

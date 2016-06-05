@@ -1,4 +1,79 @@
 // go styles
 .go {
-	
+	position: absolute;
+	margin: 100px;
+
+	&__level1 {
+		position: absolute;
+		border-bottom: 100px solid #93901f;
+		border-left: 47px solid transparent;
+		border-right: 47px solid transparent;
+		height: 0;
+		min-width: 100px;
+
+		&--top-left {
+			transform: rotate(-60deg);
+
+		}
+
+		&--top {
+
+		}
+
+		&--top-right {
+			transform: rotate(60deg);
+		}
+
+		&--bottom-right {
+			transform: rotate(120deg);
+		}
+
+		&--bottom {
+			//transform: rotate(180deg);
+		}
+
+		&--bottom-left {
+			transform: rotate(270deg);
+		}
+	}
+
+	&__inner {
+		background: #6C6;
+		border-color: #6C6;
+		border-style: solid;
+
+		&:hover {
+			background: darken(#6C6, 10%);
+			border-color: darken(#6C6, 10%);
+			cursor: pointer;
+		}
+	}
+
+	&__center {
+	    width: 60px;
+	    height: 104px;
+	    margin-right: -26px;
+    	margin-bottom: -50px;
+
+	    &--left {
+		    float: left;
+		    width: 0;
+		    border-right: 30px solid inherit;
+		    border-top: 52px solid transparent;
+		    border-bottom: 52px solid transparent;
+		}
+		&--middle {
+		    float: left;
+		    width: 60px;
+		    height: 104px;
+		    background: inherit;
+		}
+		&--right {
+		    float: left;
+		    width: 0;
+		    border-left: 30px solid inherit;
+		    border-top: 52px solid transparent;
+		    border-bottom: 52px solid transparent;
+		}
+	}
 }

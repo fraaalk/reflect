@@ -1,19 +1,27 @@
-div(class="go")&attributes({'data-go': '', 'data-go-visual': 'http://wallpoper.com/images/00/34/39/15/circuit-pcb_00343915.jpg'})
-    div(class="go__overlay")
-        h3(class="go__headline") Gesunde Strategie
-        p(class="go__body-text") Ihre Mitbewerber wachsen schneller als Ihr Unternehmen - was tun Sie?
-        nav(class="go__nav")
-            a(class="go__link go__link--prev", rel="prev", href="/question/")
-                svg(class="go__link-icon go__link-icon--prev")
-                    use(xlink:href="#angle-right")
-            div(class="go__page-indicator")
-                a(class="is-active", href="#") •
-                a(href="/question/") •
-                a(href="/question/") •
-                a(href="/question/") •
-                a(href="/question/") •
-                a(href="/question/") •
-                a(href="/question/") •
-            a(class="go__link go__link--next", rel="next" href="/question/")
-                svg(class="go__link-icon go__link-icon--next")
-                    use(xlink:href="#angle-right")
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = "../"
+
+mixin go(spec)
+    - spec = spec || ""
+    - spec.class = spec.class || ""
+
+    div(class="go")
+        div(class="go__inner")
+            div(class="go__center--left")
+            div(class="go__center--middle") GO
+            div(class="go__center--right")
+        div
+            div(class="go__center--left")
+            div(class="go__center--middle") Strategie
+            div(class="go__center--right")
+        div
+            div(class="go__center--left")
+            div(class="go__center--middle") Beziehungen
+            div(class="go__center--right")
+        div
+            div(class="go__center--left")
+            div(class="go__center--middle") 
+            div(class="go__center--right")
+        
+        

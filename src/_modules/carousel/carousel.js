@@ -25,7 +25,6 @@ export default class Carousel {
 
         if( this.nav ) {
             this.addNav();
-
         }
 
         this.bindEvents();
@@ -104,9 +103,11 @@ export default class Carousel {
     bindEvents() {
         this.$prevNext.on( 'click', $.proxy( this.slide, this) );
 
-        this.$carousel
-            .on( 'mouseenter', $.proxy( this.stopAutoplay, this ))
-            .on( 'mouseleave', $.proxy( this.startAutoplay, this ));
+        if ( this.autoplay ) {
+            this.$carousel
+                .on( 'mouseenter', $.proxy( this.stopAutoplay, this ))
+                .on( 'mouseleave', $.proxy( this.startAutoplay, this ));
+        }
     }
 
 
