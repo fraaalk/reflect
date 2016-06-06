@@ -1,79 +1,148 @@
 // go styles
 .go {
-	position: absolute;
-	margin: 100px;
+	position: relative;
 
-	&__level1 {
-		position: absolute;
-		border-bottom: 100px solid #93901f;
-		border-left: 47px solid transparent;
-		border-right: 47px solid transparent;
-		height: 0;
-		min-width: 100px;
+	@include breakpoint($bp-sm-up) {
+		width: 100%;
+		max-width: 400px;
+		margin: 30px auto;
+	}
 
+	> svg {
+		max-width: 500px;
+		max-height: 500px;
+		width: 100%;
+		height: auto;
+
+		text {
+			pointer-events: none;
+			fill: currentColor;
+		}
+	}
+
+	&__link {
+		font-family: 'Lato', sans-serif;
+		font-size: 0.65em;
+		font-weight: 500;
+		letter-spacing: 0.2px;
+		color: #ffffff;
+		text-transform: uppercase;
+		text-anchor: middle;
+		opacity: 0;
+		transition: all 0.2s ease-in;
+		transition-delay: 0.1s;
+
+		&.is-visible {
+			opacity: 1;
+		}
+
+		&.is-active path,
+		&:hover path {
+			color: white;
+			stroke-width: 1;
+			stroke: white;
+		}
+
+		/*&--top {
+			transition-delay: 0.15s;
+		}
+		&--top-right {
+			transition-delay: 0.2s;
+		}
+		&--bottom-right {
+			transition-delay: 0.25s;
+		}
+		&--bottom {
+			transition-delay: 0.3s;
+		}
+		&--bottom-left {
+			transition-delay: 0.35s;
+		}
 		&--top-left {
-			transform: rotate(-60deg);
+			transition-delay: 0.4s;
+		}*/
 
+		&--top-left,
+		&--top-right {
+			path {
+				fill: #42719F;
+			}
+
+			&:hover path {
+				fill: darken(#42719F, 10%);
+			}
 		}
 
 		&--top {
+			path {
+				fill: #154E86;
+			}
 
+			&:hover path {
+				fill: darken(#154E86, 10%);
+			}
 		}
 
-		&--top-right {
-			transform: rotate(60deg);
-		}
-
+		&--bottom-left,
 		&--bottom-right {
-			transform: rotate(120deg);
+			path {
+				fill: #7195B7;
+			}
+
+			&:hover path {
+				fill: darken(#7195B7, 10%);
+			}
 		}
 
 		&--bottom {
-			//transform: rotate(180deg);
+			path {
+				fill: #A0B8CF;
+			}
+
+			&:hover  path {
+				fill: darken(#A0B8CF, 10%);
+			}
 		}
 
-		&--bottom-left {
-			transform: rotate(270deg);
+		&:hover {
+			fill: darken(#ffffff, 10%);
 		}
 	}
 
 	&__inner {
-		background: #6C6;
-		border-color: #6C6;
-		border-style: solid;
+		fill: #93901f;
+		opacity: 0;
+		transition: opacity 0.2s ease-out;
 
-		&:hover {
-			background: darken(#6C6, 10%);
-			border-color: darken(#6C6, 10%);
-			cursor: pointer;
+		&.is-visible {
+			opacity: 1;
 		}
 	}
 
 	&__center {
-	    width: 60px;
-	    height: 104px;
-	    margin-right: -26px;
-    	margin-bottom: -50px;
+		fill: #5a6423;
+		color: white;
+		text-anchor: middle;
 
-	    &--left {
-		    float: left;
-		    width: 0;
-		    border-right: 30px solid inherit;
-		    border-top: 52px solid transparent;
-		    border-bottom: 52px solid transparent;
+		&:hover path {
+			color: white;
+			fill: darken(#5a6423, 10%);
 		}
-		&--middle {
-		    float: left;
-		    width: 60px;
-		    height: 104px;
-		    background: inherit;
+	}
+
+	&__outer {
+		transition: opacity 0.2s ease-out;
+		transition-delay: 0.2s;
+		opacity: 0;
+
+		.is-visible & {
+			opacity: 1;
 		}
-		&--right {
-		    float: left;
-		    width: 0;
-		    border-left: 30px solid inherit;
-		    border-top: 52px solid transparent;
-		    border-bottom: 52px solid transparent;
+
+		&:hover,
+		&.is-active {
+			stroke: #fff;
+			stroke-width: 1;
 		}
 	}
 }

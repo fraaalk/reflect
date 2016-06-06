@@ -17,7 +17,7 @@ mixin header(spec)
                     +navigation({"class": "nav--language", "menu": site.data.language})
             div(class="header__visual", style="background-image: url(#{spec.visual});")
                 block
-                img(class="header__visual-image", src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'#{spec.visualSize}'%2F%3E")
+               // img(class="header__visual-image", src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'#{spec.visualSize}'%2F%3E")
 
 mixin header-overlay(spec)
     - spec = spec || {}

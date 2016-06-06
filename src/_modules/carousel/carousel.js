@@ -87,6 +87,11 @@ export default class Carousel {
         this.$list
             .removeClass( 'is-set' );
 
+        this.$slides
+            .removeClass('is-active')
+            .eq( this.currentSlide )
+            .addClass( 'is-active' );
+
         this.$carousel
              .find( '.carousel__page-indicator span')
              .removeClass ( 'is-active' )

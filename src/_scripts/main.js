@@ -46,5 +46,28 @@ $(() => {
             zoom: 8
         });
     });
+
+    $('.go__center').on('click', function(e){
+        
+        $('.go__inner').toggleClass('is-visible');
+        $('.go__link').toggleClass('is-visible');
+
+        e.preventDefault();
+    });
+
+    function addText(p)
+{
+    var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    var b = p.getBBox();
+    t.setAttribute("transform", "translate(" + (b.x + b.width/2) + " " + (b.y + b.height/2 + 5) + ")");
+    t.textContent = p.getAttribute("title");
+    p.parentNode.insertBefore(t, p.nextSibling);
+}
+
+var paths = document.querySelectorAll(".go__center path, .go__link path");
+for (var p in paths)
+{
+    addText(paths[p])
+}
 });
         

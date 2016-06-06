@@ -7,8 +7,19 @@ export default class Deck {
         this.$deck = $( element );
         this.$next = $( '.deck__button--next', this.$deck );
         this.$prev = $( '.deck__button--prev', this.$deck );
+        this.$cards = $('.deck__card', this.$deck);
 
         this.bindEvents();
+
+        this.$cards
+            .eq(1)
+            .addClass( 'deck__card--active' )
+            .end()
+            .eq(0)
+            .addClass( 'deck__card--next' )
+            .end()
+            .eq(2)
+            .addClass( 'deck__card--prev' );
     }
         
     bindEvents() {
