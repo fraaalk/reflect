@@ -48,12 +48,15 @@ $(() => {
     });
 
     $('.go__center').on('click', function(e){
-        
-        $('.go__inner').toggleClass('is-visible');
-        $('.go__link').toggleClass('is-visible');
-
+        $('.go').toggleClass('is-visible');
         e.preventDefault();
+    }).on('mouseover', function(e) {
+        $('.go__inner').addClass('is-teased');
+    }).on('mouseout', function(){
+        $('.go__inner').removeClass('is-teased');
     });
+
+
 
     function addText(p)
 {
