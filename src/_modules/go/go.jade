@@ -1,12 +1,13 @@
 block config
     //- Correct base url pathing for this page
-    - var baseUrl = "../"
+    - var baseUrl = '../'
 
 mixin go(spec)
-    - spec = spec || ""
+    - spec = spec || {}
     - spec.class = spec.class || ""
+    - spec.active = spec.active || ""
 
-    div(class="go")
+    div(class="go #{spec.class}")&attributes({'data-go': ''})
         svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 250 250")
             path(class="go__inner go__inner--top-left", d="M100.1,123.4l11-19.2L101,86.6l-21.2,36.8H100.1z")
             path(class="go__inner go__inner--bottom-left", d="M111.1,145.8l-11-19.2H79.8l21.2,36.8L111.1,145.8z")
@@ -18,15 +19,15 @@ mixin go(spec)
                 path(d="M113.9,144.2h22.2l11-19.2l-11-19.2h-22.2l-11,19.2L113.9,144.2z", title="GO")
             a(class="go__center go__center--close", xlink:href="#")
                 path(d="M113.9,144.2h22.2l11-19.2l-11-19.2h-22.2l-11,19.2L113.9,144.2z", title="X")
-            a(class="go__link go__link--top-left", xlink:href="/question/prozesse/")
+            a(class="go__link go__link--top-left", xlink:href="/prozesse/")
                 path(d="M76.1,123.4l23.1-40l-23.1-40H30l-23.1,40l23.1,40H76.1z", title="Prozesse")
-            a(class="go__link go__link--bottom-left", xlink:href="/question/strukturen/")
+            a(class="go__link go__link--bottom-left", xlink:href="/strukturen/")
                 path(d="M76.1,126.6H30l-23.1,40l23.1,40h46.1l23.1-40L76.1,126.6z", title="Strukturen")
-            a(class="go__link go__link--bottom", xlink:href="/question/mitarbeiter/")
+            a(class="go__link go__link--bottom", xlink:href="/mitarbeiter/")
                 path(d="M102,168.1l-23.1,40l23.1,40H148l23.1-40l-23.1-40L102,168.1z", title="Mitarbeiter")
-            a(class="go__link go__link--bottom-right", xlink:href="/question/kultur/")
+            a(class="go__link go__link--bottom-right", xlink:href="/kultur/")
                 path(d="M173.9,126.6l-23.1,40l23.1,40H220l23.1-40l-23.1-40L173.9,126.6z", title="Kultur")
-            a(class="go__link go__link--top-right", xlink:href="/question/beziehungen/")
+            a(class="go__link go__link--top-right", xlink:href="/beziehungen/")
                 path(d="M173.9,123.4H220l23.1-40l-23.1-40h-46.1l-23.1,40L173.9,123.4z", title="Beziehungen")
-            a(class="go__link go__link--top", xlink:href="/question/strategie/")
+            a(class="go__link go__link--top", xlink:href="/strategie/")
                 path(d="M148,81.9l23.1-40L148,2H102l-23.1,40l23.1,40H148z", title="Strategie")
