@@ -29,11 +29,11 @@
 		text-transform: uppercase;
 		text-anchor: middle;
 		opacity: 0;
-
+		transition: all 0.3s ease-in;
+		
 		.is-visible & {
 			opacity: 1;
-			transition: all 0.4s ease-in;
-			transition-delay: 0.2s;
+			transition-delay: 0.1s;
 		}
 
 		&.is-active path,
@@ -43,24 +43,24 @@
 			stroke: white;
 		}
 
-		/*&--top {
-			transition-delay: 0.15s;
-		}
-		&--top-right {
-			transition-delay: 0.2s;
-		}
-		&--bottom-right {
-			transition-delay: 0.25s;
-		}
-		&--bottom {
-			transition-delay: 0.3s;
-		}
-		&--bottom-left {
-			transition-delay: 0.35s;
-		}
-		&--top-left {
-			transition-delay: 0.4s;
-		}*/
+		// &--top {
+		// 	transition-delay: 0.15s;
+		// }
+		// &--top-right {
+		// 	transition-delay: 0.2s;
+		// }
+		// &--bottom-right {
+		// 	transition-delay: 0.25s;
+		// }
+		// &--bottom {
+		// 	transition-delay: 0.3s;
+		// }
+		// &--bottom-left {
+		// 	transition-delay: 0.35s;
+		// }
+		// &--top-left {
+		// 	transition-delay: 0.4s;
+		// }
 
 		&--top-left,
 		&--top-right {
@@ -127,8 +127,30 @@
 	&__center {
 		color: white;
 		text-anchor: middle;
+		font-weight: 600;
+		font-size: 0.7em;
 
-		.is-visible & {
+		&--open {
+			.is-visible & {
+				display: none;
+			}
+
+			path {
+				fill: #5a6423;
+
+				&:hover {
+					fill: darken(#5a6423, 10%);
+				}
+			}
+		}
+
+		&--close {
+			display: none;
+
+			.is-visible & {
+				display: block;
+			}
+
 			path {
 				fill: #d0021b;
 				color: white;
@@ -138,14 +160,6 @@
 				&:hover {
 					fill: darken(#d0021b, 10%);
 				}
-			}
-		}
-
-		path {
-			fill: #5a6423;
-
-			&:hover {
-				fill: darken(#5a6423, 10%);
 			}
 		}
 	}
