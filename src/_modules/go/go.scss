@@ -132,7 +132,7 @@
 
 		&--open {
 			.is-visible & {
-				display: none;
+				visibility: hidden;
 			}
 
 			path {
@@ -145,17 +145,18 @@
 		}
 
 		&--close {
-			display: none;
+			visibility: hidden;
 
 			.is-visible & {
-				display: block;
+				visibility: visible;
 			}
 
 			path {
 				fill: #d0021b;
 				color: white;
 				stroke-width: 1;
-				stroke: white;
+				stroke-location: inside;
+				stroke: #fff;
 
 				&:hover {
 					fill: darken(#d0021b, 10%);
@@ -177,6 +178,7 @@
 		&.is-active {
 			stroke: #fff;
 			stroke-width: 1;
+			stroke-location: inside;
 		}
 	}
 }
