@@ -5,29 +5,50 @@ block config
 mixin go(spec)
     - spec = spec || {}
     - spec.class = spec.class || ""
-    - spec.active = spec.active || ""
+    - spec.visual = spec.visual || ""
 
-    div(class="go #{spec.class}")&attributes({'data-go': ''})
-        svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 250 250")
-            path(class="go__inner go__inner--top-left", d="M100.1,123.4l11-19.2L101,86.6l-21.2,36.8H100.1z")
-            path(class="go__inner go__inner--bottom-left", d="M111.1,145.8l-11-19.2H79.8l21.2,36.8L111.1,145.8z")
-            path(class="go__inner go__inner--bottom", d="M136.1,147.3h-22.2L103.7,165h42.5L136.1,147.3z")
-            path(class="go__inner go__inner--bottom-right", d="M149.9,126.6l-11,19.2l10.1,17.6l21.2-36.8H149.9z")
-            path(class="go__inner go__inner--top-right", d="M149,86.6l-10.1,17.6l11,19.2h20.3L149,86.6z")
-            path(class="go__inner go__inner--top", d="M103.7,85l10.1,17.6h22.2L146.3,85H103.7z")
-            a(class="go__center go__center--open", xlink:href="#")
+    div(class="go #{spec.class}", style="background-image: url(#{spec.visual});")&attributes({'data-go': ''})
+        svg(class="go-comb", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 250 250")
+            a(class="go-comb__center go-comb__center--open", xlink:href="#")
                 path(d="M113.9,144.2h22.2l11-19.2l-11-19.2h-22.2l-11,19.2L113.9,144.2z", title="GO")
-            a(class="go__center go__center--close", xlink:href="#")
+            a(class="go-comb__center go-comb__center--close", xlink:href="#")
                 path(d="M113.9,144.2h22.2l11-19.2l-11-19.2h-22.2l-11,19.2L113.9,144.2z", title="X")
-            a(class="go__link go__link--top-left", xlink:href="/prozesse/")
+            path(class="go-comb__inner go-comb__inner--top-left", d="M100.1,123.4l11-19.2L101,86.6l-21.2,36.8H100.1z")
+            path(class="go-comb__inner go-comb__inner--bottom-left", d="M111.1,145.8l-11-19.2H79.8l21.2,36.8L111.1,145.8z")
+            path(class="go-comb__inner go-comb__inner--bottom", d="M136.1,147.3h-22.2L103.7,165h42.5L136.1,147.3z")
+            path(class="go-comb__inner go-comb__inner--bottom-right", d="M149.9,126.6l-11,19.2l10.1,17.6l21.2-36.8H149.9z")
+            path(class="go-comb__inner go-comb__inner--top-right", d="M149,86.6l-10.1,17.6l11,19.2h20.3L149,86.6z")
+            path(class="go-comb__inner go-comb__inner--top", d="M103.7,85l10.1,17.6h22.2L146.3,85H103.7z")
+            a(class="go-comb__outer go-comb__outer--top-left", xlink:href="/prozesse/")
                 path(d="M76.1,123.4l23.1-40l-23.1-40H30l-23.1,40l23.1,40H76.1z", title="Prozesse")
-            a(class="go__link go__link--bottom-left", xlink:href="/strukturen/")
+            a(class="go-comb__outer go-comb__outer--bottom-left", xlink:href="/strukturen/")
                 path(d="M76.1,126.6H30l-23.1,40l23.1,40h46.1l23.1-40L76.1,126.6z", title="Strukturen")
-            a(class="go__link go__link--bottom", xlink:href="/mitarbeiter/")
+            a(class="go-comb__outer go-comb__outer--bottom", xlink:href="/mitarbeiter/")
                 path(d="M102,168.1l-23.1,40l23.1,40H148l23.1-40l-23.1-40L102,168.1z", title="Mitarbeiter")
-            a(class="go__link go__link--bottom-right", xlink:href="/kultur/")
+            a(class="go-comb__outer go-comb__outer--bottom-right", xlink:href="/kultur/")
                 path(d="M173.9,126.6l-23.1,40l23.1,40H220l23.1-40l-23.1-40L173.9,126.6z", title="Kultur")
-            a(class="go__link go__link--top-right", xlink:href="/beziehungen/")
+            a(class="go-comb__outer go-comb__outer--top-right", xlink:href="/beziehungen/")
                 path(d="M173.9,123.4H220l23.1-40l-23.1-40h-46.1l-23.1,40L173.9,123.4z", title="Beziehungen")
-            a(class="go__link go__link--top", xlink:href="/strategie/")
+            a(class="go-comb__outer go-comb__outer--top", xlink:href="/strategie/")
                 path(d="M148,81.9l23.1-40L148,2H102l-23.1,40l23.1,40H148z", title="Strategie")
+        block
+
+mixin go-overlay(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ""
+
+    div(class="go__overlay")
+        a(class="go__link go__link--prev", rel="prev", href="/question/")
+            svg(class="go__link-icon go__link-icon--prev")
+                use(xlink:href="#angle-right")
+        h3(class="go__overlay-headline")= spec.title
+        p(class="go__overlay-text")= spec.text
+        nav(class="go__overlay-indicators")
+            each val, index in [0, 1, 2, 3, 4, 5]
+                if index == 0
+                    a(class="is-active", href="/question", title="Seite #{index + 1}") •
+                else
+                    a(href="/question/", title="Seite #{index + 1}") •
+        a(class="go__link go__link--next", rel="next" href="/question/")
+            svg(class="go__link-icon go__link-icon--next")
+                use(xlink:href="#angle-right")

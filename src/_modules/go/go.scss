@@ -3,6 +3,10 @@
 	position: relative;
 	text-align: center;
 	line-height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 1280px;
+	margin: 0 auto;
 
 	@include breakpoint($bp-sm-up) {
 		min-height: 400px;
@@ -32,213 +36,237 @@
 		}
 	}
 
-	&__link {
-		font-family: 'Lato', sans-serif;
-		font-size: 0.65em;
-		font-weight: 500;
-		letter-spacing: 0.2px;
-		color: #ffffff;
-		text-transform: uppercase;
-		text-anchor: middle;
-		opacity: 0;
-		transition: all 0.3s ease-in;
-		
-		.is-visible & {
-			opacity: 1;
-			transition-delay: 0.1s;
-		}
-
-		&.is-active path,
-		&:hover path {
+	// waben limbo
+	&-comb {
+		// center comb containing go and close link
+		&__center {
 			color: white;
-			stroke-width: 1;
-			stroke: white;
-		}
+			text-anchor: middle;
+			font-weight: 600;
+			font-size: 0.7em;
 
-		&--top-left path {
-			.is-top-left-active & {
-				color: white;
-				stroke-width: 1;
-				stroke: white;
+			&--open {
+				.is-visible & {
+					visibility: hidden;
+				}
+
+				path {
+					fill: #5a6423;
+
+					&:hover {
+						fill: darken(#5a6423, 10%);
+					}
+				}
+			}
+
+			&--close {
+				visibility: hidden;
+
+				.is-visible & {
+					visibility: visible;
+				}
+
+				path {
+					fill: #d0021b;
+					color: white;
+					stroke-width: 1;
+					stroke-location: inside;
+					stroke: #fff;
+
+					&:hover {
+						fill: darken(#d0021b, 10%);
+					}
+				}
 			}
 		}
 
-		&--top path {
-			.is-top-active & {
-				color: white;
-				stroke-width: 1;
-				stroke: white;
+		// inner comb containing green shit
+		&__inner {
+			fill: #93901f;
+			opacity: 0;
+			transition: opacity 0.4s ease-out;
+
+			.is-visible & {
+				opacity: 1 !important;
+				
+			}
+
+			&.is-teased {
+				opacity: 0.8;
 			}
 		}
 
-		&--top-right path {
-			.is-top-right-active & {
-				color: white;
-				stroke-width: 1;
-				stroke: white;
-			}
-		}
+		// outer comb containing links
+		&__outer {
+			font-family: 'Lato', sans-serif;
+			font-size: 0.65em;
+			font-weight: 500;
+			letter-spacing: 0.2px;
+			color: #ffffff;
+			text-transform: uppercase;
+			text-anchor: middle;
+			opacity: 0;
+			transition: all 0.3s ease-in;
 
-		&--bottom path {
-			.is-bottom-active & {
-				color: white;
-				stroke-width: 1;
-				stroke: white;
-			}
-		}
-
-		&--bottom-right path {
-			.is-bottom-right-active & {
-				color: white;
-				stroke-width: 1;
-				stroke: white;
-			}
-		}
-
-		&--bottom-left path {
-			.is-bottom-left-active & {
-				color: white;
-				stroke-width: 1;
-				stroke: white;
-			}
-		}
-
-		// &--top {
-		// 	transition-delay: 0.15s;
-		// }
-		// &--top-right {
-		// 	transition-delay: 0.2s;
-		// }
-		// &--bottom-right {
-		// 	transition-delay: 0.25s;
-		// }
-		// &--bottom {
-		// 	transition-delay: 0.3s;
-		// }
-		// &--bottom-left {
-		// 	transition-delay: 0.35s;
-		// }
-		// &--top-left {
-		// 	transition-delay: 0.4s;
-		// }
-
-		&--top-left,
-		&--top-right {
-			path {
-				fill: #42719F;
-			}
-
+			&.is-active path,
 			&:hover path {
-				fill: darken(#42719F, 10%);
+				color: white;
+				stroke-width: 1;
+				stroke: white;
+			}
+			
+			.is-visible & {
+				opacity: 1;
+				transition-delay: 0.1s;
+			}
+
+			&--top-left,
+			&--top-right {
+				path {
+					fill: #42719F;
+				}
+
+				&:hover path {
+					fill: darken(#42719F, 10%);
+				}
+			}
+
+			&--top {
+				path {
+					fill: #154E86;
+				}
+
+				&:hover path {
+					fill: darken(#154E86, 10%);
+				}
+			}
+
+			&--bottom-left,
+			&--bottom-right {
+				path {
+					fill: #7195B7;
+				}
+
+				&:hover path {
+					fill: darken(#7195B7, 10%);
+				}
+			}
+
+			&--bottom {
+				path {
+					fill: #A0B8CF;
+				}
+
+				&:hover  path {
+					fill: darken(#A0B8CF, 10%);
+				}
+			}
+
+			&:hover {
+				fill: darken(#ffffff, 10%);
 			}
 		}
+	}
 
-		&--top {
-			path {
-				fill: #154E86;
-			}
+	// overlay unterhalb des waben limbos
+	&__overlay {
+		background: rgba(0, 56, 101, 0.8);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		color: white;
+		height: 96px;
+		padding: 7px 80px 10px;
 
-			&:hover path {
-				fill: darken(#154E86, 10%);
-			}
+		&-headline {
+			font-size: 20px;
+			letter-spacing: 0.3px;
+			text-transform: uppercase;
+			line-height: 1;
 		}
 
-		&--bottom-left,
-		&--bottom-right {
-			path {
-				fill: #7195B7;
-			}
-
-			&:hover path {
-				fill: darken(#7195B7, 10%);
-			}
+		&-text {
+			font-size: 20px;
+			font-weight: 200;
+			line-height: 1.1;
+			@include clearfix();
+			font-style: italic;
 		}
 
-		&--bottom {
-			path {
-				fill: #A0B8CF;
-			}
+		&-indicators {
+			display: inline-block;
+			@include clearfix();
+			margin-top: 10px;
 
-			&:hover  path {
-				fill: darken(#A0B8CF, 10%);
+			> a {
+				color: white;
+				text-decoration: none;
+				height: 14px;
+				width: 14px;
+				border: 1px solid #fff;
+				border-radius: 50%;
+				font-size: 0;
+				display: block;
+				margin: 0 3px;
+				float: left;
+
+				&.is-active {
+					background: white;
+				}
+
+				&:not(.is-active):hover {
+					border: 1px solid darken(white, 10%);
+					background: darken(white, 10%);
+				}
 			}
 		}
+	}
+
+
+	&__link {
+		$background-color: rgba(254, 254, 254, 0.3);
+		$color: rgba(255, 255, 255, 1);
+		$border-color: rgba(255, 255, 255, 1);
+
+		background-color: $background-color;
+		border-radius: 50%;
+		border-style: solid;
+		border-width: 1px;
+		border-color: $border-color;
+		color: $color;
+		cursor: pointer;
+		display: block;
+		height: 50px;
+		transition: all 0.3s ease-out;
+		width: 50px;
+		padding: 15px;
+		position: absolute;
+		bottom: 0;
+		top: calc(50% - 25px);
 
 		&:hover {
-			fill: darken(#ffffff, 10%);
-		}
-	}
-
-	&__inner {
-		fill: #93901f;
-		opacity: 0;
-		transition: opacity 0.4s ease-out;
-
-		.is-visible & {
-			opacity: 1 !important;
-			
+			background: darken($background-color, 10%);
+			color: darken($color, 10%);
+			border-color: darken($border-color, 10%);
 		}
 
-		&.is-teased {
-			opacity: 0.8;
+		&--prev {
+			left: 25px;
 		}
-	}
 
-	&__center {
-		color: white;
-		text-anchor: middle;
-		font-weight: 600;
-		font-size: 0.7em;
+		&--next {
+			right: 25px;
+		}
 
-		&--open {
-			.is-visible & {
-				visibility: hidden;
+		&-icon {
+			width: 100%;
+			height: 100%;
+			// display: inline-block;
+
+			&--prev {
+				transform: rotate(180deg);
 			}
-
-			path {
-				fill: #5a6423;
-
-				&:hover {
-					fill: darken(#5a6423, 10%);
-				}
-			}
-		}
-
-		&--close {
-			visibility: hidden;
-
-			.is-visible & {
-				visibility: visible;
-			}
-
-			path {
-				fill: #d0021b;
-				color: white;
-				stroke-width: 1;
-				stroke-location: inside;
-				stroke: #fff;
-
-				&:hover {
-					fill: darken(#d0021b, 10%);
-				}
-			}
-		}
-	}
-
-	&__outer {
-		transition: opacity 0.2s ease-out;
-		transition-delay: 0.2s;
-		opacity: 0;
-
-		.is-visible & {
-			opacity: 1;
-		}
-
-		&:hover,
-		&.is-active {
-			stroke: #fff;
-			stroke-width: 1;
-			stroke-location: inside;
 		}
 	}
 }

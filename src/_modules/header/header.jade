@@ -15,29 +15,3 @@ mixin header(spec)
                     +form-inline({"class": "form--search", "icon": "#search"})
                 div(class="header__language-selection")
                     +navigation({"class": "nav--language", "menu": site.data.language})
-            div(class="header__visual", style="background-image: url(#{spec.visual});")
-                block
-               // img(class="header__visual-image", src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'#{spec.visualSize}'%2F%3E")
-
-mixin header-overlay(spec)
-    - spec = spec || {}
-    - spec.class = spec.class || ""
-    - spec.title = spec.title || ""
-    - spec.text = spec.text || ""
-
-    div(class="header-overlay")
-        h3(class="header-overlay__headline")= spec.title
-        p(class="header-overlay__text")= spec.text
-        nav(class="header-overlay__nav")
-            a(class="header-overlay__link header-overlay__link--prev", rel="prev", href="/question/")
-                svg(class="header-overlay__link-icon header-overlay__link-icon--prev")
-                    use(xlink:href="#angle-right")
-            div(class="header-overlay__page-indicator")
-                each val, index in [0, 1, 2, 3, 4, 5, 6]
-                    if index == 0
-                        a(class="is-active", href="/question", title="Seite #{index + 1}") •
-                    else
-                        a(href="/question/", title="Seite #{index + 1}") •
-            a(class="header-overlay__link header-overlay__link--next", rel="next" href="/question/")
-                svg(class="header-overlay__link-icon header-overlay__link-icon--next")
-                    use(xlink:href="#angle-right")

@@ -47,13 +47,13 @@ $(() => {
         });
     });
 
-    $('.go__center').on('click', function(e){
+    $('.go-comb__center').on('click', function(e){
         $('.go').toggleClass('is-visible');
         e.preventDefault();
     }).on('mouseover', function(e) {
-        $('.go__inner').addClass('is-teased');
+        $('.go-comb__inner').addClass('is-teased');
     }).on('mouseout', function(){
-        $('.go__inner').removeClass('is-teased');
+        $('.go-comb__inner').removeClass('is-teased');
     });
 
 
@@ -67,7 +67,7 @@ $(() => {
     p.parentNode.insertBefore(t, p.nextSibling);
 }
 
-var paths = document.querySelectorAll(".go__center path, .go__link path");
+var paths = document.querySelectorAll(".go-comb__center path, .go-comb__outer path");
 for (var p in paths)
 {
     addText(paths[p])

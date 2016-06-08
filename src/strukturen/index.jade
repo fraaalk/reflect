@@ -6,8 +6,20 @@ block config
     - var deck = site.data.deck
 
 block content
-    +header({"class":"header--extended", "visual": "/images/visuals/strukturen.jpg"})
-        +go({"class": "is-bottom-left-active is-visible is-minimized"})
-        +header-overlay({"title": "Strukturen", "text": "Bacon ipsum dolor amet porchetta turducken boudin, turkey tri-tip bresaola strip steak pork ham hock cow fatback pig prosciutto tongue tenderloin."})
+    +go({"class": "is-bottom-active is-visible is-minimized", "visual": "/images/visuals/strukturen.jpg"})
+        +go-overlay({"title": "Strukturen", "text": "Bacon ipsum dolor amet porchetta turducken boudin"})
     +section({"class": "section--grey"})
-        p TBD
+        div(class="grid deck")&attributes({'data-deck': ''})
+            div(class="grid__col-12 grid__col-sm-7")
+                +section-headline({icon: "#television", title: "Typische Lösungen"})
+            div(class="grid__col-12")
+                div(class="grid__cell")
+                    +deck-stage()
+                        each card,val in deck 
+                            +deck-card()
+                                h2(class="deck__card-headline")= val
+                                p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+                                p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
+                                small(class="deck__card-author") Max Mustermann
+            div(class="grid__col-12")
+                +deck-controls()
