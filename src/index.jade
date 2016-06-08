@@ -9,7 +9,8 @@ block config
     - var customers = site.data.customers
 
 block content
-    +header({"class":"header--extended", "visual": "/images/visuals/homepage.jpg", "visualSize": "0 0 32 15"})
+    +go({"class": "", "visual": "/images/visuals/homepage.jpg"})
+    //- +header({"class":"header--extended", "visual": "/images/visuals/homepage.jpg", "visualSize": "0 0 32 15"})
         +go()
     +section({"class": "section--grey"})
         div(class="grid grid--align-start")

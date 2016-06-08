@@ -48,7 +48,7 @@ $(() => {
     });
 
     $('.go-comb__center').on('click', function(e){
-        $('.go').toggleClass('is-visible');
+        $('.go-comb').toggleClass('is-visible');
         e.preventDefault();
     }).on('mouseover', function(e) {
         $('.go-comb__inner').addClass('is-teased');

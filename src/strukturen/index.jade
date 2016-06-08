@@ -6,7 +6,7 @@ block config
     - var deck = site.data.deck
 
 block content
-    +go({"class": "is-bottom-active is-visible is-minimized", "visual": "/images/visuals/strukturen.jpg"})
+    +go({"class": "is-visible is-minimized", "visual": "/images/visuals/strukturen.jpg", "active": "Strukturen"})
         +go-overlay({"title": "Strukturen", "text": "Bacon ipsum dolor amet porchetta turducken boudin"})
     +section({"class": "section--grey"})
         div(class="grid deck")&attributes({'data-deck': ''})

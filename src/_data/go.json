@@ -1,0 +1,38 @@
+{
+	"strategie": {
+		"path": "M148,81.9l23.1-40L148,2H102l-23.1,40l23.1,40H148z",
+		"classes": "go-comb__outer go-comb__outer--top",
+		"href": "/strategie/",
+		"title": "Strategie"
+	},
+	"beziehungen": {
+		"path": "M173.9,123.4H220l23.1-40l-23.1-40h-46.1l-23.1,40L173.9,123.4z",
+		"classes": "go-comb__outer go-comb__outer--top-right",
+		"href": "/beziehungen/",
+		"title": "Beziehungen"
+	},
+	"kultur": {
+		"path": "M173.9,126.6l-23.1,40l23.1,40H220l23.1-40l-23.1-40L173.9,126.6z",
+		"classes": "go-comb__outer go-comb__outer--bottom-right",
+		"href": "/kultur/",
+		"title": "Kultur"
+	},
+	"mitarbeiter": {
+		"path": "M102,168.1l-23.1,40l23.1,40H148l23.1-40l-23.1-40L102,168.1z",
+		"classes": "go-comb__outer go-comb__outer--bottom",
+		"href": "/mitarbeiter/",
+		"title": "Mitarbeiter"
+	},
+	"strukturen": {
+		"path": "M76.1,126.6H30l-23.1,40l23.1,40h46.1l23.1-40L76.1,126.6z",
+		"classes": "go-comb__outer go-comb__outer--bottom-left",
+		"href": "/strukturen/",
+		"title": "Strukturen"
+	},
+	"prozesse": {
+		"path": "M76.1,123.4l23.1-40l-23.1-40H30l-23.1,40l23.1,40H76.1z",
+		"classes": "go-comb__outer go-comb__outer--top-left",
+		"href": "/prozesse/",
+		"title": "Prozesse"
+	}
+}
