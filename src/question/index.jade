@@ -12,17 +12,7 @@ block content
         div(class="grid deck")&attributes({'data-deck': ''})
             div(class="grid__col-12 grid__col-sm-7")
                 +section-headline({icon: "#television", title: "Typische Lösungen"})
-            div(class="grid__col-12")
-                div(class="grid__cell")
-                    +deck-stage()
-                        each card,val in deck 
-                            +deck-card()
-                                h2(class="deck__card-headline")= val
-                                p “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
-                                p Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere,metus mattis varius.” 
-                                small(class="deck__card-author") Max Mustermann
-            div(class="grid__col-12")
-                +deck-controls()
+            
     +section({"class": "section--white"})
         div(class="grid grid--align-start")
             div(class="grid__col-12")

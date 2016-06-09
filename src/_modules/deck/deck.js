@@ -8,23 +8,26 @@ export default class Deck {
         this.$next = $( '.deck__button--next', this.$deck );
         this.$prev = $( '.deck__button--prev', this.$deck );
         this.$cards = $('.deck__card', this.$deck);
+        this.$stage = $('.deck__stage', this.$deck);
+        this.$win = $( window );
 
         this.bindEvents();
 
-        this.$cards
-            .eq(1)
-            .addClass( 'deck__card--active' )
-            .end()
-            .eq(0)
-            .addClass( 'deck__card--next' )
-            .end()
-            .eq(2)
-            .addClass( 'deck__card--prev' );
+        this.$stage.height(this.adjustStage());
+
+    }
+
+    adjustStage() {
+        let heights = this.$cards.map(function(i, e) {
+            return $(e).outerHeight();
+        });
+        return Math.max.apply( this, heights.get() );
     }
         
     bindEvents() {
         this.$next.on( 'click', this.next );
         this.$prev.on( 'click', this.prev );
+        this.$win.on('resize', $.proxy( this.adjustStage, this) );
     }
 
     prev() {
@@ -53,6 +56,8 @@ export default class Deck {
             .addClass( 'deck__card--active' )
             .prev( '.deck__card' )
             .addClass( 'deck__card--prev' );
+
+        this.$stage.height(this.adjustStage());
     }
 
     next() {
@@ -81,5 +86,7 @@ export default class Deck {
             .removeClass( 'deck__card--next' )
             .next( '.deck__card' )
             .addClass( 'deck__card--next' );
+
+        this.$stage.height(this.adjustStage());
     }
 }

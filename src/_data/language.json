@@ -1,10 +1,7 @@
 {
 	"DE": {
-		"title": "DE",
+		"title": "EN",
 		"href": "#",
-		"items": [{
-			"title": "EN",
-			"href": "#"
-		}]
+		"items": []
 	}
 }
