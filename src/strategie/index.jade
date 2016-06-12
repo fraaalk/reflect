@@ -7,6 +7,42 @@ block config
 
 block content
     +go({"class": "is-visible is-minimized", "visual": "/images/visuals/strategie.jpg", "active": "Strategie"})
-        +go-overlay({"title": "Strategie", "text": "Bacon ipsum dolor amet porchetta turducken boudin"})
+        +go-overlay({"title": "Strategie", "text": "Bacon ipsum dolor amet porchetta turducken boudin", "active": "Strategie"})
     +section({"class": "section--grey"})
-        p TBD
+        div(class="grid deck")&attributes({'data-deck': ''})
+            div(class="grid__col-12")
+                +section-headline({icon: "#blackboard", title: "Typische Lösungen"})
+            div(class="grid__col-12")
+                div(class="grid__cell")
+                    +deck()
+                    +deck-controls()
+    +section({"class": "section--white"})
+        div(class="grid")
+            div(class="grid__col-12")
+                +section-headline({icon: "#receipt", title: "Beschreibung"})
+            div(class="grid__col-12 grid__col-sm-8")
+                div(class="grid grid--align-start")
+                    div(class="grid__col-12")
+                        blockquote(class="quote quote--default") Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id.
+                    div(class="grid__col-6") 
+                        div(class="block")
+                            p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor.
+                    div(class="grid__col-6") 
+                        div(class="block")
+                            p Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor.
+            div(class="grid__col-12 grid__col-sm-4")
+                include ../_modules/rating/rating.jade
+    +section({"class": "section--grey"})
+        div(class="grid")
+            div(class="grid__col-12")
+                +section-headline({icon: "#new-window", title: "Lösungen Teilbereich 1"})
+            div(class="grid__col-12 grid__col-sm-6")
+                div(class="block block--tiled")
+                    h3(class="block__headline") Headline Lorem Ipsum
+                    p Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.
+                    p Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. 
+            div(class="grid__col-12 grid__col-sm-6")
+                div(class="block block--tiled")
+                    h3(class="block__headline") Headline Lorem Ipsum
+                    p Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.
+                    p Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis.

@@ -33,6 +33,7 @@ mixin go(spec)
 mixin go-overlay(spec)
     - spec = spec || {}
     - spec.class = spec.class || ""
+    - spec.active = spec.active || ""
 
     div(class="go__overlay")
         a(class="go__link go__link--prev", rel="prev", href="/question/")
@@ -42,7 +43,7 @@ mixin go-overlay(spec)
         p(class="go__overlay-text")= spec.text
         nav(class="go__overlay-indicators")
             each item, index in site.data.go
-                if index == 0
+                if spec.active == item.title
                     a(class="is-active", href=item.href, title=item.title) •
                 else
                     a(href=item.href, title=item.title) •

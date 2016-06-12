@@ -25,9 +25,8 @@ export default class Deck {
     }
         
     bindEvents() {
-        this.$next.on( 'click', this.next );
-        this.$prev.on( 'click', this.prev );
-        this.$win.on('resize', $.proxy( this.adjustStage, this) );
+        this.$next.on( 'click', $.proxy( this.next, this ) );
+        this.$win.on('resize', $.proxy( this.adjustStage, this ) );
     }
 
     prev() {
@@ -39,7 +38,7 @@ export default class Deck {
 
         $bPrev
             .toggleClass( 'is-disabled', $prev.prev( '.deck__card' ).length === 0 );
-        $bNext
+        $bNext  
             .removeClass( 'is-disabled' );
 
         if ($prev.length === 0 ) {
