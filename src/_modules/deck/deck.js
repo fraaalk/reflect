@@ -26,7 +26,8 @@ export default class Deck {
         
     bindEvents() {
         this.$next.on( 'click', $.proxy( this.next, this ) );
-        this.$win.on('resize', $.proxy( this.adjustStage, this ) );
+        this.$prev.on( 'click', $.proxy( this.prev, this ) );
+        this.$win.on( 'resize', $.proxy( this.adjustStage, this ) );
     }
 
     prev() {

@@ -9,25 +9,25 @@ mixin social-links(spec)
 
     div(class='social #{spec.class}')
         if spec.googleplus
-            a(href='#', class='social__button social__button--google-plus')&attributes({'data-popup': '', 'data-popup-width': '500', 'data-popup-height': '700'})
+            a(href='#', class='social__button social__button--google-plus')
                 svg(class="social__button-icon")
                     use(xlink:href="#google-plus")
         if spec.facebook
-            a(href='http://www.facebook.com/sharer.php?u=http://www.reflect.de', class='social__button social__button--facebook')&attributes({'data-popup': '', 'data-popup-width': '700', 'data-popup-height': '400'})
+            a(href='http://www.facebook.com/sharer.php?u=http://www.reflect.de', class='social__button social__button--facebook')
                 svg(class="social__button-icon")
                     use(xlink:href="#facebook")
         if spec.linkedin
-            a(href='#', class='social__button social__button--linked-in')&attributes({'data-popup': '', 'data-popup-width': '700', 'data-popup-height': '400'})
+            a(href='#', class='social__button social__button--linked-in')
                 svg(class="social__button-icon")
-                    use(xlink:href="#linkedin")
+                    use(xlink:href="#linked-in")
         if spec.twitter
-            a(href='', class='social__button social__button--twitter')&attributes({'data-popup': '', 'data-popup-width': '600', '   data-popup-height': '450'})
+            a(href='', class='social__button social__button--twitter')
                 svg(class="social__button-icon")
                     use(xlink:href="#twitter")
         if spec.rss
             a(href='#', class='social__button social__button--rss')
                 svg(class="social__button-icon")
-                    use(xlink:href="#feed")
+                    use(xlink:href="#rss")
         if spec.xing 
             a(href='#', class='social__button social__button--xing')
                 svg(class="social__button-icon")
@@ -35,5 +35,5 @@ mixin social-links(spec)
         if spec.mail
             a(href='#', class='social__button social__button--mail')
                 svg(class="social__button-icon")
-                    use(xlink:href="#envelope-o")
+                    use(xlink:href="#mail")
     
