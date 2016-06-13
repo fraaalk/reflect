@@ -7,45 +7,53 @@ footer(id='footer', class='footer')
     div(class="footer__wrapper")
         div(class="grid")
             div(class="grid__col-12 grid__col-sm-8")
-                nav(class='footer__nav')
-                    div(class="footer__nav-block footer__nav-block--profil")
-                        h5(class="footer__headline")= site.data.footer.profil.title
+                nav(class="footer__nav grid")
+                    div(class="grid__col-12 grid__col-sm-2")
+                        h5(class="footer__nav-headline")
+                            span= site.data.footer.profil.title
                         ul
                             each item in site.data.footer.profil.items
                                 li
                                     a(title=item.title, href=item.href)= item.title
-                    div(class="footer__nav-block footer__nav-block--portfolio")
-                        h5(class="footer__headline")= site.data.footer.portfolio.title
+                    div(class="grid__col-12 grid__col-sm-3")
+                        h5(class="footer__nav-headline")
+                            span= site.data.footer.portfolio.title
                         ul
                             each item in site.data.footer.portfolio.items
                                 li
                                     a(title=item.title, href=item.href)= item.title
-                    div(class="footer__nav-block footer__nav-block--instrumente")
-                        h5(class="footer__headline")= site.data.footer.instrumente.title
-                        ul
-                            each item in site.data.footer.instrumente.items
-                                li
-                                    a(title=item.title, href=item.href)= item.title
-                        h5(class="footer__headline")= site.data.footer.kontakt.title
-                        ul
-                            each item in site.data.footer.kontakt.items
-                                li
-                                    a(title=item.title, href=item.href)= item.title
-                    div(class="footer__nav-block footer__nav-block--kunden")
-                        h5(class="footer__headline")= site.data.footer.kunden.title
+                    div(class="grid__col-sm-2 grid__col--bleed")
+                        div(class="grid__col-12")
+                            h5(class="footer__nav-headline")
+                                span= site.data.footer.instrumente.title
+                            ul
+                                each item in site.data.footer.instrumente.items
+                                    li
+                                        a(title=item.title, href=item.href)= item.title
+                        div(class="grid__col-12")
+                            h5(class="footer__nav-headline")
+                                span= site.data.footer.kontakt.title
+                            ul
+                                each item in site.data.footer.kontakt.items
+                                    li
+                                        a(title=item.title, href=item.href)= item.title
+                    div(class="grid__col-12 grid__col-sm-2")
+                        h5(class="footer__nav-headline")
+                            span= site.data.footer.kunden.title
                         ul
                             each item in site.data.footer.kunden.items
                                 li
                                     a(title=item.title, href=item.href)= item.title
-                    div(class="footer__nav-block footer__nav-block--service")
-                        h5(class="footer__headline")= site.data.footer.service.title
+                    div(class="grid__col-12 grid__col-sm-3")
+                        h5(class="footer__nav-headline")
+                            span= site.data.footer.service.title
                         ul
                             each item in site.data.footer.service.items
                                 li
                                     a(title=item.title, href=item.href)= item.title
-                div(class="grid__cell-footer")
-                    div(class="grid__cell")
-                        h5(class="footer__headline") Newsletter Anmeldung
+                    div(class="grid__col-12 grid__cell-footer")
+                        h5(class="footer__nav-headline")
+                            span Newsletter Anmeldung
                         +form-inline({"class": "form--newsletter", "icon": "#angle-right"})
             div(class="grid__col-12 grid__col-sm-4")
                 div(class="grid__cell u-text-center")

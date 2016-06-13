@@ -57,6 +57,9 @@ $(() => {
     });
 
 
+    $('.footer__nav-headline').on( 'click', function(){
+        $(this).parent('div').toggleClass('is-visible');
+    });
 
     function addText(p)
 {
