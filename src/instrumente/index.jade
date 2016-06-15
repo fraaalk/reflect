@@ -12,21 +12,4 @@ block content
         div(class="grid")
             each webinar in webinare
                 div(class="grid__col-12 grid__col-sm-6")
-                    +block({"class": "section__block--tiled" ,"title": webinar.title})
-                        p= webinar.teaser
-                        div(class="grid")
-                            div(class="grid__col-6")
-                                +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#question-circle"})
-                            div(class="grid__col-6")
-                                +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
-                        if webinar.status === 'free'
-                            div(class="section__block-footer u-bg-lg")
-                                p Ohne Freischaltcode verfügbar
-                        if webinar.status === 'locked'
-                            div(class="section__block-footer u-bg-r")
-                                p Seminar noch nicht freigeschaltet.
-                        if webinar.status === 'unlocked'
-                            div(class="section__block-footer u-bg-g")
-                                p Seminar ist bereits freigeschaltet.
-
-
+                    +webinar-teaser({"class": "", "webinar": webinar})
