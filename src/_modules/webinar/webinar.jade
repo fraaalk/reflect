@@ -1,0 +1,20 @@
+mixin webinar-teaser(spec)
+    - spec = spec || {}
+    - webinar = spec.webinar || {}
+    - spec.class = spec.class || ''
+
+    div(class="webinar-teaser")&attributes(attributes)
+        header= webinar.title
+        div(class="webinar-teaser__body")
+            p= webinar.teaser
+            +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#question-circle"})
+            +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
+        if webinar.status === 'free'
+            footer(class="u-background-lightgrey")
+                p Ohne Freischaltcode verfügbar
+        if webinar.status === 'locked'
+            footer(class="u-background-red")
+                p Seminar noch nicht freigeschaltet.
+        if webinar.status === 'unlocked'
+            footer(class="u-background-grey")
+                p Seminar ist bereits freigeschaltet.
