@@ -2,9 +2,9 @@ mixin portfolio-teaser-short(spec)
     - spec = spec || {}
     - spec.class = spec.class || ''
 
-    div(class='portfolio-teaser')&attributes(attributes)
+    div(class='block u-text-center')&attributes(attributes)
         a(href=spec.link, title=spec.title)
-            img(class="portfolio-teaser__visual", src=spec.image)
-            h3(class="portfolio-teaser__headline")= spec.title
-            p(class="portfolio-teaser__body-text")= spec.teaser[0]
-            p(class="portfolio-teaser__body-text")= spec.teaser[1]
+            img(src=spec.image)
+            h3(class="block__headline")= spec.title
+            p(class="block__body-text")= spec.teaser[0]
+            p(class="block__body-text")= spec.teaser[1]

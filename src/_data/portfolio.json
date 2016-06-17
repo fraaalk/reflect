@@ -1,7 +1,7 @@
 {
 	"personalentwicklung": {
 		"link": "/portfolio/personalentwicklung/",
-		"image": "http://baconmockup.com/160/160/",
+		"image": "images/portfolio-visuals/personalentwicklung.svg",
 		"title": "Personalentwicklung",
 		"teaser": [
 			"Bacon ipsum dolor amet jerky biltong beef shoulder pork loin ribeye.",
@@ -17,7 +17,7 @@
 	},
 	"kompetenzdiagnostik": {
 		"link": "/portfolio/kompetenzdiagnostik/",
-		"image": "http://baconmockup.com/161/161/",
+		"image": "images/portfolio-visuals/kompetenzdiagnostik.svg",
 		"title": "Kompetenzdiagnostik",
 		"teaser": [
 			"Leberkas short ribs chicken rump shoulder.",
@@ -33,7 +33,7 @@
 	},
 	"veraenderungsmanagement": {
 		"link": "/portfolio/veraenderungsmanagement/",
-		"image": "http://baconmockup.com/162/162/",
+		"image": "images/portfolio-visuals/veraenderungsmanagement.svg",
 		"title": "Veränderungsmanagement",
 		"teaser": [
 			"Frankfurter kevin filet mignon bacon strip steak ground round.",
@@ -49,7 +49,7 @@
 	},
 	"befragungen": {
 		"link": "/portfolio/befragungen/",
-		"image": "http://baconmockup.com/163/163/",
+		"image": "images/portfolio-visuals/befragungen.svg",
 		"title": "Befragungen",
 		"teaser": [
 			"Short ribs filet mignon kevin leberkas turducken sausage shankle ball tip tenderloin tongue swine capicola ham hock flank.",
@@ -65,7 +65,7 @@
 	},
 	"coaching": {
 		"link": "/portfolio/coaching/",
-		"image": "http://baconmockup.com/164/164/",
+		"image": "images/portfolio-visuals/coaching.svg",
 		"title": "Coaching",
 		"teaser": [
 			"Tenderloin boudin turducken, frankfurter beef ribs ground round bacon pancetta bresaola cupim kevin pork loin turkey brisket.",
@@ -81,7 +81,7 @@
 	},
 	"gesundeorganisation": {
 		"link": "/portfolio/gesundeorganisation/",
-		"image": "http://baconmockup.com/165/165/",
+		"image": "images/portfolio-visuals/gesundeorganisation.svg",
 		"title": "Gesunde Organisation",
 		"teaser": [
 			"T-bone pastrami short ribs, boudin pancetta pork loin tongue meatloaf turkey chuck corned beef.",

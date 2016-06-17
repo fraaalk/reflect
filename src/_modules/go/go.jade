@@ -36,7 +36,7 @@ mixin go-overlay(spec)
     - spec.active = spec.active || ""
 
     div(class="go__overlay")
-        a(class="go__link go__link--prev", rel="prev", href="/question/")
+        a(class="go__link go__link--prev", rel="prev", href="/kultur/")
             svg(class="go__link-icon go__link-icon--prev")
                 use(xlink:href="#angle-right")
         h3(class="go__overlay-headline")= spec.title
@@ -47,6 +47,6 @@ mixin go-overlay(spec)
                     a(class="is-active", href=item.href, title=item.title) •
                 else
                     a(href=item.href, title=item.title) •
-        a(class="go__link go__link--next", rel="next" href="/question/")
+        a(class="go__link go__link--next", rel="next" href="/beziehungen/")
             svg(class="go__link-icon go__link-icon--next")
                 use(xlink:href="#angle-right")

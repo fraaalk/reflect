@@ -10,12 +10,10 @@ block config
 
 block content
     +go({"class": "", "visual": "/images/visuals/homepage.jpg"})
-    //- +header({"class":"header--extended", "visual": "/images/visuals/homepage.jpg", "visualSize": "0 0 32 15"})
-        +go()
     +section({"class": "section--grey"})
         div(class="grid grid--align-start")
             div(class="grid__col-12 grid__col-sm-7")
-                +section-headline({icon: "#television", title: "Profil"})
+                +section-headline({image: "images/section-icons/profil.svg", title: "Profil"})
             div(class="grid__col-12 grid__col-sm-5")
                 +section-badge({icon: "#yelp", title: "Unser Team wartet auf Sie"})
             div(class="grid__col-12 grid__col-sm-6")
@@ -43,15 +41,19 @@ block content
     +section({"class": "section--white"})
         div(class="grid")
             div(class="grid__col-12")
-                +section-headline({icon: "#rocket", title: "Portfolio"})
+                +section-headline({image: "images/section-icons/portfolio.svg", title: "Portfolio"})
             each teaser in portfolio
-                div(class="grid__col-12 grid__col-sm-4")
-                    div(class="grid__cell")
-                        +portfolio-teaser-short(teaser)
+                div(class="grid__col-12 grid__col-sm-6 grid__col-md-4")
+                    div(class="block u-text-center")
+                        a(href=teaser.link, title=teaser.title)
+                            img(src=teaser.image)
+                            h3(class="block__headline")= teaser.title
+                            p(class="block__body-text")= teaser.teaser[0]
+                            p(class="block__body-text")= teaser.teaser[1]
     +section({"class": "section--grey"})
         div(class="grid carousel")&attributes({'data-carousel': ''})
             div(class="grid__col-12 grid__col-sm-8")
-                +section-headline({icon: "#group", title: "Team"})
+                +section-headline({image: "images/section-icons/team.svg", title: "Team"})
             div(class="grid__col-sm-4 grid--align-self-center u-text-right is-hidden-sm-down")
                 +carousel-controls()
             div(class="grid__col-12")
@@ -62,7 +64,7 @@ block content
     +section({"class": "section--white"})
         div(class="grid grid--align-center")
             div(class="grid__col-12 grid__col-sm-8")
-                +section-headline({icon: "#comment-o", title: "Blog"})
+                +section-headline({image: "images/section-icons/blog.svg", title: "Blog"})
             div(class="grid__col-sm-4 u-text-right is-hidden-sm-down")
                 +link({"class": "u-color-darkgrey u-text-upper", "href": "/blog/", "title": "Mehr Blog-Artikel", "iconAfter": "#long-arrow-right"})
             div(class="grid__col-12 grid__col-sm-6")

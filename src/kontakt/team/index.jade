@@ -8,8 +8,11 @@ block config
 block content
     +breadcrumb([["Home", "/"],["Kontakt", "/kontakt/"], ["Team", "/kontakt/team/"]])
     +section({"class": "section--compressed section--grey"})
-        +section-headline({"title": "Team", "class": "section__headline--spaced-top", "icon": "#group"})
-        p Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
+        div(class="grid__col-12")
+          +section-headline({image: "/images/section-icons/team.svg", title: "Team"})
+        div(class="grid__col-12")
+          div(class="block")
+              p Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
         div(class="grid grid--bleed team-teasers")
             each member in members
                 +team-teaser-grid(member)

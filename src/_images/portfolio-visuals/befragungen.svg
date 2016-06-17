@@ -1,0 +1,17 @@
+
+<svg width="162px" height="162px" viewBox="-1 -1 162 162" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ICON" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M112.906499,94.8492055 C112.906499,100.019157 108.676042,104.257187 103.501603,104.257187 L53.4953957,104.257187 C48.3209567,104.257187 44.0934445,100.019157 44.0934445,94.8492055 L44.0934445,60.4277421 C44.0934445,55.2488152 48.3209567,51.0197604 53.4953957,51.0197604 L103.501603,51.0197604 C108.676042,51.0197604 112.906499,55.2488152 112.906499,60.4277421 L112.906499,94.8492055 L112.906499,94.8492055 Z" id="Stroke-1" stroke="#1D1C1B" stroke-width="2"></path>
+        <path d="M59,60.8181811 L59,94.4558213" id="Stroke-3" stroke="#1D1C1B" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M78,60.8181811 L78,74.1723457" id="Stroke-4" stroke="#1D1C1B" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M97,60.8181811 L97,72.4835287" id="Stroke-5" stroke="#1D1C1B" stroke-width="2" stroke-linecap="round"></path>
+        <g id="Group-10" transform="translate(74.012195, 70.213415)" stroke="#1D1C1B">
+            <path d="M27.7331476,13.914425 C27.7331476,21.5483213 21.5446049,27.736864 13.9107085,27.736864 C6.2768122,27.736864 0.0882695122,21.5483213 0.0882695122,13.914425 C0.0882695122,6.28052866 6.2768122,0.0919859756 13.9107085,0.0919859756 C21.5446049,0.0919859756 27.7331476,6.28052866 27.7331476,13.914425 L27.7331476,13.914425 Z" id="Stroke-6" stroke-width="2.33299994"></path>
+            <path d="M22.8115122,25.653036 L33.8485671,41.0731335" id="Stroke-8" stroke-width="3.33299994" stroke-linecap="round"></path>
+        </g>
+        <circle id="Oval-79" stroke="#000000" stroke-width="2" cx="80" cy="80" r="80"></circle>
+    </g>
+</svg>
