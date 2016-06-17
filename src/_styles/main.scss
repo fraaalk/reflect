@@ -10,9 +10,9 @@ $color-lightgrey: rgba(125, 140, 147, 1);
 $color-darkgrey: rgba(0, 0, 0, 0.6);
 
 // for debugging the grid
-*[class^="grid__col"] {
-	outline: 1px dotted #000;
-}
+// *[class^="grid__col"] {
+// 	outline: 1px dotted #000;
+// }
 
 @import 'node_modules/reset.scss/reset';
 
@@ -50,7 +50,6 @@ $color-darkgrey: rgba(0, 0, 0, 0.6);
 @import '../_modules/blog/blog';
 @import '../_modules/webinar/webinar';
 @import '../_modules/customer/customer';
-@import '../_modules/portfolio-teaser/portfolio-teaser';
 @import '../_modules/team/team';
 @import '../_modules/link/link';
 
