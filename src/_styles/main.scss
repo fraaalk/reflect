@@ -14,44 +14,38 @@ $color-darkgrey: rgba(0, 0, 0, 0.6);
 // 	outline: 1px dotted #000;
 // }
 
-@import 'node_modules/reset.scss/reset';
 
 // https://github.com/at-import/breakpoint
+// http://lukyvj.github.io/family.scss/
+
+@import 'node_modules/reset.scss/reset';
 @import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
 @import 'node_modules/reflex-grid/scss/reflex';
-
-// http://lukyvj.github.io/family.scss/
 @import 'node_modules/family.scss/family';
 
 // Import Mixins
 @import 'mixins';
 
 // Import Modules
-@import '../_modules/navigation/navigation';
-@import '../_modules/header/header';
-@import '../_modules/footer/footer';
-@import '../_modules/social/social';
-@import '../_modules/section/section';
-@import '../_modules/rating/rating';
-@import '../_modules/quote/quote';
 @import '../_modules/block/block';
-
-
-// homepage elements
-@import '../_modules/go/go';
-@import '../_modules/form/form';
-
-
-@import '../_modules/carousel/carousel';
-@import '../_modules/breadcrumb/breadcrumb';
-@import '../_modules/deck/deck';
-
-@import '../_modules/pagination/pagination';
 @import '../_modules/blog/blog';
-@import '../_modules/webinar/webinar';
+@import '../_modules/breadcrumb/breadcrumb';
+@import '../_modules/carousel/carousel';
 @import '../_modules/customer/customer';
-@import '../_modules/team/team';
+@import '../_modules/deck/deck';
+@import '../_modules/footer/footer';
+@import '../_modules/form/form';
+@import '../_modules/go/go';
+@import '../_modules/header/header';
 @import '../_modules/link/link';
+@import '../_modules/navigation/navigation';
+@import '../_modules/pagination/pagination';
+@import '../_modules/quote/quote';
+@import '../_modules/rating/rating';
+@import '../_modules/section/section';
+@import '../_modules/social/social';
+@import '../_modules/team/team';
+@import '../_modules/webinar/webinar';
 
 @import 'https://fonts.googleapis.com/css?family=Lato:400,300,700';
 

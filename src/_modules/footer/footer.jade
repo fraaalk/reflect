@@ -8,21 +8,21 @@ footer(id='footer', class='footer')
         div(class="grid")
             div(class="grid__col-12 grid__col-sm-8")
                 nav(class="footer__nav grid")
-                    div(class="grid__col-12 grid__col-sm-2")
+                    div(class="grid__col-12 grid__col-sm-6 grid__col-lg-2")
                         h5(class="footer__nav-headline")
                             span= site.data.footer.profil.title
                         ul
                             each item in site.data.footer.profil.items
                                 li
                                     a(title=item.title, href=item.href)= item.title
-                    div(class="grid__col-12 grid__col-sm-3")
+                    div(class="grid__col-12 grid__col-sm-6 grid__col-lg-3")
                         h5(class="footer__nav-headline")
                             span= site.data.footer.portfolio.title
                         ul
                             each item in site.data.footer.portfolio.items
                                 li
                                     a(title=item.title, href=item.href)= item.title
-                    div(class="grid__col-sm-2 grid__col--bleed")
+                    div(class="grid__col-sm-6 grid__col-lg-2 grid__col--bleed")
                         div(class="grid__col-12")
                             h5(class="footer__nav-headline")
                                 span= site.data.footer.instrumente.title
@@ -37,14 +37,14 @@ footer(id='footer', class='footer')
                                 each item in site.data.footer.kontakt.items
                                     li
                                         a(title=item.title, href=item.href)= item.title
-                    div(class="grid__col-12 grid__col-sm-2")
+                    div(class="grid__col-12 grid__col-sm-6 grid__col-lg-2")
                         h5(class="footer__nav-headline")
                             span= site.data.footer.kunden.title
                         ul
                             each item in site.data.footer.kunden.items
                                 li
                                     a(title=item.title, href=item.href)= item.title
-                    div(class="grid__col-12 grid__col-sm-3")
+                    div(class="grid__col-12 grid__col-sm-6 grid__col-lg-3")
                         h5(class="footer__nav-headline")
                             span= site.data.footer.service.title
                         ul
