@@ -1,0 +1,7 @@
+mixin visual(spec)
+  - spec = spec || {}
+  - spec.class = spec.class || ''
+
+  div(class="visual")&attributes(attributes)
+    div(class="visual__wrapper")
+        img(src=spec.image)

@@ -4,16 +4,16 @@
 		"href": "/profil/",
 		"items": [{
 			"title": "Philosophie",
-			"href": "/profil/#philosophie"
+			"href": "/profil/philosophie"
 		}, {
 			"title": "Vision, Mission, Werte",
-			"href": "/profil/#vision"
+			"href": "/profil/vision"
 		}, {
 			"title": "Leitsätze",
-			"href": "/profil/#leitsätze"
+			"href": "/profil/leitsaetze"
 		}, {
 			"title": "Arbeitsweise",
-			"href": "/profil/#arbeitsweise"
+			"href": "/profil/arbeitsweise"
 		}]
 	},
 	"portfolio": {

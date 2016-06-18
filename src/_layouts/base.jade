@@ -37,12 +37,14 @@ include ../_modules/pagination/pagination.jade
 include ../_modules/section/section.jade
 include ../_modules/social/social.jade
 include ../_modules/team/team.jade
+include ../_modules/visual/visual.jade
 include ../_modules/webinar/webinar.jade
 
 body
-    +header()
-    block content
-    include ../_modules/footer/footer.jade
+    div(id="page")
+        +header()
+        block content
+        include ../_modules/footer/footer.jade
     include ../_images/svg/sprite.symbol.svg
 
     block scripts

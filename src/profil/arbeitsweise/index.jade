@@ -1,0 +1,29 @@
+extends ../../_layouts/base
+
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = '../../../'
+
+block content
+    +visual({image: "/images/visuals/philosophie.jpg"})
+    +breadcrumb([["Home", "/"],["Profil", "/profil/"],["Leitsätze", "/profil/arbeitsweise"]])
+    +section({"class": "section--grey"})
+        div(class="grid grid--bleed")
+            div(class="grid__col-12")
+                +section-headline({image: "/images/section-icons/profil.svg", title: "Arbeitsweise"})
+        div(class="grid")
+            div(class="grid__col-12 grid__col-sm-6")
+                +block({title: "Typisch Reflect"})
+                    p Reflect denkt in Problemlagen nicht in Branchen. Wo andere Berater Patentlösungen für ganze Branchen präsentieren und entsprechende Maßnahmen und Trainings ‚einleiten’, betrachten wir das jeweilige Problem. Anders gesagt, wir arbeiten von Fall zu Fall, nicht generell. Doch bestimmte Standard-Arbeitsschritte halten natürlich auch wir für sinnvoll, weil sie die Qualität unserer Arbeit und damit auch Ihre Ergebnisse verbessern.
+            div(class="grid__col-12 grid__col-sm-6")
+                +block({title: "Wissen schafft Vorsprung"})
+                    p Als Kunde von Reflect können Sie davon ausgehen, dass wir immer einen Schritt vorausdenken. So lassen wir neueste Erkenntnisse im Bereich der Personal- und Organisationsentwicklung in unsere Arbeit einfließen. Diese besitzen wir, weil wir permanent an uns und unserer wissenschaftlich fundierten Basis arbeiten. 
+            div(class="grid__col-12 grid__col-sm-6")
+                +block({title: "Das können Sie erwarten"})
+                    ul
+                        li eine transparente Auftragsklärung
+                        li theoretisch und praktisch erprobte Methoden
+                        li moderne Konzepte und Beratungsansätze
+                        li eine systemisch-konstruktivistische Sichtweise
+                        li ein gesundes Maß an Humor
+                        li einen echten Partner an Ihrer Seite

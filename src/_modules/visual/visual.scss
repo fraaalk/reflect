@@ -1,0 +1,15 @@
+// visual styles
+.visual {
+	background: white;
+
+	&__wrapper {
+		max-width: 1280px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+
+	img {
+		display: block;
+	}
+}

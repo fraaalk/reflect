@@ -1,0 +1,20 @@
+extends ../../_layouts/base
+
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = '../../../'
+
+block content
+    +visual({image: "/images/visuals/philosophie.jpg"})
+    +breadcrumb([["Home", "/"],["Profil", "/profil/"],["Philosophie", "/profil/philosophie"]])
+    +section({"class": "section--grey"})
+        div(class="grid grid--bleed")
+            div(class="grid__col-12")
+                +section-headline({image: "/images/section-icons/profil.svg", title: "Philosophie"})
+        div(class="grid")
+            div(class="grid__col-12 grid__col-sm-6")
+                +block({title: "Perspektiven Nutzen"})
+                   p Das Wesen unserer Arbeit erkennen Sie bereits in unserem Namen: Reflect steht für den Prozess reflektierten Handelns – gemeinsam mit Ihnen als Kunde. Denn durch gezielte Reflexion entstehen neue Perspektiven: Menschen können sich besser in die Lage anderer hineinversetzen. Der Blick kann sich mehrdimensionalen Lösungen öffnen. Der eigene Horizont erweitert sich. Und wo vorher keine Lösung mehr sichtbar oder denkbar war, entstehen herausragende Ideen und Optionen.
+            div(class="grid__col-12 grid__col-sm-6")
+                +block({title: "Fähigkeiten weiterentwickeln"})
+                   p Damit aus Chancen Fakten werden, begleitet Reflect den gesamten Prozess des Gewahrwerdens und Sichtbarmachens von Verhalten. Dabei analysieren wir unterschiedliche Wahrnehmungen und besprechen diese mit Ihnen. Bei der professionellen Auseinandersetzung mit der eigenen Person erkennen Sie dann ihre eigenen Verhaltensmuster sowie die der Organisationen, in denen sie leben und arbeiten. Sie lernen, zwischen funktionalen und dysfunktionalen Mustern ihres Handelns zu unterscheiden und beginnen damit, Ihre verborgenen Potenziale zu entfalten.

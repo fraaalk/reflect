@@ -1,0 +1,50 @@
+extends ../../_layouts/base
+
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = '../../../'
+
+block content
+    +visual({image: "/images/visuals/philosophie.jpg"})
+    +breadcrumb([["Home", "/"],["Profil", "/profil/"],["Leitsätze", "/profil/leitsaetze"]])
+    +section({"class": "section--grey"})
+        div(class="grid grid--bleed")
+            div(class="grid__col-12")
+                +section-headline({image: "/images/section-icons/profil.svg", title: "Leitsätze"})
+        div(class="grid")
+            div(class="grid__col-12 grid__col-sm-12")
+                +block({title: "Unsere sieben Standpunkte"})
+                    p Wir nehmen regelmäßig neue Perspektiven ein. Das ist unser Job. Dennoch haben wir Prinzipien und bekennen uns zu klaren Leitsätzen.
+                    p An diesen sollten Sie uns messen und auf diese berufen wir uns selbst. So garantieren wir Ihnen und uns die bestmögliche Arbeit mit den bestmöglichen Ergebnissen.
+            div(class="grid__col-12 grid__col-sm-6")
+                +block()
+                    p 
+                        strong 1. Kundenorientierung
+                        br 
+                        | Gegenseitiger Respekt sowie die Bereitschaft zur intensiven   Zusammenarbeit mit Ihnen sind für uns die unabdingbaren Voraussetzungen eines erfolgreichen Beratungsprozesses
+                    p
+                        strong 2. Prozess- und Ressourcenorientierung
+                        br
+                        | Unsere Beratung ist grundsätzlich Prozess- und Ressourcen orientiert: Wir machen Prozesse innerhalb sozialer Systeme sichtbar und ermöglichen ihre Veränderung. So entfalten wir die Potenziale ihrer Mitarbeiter.
+                    p
+                        strong 3. Angebotsorientierung
+                        br
+                        | Jede Art von Beratung beinhaltet Empfehlungen und Anstöße zur Veränderung von Perspektiven, Sichtweisen und Bewertungen, die neues Verhalten ermöglichen. Die Bewertungen unserer Erfahrungen lassen sich nicht vorschreiben.
+                    p
+                        strong 4. Technische Neutralität
+                        br
+                        | Wir sind nicht gleichgültig, aber wir versuchen technische Neutralität zu wahren. Also machen wir die eigene Meinung nicht zum allgemeinen Maßstab für Andere und bleiben stets neugierig und hungrig auf das Neue.
+            div(class="grid__col-12 grid__col-sm-6")
+                +block()
+                    p
+                        strong 5. Bewahrung von Autonomie
+                        br
+                        | Menschen sind in der Lage, selbst Entscheidungen zu treffen. Reflect unterstützt diesen Prozess der eigenständigen Entscheidungsfindung, ohne die Autonomie des Kunden außer Kraft zu setzen.
+                    p
+                        strong 6. Verzicht auf Wahrheitsansprüche
+                        br
+                        | Personen haben ganz persönliche Sichtweisen und Standpunkte gegenüber den Dingen, die um sie herum geschehen. Die „richtige“ Sichtweise gibt es nicht.
+                    p 
+                        strong 7. Anerkennung von Komplexität
+                        br
+                        | Innerhalb komplexer Systeme (Firmen, Behörden, Organisationen) wirken eine Vielzahl von Ereignissen und Deutungen dieser Ereignisse ständig aufeinander. Es lassen sich daher keine einfachen Ursache- Wirkungszusammenhänge herstellen.
