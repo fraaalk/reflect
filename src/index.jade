@@ -48,8 +48,8 @@ block content
                         a(href=teaser.link, title=teaser.title)
                             img(src=teaser.image)
                             h3(class="block__headline")= teaser.title
-                            p(class="block__body-text")= teaser.teaser[0]
-                            p(class="block__body-text")= teaser.teaser[1]
+                            p= teaser.teaser[0]
+                            p= teaser.teaser[1]
     +section({"class": "section--grey"})
         div(class="grid carousel")&attributes({'data-carousel': ''})
             div(class="grid__col-12 grid__col-sm-8")
