@@ -26,7 +26,7 @@ $(() => {
         $( '.header__off-canvas' ).toggleClass( 'is-visible' );
     });
 
-    $( '.nav__listitem--l1' ).on ( 'mouseenter', 'a', function() {
+    $( '.nav__listitem--l1' ).on ( 'mouseenter', 'a, button', function() {
     	$(this)
     		.parent( '.nav__listitem--l1' )
     		.addClass( 'is-active' )

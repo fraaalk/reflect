@@ -55,5 +55,13 @@
 	"blog": {
 		"title": "Blog",
 		"href": "/blog/"
+	},
+	"search": {
+		"title": "Suche",
+		"href": "omg"
+	},
+	"language": {
+		"title": "EN",
+		"href": "omg"
 	}
 }

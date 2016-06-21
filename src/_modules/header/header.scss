@@ -16,6 +16,14 @@
 		}
 	}
 
+	&__search-toggle {
+		display: none;
+		border: none;
+		background: none;
+		background: white;
+		color: #ccc;
+	}
+
 	// wrapper for navigation,
 	// search and language selection
 	// which is moved out of the canvas on mobile
@@ -57,6 +65,10 @@
 			height: 70px;
 		}
 
+		&__search-toggle {
+			display: block;
+		}
+
 		&__nav,
 		&__search,
 		&__language-selection {
@@ -65,7 +77,7 @@
 
 		// wrapper for header navigation
 		&__nav {
-			width: 70%;
+			width: 100%;
 			padding: 12px 0;
 		}
 
@@ -106,6 +118,7 @@
 		}
 	}
 
+
 	&__logo {
 
 		@include breakpoint($bp-sm-down) {
@@ -133,24 +146,4 @@
 			display: block;
 		}
 	}
-
-	// &__visual {
-	// 	position: relative;
-	// 	background-size: cover;
-	// 	background-repeat: no-repeat;
-	// 	width: 100%;
-
-	// 	@include breakpoint($bp-sm-up) {
-	// 		border-top: 40px solid #00488D;
-	// 	}
-
-	// 	// large breakpoint, check for mobile?!
-	// 	min-height: calc(196px + 40px);
-		
-	// 	&-image {
-	// 		display: block;
-	// 		width: 100%;
-	// 		height: auto;
-	// 	}
-	// }
 }

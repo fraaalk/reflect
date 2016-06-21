@@ -9,22 +9,16 @@ mixin navigation(spec)
     nav(class="nav #{spec.class}")
         ul(class="nav__list nav__list--l1")
             each item in spec.menu
-                //if item.badge
-                    li(class="nav__listitem nav__listitem--l1 nav__listitem--badge")
+                li(class="nav__listitem nav__listitem--l1")
+                    if item.title === 'Suche'
+                        button(class="header__search-toggle")
+                            svg(class="form__submit-icon")
+                                use(xlink:href="#search")
+                        div(class="nav__list nav__list--l2")
+                            +form-inline({"class": "form--search", "icon": "#search"})
+                    else
                         a(title=item.title, href=item.href)
                             span(class="nav__listitem-text")= item.title
-                            span(class="badge")= item.badge
-                        if item.items
-                            ul(class="nav__list nav__list--l2")
-                                each subitem in item.items
-                                    li(class="nav__listitem nav__listitem--l2")
-                                        a(href=subitem.href, title=subitem.title)= subitem.title
-                li(class="nav__listitem nav__listitem--l1")
-                    a(title=item.title, href=item.href)
-                        span(class="nav__listitem-text")= item.title
-                        if item.items
-                            //svg(class="nav__listitem-icon")
-                                use(xlink:href="#angle-right")
                     if item.items
                         ul(class="nav__list nav__list--l2")
                             each subitem in item.items

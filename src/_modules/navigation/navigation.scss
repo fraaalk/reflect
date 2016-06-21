@@ -55,8 +55,8 @@
 			padding: 0;
 			display: block;
 
-			&--l1 > a {
-				
+			&--l1 > a,
+			&--l1 > button {
 
 				@include breakpoint($bp-sm-down) {
 					padding: 13px 0;
