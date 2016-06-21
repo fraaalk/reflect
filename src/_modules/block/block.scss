@@ -54,8 +54,10 @@
 		margin-top: 1.5em;
 	}
 
-	&__section + &__section {
-		margin-bottom: 1.5em;
+	&__section {
+		&:not(:last-of-type) {
+			margin-bottom: 1.5em;
+		}
 		display: inline-block;
 		width: 100%;
 	}
