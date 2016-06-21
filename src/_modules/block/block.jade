@@ -19,6 +19,14 @@ mixin block-headline(spec)
 
     h2(class="block__headline #{spec.class}")= spec.title
 
+
+mixin block-section(spec)
+    - spec = spec || {}
+    - spec.class = spec.class || ""
+
+    div(class="block__section")
+        block
+
 mixin block-sub-headline(spec)
     - spec = spec || {}
     - spec.class = spec.class || ""
