@@ -16,10 +16,10 @@ block content
                 +section-headline({image: "images/section-icons/profil.svg", title: "Profil"})
             div(class="grid__col-12 grid__col-sm-5")
                 +section-badge({icon: "#yelp", title: "Unser Team wartet auf Sie"})
-            div(class="grid__col-12 grid__col-sm-6")
-                +block({title: "Philosophie"})
+            div(class="grid__col-12")
+                +block({"title": "Philosophie", "class": "block--columned-2"})
                     p Das Wesen unserer Arbeit erkennen Sie bereits in unserem Namen: Reflect steht für den Prozess reflektierten Handelns – gemeinsam mit Ihnen als Kunde. Denn durch gezielte Reflexion entstehen neue Perspektiven: Menschen können sich besser in die Lage anderer hineinversetzen. Der Blick kann sich mehrdimensionalen Lösungen öffnen. Der eigene Horizont erweitert sich. Und wo vorher keine Lösung mehr sichtbar oder denkbar war, entstehen herausragende Ideen und Optionen.
-                +block({title: "Leitsätze - unsere 7 Standpunkte"})
+                    +block-headline({"title":"Leitsätze - unsere 7 Standpunkte"})
                     p Wir nehmen regelmäßig neue Perspektiven ein. Das ist unser Job. Dennoch haben wir Prinzipien und bekennen uns zu klaren Leitsätzen.
                     p An diesen sollten Sie uns messen und auf diese berufen wir uns selbst. So garantieren wir Ihnen und uns die bestmögliche Arbeit mit den bestmöglichen Ergebnissen.
                     ol
@@ -30,13 +30,12 @@ block content
                         li Bewahrung von Autonomie
                         li Verzicht auf Wahrheitsansprüche
                         li Anerkennung von Komplexität
-            div(class="grid__col-12 grid__col-sm-6")
-                +block({title: "Vision, Mission, Werte"})
+                    +block-headline({title: "Vision, Mission, Werte"})
                     p Die Entscheidungsträger innerhalb von Unternehmen in der Region sind sich der Bedeutung strategischer Personalentwicklung bewusst. Sie sehen die Wirkung strategischer Personalentwicklung als relevanten Beitrag an, um ihre Organisation human, wirtschaftlich erfolgreich, zukunftsfähig und nicht kopierbar zu gestalten.
                     p Wir wollen Menschen und Unternehmen bei ihrer Entwicklung unterstützen, so dass diese ihre spezifischen Potenziale zum Wohle des Unternehmens, ihrer eigenen Person und somit der Gesellschaft voll zur Entfaltung bringen können. Dabei sehen wir Potenzialentfaltung nicht als Selbstzweck an, sondern als Weg der Verantwortungsübernahme jedes Einzelnen innerhalb des unternehmerischen und gesellschaftlichen Kontextes. 
                     p 
                         strong Kompetenz, Integrität und Spaß bei der Arbeit!
-                +block({title: "Arbeitsweise"})
+                    +block-headline({title: "Arbeitsweise"})
                     p Reflect denkt in Problemlagen nicht in Branchen. Wo andere Berater Patentlösungen für ganze Branchen präsentieren und entsprechende Maßnahmen und Trainings ‚einleiten’, betrachten wir das jeweilige Problem. Anders gesagt, wir arbeiten von Fall zu Fall, nicht generell. Doch bestimmte Standard-Arbeitsschritte halten natürlich auch wir für sinnvoll, weil sie die Qualität unserer Arbeit und damit auch Ihre Ergebnisse verbessern.
     +section({"class": "section--white"})
         div(class="grid")

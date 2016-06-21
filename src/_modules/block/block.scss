@@ -9,6 +9,12 @@
 		padding: 20px;
 	}
 
+	@include breakpoint($bp-sm-up) {
+		&--columned-2 {
+			column-count: 2;
+		}
+	}
+
 	&__headline {
 		font-size: 20px;
 		line-height: 1.5;
@@ -43,6 +49,7 @@
 	}
 
 	ul + &__headline,
+	ol + &__headline,
 	p + &__headline {
 		margin-top: 1.5em;
 	}
