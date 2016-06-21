@@ -47,6 +47,10 @@ $(() => {
         });
     });
 
+    $('.header__search-toggle').on( 'click', function(){
+        $('header .form--search').toggleClass('is-visible');
+    });
+
     $('.go-comb__center').on('click', function(e){
         $('.go-comb').toggleClass('is-visible');
         e.preventDefault();
@@ -63,8 +67,14 @@ $(() => {
 
     function addText(p)
 {
-    var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    var b = p.getBBox();
+    var t = document.createElementNS("http://www.w3.org/2000/svg", "text"),
+        b;
+    
+    if ( typeof(p.getBBox) !== "function") {
+        return;
+    } 
+    
+    b = p.getBBox();
     t.setAttribute("transform", "translate(" + (b.x + b.width/2) + " " + (b.y + b.height/2 + 5) + ")");
     t.textContent = p.getAttribute("title");
     p.parentNode.insertBefore(t, p.nextSibling);
