@@ -10,15 +10,8 @@ mixin navigation(spec)
         ul(class="nav__list nav__list--l1")
             each item in spec.menu
                 li(class="nav__listitem nav__listitem--l1")
-                    if item.title === 'Suche'
-                        button(class="header__search-toggle")
-                            svg(class="form__submit-icon")
-                                use(xlink:href="#search")
-                        div(class="nav__list nav__list--l2")
-                            +form-inline({"class": "form--search", "icon": "#search"})
-                    else
-                        a(title=item.title, href=item.href)
-                            span(class="nav__listitem-text")= item.title
+                    a(title=item.title, href=item.href)
+                        span(class="nav__listitem-text")= item.title
                     if item.items
                         ul(class="nav__list nav__list--l2")
                             each subitem in item.items

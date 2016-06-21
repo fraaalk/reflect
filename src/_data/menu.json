@@ -1,21 +1,4 @@
 {
-	"profil": {
-		"title": "Profil",
-		"href": "/profil/",
-		"items": [{
-			"title": "Philosophie",
-			"href": "/profil/philosophie"
-		}, {
-			"title": "Vision, Mission, Werte",
-			"href": "/profil/vision"
-		}, {
-			"title": "Leitsätze",
-			"href": "/profil/leitsaetze"
-		}, {
-			"title": "Arbeitsweise",
-			"href": "/profil/arbeitsweise"
-		}]
-	},
 	"portfolio": {
 		"title": "Portfolio",
 		"href": "/portfolio/",
@@ -44,21 +27,34 @@
 		"title": "Instrumente",
 		"href": "/instrumente/"
 	},
-	"kunden": {
-		"title": "Kunden",
-		"href": "/kunden/"
+	"termine": {
+		"title": "Termine",
+		"href": "/termine/"
 	},
-	"kontakt": {
-		"title": "Kontakt",
-		"href": "/kontakt/"
+	"profil": {
+		"title": "Profil",
+		"href": "/profil/",
+		"items": [{
+			"title": "Philosophie",
+			"href": "/profil/philosophie"
+		}, {
+			"title": "Vision, Mission, Werte",
+			"href": "/profil/vision"
+		}, {
+			"title": "Leitsätze",
+			"href": "/profil/leitsaetze"
+		}, {
+			"title": "Arbeitsweise",
+			"href": "/profil/arbeitsweise"
+		}]
 	},
 	"blog": {
 		"title": "Blog",
 		"href": "/blog/"
 	},
-	"search": {
-		"title": "Suche",
-		"href": "omg"
+	"kontakt": {
+		"title": "Kontakt",
+		"href": "/kontakt/"
 	},
 	"language": {
 		"title": "EN",

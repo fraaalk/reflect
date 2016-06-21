@@ -17,11 +17,45 @@
 	}
 
 	&__search-toggle {
-		display: none;
+		display: block;
 		border: none;
 		background: none;
 		background: white;
 		color: #ccc;
+	}
+
+	@include breakpoint($bp-sm-down) {
+		&__nav-toggle {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 62px;
+			line-height: 62px;
+			z-index: 600;
+
+			button {
+				border: none;
+				background: none;
+				color: #8493a8;
+				vertical-align: middle;
+				display: inline-block;
+			}
+		}
+
+		&__search-toggle {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 62px;
+			line-height: 62px;
+			z-index: 600;
+		}
+	}
+
+	&__search {
+		form {
+			display: none;
+		}
 	}
 
 	// wrapper for navigation,
@@ -57,21 +91,15 @@
 
 		&__off-canvas {
 			display: flex;
-			// calculated width all available space minus logo
-			// needs to be adjusted if logo should get more spacing
-			width: calc(100% - 220px);
+			// calculated width all available space minus logo minus search
+			width: calc(100% - 250px);
 			background: white;
 			z-index: 700;
 			height: 70px;
 		}
 
-		&__search-toggle {
-			display: block;
-		}
-
 		&__nav,
-		&__search,
-		&__language-selection {
+		&__search {
 			align-self: center;
 		}
 
@@ -83,41 +111,34 @@
 
 		// wrapper for the header search
 		&__search {
-			width: 20%;
-		}
-
-		// wrapper for language selection
-		&__language-selection {
-			width: 10%;
+			width: 30px;
 		}
 
 		// nav toggle button only visible on mobile
 		&__nav-toggle {
 			display: none;
 		}
-
-		&__visual {
-			width: 100%;
-		}
 	}
 
-	&__nav-toggle {
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 62px;
-		line-height: 62px;
-		z-index: 600;
+	@include breakpoint($bp-md-up) { 
 
-		button {
-			border: none;
-			background: none;
-			color: #8493a8;
-			vertical-align: middle;
-			display: inline-block;
+		&__off-canvas {
+			width: calc(100% - 400px);
+		}
+
+		// wrapper for the header search
+		&__search {
+			width: 170px;
+
+			form {
+				display: block;
+			}
+		}
+
+		&__search-toggle {
+			display: none;
 		}
 	}
-
 
 	&__logo {
 
