@@ -6,9 +6,10 @@ block config
     - var portfolio = site.data.portfolio.befragungen
 
 block content
+    +visual({image: "/images/visuals/philosophie.jpg"})
     +breadcrumb([["Home", "/"],["Instrumente", "/instrumente/"], ["Registrierung", "/instrumente/registrierung/"]])
     +section({"class": "section--grey"})
-        +section-headline({icon: "#rocket", title: "Login"})
+        +section-headline({image: "/images/section-icons/registrieren.svg", title: "Login"})
         form(class="grid grid--justify-end form")
             p(class="grid__col-12") Um an dieser Umfrage teilzunehmen, benötigen Sie einen passenden Zugangsschlüssel. Falls Sie einen Zugangsschlüssel erhalten haben, geben Sie diesen bitte in das untenstehende Feld ein und klicken Sie auf 'Weiter'.
             div(class="grid__col-12 grid__col-sm-4")
@@ -18,9 +19,9 @@ block content
             div(class="grid__col-12 grid__col-sm-4")
                 input(type="submit", class="form__submit", value="Weiter")
             div(class="grid__col-12 grid__col-sm-4 grid__col--bleed")
-                +link({"class": "u-color-red u-text-upper u-text-center", "href": "/instrumente/registrierung/", "title": "Login vergessen", "iconBefore": "#question-circle"})
+                +link({"class": "u-color-red u-text-upper u-text-center", "href": "/instrumente/registrierung/", "title": "Login vergessen", "iconBefore": "#help-alt"})
     +section({"class": "section--white"})
-        +section-headline({icon: "#rocket", title: "Noch keinen Zugangsschlüssel? Hier registrieren"})
+        +section-headline({image: "/images/section-icons/registrieren.svg", title: "Noch keinen Zugangsschlüssel? Hier registrieren"})
         form(class="grid grid--justify-end form")
             div(class="grid__col-12 grid__col-sm-6")
                 input(class="form__input", placeholder="Name")

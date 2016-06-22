@@ -10,8 +10,8 @@
 		letter-spacing: 0.5px;
 		color: rgba(0, 125, 199, 1);
 		text-transform: uppercase;
-		// text-align: center;
 		display: flex;
+		word-wrap: break-word;
 
 		&-text {
 			// 100% - icon width
