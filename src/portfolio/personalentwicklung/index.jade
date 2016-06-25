@@ -6,14 +6,27 @@ block config
     - var portfolio = site.data.portfolio.personalentwicklung
 
 block content
+    +visual({image: "/images/visuals/personalentwicklung.jpg"})
     +breadcrumb([["Home", "/"],["Portfolio", "/portfolio"], [portfolio.title, portfolio.link]])
     +section({"class": "section--grey"})
-        div(class="grid")
-            div(class="grid__col-12 grid__col-sm-4 grid__col--bleed")
-                +section-headline({icon: "#rocket", title: portfolio.title})
-            div(class="grid__col-12 grid__col-sm-6")
-                +block()
-                    p Viele Unternehmen fragen sich, wie sie Ihre Prozesse effizienter organisieren können, um ihre Wertschöpfung zu verbessern und Wettbewerbsvorteile zu erzielen. Das fängt beim Klein- und Mittelständler an und gilt natürlich auch für Großkonzerne. Personalentwicklung kann hier nur innovativ fördern, wenn sie sich an strategischen Unternehmenszielen orientiert. Dafür muss sie strategisch denken und arbeiten, also bedarfsspezifisch, nutzenorientiert und individuell – wie Reflect.
-            div(class="grid__col-12 grid__col-sm-6")
-                +block()
-                    p Eine weitere Aufgabe, der sich Reflect mit Ihnen gemeinsam gerne stellt, ist die Steigerung von Arbeitgeberattraktivität durch „Employer Branding“. Schließlich sagen Experten voraus, dass sich Unternehmen in Zeiten zunehmenden Fachkräftemangels in Zukunft eher bei den Fachkräften bewerben als umgekehrt. Also unterstützt Reflect Sie dabei, Ihr Unternehmen stärker, attraktiver und begehrenswerter am Arbeitsmarkt zu präsentieren. Damit Sie auch in Zukunft die bestmöglichen Mitarbeiter in Ihren Reihen haben. 
+        div(class="section__wrapper")
+            div(class="grid")
+                div(class="grid__col-12 grid__col--bleed")
+                    +section-headline({image: "/images/section-icons/portfolio.svg", title: "Personalentwicklung"})
+                div(class="grid__col-12 grid__col-sm-6")
+                    +block()
+                        +block-headline({title: "Nutzen schafft Vorteile"})
+                        p Viele Unternehmen fragen sich, wie sie Ihre Prozesse effizienter organisieren können, um ihre Wertschöpfung zu verbessern und Wettbewerbsvorteile zu erzielen. Das fängt beim Klein- und Mittelständler an und gilt natürlich auch für Großkonzerne. Personalentwicklung kann hier nur innovativ fördern, wenn sie sich an strategischen Unternehmenszielen orientiert. Dafür muss sie strategisch denken und arbeiten, also bedarfsspezifisch, nutzenorientiert und individuell – wie Reflect.
+                div(class="grid__col-12 grid__col-sm-6")
+                    +block()
+                        +block-headline({title: "Arbeitgeber werden Marken"})
+                        p Eine weitere Aufgabe, der sich Reflect mit Ihnen gemeinsam gerne stellt, ist die Steigerung von Arbeitgeberattraktivität durch „Employer Branding“. Schließlich sagen Experten voraus, dass sich Unternehmen in Zeiten zunehmenden Fachkräftemangels in Zukunft eher bei den Fachkräften bewerben als umgekehrt. Also unterstützt Reflect Sie dabei, Ihr Unternehmen stärker, attraktiver und begehrenswerter am Arbeitsmarkt zu präsentieren. Damit Sie auch in Zukunft die bestmöglichen Mitarbeiter in Ihren Reihen haben. 
+                div(class="grid__col-12")
+                    +block()
+                        +block-headline({title: "Werkzeuge der strategischen Personalentwicklungsbedarfs"})
+                        ul
+                            li Gezielte Erfassung des Personalentwicklungsbedarfs
+                            li Konzeption und Durchführung zweckmäßiger Förderprogramme
+                            li Passgenaue Förderung von Schlüsselpersonen und Schlüsselabteilungen
+                            li Entwicklung und Umsetzung von Auswahlverfahren für neue und bestehende Mitarbeiter
+                            li Evaluation und ROI-Analyse von Bildungsmaßnahmen

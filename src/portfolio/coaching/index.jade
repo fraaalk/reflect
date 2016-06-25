@@ -6,11 +6,17 @@ block config
     - var portfolio = site.data.portfolio.coaching
 
 block content
+    +visual({image: "/images/visuals/coaching.jpg"})
     +breadcrumb([["Home", "/"],["Portfolio", "/portfolio"], [portfolio.title, portfolio.link]])
     +section({"class": "section--grey"})
-        +section-headline({icon: "#rocket", title: portfolio.title})
         div(class="grid")
-            div(class="grid__col-12")
-                each item in portfolio.text
-                    +block()
-                        p= item
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({image: "/images/section-icons/portfolio.svg", title: "Coaching"})
+            div(class="grid__col-12 grid__col-sm-6")
+                +block()
+                    +block-headline({title: "Wir traineren Unternehmen"})
+                    p Unser Coaching ist kein ‚Gehirnjogging für Manager’, sondern ein ‚Zirkeltraining für den Chef’. Als intensives Sparring für Führungskräfte macht es Entscheider fit für den Job in einem sich ständig verändernden Umfeld. Die Ausgangssituation ist dabei immer anders. Darum entwickeln wir Ihre persönlichen, sozialen und methodischen Kompetenzen auch individuell und gemeinsam mit Ihnen. Die Wirksamkeit dieses Instruments, insofern es wie bei Reflect professionell eingesetzt wird, konnte bereits in zahlreichen Studien nachgewiesen werden.
+            div(class="grid__col-12 grid__col-sm-6")
+                +block()
+                    +block-headline({title: "Natürlich sprechen wir ihre Sprache"})
+                    p Unsere Mitarbeiter kennen die Welt des Managements und können diese nachvollziehen. Dadurch sind sie als Coach in der Lage, sinnvoll zu leiten und die Potenziale der Coachees zu entfalten. Und weil viele Unternehmen heute global agieren, sprechen unsere Coaches nicht nur die Sprache der Unternehmenskulturen und -Strategen dieser Welt, sondern auch die entsprechenden Landessprachen: Deutsch, Englisch und auf Wunsch gerne auch Französisch, Spanisch, Portugiesisch und Italienisch.

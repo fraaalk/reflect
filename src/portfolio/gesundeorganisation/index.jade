@@ -6,11 +6,17 @@ block config
     - var portfolio = site.data.portfolio.gesundeorganisation
 
 block content
+    +visual({image: "/images/visuals/gesundeorganisation.jpg"})
     +breadcrumb([["Home", "/"],["Portfolio", "/portfolio"], [portfolio.title, portfolio.link]])
     +section({"class": "section--grey"})
-        +section-headline({icon: "#rocket", title: portfolio.title})
         div(class="grid")
-            div(class="grid__col-12")
-                each item in portfolio.text
-                    +block()
-                        p= item
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({image: "/images/section-icons/portfolio.svg", title: "Gesunde Organisation"})
+            div(class="grid__col-12 grid__col-sm-6")
+                +block()
+                    +block-headline({title: "Stress ist ein Kostenfaktor"})
+                    p Mehr als die Hälfte aller verlorenen Arbeitstage in Deutschland sind inzwischen auf psychische Belastungen zurückzuführen. Daher wird das Gesundheitsmanagement in Zukunft eine immer größere Rolle spielen. Es muss dem demographischen Wandel Rechnung tragen und immer knappere ökonomische Ressourcen sowie steigende Qualitätsanforderungen und den damit verbundenen steigenden Belastungen am Arbeitsplatz entsprechen. Das gilt für Führungskräfte genauso wie für ihre Mitarbeiter. Ohne geeignete Maßnahmen wird es teuer, weil jeder verlorene Arbeitstag Unternehmen bares Geld kostet.
+            div(class="grid__col-12 grid__col-sm-6")
+                +block()
+                    +block-headline({title: "Wir machen Unternehmen gesund"})
+                    p Auf Basis der Zusammenarbeit von Arbeitsmedizinern und Organisationsentwicklern haben wir einen Ansatz entwickelt, der fokussiert, prozessorientiert, langfristig, partizipativ und wirksam ist. In der Broschüre erhalten Sie weitere Informationen über diesen Ansatz. U.a. zeigen wir Ihnen an einem Beispiel den konkreten Weg, den wir mit einem unserer Kunden gegangen sind, psychische Belastungen am Arbeitsplatz zu reduzieren und ihnen vorzubeugen. Wenn Sie noch mehr darüber erfahren möchten oder das Thema mit uns gemeinsam angehen wollen, sprechen Sie uns gerne an.

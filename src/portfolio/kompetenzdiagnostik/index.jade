@@ -6,11 +6,18 @@ block config
     - var portfolio = site.data.portfolio.kompetenzdiagnostik
 
 block content
+    +visual({image: "/images/visuals/kompetenzdiagnostik.jpg"})
     +breadcrumb([["Home", "/"],["Portfolio", "/portfolio"], [portfolio.title, portfolio.link]])
     +section({"class": "section--grey"})
-        +section-headline({icon: "#rocket", title: portfolio.title})
-        div(class="grid")
-            div(class="grid__col-12")
-                each item in portfolio.text
+        div(class="section__wrapper")
+            div(class="grid")
+                div(class="grid__col-12 grid__col--bleed")
+                    +section-headline({image: "/images/section-icons/portfolio.svg", title: "Kompetenzdiagnostik"})
+                div(class="grid__col-12 grid__col-sm-6")
                     +block()
-                        p= item
+                        +block-headline({title: "Sinnvolle Analyse"})
+                        p Unsere Kompetenzdiagnostik ist kein Selbstzweck, sie schafft wertvolle Ergebnisse. Denn nur durch Analysieren der sozialen und methodischen Kompetenzen der Mitarbeitenden und Führenden in Ihrem Unternehmen sind wir in der Lage, gezielte Personalentwicklungsmaßnahmen zu bestimmen. Den Erfolg dieser Maßnahmen wiederum können wir messen und evaluieren. Auf dieser Basis wägen wir die Selbst-, Fremd- und Solleinschätzungen ab und nutzen die ermittelten Werte auch für spätere oder weitere Entwicklungsmaßnahmen.
+                div(class="grid__col-12 grid__col-sm-6")
+                    +block()
+                        +block-headline({title: "Transparente Ergebnisse"})
+                        p Mit den, in der Analyse gewonnen Erkenntnissen, können wir für Sie, ein optimales Kompetenzmodell entwickeln. Genauso gerne stellen wir Ihnen aber auch bereits wissenschaftlich abgesicherte Modelle zur Verfügung. Durch den Einsatz von onlinegestützten Verfahren halten wir den notwendigen Aufwand effizient. Gleichzeitig sorgen wir für eine größtmögliche Schnelligkeit und Transparenz der Kompetenzanalysen innerhalb Ihrer Potenzialeinschätzungsprozesse.

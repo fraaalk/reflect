@@ -6,11 +6,13 @@ block config
     - var portfolio = site.data.portfolio.befragungen
 
 block content
+    +visual({image: "/images/visuals/befragungen.jpg"})
     +breadcrumb([["Home", "/"],["Portfolio", "/portfolio"], [portfolio.title, portfolio.link]])
     +section({"class": "section--grey"})
-        +section-headline({icon: "#rocket", title: portfolio.title})
         div(class="grid")
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({image: "/images/section-icons/portfolio.svg", title: "Befragungen"})
             div(class="grid__col-12")
-                each item in portfolio.text
-                    +block()
-                        p= item
+                +block()
+                    +block-headline({title: "Antworten finden"})
+                    p Erst, wenn Sie die Wünsche und Bedürfnisse Ihrer Kunden oder Mitarbeiter besser kennen, können Sie auf diese reagieren. Durch unsere Befragung gewinnen Sie nutzbare Informationen zu Einstellungen, Meinungen, Wissen und Verhaltensweisen der Menschen. Wir führen eine solche Befragung mündlich, fernmündlich – also im direkten Kontakt zwischen Interviewer und befragter Person – oder schriftlich durch. Je nach Methode haben unsere Befragungen einen unterschiedlichen Grad an Standardisierung und Strukturierung. Das Ziel ist jedoch immer dasselbe: Daten in erstklassig verwertbarer Qualität.

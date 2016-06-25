@@ -6,11 +6,17 @@ block config
     - var portfolio = site.data.portfolio.veraenderungsmanagement
 
 block content
+    +visual({image: "/images/visuals/veraenderungsmanagement.jpg"})
     +breadcrumb([["Home", "/"],["Portfolio", "/portfolio"], [portfolio.title, portfolio.link]])
     +section({"class": "section--grey"})
-        +section-headline({icon: "#rocket", title: portfolio.title})
         div(class="grid")
-            each item in portfolio.text
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({image: "/images/section-icons/portfolio.svg", title: "Veränderungsmanagement"})
+            div(class="grid__col-12 grid__col-sm-6")
                 +block()
-                    div(class="grid__col-12")
-                        p= item
+                    +block-headline({title: "Veränderung ist menschlich"})
+                    p Unternehmen sind ständig in Bewegung. Und auch die Menschen, die in ihnen arbeiten und sie vorantreiben, verändern sich permanent. Deswegen gibt es immer zwei Seiten, die wir bei einem zielgerichteten Veränderungsmanagement betrachten und beachten: zum einen die harten Fakten der betrieblichen Situation, zum anderen die Charaktere, die an den geplanten Veränderungen beteiligt sind. Nur die richtige Verbindung beider Seiten führt zu einem sinnvollen und guten Ergebnis.
+            div(class="grid__col-12 grid__col-sm-6")
+                +block()
+                    +block-headline({title: "Wir begleiten den Prozess"})
+                    p Eine veränderte Unternehmensstrategie, Restrukturierungen, Zusammenschlüsse, Übernahmen oder externe Einflüsse – Ihr Veränderungsprozess kann viele Gründe haben. So oder so müssen Sie sich im Management auf Schwierigkeiten vorbereiten, mit Turbulenzen rechnen und diese einplanen. Mit unserem sechs Handlungsstränge umfassenden Change-Konzept unterstützen wir Sie bei der Umsetzung Ihres Vorhabens. Denn: Es ist ein langer Weg zum Wechsel. Aber wir gehen ihn gerne – gemeinsam mit Ihnen.
