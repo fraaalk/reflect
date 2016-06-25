@@ -23,7 +23,6 @@ $(() => {
     });
 
 
-
     $( '.header__nav-toggle' ).on( 'click', function() {
         $( '.header__nav' ).toggleClass( 'is-visible' );
     });
@@ -63,17 +62,6 @@ $(() => {
                 $('.nav__overlay').removeClass('is-visible');
             }, 200);
         }
-    });
-
-    // $('body').on('mouseover', function(e) {
-        
-    // });
-
-    $( '#google-maps' ).each( function() {
-        new google.maps.Map(document.getElementById('google-maps'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 8
-        });
     });
 
     $('.go-comb__center').on('click', function(e){

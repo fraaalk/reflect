@@ -5,6 +5,26 @@
 		text-align: center;
 	}
 
+	&--contact {
+		margin-top: 20px;
+
+		a {
+			border: 2px solid #7d8c93;
+			color: #7d8c93;
+			padding: 9px 4px 4px 4px;
+
+			&:hover {
+				border: 2px solid darken(#7d8c93, 10%);
+				color: darken(#7d8c93, 10%);
+			}
+
+			.social__button-icon {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
 	&__button {
 		$background-color: rgba(254, 254, 254, 0.3);
 		$border-color: rgba(254, 254, 254, 0.3);

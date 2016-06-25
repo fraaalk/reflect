@@ -11,7 +11,7 @@ block content
     +section({"class": "section--compressed section--grey"})
         div(class="grid")
             div(class="grid__col-12 grid__col--bleed")
-                +section-headline({"title": "Kontakt", "class": "", "icon": "#group"})
+                +section-headline({"title": "Kontakt", "image": "/images/section-icons/kontakt.svg"})
             div(class="grid__col-12")
                 form(class="grid grid--justify-end form")
                     p(class="grid__col-12") Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
@@ -33,7 +33,7 @@ block content
     +section({"class": "section--white"})
         div(class="grid")
             div(class="grid__col-12 grid__col--bleed")
-                +section-headline({icon: "#television", title: "Adresse & Anfahrt"})
+                +section-headline({"image": "/images/section-icons/anfahrt.svg", title: "Adresse & Anfahrt"})
             div(class="grid__col-12")
                 +block()
                     p 
@@ -49,7 +49,7 @@ block content
                         br
                         | Vom Flughafen Mannheim (65 km) oder Karlsruhe-Baden (70 km) am schnellsten per Bahn (s. o.) zu erreichen .
             div(class="grid__col-12 grid__col-sm-6")
-                div(id="google-maps")
+                iframe(class="map", src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.2117662108185!2d8.129646251251431!3d49.13960358871719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479656e818a2161d%3A0xbf899d7dd1303b68!2sReflect!5e0!3m2!1sde!2sde!4v1466885430013", width="100%", height="450", frameborder="0", style="border:0", allowfullscreen)
             div(class="grid__col-12 grid__col-sm-6")
                 p
                     strong Kontaktadresse
@@ -67,10 +67,11 @@ block content
                     | Fon: +49 (06349) 96 30 228
                     br
                     | Fax: +49 (06349) 96 30 229 
+                +social-links({"class": "social--contact","facebook": true, "googleplus": false, "linkedin": true, "twitter": true, "rss": false, "xing": true})
     +section({"id": "team", "class": "section--grey"})
         div(class="grid")
             div(class="grid__col-12 grid__col--bleed")
-                +section-headline({icon: "#television", title: "Team"})
+                +section-headline({"image": "/images/section-icons/team.svg", title: "Team"})
             div(class="grid__col-12")
                 +block()
                     p Schreiben Sie uns Ihr Anliegen über unser Kontataktformular. Wenn Sie uns eine Telefonnummer hinterlassen, rufen wir Sie auch gern zurück.
