@@ -38,6 +38,10 @@
 			&.is-visible {
 				transform: translateX(0);
 			}
+
+			.header__nav-toggle {
+				display: none;
+			}
 		}
 
 		@include breakpoint($bp-sm-up) {

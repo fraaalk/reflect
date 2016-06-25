@@ -26,8 +26,6 @@ $(() => {
 
     $( '.header__nav-toggle' ).on( 'click', function() {
         $( '.header__nav' ).toggleClass( 'is-visible' );
-        $( '.header__nav .header__nav-toggle' ).toggleClass('is-hidden');
-
     });
 
     $( '.header__search-toggle' ).on( 'click', function() {
