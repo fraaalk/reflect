@@ -13,56 +13,13 @@
 
 		@include breakpoint($bp-sm-up) {
 			border-bottom: 40px solid #00488D;
+			display: flex;
+			flex-wrap: wrap;
 		}
 	}
 
-	&__search-toggle {
-		display: block;
-		border: none;
-		background: none;
-		background: white;
-		color: #ccc;
-	}
-
-	@include breakpoint($bp-sm-down) {
-		&__nav-toggle {
-			position: absolute;
-			left: 0;
-			top: 0;
-			height: 62px;
-			line-height: 62px;
-			z-index: 600;
-
-			button {
-				border: none;
-				background: none;
-				color: #8493a8;
-				vertical-align: middle;
-				display: inline-block;
-			}
-		}
-
-		&__search-toggle {
-			position: absolute;
-			right: 0;
-			top: 0;
-			height: 62px;
-			line-height: 62px;
-			z-index: 600;
-		}
-	}
-
-	&__search {
-		form {
-			display: none;
-		}
-	}
-
-	// wrapper for navigation,
-	// search and language selection
-	// which is moved out of the canvas on mobile
-	&__off-canvas {
-
+	// nav and nav toggle
+	&__nav {
 		@include breakpoint($bp-sm-down) {
 			width: 269px;
 			overflow: hidden;
@@ -81,70 +38,115 @@
 				transform: translateX(0);
 			}
 		}
-	}
 
-	@include breakpoint($bp-sm-up) {
-		&__wrapper {
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-		&__off-canvas {
+		@include breakpoint($bp-sm-up) {
 			display: flex;
 			// calculated width all available space minus logo minus search
-			width: calc(100% - 250px);
+			width: calc(100% - 260px);
 			background: white;
 			z-index: 700;
 			height: 70px;
-		}
-
-		&__nav,
-		&__search {
 			align-self: center;
 		}
 
-		// wrapper for header navigation
-		&__nav {
-			width: 100%;
-			padding: 12px 0;
+		@include breakpoint($bp-md-up) { 
+			width: calc(100% - 450px);
 		}
 
-		// wrapper for the header search
-		&__search {
-			width: 30px;
-		}
-
-		// nav toggle button only visible on mobile
-		&__nav-toggle {
+		&-toggle {
+			align-self: center;
 			display: none;
+			border: none;
+			background: none;
+			background: white;
+			color: #ccc;
+			padding: 29px 0 23px;
+			cursor: pointer;
+			z-index: 6000;
+			padding: 23px 10px 21px;
+
+			@include breakpoint($bp-sm-down) {
+				left: 0;
+				display: block;
+			}
+
+			@include breakpoint($bp-md-up) {
+				display: none;
+			}
 		}
 	}
 
-	@include breakpoint($bp-md-up) { 
+	// search and search toggle
+	&__search {
+		align-self: center;
 
-		&__off-canvas {
-			width: calc(100% - 400px);
-		}
+		@include breakpoint($bp-md-down) {
+			&:not(.is-visible) {
+				form {
+					display: none;
+					transform: translateX(100%);
+					position: absolute;
+				}
+			}
 
-		// wrapper for the header search
-		&__search {
-			width: 170px;
+			&.is-visible {
+				form {
+					display: block;
+					transform: translateX(0);
+					position: absolute;
+					top: 0;
+					right: 0;
+					z-index: 7000;
+					margin: 17px 0 0 0;
+					width: 300px;
+				}
+			}
 
-			form {
-				display: block;
+			@include breakpoint($bp-sm-down) {
+				&.is-visible {
+					form {
+						margin: 11px 0 0 0;
+					}
+				}
 			}
 		}
 
-		&__search-toggle {
+		&-toggle {
+			align-self: center;
 			display: none;
+			border: none;
+			background: none;
+			background: white;
+			color: #ccc;
+			padding: 29px 0 23px;
+			cursor: pointer;
+			z-index: 6000;
+			padding: 23px 10px 21px;
+
+			@include breakpoint($bp-sm-down) {
+				right: 0;
+				display: block;
+			}
+
+			@include breakpoint($bp-sm-up) {
+				display: block;
+				right: 0;
+				padding: 29px 10px 23px;
+
+			}
+
+			@include breakpoint($bp-md-up) {
+				display: none;
+
+			}
 		}
 	}
 
+	// logo
 	&__logo {
-
 		@include breakpoint($bp-sm-down) {
 			padding: 9px 30px 10px;
-			width: 100%;
+			width: calc(100% - 78px);
 			text-align: center;
 			position: relative;
 			z-index: 500;

@@ -2,6 +2,10 @@
 .nav {
 	display: block;
 
+	@include breakpoint($bp-sm-up) {
+		width: 100%;
+	}
+
 	a {
 		font-size: inherit;
 		color: $color-lightgrey;

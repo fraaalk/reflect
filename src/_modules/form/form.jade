@@ -13,5 +13,6 @@ mixin form-inline(spec)
     form(class="form form--inline #{spec.class}")&attributes(attributes)
         input(class="form__input form__input--inline")
         button(type="button", class="form__submit form__submit--inline")
+            span(class="form__submit-text")= spec.submit
             svg(class="form__submit-icon")
                 use(xlink:href=spec.icon)

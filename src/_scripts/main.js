@@ -22,9 +22,20 @@ $(() => {
         new Carousel( this );
     });
 
-    $( '.header__nav-toggle' ).on( 'click', 'button', function() {
-        $( '.header__off-canvas' ).toggleClass( 'is-visible' );
+
+
+    $( '.header__nav-toggle' ).on( 'click', function() {
+        $( '.header__nav' ).toggleClass( 'is-visible' );
     });
+
+    $( '.header__search-toggle' ).on( 'click', function() {
+        $( '.header__search' ).addClass( 'is-visible' );
+    });
+
+    $( 'body' ).on( 'click', '.header__search-overlay', function() {
+        $( '.header__search' ).removeClass( 'is-visible' );
+    });
+
 
     $( '.nav__listitem--l1' ).on ( 'mouseenter', 'a, button', function() {
     	$(this)
@@ -45,10 +56,6 @@ $(() => {
             center: {lat: -34.397, lng: 150.644},
             zoom: 8
         });
-    });
-
-    $('.header__search-toggle').on( 'click', function(){
-        $('header .form--search').toggleClass('is-visible');
     });
 
     $('.go-comb__center').on('click', function(e){
