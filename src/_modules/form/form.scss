@@ -77,6 +77,15 @@
 			cursor: pointer;
 		}
 
+		&--reset {
+			background: #d0021b;
+
+			&:hover {
+				background: darken(#d0021b, 10%);
+				cursor: pointer;
+			}
+		}
+
 		&-icon {
 			width: 14px;
 			height: 14px;

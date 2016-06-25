@@ -1,0 +1,20 @@
+extends ../../_layouts/base
+
+block config
+    //- Correct base url pathing for this page
+    - var baseUrl = '../../'
+
+block content
+    +visual({image: "/images/visuals/philosophie.jpg"})
+    +breadcrumb([["Home", "/"],["Instrumente", "/instrumente/"], ["Passwort Zurücksetzen", "/instrumente/passwort/"]])
+    +section({"class": "section--grey"})
+        div(class="grid grid--align-start")
+            div(class="grid__col-12 grid__col--bleed")
+                +section-headline({image: "/images/section-icons/login.svg", title: "Passwort zurücksetzen"})
+        div(class="grid__col-12")
+            form(class="grid grid--justify-end form")
+                p(class="grid__col-12") Bitte geben Sie Ihren Benutzernamen oder Ihre E-Mail Adresse ein. Sie bekommen in Kürze eine Nachricht per E-Mail, welche weiteren Schritte unternommen werden müssen.
+                div(class="grid__col-12 grid__col-sm-8")
+                    input(class="form__input")
+                div(class="grid__col-12 grid__col-sm-4")
+                    input(type="submit", class="form__submit form__submit--reset", value="Zurücksetzen")
