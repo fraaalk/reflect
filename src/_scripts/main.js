@@ -26,9 +26,12 @@ $(() => {
 
     $( '.header__nav-toggle' ).on( 'click', function() {
         $( '.header__nav' ).toggleClass( 'is-visible' );
+        $( '.header__nav .header__nav-toggle' ).toggleClass('is-hidden');
+
     });
 
     $( '.header__search-toggle' ).on( 'click', function() {
+        $( '.header__nav' ).removeClass( 'is-visible' );
         $( '.header__search' ).addClass( 'is-visible' );
         $( '.header__search input').on('blur', function(e) {
             // giving a small timeout so the click on the submit

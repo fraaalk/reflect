@@ -183,6 +183,8 @@ svg {
 // states
 .is {
 	&-hidden {
+		display: none;
+		
 		@include breakpoint($bp-sm-down) {
 			&-sm-down {
 				display: none;
