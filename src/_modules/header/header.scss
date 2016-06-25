@@ -10,6 +10,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
+		border-bottom: 4px solid #00488D;
 
 		@include breakpoint($bp-sm-up) {
 			border-bottom: 40px solid #00488D;

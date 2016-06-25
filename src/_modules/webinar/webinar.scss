@@ -4,7 +4,10 @@
 	&-teaser {
 		background: white;
 		border: 1px solid #cccccc;
-		
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		flex-wrap: wrap;
 
 		&__body {
 			padding: 20px;
@@ -12,18 +15,26 @@
 
 		header {
 			padding: 15px 20px 0;
+			position: relative;
 
 			h3 {
 				font-size: 20px;
 				line-height: 1.5;
 				letter-spacing: 1.7px;
 				color: #333333;
+				padding-right: 65px;
 			}
 		}
 
 		&__body {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
 			a {
 				font-size: 14px;
+				white-space: nowrap;
+				width: 50%;
 			}
 
 			p {
@@ -35,6 +46,8 @@
 			padding: 0px 20px;
 			color: white;
 			font-weight: 500;
+			margin-top: auto;
+			position: relative;
 		}
 
 		&--unlocked footer {
@@ -47,6 +60,34 @@
 
 		&--free footer {
 			background: #ccc;
+		}
+
+		&__icon {
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			top: calc(50% - 7px);
+			right: 10px;
+		}
+
+		&__badge {
+			background-color: #d0021b;
+			border-radius: 20px;
+			border: solid 1px #979797;
+			color: #ffffff;
+			font-size: 10px;
+			font-weight: 600;
+			height: 21px;
+			letter-spacing: 0.3px;
+			line-height: 1;
+			min-width: 56px;
+			padding: 4px 10px;
+			position: absolute;
+			right: 20px;
+			text-align: center;
+			text-transform: uppercase;
+			top: 18px;
+			white-space: nowrap;
 		}
 	}
 }

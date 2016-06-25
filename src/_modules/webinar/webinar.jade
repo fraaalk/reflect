@@ -5,40 +5,40 @@ mixin webinar-teaser(spec)
 
     if webinar.status === 'free'
         article(class="webinar-teaser webinar-teaser--free")&attributes(attributes)
-            header
-                h3= webinar.title
-            div(class="webinar-teaser__body")
-                p= webinar.teaser
-                div(class="grid grid--bleed")
-                    div(class="grid__col-6")
-                        +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#help-alt"})
-                    div(class="grid__col-6")
-                        +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
-            footer
-                p Ohne Freischaltcode verfügbar
+                header
+                    h3= webinar.title
+                    if webinar.new === true
+                        div(class="webinar-teaser__badge") neu!
+                div(class="webinar-teaser__body")
+                    p= webinar.teaser
+                    +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#help-alt"})
+                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
+                footer
+                    p Ohne Freischaltcode verfügbar
     if webinar.status === 'locked'
         article(class="webinar-teaser webinar-teaser--locked")&attributes(attributes)
-            header
-                h3= webinar.title
-            div(class="webinar-teaser__body")
-                p= webinar.teaser
-                div(class="grid grid--bleed")
-                    div(class="grid__col-6")
-                        +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#help-alt"})
-                    div(class="grid__col-6")
-                        +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
-            footer
-                p Seminar noch nicht freigeschaltet.
+                header
+                    h3= webinar.title
+                    if webinar.new === true
+                    div(class="webinar-teaser__badge") neu!
+                div(class="webinar-teaser__body")
+                    p= webinar.teaser
+                    +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#help-alt"})
+                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
+                footer
+                    p Seminar noch nicht freigeschaltet.
+                    svg(class="webinar-teaser__icon")
+                        use(xlink:href="#lock") 
     if webinar.status === 'unlocked'
         article(class="webinar-teaser webinar-teaser--unlocked")&attributes(attributes)
-            header
-                h3= webinar.title
-            div(class="webinar-teaser__body")
-                p= webinar.teaser
-                div(class="grid grid--bleed")
-                    div(class="grid__col-6")
-                        +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#help-alt"})
-                    div(class="grid__col-6")
-                        +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
-            footer
-                p Seminar ist bereits freigeschaltet.
+                header
+                    h3= webinar.title
+                    if webinar.new === true
+                    div(class="webinar-teaser__badge") neu!
+                div(class="webinar-teaser__body")
+                    p= webinar.teaser
+                    div(class="grid grid--bleed")
+                    +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#help-alt"})
+                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
+                footer
+                    p Seminar ist bereits freigeschaltet.
