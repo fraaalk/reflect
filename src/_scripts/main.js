@@ -51,9 +51,22 @@ $(() => {
     		.addClass( 'is-active' )
             .siblings()
             .removeClass( 'is-active' );
-    }).on( 'mouseleave', function() {
-        
+
+        $('.nav__overlay').addClass('is-visible');
     });
+
+    $('.nav__overlay').on( 'mouseenter', function() {
+        if( $('.nav__overlay').hasClass('is-visible') ) {
+            window.setTimeout(function(){
+                $( '.nav__listitem--l1' ).removeClass('is-active');
+                $('.nav__overlay').removeClass('is-visible');
+            }, 200);
+        }
+    });
+
+    // $('body').on('mouseover', function(e) {
+        
+    // });
 
     $( '#google-maps' ).each( function() {
         new google.maps.Map(document.getElementById('google-maps'), {
