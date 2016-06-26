@@ -6,7 +6,7 @@ mixin navigation(spec)
     - spec = spec || ""
     - spec.class = spec.class || ""
 
-    nav(class="nav #{spec.class}")
+    nav(class="nav #{spec.class}")&attributes({'data-navigation': ''})
         div(class="nav__overlay")
         ul(class="nav__list nav__list--l1")
             each item in spec.menu

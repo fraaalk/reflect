@@ -2,7 +2,7 @@ mixin header(spec)
     - spec = spec || {}
     - spec.class = spec.class || ''
 
-    header(class="header")&attributes(attributes)
+    header(class="header")&attributes({'data-header': ''})
         div(class="header__wrapper")
             button(class="header__nav-toggle")
                 svg(class="form__submit-icon")
