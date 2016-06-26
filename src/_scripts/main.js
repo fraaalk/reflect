@@ -7,6 +7,7 @@ import $ from 'jquery';
 import Popup from '../_modules/popup/popup';
 import Carousel from '../_modules/carousel/carousel';
 import Deck from '../_modules/deck/deck';
+import Go from '../_modules/go/go';
 
 $(() => {
 
@@ -20,6 +21,10 @@ $(() => {
 
     $('[data-carousel]').each( function() {
         new Carousel( this );
+    });
+
+    $('[data-go]').each( function() {
+        new Go( this );
     });
 
 
@@ -64,39 +69,8 @@ $(() => {
         }
     });
 
-    $('.go-comb__center').on('click', function(e){
-        $('.go-comb').toggleClass('is-visible');
-        e.preventDefault();
-    }).on('mouseover', function(e) {
-        $('.go-comb__inner').addClass('is-teased');
-    }).on('mouseout', function(){
-        $('.go-comb__inner').removeClass('is-teased');
-    });
-
-
     $('.footer__nav-headline').on( 'click', function(){
         $(this).parent('div').toggleClass('is-visible');
     });
-
-    function addText(p)
-{
-    var t = document.createElementNS("http://www.w3.org/2000/svg", "text"),
-        b;
-    
-    if ( typeof(p.getBBox) !== "function") {
-        return;
-    } 
-    
-    b = p.getBBox();
-    t.setAttribute("transform", "translate(" + (b.x + b.width/2) + " " + (b.y + b.height/2 + 5) + ")");
-    t.textContent = p.getAttribute("title");
-    p.parentNode.insertBefore(t, p.nextSibling);
-}
-
-var paths = document.querySelectorAll(".go-comb__center path, .go-comb__outer path");
-for (var p in paths)
-{
-    addText(paths[p])
-}
 });
         

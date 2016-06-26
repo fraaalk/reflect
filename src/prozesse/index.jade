@@ -6,7 +6,7 @@ block config
     - var deck = site.data.deck
 
 block content
-    +go({"class": "is-visible is-minimized", "visual": "/images/visuals/prozesse.jpg", "active": "Prozesse"})
+    +go({"class": "is-visible is-minimized", "visual": "/images/visuals/prozesse.jpg", "active": "Prozesse", "link": "/"})
         +go-overlay({"title": "Prozesse", "text": "Bacon ipsum dolor amet porchetta turducken boudin", "active": "Prozesse"})
     +section({"class": "section--grey"})
         div(class="grid deck")&attributes({'data-deck': ''})

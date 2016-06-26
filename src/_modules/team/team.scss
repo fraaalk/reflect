@@ -168,8 +168,12 @@
 	}
 
 	&-header {
-		position: absolute;
-		top: 0;
+		position: relative;
+		line-height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		max-width: 1280px;
+		margin: 0 auto;
 
 		&__body {
 			text-align: center;

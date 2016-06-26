@@ -10,8 +10,10 @@ mixin deck(spec)
     div(class="deck__stage")
         each card,val in deck 
             if val == 0
-                - spec.class = 'deck__card--active'
+                - spec.class = 'deck__card--prev'
             else if val == 1
+                - spec.class = 'deck__card--active'
+            else if val == 2
                 - spec.class = 'deck__card--next'
             else
                 - spec.class = ''

@@ -5,7 +5,8 @@
 		text-align: center;
 	}
 
-	&--contact {
+	&--contact,
+	&--team {
 		margin-top: 20px;
 
 		a {
@@ -23,6 +24,10 @@
 				height: 20px;
 			}
 		}
+	}
+
+	&--team {
+		margin-top: 0;
 	}
 
 	&__button {

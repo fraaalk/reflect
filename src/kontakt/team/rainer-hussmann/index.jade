@@ -1,0 +1,20 @@
+extends ../../../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../../../'
+  - var member = site.data.team[4]
+
+block content
+    +team-header({member: member, visual: "/images/visuals/philosophie.jpg"})
+    +breadcrumb([["Home", "/"],["Kontakt", "/kontakt/"], ["Team", "/kontakt/team/"], [member.name, "/kontakt/team/rainer-hussmann/"]])
+    +section({"class": "section--grey"})
+        div(class="grid")
+            div(class="grid__col-12 grid__col--bleed")
+              +section-headline({"title": member.name })
+            div(class="grid__col-12 grid__col-sm-7")
+                +team-info(member.content[0])
+            div(class="grid__col-12 grid__col-sm-5")
+                +team-info(member.content[1])
+            div(class="grid__col-12")
+                +social-links({"class": "social--team", "mail": true, "xing": true})

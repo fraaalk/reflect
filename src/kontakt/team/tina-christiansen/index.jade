@@ -6,11 +6,12 @@ block config
   - var member = site.data.team[0]
 
 block content
-    +team-header(member)
-    +breadcrumb([["Home", "/"],["Kontakt", "/kontakt/"], ["Team", "/kontakt/team/"], [member.name, "/kontakt/team/tinachristiansen/"]])
-    +section({"class": "section--compressed section--grey"})
-        +section-headline({"title": member.name, "class": "section__headline--spaced-top"})
+    +team-header({member: member, visual: "/images/visuals/philosophie.jpg"})
+    +breadcrumb([["Home", "/"],["Kontakt", "/kontakt/"], ["Team", "/kontakt/team/"], [member.name, "/kontakt/team/tina-christiansen/"]])
+    +section({"class": "section--grey"})
         div(class="grid")
+            div(class="grid__col-12 grid__col--bleed")
+              +section-headline({"title": member.name })
             div(class="grid__col-12 grid__col-sm-7")
                 +team-info(member.content[0])
             div(class="grid__col-12 grid__col-sm-5")

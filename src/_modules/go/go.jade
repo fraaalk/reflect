@@ -8,12 +8,13 @@ mixin go(spec)
     - spec.class = spec.class || ""
     - spec.visual = spec.visual || ""
     - spec.active = spec.active || ""
+    - spec.link = spec.link || "#"
 
     div(class="go", style="background-image: url(#{spec.visual});")&attributes({'data-go': ''})
         svg(class="go-comb #{spec.class}", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 250 250")
-            a(class="go-comb__center go-comb__center--open", xlink:href="#")
+            a(class="go-comb__center go-comb__center--open", xlink:href=spec.link)
                 path(d="M113.9,144.2h22.2l11-19.2l-11-19.2h-22.2l-11,19.2L113.9,144.2z", title="GO")
-            a(class="go-comb__center go-comb__center--close", xlink:href="#")
+            a(class="go-comb__center go-comb__center--close", xlink:href=spec.link)
                 path(d="M113.9,144.2h22.2l11-19.2l-11-19.2h-22.2l-11,19.2L113.9,144.2z", title="X")
             each item in site.data.go
                 if spec.active == item.title
