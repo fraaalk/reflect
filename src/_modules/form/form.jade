@@ -11,7 +11,7 @@ mixin form-inline(spec)
   - spec.class = spec.class || ''
 
     form(method="get", action="/suche/", class="form form--inline #{spec.class}")&attributes(attributes)
-        input(placeholder="Suchen",class="form__input form__input--inline")
+        input(class="form__input form__input--inline")
         button(type="submit", class="form__submit form__submit--inline")
             span(class="form__submit-text")= spec.submit
             svg(class="form__submit-icon")

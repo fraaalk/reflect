@@ -1,6 +1,7 @@
 {
 	"antreibertest": {
 		"title": "Antreibertest",
+		"key": "asdasd9as8dasdjasdn",
 		"status": "unlocked",
 		"new": true,
 		"link": "#",
@@ -8,6 +9,7 @@
 	},
 	"auftragsklaerung": {
 		"title": "Auftragsklärung",
+		"key": "asdasd9as8dasdjasdn",
 		"status": "locked",
 		"new": true,
 		"link": "#",
@@ -15,18 +17,21 @@
 	},
 	"biwecon": {
 		"title": "biwecon",
+		"key": "asdasd9as8dasdjasdn",
 		"status": "free",
 		"link": "#",
 		"teaser": "Talentmanagementsoftware: Mit diesem Instrument gewinnen, entwickeln und behalten Sie Ihre Talente!"
 	},
 	"lifomethode": {
 		"title": "Lifo-Methode",
+		"key": "asdasd9as8dasdjasdn",
 		"status": "free",
 		"link": "#",
 		"teaser": "Der folgende Fragebogen liefert eine Standortbestimmung zum Thema „Gesunde Organisation“. Aus Ihren Antworten auf die einzelnen Fragen ermitteln wir einen Reifegrad, der Ihnen einen Anhaltspunkt liefert, wie weit Sie auf dem Weg zu einer Gesunden Organisation sind."
 	},
 	"teamanalyse": {
 		"title": "Teamanalyse",
+		"key": "asdasd9as8dasdjasdn",
 		"status": "free",
 		"link": "#",
 		"teaser": "Wahre Teamarbeit ist in den meisten Unternehmen nach wie vor ein seltenes Phänomen. Teamarbeit kommt deshalb nicht zustande, weil die Teammitglieder unwissentlich in fünf Fallgruben tappen, die aus nur zu menschlichem, deshalb aber nicht minder gefährlichem Fehlverhalten bestehen. Diese Fallgruben bezeichnet Lencioni (2008) als die fünf 'Krankheiten'. Ihre Antworten bilden eine gute Basis für die Analyse Ihres Teams und für eine individuell auf Sie und Ihr Team abgestimmte und damit optimale Beratungsleistung."

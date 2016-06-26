@@ -27,6 +27,7 @@ $color-darkgrey: rgba(0, 0, 0, 0.6);
 @import 'mixins';
 
 // Import Modules
+@import '../_modules/button/button';
 @import '../_modules/block/block';
 @import '../_modules/blog/blog';
 @import '../_modules/breadcrumb/breadcrumb';
@@ -174,7 +175,11 @@ svg {
 			background: rgba(74, 74, 74, 1);
 		}
 
-		&-blue {
+		&-lightblue {
+			background: rgba(0, 125, 199, 1);
+		}
+
+		&-darkblue {
 			background: rgba(0, 125, 199, 1);
 		}
 	}
@@ -194,6 +199,12 @@ svg {
 		@include breakpoint($bp-sm-up) {
 			&-sm-up {
 				display: none;
+			}
+		}
+
+		@include breakpoint($bp-lg-down) {
+			&-lg-down {
+				display: none !important;
 			}
 		}
 	}

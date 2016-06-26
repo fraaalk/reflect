@@ -42,3 +42,27 @@ mixin webinar-teaser(spec)
                     +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
                 footer
                     p Seminar ist bereits freigeschaltet.
+
+mixin webinar-key(spec)
+    - spec = spec || {}
+    - webinar = spec.webinar || {}
+    - spec.class = spec.class || ''
+
+    if webinar.status === 'locked'
+        div(class="webinar-key webinar-key--locked")&attributes(attributes)
+            header
+                strong Seminar: #{webinar.title}
+                if webinar.status === 'unlocked' || webinar.status === 'free'
+                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Aufrufen", "iconAfter": "#long-arrow-right"})
+            div(class="webinar-key__body webinar-key__body--locked")
+                span 
+                    svg(class="webinar-key__icon")
+                        use(xlink:href="#lock")
+                    | FREISCHALTCODE NOTWENDIG
+                a(class="button button--green") Hier Freischalten
+    else
+        div(class="webinar-key")&attributes(attributes)
+            header
+                strong Seminar: #{webinar.title}
+            div(class="webinar-key__body")
+                span= webinar.key

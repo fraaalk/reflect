@@ -28,13 +28,14 @@ mixin team-header(spec)
     - spec.member = spec.member || {}
     - spec.class = spec.class || ""
 
-    div(class="team-header grid grid--align-center", style="background-image: url(#{spec.visual});")&attributes(attributes)
-        div(class="team-header__image grid__col-auto grid__cell")
-            img(class="team__member-image", src=spec.member.image)
-        div(class="team-header__body grid__col-auto")
-            blockquote(class="team__member-quote")= spec.member.quote
-            p(class="team__member-name")= spec.member.name
-            p(class="team__member-title")= spec.member.title
+    div(class="team-header", style="background-image: url(#{spec.visual});")&attributes(attributes)
+        div(class="team-header__wrapper")
+            div(class="team-header__image")
+                img(class="team__member-image", src=spec.member.image)
+            div(class="team-header__body")
+                blockquote(class="team__member-quote")= spec.member.quote
+                p(class="team__member-name")= spec.member.name
+                p(class="team__member-title")= spec.member.title
 
 mixin team-info(spec)
     - spec = spec || {}

@@ -175,6 +175,15 @@
 		max-width: 1280px;
 		margin: 0 auto;
 
+		&__wrapper {
+			margin: 0 auto;
+			max-width: 992px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			height: 192px;
+		}
+
 		&__body {
 			text-align: center;
 			padding: 0 60px;

@@ -30,13 +30,13 @@
 			height: 100%;
 			background: white;
 			z-index: 400;
-			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 			padding: 62px 20px 0;
-			transform: translateX(-100%);
+			transform: translateX(-110%);
 			transition: all 0.3s ease-out;
 
 			&.is-visible {
 				transform: translateX(0);
+				box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 			}
 
 			.header__nav-toggle {

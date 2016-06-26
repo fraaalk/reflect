@@ -6,20 +6,20 @@ block config
 footer(id='footer', class='footer')&attributes({"data-footer": ""})
     div(class="footer__wrapper")
         div(class="grid")
-            div(class="grid__col-12 grid__col-sm-8")
+            div(class="grid__col-12 grid__col-sm-8 grid__col-md-9")
                 nav(class="footer__nav grid")
-                    div(class="grid__col-12 grid__col-sm-6 grid__col-lg-2")
-                        h5(class="footer__nav-headline")
-                            span= site.data.footer.profil.title
-                        ul
-                            each item in site.data.footer.profil.items
-                                li
-                                    a(title=item.title, href=item.href)= item.title
                     div(class="grid__col-12 grid__col-sm-6 grid__col-lg-3")
                         h5(class="footer__nav-headline")
                             span= site.data.footer.portfolio.title
                         ul
                             each item in site.data.footer.portfolio.items
+                                li
+                                    a(title=item.title, href=item.href)= item.title
+                    div(class="grid__col-12 grid__col-sm-6 grid__col-lg-2")
+                        h5(class="footer__nav-headline")
+                            span= site.data.footer.profil.title
+                        ul
+                            each item in site.data.footer.profil.items
                                 li
                                     a(title=item.title, href=item.href)= item.title
                     div(class="grid__col-sm-6 grid__col-lg-2 grid__col--bleed")
@@ -52,10 +52,16 @@ footer(id='footer', class='footer')&attributes({"data-footer": ""})
                                 li
                                     a(title=item.title, href=item.href)= item.title
                     div(class="grid__col-12 grid__cell-footer")
-                        h5(class="footer__nav-headline")
-                            span Newsletter Anmeldung
-                        +form-inline({"class": "form--newsletter", "icon": "#angle-right"})
-            div(class="grid__col-12 grid__col-sm-4")
+                        div(class="grid grid--bleed")
+                            div(class="grid__col-md-6")
+                                div(class="grid__cell-footer")
+                                    div(class="grid__cell")
+                                        h5(class="footer__nav-headline")
+                                            span Newsletter Anmeldung
+                                        +form-inline({"class": "form--newsletter", "icon": "#angle-right"})
+                            div(class="grid__col-lg-6 is-hidden-lg-down")
+                                img(class="footer__visual", src="/images/footer__background.png")
+            div(class="grid__col-12 grid__col-sm-4 grid__col-md-3")
                 div(class="grid__cell u-text-center")
                     img(class="grid__cell-img", class="footer__logo", src="/images/logo--footer.png")
                     div(class='footer__address')

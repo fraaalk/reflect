@@ -13,7 +13,6 @@ import Navigation from '../_modules/navigation/navigation';
 import Footer from '../_modules/footer/footer';
 
 $(() => {
-
     $('[data-popup]').each( function() {
         new Popup( this );
     });

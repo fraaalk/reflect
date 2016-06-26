@@ -3,26 +3,51 @@ extends ../../_layouts/base
 block config
     //- Correct base url pathing for this page
     - var baseUrl = '../../'
+    - var webinare = site.data.webinare
 
 block content
     +visual({image: "/images/visuals/philosophie.jpg"})
     +breadcrumb([["Home", "/"],["Instrumente", "/instrumente/"], ["Kundenbereich", "/instrumente/kundenbereich/"]])
     +section({"class": "section--grey"})
-        div(class="grid grid--align-start")
-            div(class="grid__col-12")
+        div(class="grid grid--align-center")
+            div(class="grid__col-12 grid__col-sm-7")
                 +section-headline({image: "/images/section-icons/kundenbereich.svg", title: "Hallo Max Mustermann"})
-            div(class="grid__col-12")
-                form(class="grid grid--justify-end form")
-                    p(class="grid__col-12") Bitte geben Sie Ihren Benutzernamen oder Ihre E-Mail Adresse ein. Sie bekommen in Kürze eine Nachricht per E-Mail, welche weiteren Schritte unternommen werden müssen.
-                    div(class="grid__col-12 grid__col-sm-8")
-                        input(class="form__input")
-                    div(class="grid__col-12 grid__col-sm-4")
-                        input(type="submit", class="form__submit form__submit--reset", value="Zurücksetzen")
-    +section({"class": "section--white"})
+            div(class="grid__col-12 grid__col-sm-5")
+                div(class="grid__cell")
+                    a(href="/instrumente/kundenbereich/bearbeiten/", class="button button--darkgrey") Persönliche Daten ändern
+                    a(href="/instrumente/passwort/", class="button button--darkgrey") Passwort ändern
+            div(class="grid__col-6 grid__col-sm-2 u-text-strong")
+                | Vorname:
+                br
+                | Nachname:
+                br
+                | Firma:
+                br
+                | Straße, Nr:
+                br 
+                | PLZ:
+                br 
+                | Ort:
+                br 
+                | E-Mail Adresse:
+            div(class="grid__col-6 grid__col-sm-10")
+                | Max
+                br
+                | Mustermann
+                br
+                | Mustermann GmbH
+                br
+                | Musterstraße
+                br 
+                | 78954
+                br 
+                | Musterhausen
+                br 
+                | maxl@t-online.de 
+    +section({"class": "section--white"}) 
         div(class="grid grid--align-start")
             div(class="grid__col-12")
                 +section-headline({image: "/images/section-icons/zugangsschluessel.svg", title: "Ihre Zugangsschlüssel"})
-            div(class="grid__col-12 grid__col-sm-6")
-                | schlüssel 1
-            div(class="grid__col-12 grid__col-sm-6")
-                | schlüssel 2
+            each webinar in webinare
+                div(class="grid__col-12 grid__col-sm-6")
+                    +webinar-key({"class": "", "webinar": webinar})
