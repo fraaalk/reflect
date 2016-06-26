@@ -7,6 +7,10 @@
 		background: white;
 		border: 1px solid #cccccc;
 		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		flew-wrap: wrap;
+		flex: 1;
 	}
 
 	@include breakpoint($bp-sm-up) {

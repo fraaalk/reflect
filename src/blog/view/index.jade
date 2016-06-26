@@ -10,3 +10,19 @@ block content
     +breadcrumb([["Home", "/"],["Blog", "/blog"],[blog.shorttitle, "/blog/view"]])
     section(class="section section--grey")
         div(class="section__wrapper")
+            div(class="grid")
+                div(class="grid__col-12")
+                    article(class="blog-view")
+                        header(class="blog-view__header")
+                            time(class="blog-view__pub-date")= blog.pubDate
+                            div(class="blog-view__author")= blog.author
+                        div(class="blog-view__body")
+                            h3(class="blog-view__headline")= blog.title
+                            if blog.image
+                                img(class="blog-view__image", src=blog.image)
+                            each paragraph in blog.body
+                                p= paragraph
+                div(class="grid__col-6")
+                    +link({"class": "u-color-darkgrey u-text-strong u-text-upper u-text-left", "href":"#", "title": "vorheriger artikel", "iconBefore": "#long-arrow-left"})
+                div(class="grid__col-6 u-text-right u-text-upper")
+                    +link({"class": "u-color-darkgrey u-text-strong u-text-upper u-text-right", "href":"#", "title": "vorheriger artikel", "iconAfter": "#long-arrow-right"})

@@ -7,9 +7,10 @@ mixin breadcrumb(spec)
     - spec = spec || ''
 
     nav(class="breadcrumb")
-        ol(itemscope="", itemtype="http://schema.org/BreadcrumbList")
-            each crumb, index in spec
-                li(itemprop="itemListElement", itemscope="", itemtype="http://schema.org/ListItem")
-                    a(title=crumb[0], itemprop="item", href=crumb[1])
-                        span(itemprop="name")= crumb[0]
-                        meta(itemprop="position", content=index)
+        div(class="breadcrumb__wrapper")
+            ol(itemscope="", itemtype="http://schema.org/BreadcrumbList")
+                each crumb, index in spec
+                    li(itemprop="itemListElement", itemscope="", itemtype="http://schema.org/ListItem")
+                        a(title=crumb[0], itemprop="item", href=crumb[1])
+                            span(itemprop="name")= crumb[0]
+                            meta(itemprop="position", content=index)

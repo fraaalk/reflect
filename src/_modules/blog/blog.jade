@@ -48,9 +48,9 @@ mixin blog-category-listing(spec)
 
     div(class="blog-sidebar__categories")&attributes(attributes)
         ol
-            each blog in spec
+            each blog,index in spec
                 li
-                    a= blog.category
+                    a(href="#", title=blog.category)= blog.category
 
 mixin blog-search(spec)
     - spec = spec || {}
