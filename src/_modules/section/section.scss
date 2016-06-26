@@ -42,6 +42,11 @@
 		margin: 0 auto;
 		max-width: 992px;
 		position: relative;
+
+		@include breakpoint($bp-lg-up) {
+			max-width: 1280px;
+			padding: 0 144px;
+		}
 	}
 
 	&--grey {
@@ -68,12 +73,23 @@
 		color: rgba(255, 255, 255, 1);
 		padding: 0 15px 0 10px;
 
+		@include breakpoint($bp-md-up) {
+			position: absolute;
+			right: -15px;
+		}
+
+		@include breakpoint($bp-lg-up) {
+			position: absolute;
+			right: -144px;
+		}
+
 		&-icon {
-			width: 20px;
-			height: 20px;
-			display: inline;
-			margin-right: 5px;
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			margin-right: 10px;
 			vertical-align: middle;
+			margin-top: -2px;
 		}
 	}
 }

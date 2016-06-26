@@ -6,12 +6,12 @@ block config
     - var deck = site.data.deck
 
 block content
-    +go({"class": "is-visible is-minimized", "visual": "/images/visuals/strukturen.jpg", "active": "Strukturen"})
+    +go({"class": "is-visible is-minimized", "visual": "/images/visuals/strukturen.jpg", "active": "Strukturen", "link": "/"})
         +go-overlay({"title": "Strukturen", "text": "Bacon ipsum dolor amet porchetta turducken boudin", "active": "Strukturen"})
     +section({"class": "section--grey"})
         div(class="grid deck")&attributes({'data-deck': ''})
             div(class="grid__col-12")
-                +section-headline({icon: "#blackboard", title: "Typische Lösungen"})
+                +section-headline({image: "/images/section-icons/loesungen.svg", title: "Typische Lösungen"})
             div(class="grid__col-12")
                 div(class="grid__cell")
                     +deck()
@@ -19,7 +19,7 @@ block content
     +section({"class": "section--white"})
         div(class="grid")
             div(class="grid__col-12")
-                +section-headline({icon: "#receipt", title: "Beschreibung"})
+                +section-headline({image: "/images/section-icons/beschreibung.svg", title: "Beschreibung"})
             div(class="grid__col-12 grid__col-sm-8")
                 div(class="grid grid--align-start")
                     div(class="grid__col-12")
@@ -35,7 +35,7 @@ block content
     +section({"class": "section--grey"})
         div(class="grid")
             div(class="grid__col-12")
-                +section-headline({icon: "#new-window", title: "Lösungen Teilbereich 1"})
+                +section-headline({image: "/images/section-icons/loesungen-teilbereich.svg", title: "Lösungen Teilbereich 1"})
             div(class="grid__col-12 grid__col-sm-6")
                 div(class="block block--tiled")
                     h3(class="block__headline") Headline Lorem Ipsum

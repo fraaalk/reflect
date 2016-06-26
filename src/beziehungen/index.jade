@@ -6,7 +6,7 @@ block config
     - var deck = site.data.deck
 
 block content
-    +go({"class": "is-visible is-minimized", "visual": "/images/visuals/beziehungen.jpg", "active": "Beziehungen"})
+    +go({"class": "is-visible is-minimized", "visual": "/images/visuals/beziehungen.jpg", "active": "Beziehungen", "link": "/"})
         +go-overlay({"title": "Beziehungen", "text": "Bacon ipsum dolor amet porchetta turducken boudin", "active": "Beziehungen"})
     +section({"class": "section--grey"})
         div(class="grid grid--align-start deck")&attributes({'data-deck': ''})
@@ -19,7 +19,7 @@ block content
     +section({"class": "section--white"})
         div(class="grid grid--align-start")
             div(class="grid__col-12 grid__col--bleed")
-                +section-headline({icon: "#receipt", title: "Beschreibung"})
+                +section-headline({image: "/images/section-icons/beschreibung.svg", title: "Beschreibung"})
             div(class="grid__col-12 grid__col-sm-8")
                 div(class="grid grid--align-start")
                     div(class="grid__col-12")
