@@ -23,7 +23,6 @@
 	}
 
 	&__text {
-		line-height: 1;
 
 		&:hover {
 			text-decoration: underline;
@@ -33,13 +32,12 @@
 	&__icon,
 	&__text {
 		display: inline-block;
-		vertical-align: middle;
 	}
 
 	&__icon {
 		height: 1em;
 		width: 1em;
-		line-height: 1;
+		vertical-align: middle;
 
 		&--after {
 			margin-left: 4px;
