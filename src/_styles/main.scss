@@ -48,7 +48,10 @@ $color-darkgrey: rgba(0, 0, 0, 0.6);
 @import '../_modules/visual/visual';
 @import '../_modules/webinar/webinar';
 
-@import 'https://fonts.googleapis.com/css?family=Lato:400,300,700';
+// Import fonts
+@import 'https://fonts.googleapis.com/css?family=Lato:400,300,700',
+		'Linearicons-Free';
+
 
 
 // Box sizing partial styles:
