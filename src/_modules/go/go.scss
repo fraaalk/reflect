@@ -76,6 +76,20 @@
 			fill: #93901f;
 			opacity: 0;
 			transition: opacity 0.4s ease-out;
+			font-family: 'Lato', sans-serif;
+			font-size: 0.3em;
+			font-weight: 500;
+			letter-spacing: 0.2px;
+			color: #ffffff;
+			text-transform: uppercase;
+			text-anchor: middle;
+
+			&--top {
+				text {
+					top: -20px;
+					padding: 20px;
+				}
+			}
 
 			.is-visible & {
 				opacity: 1 !important;
@@ -109,6 +123,10 @@
 			.is-visible & {
 				opacity: 1;
 				transition-delay: 0.1s;
+			}
+
+			&.is-teased {
+				opacity: 0.8;
 			}
 
 			&--top-left,

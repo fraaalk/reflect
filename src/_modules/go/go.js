@@ -5,14 +5,13 @@ import $ from 'jquery';
 export default class Go {
     constructor() {
         this.name = 'go';
-        console.log('%s module', this.name);
 
-        var paths = document.querySelectorAll(".go-comb__center path, .go-comb__outer path");
+        var paths = document.querySelectorAll(".go path");
 
         this.bindEvents();
 
         for (var p in paths) {
-            this.addText(paths[p]);
+            this.addText(paths[p], paths[p].getAttribute('title'));
         }
     }
 
@@ -23,22 +22,30 @@ export default class Go {
                 e.preventDefault();
             }
         }).on('mouseover', function(e) {
-            $('.go-comb__inner').addClass('is-teased');
+            $('.go-comb__inner, .go-comb__outer').addClass('is-teased');
         }).on('mouseout', function(){
-            $('.go-comb__inner').removeClass('is-teased');
+            $('.go-comb__inner, .go-comb__outer').removeClass('is-teased');
         });
     }
 
-    addText(p) {
+    addText(p, title) {
         var t = document.createElementNS("http://www.w3.org/2000/svg", "text"),
-        b;
+        b, yAxis;
 
         if ( typeof(p.getBBox) !== "function") {
             return;
         } 
-
         b = p.getBBox();
-        t.setAttribute("transform", "translate(" + (b.x + b.width/2) + " " + (b.y + b.height/2 + 5) + ")");
+
+         if ( title === "Führung" ) {
+            yAxis = (b.y + b.height - 2);
+        } else if (title === "Balancierte" ) {
+            yAxis = (b.y + 6);
+        } else {
+            yAxis = (b.y + b.height/2 + 5);
+        }
+
+        t.setAttribute("transform", "translate(" + (b.x + b.width/2) + " " + yAxis + ")");
         t.textContent = p.getAttribute("title");
         p.parentNode.insertBefore(t, p.nextSibling);
     }
