@@ -5,17 +5,19 @@ import $ from 'jquery';
 export default class Navigation {
   constructor() {
     this.name = 'navigation';
-    console.log('%s module', this.name);
-
 
     this.bindEvents();
   }
 
   bindEvents() {
-  	$( '.nav__listitem--l1' ).on ( 'mouseenter', 'a, button', function() {
-    	$(this)
-    		.parent( '.nav__listitem--l1' )
-    		.addClass( 'is-active' )
+    $( '.nav__listitem--l1' ).on ( 'mouseenter', 'a, button', function() {
+        if (document.documentElement.clientWidth < 768) {
+            return;
+        }
+        
+        $(this)
+        .parent( '.nav__listitem--l1' )
+            .addClass( 'is-active' )
             .siblings()
             .removeClass( 'is-active' );
 
