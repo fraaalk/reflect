@@ -8,6 +8,10 @@ mixin social-links(spec)
     - spec.class = spec.class || ''
 
     div(class='social #{spec.class}')
+        if spec.xing 
+            a(href='#', class='social__button social__button--xing')
+                svg(class="social__button-icon")
+                    use(xlink:href="#xing")
         if spec.googleplus
             a(href='#', class='social__button social__button--google-plus')
                 svg(class="social__button-icon")
@@ -28,10 +32,6 @@ mixin social-links(spec)
             a(href='#', class='social__button social__button--rss')
                 svg(class="social__button-icon")
                     use(xlink:href="#rss")
-        if spec.xing 
-            a(href='#', class='social__button social__button--xing')
-                svg(class="social__button-icon")
-                    use(xlink:href="#xing")
         if spec.mail
             a(href='#', class='social__button social__button--mail')
                 svg(class="social__button-icon")
