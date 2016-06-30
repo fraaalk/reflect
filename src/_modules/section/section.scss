@@ -12,17 +12,17 @@
 		text-transform: uppercase;
 		display: flex;
 		word-wrap: break-word;
+		line-height: 1.2;
 
 		&-text {
 			// 100% - icon width
 			width: calc(100% - 1em + 12px);
-			line-height: 1.2;
 		}
 
 		&-icon {
 			height: 1em;
 			width: 1em;
-			margin: 6px 12px 0 0;
+			margin: 1px 12px 0 0;
 		}
 
 		@include breakpoint($bp-sm-up) {

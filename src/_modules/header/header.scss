@@ -84,8 +84,11 @@
 	// search and search toggle
 	&__search {
 		align-self: center;
+		width: 200px;
 
 		@include breakpoint($bp-md-down) {
+			width: auto;
+
 			&:not(.is-visible) {
 				form {
 					display: none;
@@ -172,7 +175,7 @@
 	&__logo {
 		@include breakpoint($bp-sm-down) {
 			padding: 9px 30px 10px;
-			width: calc(100% - 78px);
+			width: calc(100% - 100px);
 			text-align: center;
 			position: relative;
 			z-index: 500;

@@ -18,10 +18,7 @@ mixin section-headline(spec)
 
     h2(class="section__headline #{spec.class}")
         if spec.icon
-            svg(class="section__headline-icon")
-                use(xlink:href=spec.icon)
-        if spec.image
-            img(class="section__headline-icon", src=spec.image)
+            span(class="section__headline-icon lnr lnr-#{spec.icon}")
         span(class="section__headline-text")= spec.title
         block
 
