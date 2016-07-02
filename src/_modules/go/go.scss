@@ -187,11 +187,19 @@
 		padding: 7px 80px 10px;
 		position: relative;
 
+		&--home {
+			background: transparent;
+		}
+
 		&-headline {
 			font-size: 20px;
 			letter-spacing: 0.3px;
 			text-transform: uppercase;
 			line-height: 1;
+
+			.go__overlay--home & {
+				display: none;
+			}
 		}
 
 		&-text {
@@ -200,12 +208,20 @@
 			line-height: 1.1;
 			@include clearfix();
 			font-style: italic;
+
+			.go__overlay--home & {
+				display: none;
+			}
 		}
 
 		&-indicators {
 			display: inline-block;
 			@include clearfix();
 			margin-top: 10px;
+
+			.go__overlay--home & {
+				display: none;
+			}
 
 			> a {
 				color: white;

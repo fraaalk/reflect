@@ -38,12 +38,13 @@ mixin go-overlay(spec)
     - spec.class = spec.class || ""
     - spec.active = spec.active || ""
 
-    div(class="go__overlay")
+    div(class="go__overlay #{spec.class}")
         a(class="go__link go__link--prev", rel="prev", href="/kultur/")
             svg(class="go__link-icon go__link-icon--prev")
                 use(xlink:href="#angle-right")
         h3(class="go__overlay-headline")= spec.title
         p(class="go__overlay-text")= spec.text
+        
         nav(class="go__overlay-indicators")
             each item, index in site.data.go
                 if spec.active == item.title
