@@ -12,7 +12,6 @@
 		a {
 			border: 2px solid #7d8c93;
 			color: #7d8c93;
-			padding: 9px 4px 4px 4px;
 
 			&:hover {
 				border: 2px solid darken(#7d8c93, 10%);
@@ -61,33 +60,5 @@
 			margin: 7px 5px 5px 5px;
 			display: inline-block;
 		}
-
-		// &--google-plus {
-		// 	padding: 6px 2px 5px 5px;
-		// }
-
-		// &--facebook {
-		// 	padding: 6px 2px 5px 5px;
-		// }
-
-		// &--linked-in {
-		// 	padding: 6px 2px 5px 5px;
-		// }
-
-		// &--twitter {
-		// 	padding: 6px 2px 5px 5px;
-		// }
-
-		// &--rss {
-		// 	padding: 6px 2px 5px 7px;
-		// }
-
-		// &--mail {
-		// 	padding: 6px 2px 5px 7px;
-		// }
-
-		// &--xing {
-		// 	padding: 6px 2px 5px 7px;
-		// }
 	}
 }

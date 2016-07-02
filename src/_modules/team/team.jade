@@ -20,8 +20,7 @@ mixin team-teaser-grid(spec)
             div(class="team-teaser__body")
                 p(class="team__member-name")= spec.name
                 p(class="team__member-title")= spec.title
-                svg(class="team-teaser__icon")
-                    use(xlink:href="#long-arrow-right")
+                span(class="team-teaser__icon lnr lnr-arrow-right")
 
 mixin team-header(spec)
     - spec = spec || {}

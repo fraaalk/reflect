@@ -10,7 +10,7 @@ mixin blog-teaser-default(spec)
             p= spec.body[0]
         footer(class="blog-teaser__footer")
             div(class="blog-teaser__detail-link")
-                +link({"class": "u-color-darkblue", "href": spec.link, "title": "weiterlesen", "iconAfter": "#long-arrow-right"})
+                +link({"class": "u-color-darkblue", "href": spec.link, "title": "weiterlesen", "iconAfter": "arrow-right"})
 
 mixin blog-teaser-extended(spec)
     - spec = spec || {}
@@ -31,7 +31,7 @@ mixin blog-teaser-extended(spec)
                 each tag in spec.tags
                     +link({"class": "u-color-white", "href": "#", "title": tag})
             div(class="blog-teaser__detail-link")
-                +link({"class": "u-color-white", "href": spec.link, "title": "weiterlesen", "iconAfter": "#long-arrow-right"})
+                +link({"class": "u-color-white", "href": spec.link, "title": "weiterlesen", "iconAfter": "arrow-right"})
 
 mixin blog-tag-listing(spec)
     - spec = spec || {}

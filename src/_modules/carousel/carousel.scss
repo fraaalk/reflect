@@ -108,7 +108,8 @@
         width: 40px;
         margin: 0 2px;
         text-align: center;
-        padding: 7px 5px 5px 4px;
+        line-height: 40px;
+        font-size: 23px;
 
         &:hover {
             background: darken($background-color, 10%);
@@ -117,28 +118,20 @@
         }
 
         &--prev {
-            
-            // hacking with padding, since i dont get proper
-            // made icons with no spacing around which would be the best
-            // looks at least somehow centered now
-            padding: 7px 5px 5px 4px;
+            > span {
+                margin-left: -3px;
+            }
         }
 
         &--next {
-            // hacking with padding, since i dont get proper
-            // made icons with no spacing around which would be the best
-            // looks at least somehow centered now
-            padding: 6px 2px 5px 5px;
+            > span {
+                margin-right: -3px;
+            }
         }
 
-        &-icon {
-            width: 25px;
-            height: 25px;
-            display: inline-block;
-
-            &--prev {
-                transform: rotate(180deg);
-            }
+        > span {
+            width: 100%;
+            height: 100%;
         }
     }
 }

@@ -8,9 +8,7 @@ mixin link(spec)
 
     a(class="link #{spec.class}", href=spec.href, title=spec.title)
         if spec.iconBefore
-            svg(class="link__icon link__icon--before")
-                use(xlink:href=spec.iconBefore)
+            span(class="link__icon link__icon--before lnr lnr-#{spec.iconBefore}")
         span(class="link__text")= spec.title
         if spec.iconAfter
-            svg(class="link__icon link__icon--after")
-                use(xlink:href=spec.iconAfter)
+            span(class="link__icon link__icon--after lnr lnr-#{spec.iconAfter}")

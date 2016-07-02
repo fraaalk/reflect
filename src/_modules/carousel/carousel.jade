@@ -21,11 +21,9 @@ mixin carousel-controls(spec)
 
     nav(class="carousel__controls carousel__controls--team-teaser")
         button(class="carousel__button carousel__button--prev") 
-            svg(class="carousel__button-icon carousel__button-icon--prev")
-                use(xlink:href="#angle-right")
+            span(class="lnr lnr-chevron-left")
         button(class="carousel__button carousel__button--next")
-            svg(class="carousel__button-icon carousel__button-icon--next")
-                use(xlink:href="#angle-right")
+            span(class="lnr lnr-chevron-right")
 
 
 mixin carousel-slide(spec)

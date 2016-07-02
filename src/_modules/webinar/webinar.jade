@@ -11,8 +11,8 @@ mixin webinar-teaser(spec)
                         div(class="webinar-teaser__badge") neu!
                 div(class="webinar-teaser__body")
                     p= webinar.teaser
-                    +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#help-alt"})
-                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
+                    +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "question-circle"})
+                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "arrow-right"})
                 footer
                     p Ohne Freischaltcode verfügbar
     if webinar.status === 'locked'
@@ -23,8 +23,8 @@ mixin webinar-teaser(spec)
                     div(class="webinar-teaser__badge") neu!
                 div(class="webinar-teaser__body")
                     p= webinar.teaser
-                    +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#help-alt"})
-                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
+                    +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "poop"})
+                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "arrow-right"})
                 footer
                     p Seminar noch nicht freigeschaltet.
                     svg(class="webinar-teaser__icon")
@@ -38,8 +38,8 @@ mixin webinar-teaser(spec)
                 div(class="webinar-teaser__body")
                     p= webinar.teaser
                     div(class="grid grid--bleed")
-                    +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "#help-alt"})
-                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "#long-arrow-right"})
+                    +link({"class": "u-color-red u-text-upper u-text-left","href": "/instrumente/registrierung/", "title": "Noch kein Zugang?", "iconBefore": "question-circle"})
+                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Webinar öffnen", "iconAfter": "arrow-right"})
                 footer
                     p Seminar ist bereits freigeschaltet.
 
@@ -53,7 +53,7 @@ mixin webinar-key(spec)
             header
                 strong Seminar: #{webinar.title}
                 if webinar.status === 'unlocked' || webinar.status === 'free'
-                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Aufrufen", "iconAfter": "#long-arrow-right"})
+                    +link({"class": "u-color-darkblue u-text-upper u-text-right", "href": "#", "title": "Aufrufen", "iconAfter": "long-right"})
             div(class="webinar-key__body webinar-key__body--locked")
                 span 
                     svg(class="webinar-key__icon")
