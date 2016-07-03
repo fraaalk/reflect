@@ -6,12 +6,17 @@ export default class Go {
     constructor() {
         this.name = 'go';
 
-        var paths = document.querySelectorAll(".go path");
+        var paths = document.querySelectorAll(".go path"),
+            title = null;
 
         this.bindEvents();
 
         for (var p in paths) {
-            this.addText(paths[p], paths[p].getAttribute('title'));
+
+            if ( typeof(paths[p].getAttribute) === "function") {
+                title = paths[p].getAttribute('title');
+            }
+            this.addText(paths[p], title);
         }
     }
 
@@ -37,7 +42,7 @@ export default class Go {
         } 
         b = p.getBBox();
 
-         if ( title === "Führung" ) {
+        if ( title === "Führung" ) {
             yAxis = (b.y + b.height - 2);
         } else if (title === "Balancierte" ) {
             yAxis = (b.y + 6);

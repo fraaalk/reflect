@@ -5,8 +5,6 @@ import $ from 'jquery';
 export default class Header {
     constructor() {
         this.name = 'header';
-        console.log('%s module', this.name);
-
         this.bindEvents();
     }
 
